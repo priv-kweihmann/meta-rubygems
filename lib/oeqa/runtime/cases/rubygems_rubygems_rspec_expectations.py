@@ -1,0 +1,8 @@
+from rubygems_utils import RubyGemsTestUtils
+from oeqa.core.decorator.depends import OETestDepends
+
+class RubyGemsTestrubygems_rspec_expectations(RubyGemsTestUtils):
+
+    def test_gem_list_rubygems_rspec_expectations(self):
+        self.gem_is_installed("rspec-expectations")
+

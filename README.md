@@ -12,6 +12,8 @@ The following variants are tested regularly
 | x86     | x     | x    |        |
 | x86-64  | x     | x    |        |
 
+other variants most likely will work.
+Feel free to contribute any needed patches
 ## Support
 
 This layer is a rolling release.

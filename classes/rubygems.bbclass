@@ -159,7 +159,7 @@ FILES_${PN} += "${GEM_DIR}/gems \
                 ${RUBY_SITEDIR} \
 "
 
-RDEPENDS_${PN}_append_class-target += "ruby"
+RDEPENDS_${PN}_append_class-target = " ruby"
 
 UPSTREAM_CHECK_URI ?= "https://rubygems.org/gems/${GEM_NAME}/versions"
 UPSTREAM_CHECK_REGEX ?= "/gems/${GEM_NAME}/versions/(?P<pver>(\d+\.*)*\d+)$"

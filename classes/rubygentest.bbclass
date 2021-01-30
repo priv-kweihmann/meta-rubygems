@@ -31,7 +31,7 @@ python do_rubygems_gen_test() {
 
     __tests.add(_tpl_gem.format(
         pn=sanitize_name(d.getVar("BPN")),
-        gemname=sanitize_name(d.getVar("GEM_NAME"))))
+        gemname=d.getVar("GEM_NAME")))
 
     with open(d.expand("${RUBYGEMS_LAYERDIR}/lib/oeqa/runtime/cases/rubygems_%s.py" % sanitize_name(d.getVar("BPN"))), "w") as o:
         o.write(_tpl_class.format(
@@ -42,4 +42,4 @@ python do_rubygems_gen_test() {
 
 do_rubygems_gen_test[doc] = "generate automatic test cases for rubygems"
 do_rubygems_gen_test[nostamp] = "1"
-addtask do_rubygems_gen_test after do_package
+addtask do_rubygems_gen_test after do_package before do_package_qa

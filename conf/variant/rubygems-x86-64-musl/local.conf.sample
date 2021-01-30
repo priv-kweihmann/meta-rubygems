@@ -1,6 +1,8 @@
-CONF_VERSION = "1"
-
 MACHINE = "qemux86-64"
 
+include conf/variant/common/common.inc
 include conf/variant/common/ci.inc
-include conf/variant/common/musl.inc
+include conf/variant/common/glibc.inc
+
+CONF_VERSION = "1"
+

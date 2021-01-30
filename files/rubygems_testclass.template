@@ -1,4 +1,5 @@
-from oeqa.runtime.case import RubyGemsTestUtils
+from rubygems_utils import RubyGemsTestUtils
+from oeqa.core.decorator.depends import OETestDepends
 
 class RubyGemsTest{pn}(RubyGemsTestUtils):
 

@@ -14,8 +14,7 @@ from license_util import get_license_info
 from recipe_util import check_depends
 from semantic_version import Version
 
-TPL = """
-# SPDX-License-Identifier: MIT
+TPL = """# SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: {name}"
 DESCRIPTION = "{__info}"
 HOMEPAGE = "{homepage_uri}"
@@ -60,7 +59,7 @@ def create_depends(desc, old):
         return ""
     if not "runtime" in desc["dependencies"]:
         return ""
-    _tpl = "ruby-{}-native"
+    _tpl = "rubygems-{}-native"
     res = [sanitize_pkgname(_tpl.format(k["name"])) for k in desc["dependencies"]["runtime"]]
     res, _ = check_depends(res, [], old)
     return " \\\n                  ".join(sorted(res))
@@ -70,7 +69,7 @@ def create_rdepends(desc, old):
         return ""
     if not "runtime" in desc["dependencies"]:
         return ""
-    _tpl = "ruby-{}"
+    _tpl = "rubygems-{}"
     res = [sanitize_pkgname(_tpl.format(k["name"])) for k in desc["dependencies"]["runtime"]]
     _, res = check_depends([], res, old)
     return " \\\n                  ".join(sorted(res))
@@ -137,7 +136,7 @@ def check_existing(args, pkgname, version, _naming_pattern):
 
 def create_tpl(args, pkgname, version):
     global __seen_pkgs
-    _naming_pattern = "ruby-{}_{}.bb"
+    _naming_pattern = "rubygems-{}_{}.bb"
     if pkgname in __seen_pkgs:
         return
     _all_description = get_description(args, pkgname)

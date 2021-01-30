@@ -4,6 +4,8 @@
 # Copyright (c) 2020, Konrad Weihmann
 # Copyright (c) 2020, Yocto maintainers
 
+FILESEXTRAPATHS_prepend := "${THISDIR}/ruby-cross:"
+
 SUMMARY = "An interpreter of object-oriented scripting language"
 DESCRIPTION = "Ruby cross variant"
 HOMEPAGE = "http://www.ruby-lang.org/"
