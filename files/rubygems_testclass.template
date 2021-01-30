@@ -1,0 +1,5 @@
+from oeqa.runtime.case import RubyGemsTestUtils
+
+class RubyGemsTest{pn}(RubyGemsTestUtils):
+
+{tests}
