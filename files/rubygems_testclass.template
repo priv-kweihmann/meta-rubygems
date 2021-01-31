@@ -1,5 +1,4 @@
 from rubygems_utils import RubyGemsTestUtils
-from oeqa.core.decorator.depends import OETestDepends
 
 class RubyGemsTest{pn}(RubyGemsTestUtils):
 
