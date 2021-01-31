@@ -17,7 +17,6 @@ Following items needs to be installed on your host
 
 ## Testing changes
 
-* run `bitbake core-image-minimal-rubygems -c cleansstate`
 * run `bitbake core-image-minimal-rubygems`
 * run `bitbake core-image-minimal-rubygems -c testimage`
 
