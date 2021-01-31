@@ -15,11 +15,19 @@ RDEPENDS_${PN} += "\
                     rubygems-diff-lcs \
                     rubygems-faraday \
                     rubygems-faraday-net-http \
+                    rubygems-ffi \
                     rubygems-i18n \
                     rubygems-jmespath \
+                    rubygems-json \
+                    rubygems-mime-types \
+                    rubygems-mime-types-data \
+                    rubygems-mini-portile2 \
                     rubygems-minitest \
+                    rubygems-multi-json \
                     rubygems-multipart-post \
+                    rubygems-nokogiri \
                     rubygems-public-suffix \
+                    rubygems-rack \
                     rubygems-rspec \
                     rubygems-rspec-core \
                     rubygems-rspec-expectations \
