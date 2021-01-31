@@ -1,6 +1,8 @@
 ## SPDX-License-Identifier: MIT
 ## Copyright (c) 2021, Konrad Weihmann
 
+RUBYGEMS_AUTOGEN_TESTS ??= "0"
+
 def rubygem_load_template(d, name):
     try:
         with open(d.expand("${RUBYGEMS_LAYERDIR}/files/%s" % name), "r") as i:
@@ -11,6 +13,9 @@ def rubygem_load_template(d, name):
 python do_rubygems_gen_test() {
     import glob
     import json
+
+    if d.getVar("RUBYGEMS_AUTOGEN_TESTS") != "1":
+        return
 
     def sanitize_name(pn):
         return pn.replace("-", "_")
