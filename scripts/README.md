@@ -6,7 +6,7 @@ Following items needs to be installed on your host
 
 * curl
 * python3
-* python packages (run `pip3 install --user -f dev-requirements.txt` in this directory)
+* python packages (run `pip3 install --user -r dev-requirements.txt` in this directory)
 
 ## Add a new ruby gem
 
