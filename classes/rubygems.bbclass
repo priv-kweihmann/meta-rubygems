@@ -5,6 +5,8 @@
 
 inherit rubygentest
 
+GEMLIB_VERSION = "2.7.0"
+
 GEM_SRC ?= "http://rubygems.org/gems"
 
 GEM_NAME ?= ""
@@ -23,7 +25,7 @@ GEM_SPEC_FILENAME = "${GEM_FILENAME}spec"
 GEM_SPEC_FILE ?= "${S}/${GEM_SPEC_FILENAME}"
 GEM_SPEC_CACHE ?= "${T}/.gems"
 
-GEM_DIR = "${libdir}/ruby/gems"
+GEM_DIR = "${libdir}/ruby/gems/${GEMLIB_VERSION}"
 RUBY_SITEDIR = "${libdir}/ruby/site_ruby/"
 GEM_HOME = "${D}${GEM_DIR}"
 GEM_PATH_class-target = "${RECIPE_SYSROOT}${GEM_DIR}:${RECIPE_SYSROOT_NATIVE}${GEM_DIR}:${GEM_HOME}"
