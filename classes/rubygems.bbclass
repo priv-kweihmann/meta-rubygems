@@ -3,8 +3,6 @@
 ## Copyright (c) 2015, Michaël Burtin
 ## Copyright (c) 2020, Konrad Weihmann
 
-inherit rubygentest
-
 GEMLIB_VERSION = "2.7.0"
 
 GEM_SRC ?= "http://rubygems.org/gems"
@@ -170,3 +168,5 @@ BBCLASSEXTEND += "native"
 
 # Skip automatically, as this is an intended side effect
 INSANE_SKIP_${PN} += "dev-so"
+
+inherit rubygentest

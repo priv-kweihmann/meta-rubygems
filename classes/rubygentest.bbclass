@@ -14,9 +14,6 @@ python do_rubygems_gen_test() {
     import glob
     import json
 
-    if d.getVar("RUBYGEMS_AUTOGEN_TESTS") != "1":
-        return
-
     def sanitize_name(pn):
         return pn.replace("-", "_")
 
@@ -26,7 +23,7 @@ python do_rubygems_gen_test() {
 
     __tests = set()
 
-    for _file in glob.glob(d.expand("${PKGDEST}/${PN}/${libdir}/ruby/gems/gems/*/lib/*.rb")):
+    for _file in glob.glob(d.expand("${PKGDEST}/${PN}/${libdir}/ruby/gems/${GEMLIB_VERSION}/gems/*/lib/*.rb")):
         _filename, _ext = os.path.splitext(_file)
         _filename = os.path.basename(_filename)
         __tests.add(_tpl_require.format(
@@ -46,5 +43,11 @@ python do_rubygems_gen_test() {
 }
 
 do_rubygems_gen_test[doc] = "generate automatic test cases for rubygems"
-do_rubygems_gen_test[nostamp] = "1"
 addtask do_rubygems_gen_test after do_package before do_package_qa
+
+python() {
+    if d.getVar("RUBYGEMS_AUTOGEN_TESTS") == "1":
+        d.setVarFlag("do_rubygems_gen_test", "nostamp", "1")
+    else:
+        d.setVarFlag("do_rubygems_gen_test", "noexec", "1")
+}
