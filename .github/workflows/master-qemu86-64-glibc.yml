@@ -1,9 +1,7 @@
 name: "[master]-[glibc]-[qemux86-64]"
 
 on:
-  schedule:
-    - push
-    - cron: "30 0 * * *"
+  schedule: [push]
 
 jobs:
   buildrun:
