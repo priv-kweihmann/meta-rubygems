@@ -1,7 +1,7 @@
 name: "[master]-[musl]-[qemux86-64]"
 
 on:
-  schedule: [push]
+  schedule: push
 
 jobs:
   buildrun:
