@@ -6,14 +6,15 @@ A layer providing gems for ruby
 
 The following variants are tested regularly
 
-| variant | glibc | musl | status |
-| ------- | ----- | ---- | ------ |
-| aarch64 | x     | x    |        |
-| x86     | x     | x    |        |
-| x86-64  | x     | x    |        |
+| variant     | glibc | musl | status |
+| ----------- | ----- | ---- | ------ |
+| qemuaarch64 | x     | x    |        |
+| qemux86     | x     | x    |        |
+| qemux86-64  | x     | x    |        |
 
 other variants most likely will work.
 Feel free to contribute any needed patches
+
 ## Support
 
 This layer is a rolling release.

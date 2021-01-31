@@ -1,0 +1,11 @@
+- CI setup
+    - cron+push
+    - package update check
+- ruby-gen
+    - save GEM_INSTALL_FLAGS on updating
+    - save DEPENDS_class-target on updating
+    - version field can be removed (always using the latest anyway)
+- github
+    - labels
+    - CONTRIBUTING.md
+    - SECURITY.md
