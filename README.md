@@ -6,11 +6,11 @@ A layer providing gems for ruby
 
 The following variants are tested regularly
 
-| variant     | glibc | musl | status |
-| ----------- | ----- | ---- | ------ |
-| qemuaarch64 | x     | x    |        |
-| qemux86     | x     | x    |        |
-| qemux86-64  | x     | x    |        |
+| variant     | glibc                                                                                                                                             | musl                                                                                                                                            |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| qemuaarch64 | ![[master]-[glibc]-[qemuaarch64]](https://github.com/priv-kweihmann/meta-rubygems/workflows/%5Bmaster%5D-%5Bglibc%5D-%5Bqemuaarch64%5D/badge.svg) | ![[master]-[musl]-[qemuaarch64]](https://github.com/priv-kweihmann/meta-rubygems/workflows/%5Bmaster%5D-%5Bmusl%5D-%5Bqemuaarch64%5D/badge.svg) |
+| qemux86     | ![[master]-[glibc]-[qemux86]](https://github.com/priv-kweihmann/meta-rubygems/workflows/%5Bmaster%5D-%5Bglibc%5D-%5Bqemux86%5D/badge.svg)         | ![[master]-[musl]-[qemux86]](https://github.com/priv-kweihmann/meta-rubygems/workflows/%5Bmaster%5D-%5Bmusl%5D-%5Bqemux86%5D/badge.svg)         |
+| qemux86-64  | ![[master]-[glibc]-[qemux86-64]](https://github.com/priv-kweihmann/meta-rubygems/workflows/%5Bmaster%5D-%5Bglibc%5D-%5Bqemux86-64%5D/badge.svg)   | ![[master]-[musl]-[qemux86-64]](https://github.com/priv-kweihmann/meta-rubygems/workflows/%5Bmaster%5D-%5Bmusl%5D-%5Bqemux86-64%5D/badge.svg)   |
 
 other variants most likely will work.
 Feel free to contribute any needed patches
