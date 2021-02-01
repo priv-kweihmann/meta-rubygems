@@ -43,6 +43,7 @@ jobs:
         with:
           repo: https://github.com/priv-kweihmann/meta-rubygems.git
           branch: init
+          add-layer: "0"
       - if: env.BUILD_GLIBC == '1'
         name: build (glibc)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
