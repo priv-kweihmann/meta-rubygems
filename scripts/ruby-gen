@@ -1,18 +1,33 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: BSD-2-Clause
 # Copyright (c) 2020, Konrad Weihmann
-import os
-import json
 import argparse
+import atexit
 import copy
+import glob
+import hashlib
+import json
+import os
 import re
 import subprocess
-import hashlib
 import tarfile
-import glob
-from license_util import get_license_info
-from recipe_util import check_depends
+import tempfile
+
 from semantic_version import Version
+
+from license_util import get_license_info
+from recipe_util import check_depends, save_variables
+
+_tempfolder = tempfile.TemporaryDirectory(prefix="rubygen_")
+
+def remove_tempfolder():
+    import shutil
+    try:
+        shutil.rmtree(_tempfolder)
+    except:
+        pass
+
+atexit.register(remove_tempfolder)
 
 TPL = """# SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: {name}"
@@ -23,7 +38,10 @@ LICENSE = "{__license}"
 LIC_FILES_CHKSUM = "file://{__licfile};md5={__lichash}"
 
 DEPENDS_class-native += "{__deps}"
+DEPENDS_class-target += "{__tdeps}"
 RDEPENDS_${PN}_class-target += "{__rdeps}"
+
+GEM_INSTALL_FLAGS += "{__install_flags}"
 
 SRC_URI[md5sum] = "{__md5sum}"
 SRC_URI[sha256sum] = "{__sha256sum}"
@@ -62,7 +80,7 @@ def create_depends(desc, old):
     _tpl = "rubygems-{}-native"
     res = [sanitize_pkgname(_tpl.format(k["name"])) for k in desc["dependencies"]["runtime"]]
     res, _ = check_depends(res, [], old)
-    return " \\\n                  ".join(sorted(res))
+    return " \\\n                         ".join(sorted(res))
 
 def create_rdepends(desc, old):
     if not "dependencies" in desc:
@@ -72,14 +90,15 @@ def create_rdepends(desc, old):
     _tpl = "rubygems-{}"
     res = [sanitize_pkgname(_tpl.format(k["name"])) for k in desc["dependencies"]["runtime"]]
     _, res = check_depends([], res, old)
-    return " \\\n                  ".join(sorted(res))
+    return " \\\n                                ".join(sorted(res))
 
 def get_best_version(desc, pkgname, version):
     return desc["version"]
 
 def get_hashes(args, description, url):
+    __tempfile = os.path.join(_tempfolder.name, "rubygen.tmp")
     try:
-        subprocess.check_call(["curl", "-k", url, "--output", "/tmp/rubygen.tmp"],
+        subprocess.check_call(["curl", "-k", url, "--output", __tempfile],
                               stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print("Can't generate hashes for URL:{}".format(url))
@@ -88,21 +107,20 @@ def get_hashes(args, description, url):
     _lic_hash = ""
     _lic_path = "TODO"
 
-    tar = tarfile.open("/tmp/rubygen.tmp", 'r')
-    os.makedirs("/tmp/rubygen/", exist_ok=True)
-    tar.extract("data.tar.gz", "/tmp/rubygen/")
+    tar = tarfile.open(__tempfile, 'r')
+    tar.extract("data.tar.gz", _tempfolder.name)
 
-    tar = tarfile.open("/tmp/rubygen/data.tar.gz", 'r')
+    tar = tarfile.open(os.path.join(_tempfolder.name, "data.tar.gz"), 'r')
     _lic_path, _lic_hash = get_license_info(tar, [r".*gemspec"])
     if not _lic_hash:
         print("Can't extract license for {}".format(description["name"]))
         _lic_hash = "abcdef"
 
-    os.remove("/tmp/rubygen/data.tar.gz")
+    os.remove(os.path.join(_tempfolder.name, "data.tar.gz"))
     
     hash_md5 = hashlib.md5()
     hash_sha256 = hashlib.sha256()
-    with open("/tmp/rubygen.tmp", "rb") as f:
+    with open(__tempfile, "rb") as f:
         for chunk in iter(lambda: f.read(4096), b""):
             hash_md5.update(chunk)
             hash_sha256.update(chunk)
@@ -147,7 +165,7 @@ def create_tpl(args, pkgname, version):
         return
     _oldrecipes = check_existing(args, pkgname, _bestversion, _naming_pattern)
     if not _oldrecipes:
-        print("Higher version already existing")
+        print("Same or higher version recipe already exists")
         return
     _description = _all_description
     _respath = os.path.join(args.basepath, _naming_pattern.format(sanitize_pkgname(pkgname), _bestversion))
@@ -159,6 +177,8 @@ def create_tpl(args, pkgname, version):
             "__class": ["rubygems", "rubygentest"],
             "__deps": _depends,
             "__rdeps": _rdepends,
+            "__tdeps": " ".join(save_variables("DEPENDS", ["class-target"], _oldrecipes)),
+            "__install_flags": " ".join(save_variables("GEM_INSTALL_FLAGS", None, _oldrecipes)),
             "__cleanname": sanitize_pkgname(pkgname),
             "__version": _bestversion,
             "__license": get_license(_description),
