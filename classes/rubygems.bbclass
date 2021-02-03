@@ -64,7 +64,6 @@ do_unpack_gem() {
     gem unpack -V ${GEM_FILE}
 }
 
-DEPENDS_append_class-native = " ${@d.getVar('RDEPENDS_' + '${PN}', True) or ''}"
 DEPENDS_append_class-target = " ruby-cross-${TARGET_ARCH}"
 
 python () {
