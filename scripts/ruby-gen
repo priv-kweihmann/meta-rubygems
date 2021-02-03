@@ -35,7 +35,7 @@ DESCRIPTION = "{__info}"
 HOMEPAGE = "{homepage_uri}"
 
 LICENSE = "{__license}"
-LIC_FILES_CHKSUM = "file://{__licfile};md5={__lichash}"
+LIC_FILES_CHKSUM = "{__licensefile}"
 
 EXTRA_DEPENDS += "{__xtradep}"
 EXTRA_RDEPENDS += "{__xtrardep}"
@@ -149,9 +149,15 @@ def check_existing(args, pkgname, version, _naming_pattern):
             cversion = int(version.replace(".", ""))
         if mversion >= cversion and not args.force:
             return []
-        if mversion < cversion or args.force:
+        if mversion < cversion or (args.force and str(mversion) != "9.9.9"):
             res.append(m)
     return res
+
+def double_check_license(args, __licfile, __lichash, old_recipes):
+    _saved_items = save_variables("LIC_FILES_CHKSUM", None, old_recipes)
+    if __licfile == "TODO" and _saved_items:
+        return " \\n                    ".join(_saved_items)
+    return "file://{__licfile};md5={__lichash}".format(__licfile=__licfile, __lichash=__lichash)
 
 def create_tpl(args, pkgname, version):
     global __seen_pkgs
@@ -174,6 +180,7 @@ def create_tpl(args, pkgname, version):
         # compute a few things first
         _depends = create_depends(_description, _oldrecipes)
         _rdepends = create_rdepends(_description, _oldrecipes)
+        _installflags = " \\\n                      ".join(save_variables("GEM_INSTALL_FLAGS", None, _oldrecipes))
         __calculated = {
             "__class": ["rubygems", "rubygentest"],
             "__deps": _depends,
@@ -181,20 +188,24 @@ def create_tpl(args, pkgname, version):
             "__xtradep": " ".join(save_variables("EXTRA_RDEPENDS", None, _oldrecipes)),
             "__xtrardep": " ".join(save_variables("EXTRA_DEPENDS", None, _oldrecipes)),
             "__tdeps": " ".join(save_variables("DEPENDS", ["class-target"], _oldrecipes)),
-            "__install_flags": " ".join(save_variables("GEM_INSTALL_FLAGS", None, _oldrecipes)),
+            "__install_flags": _installflags,
             "__cleanname": sanitize_pkgname(pkgname),
             "__version": _bestversion,
             "__license": get_license(_description),
             "__disttarball": _description["gem_uri"],
             "__info": re.sub(r'\n|"', "", _description["info"].split(". ")[0]).strip()
         }
+        __calculated["__class"] = "\n".join(["inherit {}".format(x) for x in __calculated["__class"]])
+        __calculated["__md5sum"], __calculated["__sha256sum"], __calculated["__licfile"], __calculated["__lichash"] = get_hashes(args, _description, __calculated["__disttarball"])
+        
+        __calculated["__licensefile"] = double_check_license(args, __calculated["__licfile"], __calculated["__lichash"], _oldrecipes)
+
         for m in _oldrecipes:
             if not os.path.exists(m):
                 continue
             print("Deleting old version {}".format(os.path.basename(m)))
             os.remove(m)
-        __calculated["__class"] = "\n".join(["inherit {}".format(x) for x in __calculated["__class"]])
-        __calculated["__md5sum"], __calculated["__sha256sum"], __calculated["__licfile"], __calculated["__lichash"] = get_hashes(args, _description, __calculated["__disttarball"])
+
         __tpl = copy.deepcopy(TPL)
         for k, v in _description.items():
             __tpl = __tpl.replace("{{{}}}".format(k), str(v))
