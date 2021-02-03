@@ -6,11 +6,13 @@ HOMEPAGE = "https://nokogiri.org"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE-DEPENDENCIES.md;md5=c644838b6b0e3a103049195adecd1ac6"
 
+EXTRA_DEPENDS += "libxml2 libxslt"
+
 DEPENDS_class-native += "libxml2-native \
                          libxslt-native \
                          rubygems-mini-portile2-native \
                          rubygems-racc-native"
-DEPENDS_class-target += "libxml2 libxslt rubygems-mini-portile2"
+DEPENDS_class-target += "rubygems-mini-portile2"
 RDEPENDS_${PN}_class-target += "rubygems-mini-portile2 \
                                 rubygems-racc"
 
