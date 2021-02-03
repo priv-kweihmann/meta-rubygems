@@ -16,5 +16,6 @@ GEM_NAME = "rspec-core"
 
 inherit rubygems
 inherit rubygentest
+inherit pkgconfig
 
 BBCLASSEXTEND = "native"

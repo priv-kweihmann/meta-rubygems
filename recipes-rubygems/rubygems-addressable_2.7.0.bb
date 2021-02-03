@@ -16,5 +16,6 @@ GEM_NAME = "addressable"
 
 inherit rubygems
 inherit rubygentest
+inherit pkgconfig
 
 BBCLASSEXTEND = "native"

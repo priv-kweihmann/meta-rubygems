@@ -16,5 +16,6 @@ GEM_NAME = "activemodel"
 
 inherit rubygems
 inherit rubygentest
+inherit pkgconfig
 
 BBCLASSEXTEND = "native"

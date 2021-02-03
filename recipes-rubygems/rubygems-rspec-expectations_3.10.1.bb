@@ -7,9 +7,9 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=3d96800bd9b5ffa0ed091438eaea6f01"
 
 DEPENDS_class-native += "rubygems-diff-lcs-native \
-                  rubygems-rspec-support-native"
+                         rubygems-rspec-support-native"
 RDEPENDS_${PN}_class-target += "rubygems-diff-lcs \
-                  rubygems-rspec-support"
+                                rubygems-rspec-support"
 
 SRC_URI[md5sum] = "65cca592c5fd3044456099f45d159b5d"
 SRC_URI[sha256sum] = "27acf5d5df13f8cc8f7158001ebf572513bcec3d45404ba76e0a8998895ce9eb"
@@ -18,5 +18,6 @@ GEM_NAME = "rspec-expectations"
 
 inherit rubygems
 inherit rubygentest
+inherit pkgconfig
 
 BBCLASSEXTEND = "native"

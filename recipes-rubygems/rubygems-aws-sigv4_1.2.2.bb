@@ -4,7 +4,7 @@ DESCRIPTION = "Amazon Web Services Signature Version 4 signing library"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/${LICENSE};md5=89aea4e17d99a7cacdbeed46a0096b10"
+LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10"
 
 DEPENDS_class-native += "rubygems-aws-eventstream-native"
 RDEPENDS_${PN}_class-target += "rubygems-aws-eventstream"
@@ -16,5 +16,6 @@ GEM_NAME = "aws-sigv4"
 
 inherit rubygems
 inherit rubygentest
+inherit pkgconfig
 
 BBCLASSEXTEND = "native"

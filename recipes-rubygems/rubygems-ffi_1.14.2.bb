@@ -16,5 +16,6 @@ GEM_NAME = "ffi"
 
 inherit rubygems
 inherit rubygentest
+inherit pkgconfig
 
 BBCLASSEXTEND = "native"

@@ -16,5 +16,6 @@ GEM_NAME = "mime-types"
 
 inherit rubygems
 inherit rubygentest
+inherit pkgconfig
 
 BBCLASSEXTEND = "native"
