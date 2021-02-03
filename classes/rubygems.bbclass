@@ -34,6 +34,11 @@ GEM_DISABLE_STRICT_VER ?= "1"
 
 GEM_INSTALL_FLAGS ?= ""
 
+# Use the following to define extra depend/rdepends
+# which cannot be seen by the package updater
+EXTRA_RDEPENDS ?= ""
+EXTRA_DEPENDS ?= ""
+
 RUBYLIB_class-target = "${STAGING_LIBDIR}/ruby/${@get_cross_platform_folder(d)}"
 CFLAGS_append = " -DHAVE_GCC_CAS"
 
@@ -65,6 +70,8 @@ do_unpack_gem() {
 }
 
 DEPENDS_append_class-target = " ruby-cross-${TARGET_ARCH}"
+RDEPENDS_${PN}_append_class-target = " ${EXTRA_RDEPENDS}"
+DEPENDS_append = " ${EXTRA_DEPENDS}"
 
 python () {
     # unpack_gem need ruby to be installed in sysroot to succeed
