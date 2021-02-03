@@ -41,4 +41,4 @@ def save_variables(name, modifiers, oldrecipes):
     old_values = set()
     for x in oldrecipes:
         old_values.update(__get_info_from_stash(x, name, modifiers))
-    return old_values
+    return sorted(old_values)
