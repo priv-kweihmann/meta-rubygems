@@ -182,7 +182,7 @@ def create_tpl(args, pkgname, version):
         _rdepends = create_rdepends(_description, _oldrecipes)
         _installflags = " \\\n                      ".join(save_variables("GEM_INSTALL_FLAGS", None, _oldrecipes))
         __calculated = {
-            "__class": ["rubygems", "rubygentest"],
+            "__class": ["rubygems", "rubygentest", "pkgconfig"],
             "__deps": _depends,
             "__rdeps": _rdepends,
             "__xtradep": " ".join(save_variables("EXTRA_RDEPENDS", None, _oldrecipes)),
