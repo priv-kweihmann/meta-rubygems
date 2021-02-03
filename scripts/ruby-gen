@@ -37,6 +37,9 @@ HOMEPAGE = "{homepage_uri}"
 LICENSE = "{__license}"
 LIC_FILES_CHKSUM = "file://{__licfile};md5={__lichash}"
 
+EXTRA_DEPENDS += "{__xtradep}"
+EXTRA_RDEPENDS += "{__xtrardep}"
+
 DEPENDS_class-native += "{__deps}"
 DEPENDS_class-target += "{__tdeps}"
 RDEPENDS_${PN}_class-target += "{__rdeps}"
@@ -79,7 +82,6 @@ def create_depends(desc, old):
         return ""
     _tpl = "rubygems-{}-native"
     res = [sanitize_pkgname(_tpl.format(k["name"])) for k in desc["dependencies"]["runtime"]]
-    res, _ = check_depends(res, [], old)
     return " \\\n                         ".join(sorted(res))
 
 def create_rdepends(desc, old):
@@ -89,7 +91,6 @@ def create_rdepends(desc, old):
         return ""
     _tpl = "rubygems-{}"
     res = [sanitize_pkgname(_tpl.format(k["name"])) for k in desc["dependencies"]["runtime"]]
-    _, res = check_depends([], res, old)
     return " \\\n                                ".join(sorted(res))
 
 def get_best_version(desc, pkgname, version):
@@ -146,9 +147,9 @@ def check_existing(args, pkgname, version, _naming_pattern):
         except ValueError:
             mversion = int(os.path.basename(m).replace(".bb", "").split("_")[1].replace(".", ""))
             cversion = int(version.replace(".", ""))
-        if mversion >= cversion:
-            return False
-        if mversion < cversion:
+        if mversion >= cversion and not args.force:
+            return []
+        if mversion < cversion or args.force:
             res.append(m)
     return res
 
@@ -177,6 +178,8 @@ def create_tpl(args, pkgname, version):
             "__class": ["rubygems", "rubygentest"],
             "__deps": _depends,
             "__rdeps": _rdepends,
+            "__xtradep": " ".join(save_variables("EXTRA_RDEPENDS", None, _oldrecipes)),
+            "__xtrardep": " ".join(save_variables("EXTRA_DEPENDS", None, _oldrecipes)),
             "__tdeps": " ".join(save_variables("DEPENDS", ["class-target"], _oldrecipes)),
             "__install_flags": " ".join(save_variables("GEM_INSTALL_FLAGS", None, _oldrecipes)),
             "__cleanname": sanitize_pkgname(pkgname),
@@ -200,8 +203,11 @@ def create_tpl(args, pkgname, version):
         
         if not os.path.exists(_respath):
             os.makedirs(os.path.dirname(_respath), exist_ok=True)
+            # strip empty assignment lines
+            _lines = __tpl.split("\n")
+            _lines = [x for x in _lines if not re.match(r'.*=\s""$', x)]
             with open(_respath, "w") as o:
-                o.write(__tpl)
+                o.write(re.sub("\n{3,}", "\n\n", "\n".join(_lines)))
         
         __seen_pkgs.append(pkgname)
 
@@ -212,6 +218,7 @@ def create_tpl(args, pkgname, version):
 def create_parser():
     parser = argparse.ArgumentParser(
         description='Ruby recipe generator')
+    parser.add_argument("--force", default=False, action="store_true", help="enforce recipe generation")
     parser.add_argument("basepath", help="base path to the recipes")
     parser.add_argument("gemname", help="name of the gem package")
     parser.add_argument("gemversion", help="version of the gem package")
