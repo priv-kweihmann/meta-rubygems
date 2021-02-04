@@ -26,7 +26,7 @@ GEM_SPEC_CACHE ?= "${T}/.gems"
 GEM_DIR = "${libdir}/ruby/gems/${GEMLIB_VERSION}"
 RUBY_SITEDIR = "${libdir}/ruby/site_ruby/"
 GEM_HOME = "${D}${GEM_DIR}"
-GEM_PATH_class-target = "${RECIPE_SYSROOT}${GEM_DIR}:${RECIPE_SYSROOT_NATIVE}${GEM_DIR}:${GEM_HOME}"
+GEM_PATH_class-target = "${RECIPE_SYSROOT}${GEM_DIR}:${RECIPE_SYSROOT}${GEM_DIR}:${GEM_HOME}"
 GEM_PATH_class-native = "${RECIPE_SYSROOT_NATIVE}${GEM_DIR}:${GEM_HOME}"
 
 # Disable the very strict versioning with ~>
