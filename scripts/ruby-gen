@@ -118,7 +118,7 @@ def get_hashes(args, description, url):
     tar.extract("data.tar.gz", _tempfolder.name)
 
     tar = tarfile.open(os.path.join(_tempfolder.name, "data.tar.gz"), 'r')
-    _lic_path, _lic_hash = get_license_info(tar, [r".*gemspec"])
+    _lic_path, _lic_hash = get_license_info(tar, _tempfolder, [r".*gemspec"])
     if not _lic_hash:
         print("Can't extract license for {}".format(description["name"]))
         _lic_hash = "abcdef"

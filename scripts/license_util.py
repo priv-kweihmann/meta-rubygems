@@ -34,28 +34,30 @@ def __get_from_file(tarball):
     return (os.path.basename(_lic_path), _lic_hash)
 
 
-def __get_from_scancode(tarball, excludes):
+def __get_from_scancode(tarball, temp_folder, excludes):
     _dir = tempfile.mkdtemp()
     _l = tarball.extractall(path=_dir)
 
     try:
         subprocess.check_call(
-            ["scancode", "--license", "--strip-root", "--quiet", "--json", "/tmp/scancode.res.json", "-n", "8", _dir], stderr=subprocess.DEVNULL)
-    except:
-        pass
+            ["scancode", "--license", "--strip-root", "--quiet", "--json", 
+             os.path.join(temp_folder, "scancode.res.json"), "-n", "8", _dir], stderr=subprocess.DEVNULL)
+    except subprocess.CalledProcessError as e:
+        print("scancode run failed: {}".format(e))
 
     res = {}
-    with open("/tmp/scancode.res.json") as i:
-        j = json.load(i)
-        for f in j["files"]:
-            if any([re.match(x, f["path"]) for x in excludes]):
-                continue
-            for l in f["licenses"]:
-                if f["path"] not in res:
-                    res[f["path"]] = {"start": 99999999999, "end": -1}
-                res[f["path"]]["start"] = min(
-                    res[f["path"]]["start"], l["start_line"])
-                res[f["path"]]["end"] = max(res[f["path"]]["end"], l["end_line"])
+    if oe.path.exists(os.path.join(temp_folder, "scancode.res.json"))
+        with open(os.path.join(temp_folder, "scancode.res.json")) as i:
+            j = json.load(i)
+            for f in j["files"]:
+                if any([re.match(x, f["path"]) for x in excludes]):
+                    continue
+                for l in f["licenses"]:
+                    if f["path"] not in res:
+                        res[f["path"]] = {"start": 99999999999, "end": -1}
+                    res[f["path"]]["start"] = min(
+                        res[f["path"]]["start"], l["start_line"])
+                    res[f["path"]]["end"] = max(res[f["path"]]["end"], l["end_line"])
 
     _lic_path = ""
     _lic_hash = ""
@@ -73,11 +75,11 @@ def __get_from_scancode(tarball, excludes):
     return (_lic_path, _lic_hash)
 
 
-def get_license_info(tarball, excludes=[]):
+def get_license_info(tarball, temp_folder, excludes=[]):
     _lic_path, _lic_hash = __get_from_file(tarball)
     if _lic_path:
         return (_lic_path, _lic_hash)
-    _lic_path, _lic_hash = __get_from_scancode(tarball, excludes)
+    _lic_path, _lic_hash = __get_from_scancode(tarball, temp_folder, excludes)
     if _lic_path:
         return (_lic_path, _lic_hash)
     return ("TODO", None)
