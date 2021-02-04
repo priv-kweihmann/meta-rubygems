@@ -129,6 +129,12 @@ rubygems_do_install() {
 
     install -d ${D}${RUBY_SITEDIR}/${GEM_NAME}
     find ${GEM_HOME} -name "*.so" -type f -exec sh -c "cp {} ${D}${RUBY_SITEDIR}/${GEM_NAME}/\$(basename {})" \;
+
+    # remove all object files
+    find ${GEM_HOME} -name "*.o" -type f -exec rm -f {} \;
+
+    # remove everything under ext
+    rm -rf ${GEM_HOME}/gems/*/ext/*
 }
 
 EXPORT_FUNCTIONS do_compile do_install
@@ -136,20 +142,15 @@ EXPORT_FUNCTIONS do_compile do_install
 PACKAGES =+ "${PN}-examples ${PN}-tests"
 
 FILES_${PN}-dbg += "/usr/src/debug/* \
-                    ${libdir}/ruby/*/.debug \
-                    ${libdir}/ruby/*/*/.debug \
-                    ${libdir}/ruby/*/*/*/.debug \
-                    ${libdir}/ruby/*/*/*/*/.debug \
-                    ${libdir}/ruby/*/*/*/*/*/.debug \
-                    ${libdir}/ruby/*/*/*/*/*/*/.debug \
-                    ${libdir}/ruby/*/*/*/*/*/*/*/.debug \
-                    ${libdir}/ruby/*/*/*/*/*/*/*/*/.debug \
+                    ${libdir}/ruby/**/.debug \
 "
-FILES_${PN}-staticdev += "${libdir}/ruby/gems/gems/*/ext/*/*/.libs/*.a"
+FILES_${PN}-staticdev += "${libdir}/ruby/gems/gems/**/.libs/*.a"
 FILES_${PN}-dev += "${GEM_DIR}/gems/*/debian.template \
                     ${GEM_DIR}/cache \
                     ${GEM_DIR}/build_info \
                     ${GEM_DIR}/gems/*/lib/generators \
+                    ${GEM_DIR}/gems/**/*.c \
+                    ${GEM_DIR}/gems/**/*.h \
 "
 FILES_${PN}-tests = "${GEM_DIR}/gems/*/tests \
                      ${GEM_DIR}/gems/*/test \
@@ -169,8 +170,6 @@ RDEPENDS_${PN}_append_class-target = " ruby"
 
 UPSTREAM_CHECK_URI ?= "https://rubygems.org/gems/${GEM_NAME}/versions"
 UPSTREAM_CHECK_REGEX ?= "/gems/${GEM_NAME}/versions/(?P<pver>(\d+\.*)*\d+)$"
-
-BBCLASSEXTEND += "native"
 
 # Skip automatically, as this is an intended side effect
 INSANE_SKIP_${PN} += "dev-so"
