@@ -6,7 +6,6 @@ import json
 import os
 import re
 import subprocess
-import tarfile
 import tempfile
 import shutil
 
@@ -41,13 +40,13 @@ def __get_from_scancode(tarball, temp_folder, excludes):
     try:
         subprocess.check_call(
             ["scancode", "--license", "--strip-root", "--quiet", "--json",
-             os.path.join(temp_folder, "scancode.res.json"), "-n", "8", _dir], stderr=subprocess.DEVNULL)
+             os.path.join(temp_folder.name, "scancode.res.json"), "-n", "8", _dir], stderr=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print("scancode run failed: {}".format(e))
 
     res = {}
-    if oe.path.exists(os.path.join(temp_folder, "scancode.res.json")):
-        with open(os.path.join(temp_folder, "scancode.res.json")) as i:
+    if os.path.exists(os.path.join(temp_folder.name, "scancode.res.json")):
+        with open(os.path.join(temp_folder.name, "scancode.res.json")) as i:
             j = json.load(i)
             for f in j["files"]:
                 if any([re.match(x, f["path"]) for x in excludes]):
@@ -62,7 +61,7 @@ def __get_from_scancode(tarball, temp_folder, excludes):
     _lic_path = ""
     _lic_hash = ""
     if res:
-        for k,v in res.items():
+        for k, v in res.items():
             _lic_path = k
             hash_md5 = hashlib.md5()
             with open(os.path.join(_dir, _lic_path), "r") as f:
