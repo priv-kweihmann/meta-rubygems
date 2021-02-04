@@ -40,13 +40,13 @@ def __get_from_scancode(tarball, temp_folder, excludes):
 
     try:
         subprocess.check_call(
-            ["scancode", "--license", "--strip-root", "--quiet", "--json", 
+            ["scancode", "--license", "--strip-root", "--quiet", "--json",
              os.path.join(temp_folder, "scancode.res.json"), "-n", "8", _dir], stderr=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         print("scancode run failed: {}".format(e))
 
     res = {}
-    if oe.path.exists(os.path.join(temp_folder, "scancode.res.json"))
+    if oe.path.exists(os.path.join(temp_folder, "scancode.res.json")):
         with open(os.path.join(temp_folder, "scancode.res.json")) as i:
             j = json.load(i)
             for f in j["files"]:
