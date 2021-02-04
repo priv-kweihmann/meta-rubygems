@@ -9,3 +9,8 @@
 - CVE_PRODUCT support?
     -> needs CI support
 - layer index submit
+- oelint-adv pipeline
+    - tabs
+    - assignments
+    - new recipe come with a test case
+- exec wrapper test (scan /usr/bin for executables)
