@@ -75,7 +75,7 @@ def get_description(args, pkgname):
 def prettify_list(_in):
     res = " \\\n    ".join(sorted(_in))
     if res:
-        res = "\\\n" + res
+        res = "\\\n    " + res
     return res 
 
 def sanitize_pkgname(raw):
