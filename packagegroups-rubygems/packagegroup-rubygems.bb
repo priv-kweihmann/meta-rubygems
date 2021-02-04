@@ -31,6 +31,8 @@ RDEPENDS_${PN} += "\
                     rubygems-rspec \
                     rubygems-rspec-core \
                     rubygems-rspec-expectations \
+                    rubygems-rspec-its \
+                    rubygems-rspec-junit-formatter \
                     rubygems-rspec-mocks \
                     rubygems-rspec-support \
                     rubygems-ruby2-keywords \
