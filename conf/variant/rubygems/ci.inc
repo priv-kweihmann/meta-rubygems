@@ -1,12 +1,6 @@
 BB_DISKMON_DIRS = ""
 BB_GENERATE_SHALLOW_TARBALLS = "1"
 BB_GIT_SHALLOW = "1"
-EXTRA_IMAGE_FEATURES = "debug-tweaks"
-PACKAGE_CLASSES = "package_rpm"
-PACKAGECONFIG_append_pn-qemu-system-native = " sdl"
-PATCHRESOLVE = "noop"
-SCA_VERBOSE_OUTPUT = "1"
-USER_CLASSES = "image-mklibs image-prelink"
 
 QB_MEM = "-m 1024"
 QEMU_USE_KVM = "1"
@@ -14,5 +8,3 @@ QEMU_USE_SLIRP = "1"
 TEST_SERVER_IP = "192.168.7.1"
 TEST_TARGET_IP = "192.168.7.2"
 TEST_RUNQEMUPARAMS = "nographic"
-
-INHERIT += "rm_work"
