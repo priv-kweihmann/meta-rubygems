@@ -1,5 +1,6 @@
 - CI setup
     - cron+push
+        - check out branch from actions info
     - package update check
 - github
     - SECURITY.md
