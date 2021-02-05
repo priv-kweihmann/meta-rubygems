@@ -2,7 +2,6 @@
     - cron+push
     - package update check
 - github
-    - CONTRIBUTING.md
     - SECURITY.md
 - meta packages
     - see https://stdgems.org / https://stdgems.org/compare/

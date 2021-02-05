@@ -28,4 +28,5 @@ Newly added recipes are exclusively licensed under `MIT`.
 
 ## Add a new gem
 
-Please see [the development README](scripts/README.md) for details
+Please see [the development README](scripts/README.md) for details.
+Also please mind the [contribution guideline](CONTRIBUTING.md)
