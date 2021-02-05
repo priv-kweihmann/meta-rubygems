@@ -23,6 +23,7 @@ DEPENDS += "\
             libffi \
             libyaml \
             libxcrypt \
+            openssl \
             readline \
             ruby-native \
             tcl \

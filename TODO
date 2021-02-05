@@ -11,4 +11,7 @@
     - tabs
     - assignments
     - new recipe come with a test case
-
+- ruby-gen
+    - save functions and exports
+    - save INSANE_SKIPs
+    - extract LICENSE from scancode if still on TODO
