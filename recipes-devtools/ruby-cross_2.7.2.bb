@@ -22,7 +22,7 @@ DEPENDS += "\
             gdbm \
             libffi \
             libyaml \
-            openssl \
+            libxcrypt \
             readline \
             ruby-native \
             tcl \
@@ -61,7 +61,6 @@ inherit autotools cross
 
 EXTRA_OECONF = "\
     --disable-versioned-paths \
-    --disable-rpath \
     --enable-shared \
     --enable-load-relative \
     --host=${TARGET_SYS} \

@@ -16,6 +16,13 @@ RDEPENDS_${PN} += "\
 
 GEM_INSTALL_FLAGS += "\
     --use-system-libraries \
+    --with-exslt-include=${STAGING_INCDIR} \
+    --with-exslt-lib=${STAGING_LIBDIR} \
+    --with-opt-dir=${RECIPE_SYSROOT} \
+    --with-xml2-include=${STAGING_LIBDIR} \
+    --with-xml2-lib=${STAGING_LIBDIR} \
+    --with-xslt-include=${STAGING_INCDIR} \
+    --with-xslt-lib=${STAGING_LIBDIR} \
 "
 
 SRC_URI[md5sum] = "7d93e4cc0c24d1831ddf43ea6988f07f"
