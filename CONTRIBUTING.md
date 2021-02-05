@@ -5,10 +5,10 @@ Here are a few points we'd like you to address
 
 ## How-To contribute
 
-Contributions shall be made via pull-requests.
+Contributions are made via pull requests.
 These pull requests shall do the following
 
-- target branch shall always be `master`
+- target branch is `master`
 - if commits refer to an issue please add `Closes #<issue>` or `Relates to #<issue>` into the commit message
   e.g.
 
@@ -26,7 +26,7 @@ If the contribution was for all release branches, the layer maintainer will cher
 
 ## Licensing
 
-New contributions are licensed under either `MIT`.
+New contributions are licensed under `MIT`.
 There is no need to sign a CLA, your full copyright will be left unchanged.
 
 ## Styleguide for recipes
