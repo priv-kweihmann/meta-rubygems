@@ -151,7 +151,7 @@ rubygems_do_install() {
     find ${GEM_HOME} -name "*.o" -type f -exec rm -f {} \;
 
     # remove everything under ext
-    ##rm -rf ${GEM_HOME}/gems/*/ext/*
+    rm -rf ${GEM_HOME}/gems/*/ext/*
 }
 
 EXPORT_FUNCTIONS do_compile do_install
