@@ -155,9 +155,13 @@ def check_existing(args, pkgname, version, _naming_pattern):
             cversion = int(version.replace(".", ""))
         if mversion >= cversion and not args.force:
             return []
-        if mversion < cversion or (args.force and str(mversion) != "9.9.9"):
+        if mversion < cversion:
             res.append(m)
     return res
+
+def check_for_stdgems(args, pkgname, _naming_pattern):
+    return any(glob.glob(os.path.join(args.basepath, "..", 
+        "recipes-stdgems", _naming_pattern.format(sanitize_pkgname(pkgname), "*"))))
 
 def double_check_license(args, __licfile, __lichash, old_recipes):
     _saved_items = save_variables("LIC_FILES_CHKSUM", None, old_recipes)
@@ -175,6 +179,9 @@ def create_tpl(args, pkgname, version):
         _bestversion = get_best_version(_all_description, pkgname, version)
     except ValueError:
         print("Can't get useful version for {} with '{}'".format(pkgname, version))
+        return
+    if check_for_stdgems(args, pkgname, _naming_pattern):
+        print("Provided as stdgem by ruby")
         return
     _oldrecipes = check_existing(args, pkgname, _bestversion, _naming_pattern)
     if not _oldrecipes:
