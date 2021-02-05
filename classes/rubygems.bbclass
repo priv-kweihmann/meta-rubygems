@@ -119,8 +119,20 @@ rubygems_do_compile() {
 }
 
 rubygems_do_install_prepend_class-target() {
+    # point to cross compiler for target build
+    export AR="${TARGET_SYS}-ar"
+    export AS="${TARGET_SYS}-as"
     export CC="${TARGET_SYS}-gcc --sysroot=${STAGING_DIR_TARGET} ${TARGET_CC_ARCH}"
+    export CFLAG="${TARGET_CFLAGS}"
+    export CPP="${TARGET_SYS}-gcc -E --sysroot=${STAGING_DIR_TARGET} ${TARGET_CC_ARCH}"
+    export CPPFLAGS="${TARGET_CPPFLAGS}"
     export CXX="${TARGET_SYS}-g++ --sysroot=${STAGING_DIR_TARGET} ${TARGET_CC_ARCH}"
+    export CXXFLAGS="${TARGET_CXXFLAGS}"
+    export LDFLAGS="${TARGET_LDFLAGS} --sysroot=${STAGING_DIR_TARGET}"
+    export NM="${TARGET_SYS}-nm"
+    export OBJDUMP="${TARGET_SYS}-objdump"
+    export RANLIB="${TARGET_SYS}-ranlib"
+    export STRIP="${TARGET_SYS}-strip"
 }
 
 rubygems_do_install() {
@@ -139,7 +151,7 @@ rubygems_do_install() {
     find ${GEM_HOME} -name "*.o" -type f -exec rm -f {} \;
 
     # remove everything under ext
-    rm -rf ${GEM_HOME}/gems/*/ext/*
+    ##rm -rf ${GEM_HOME}/gems/*/ext/*
 }
 
 EXPORT_FUNCTIONS do_compile do_install
