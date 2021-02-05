@@ -44,6 +44,12 @@ jobs:
           repo: https://github.com/priv-kweihmann/meta-rubygems.git
           branch: init
           add-layer: "0"
+      - name: checkout (meta-openembedded)
+        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
+        with:
+          repo: git://git.openembedded.org/meta-openembedded
+          branch: ${{ env.SCM_BRANCH }}
+          add-layer: "0"
       - if: env.BUILD_GLIBC == '1'
         name: build (glibc)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
