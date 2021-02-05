@@ -1,8 +1,8 @@
 MACHINE = "qemux86-64"
 
-include conf/variant/common/common.inc
-include conf/variant/common/ci.inc
-include conf/variant/common/glibc.inc
+include rubygems/variant/common/common.inc
+include rubygems/variant/common/ci.inc
+include rubygems/variant/common/glibc.inc
 
 CONF_VERSION = "1"
 
