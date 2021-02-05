@@ -22,7 +22,6 @@ DEPENDS += "\
             gdbm \
             libffi \
             libyaml \
-            libxcrypt \
             openssl \
             readline \
             ruby-native \
