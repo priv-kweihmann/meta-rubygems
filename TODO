@@ -3,8 +3,6 @@
     - package update check
 - github
     - SECURITY.md
-- meta packages
-    - see https://stdgems.org / https://stdgems.org/compare/
 - CVE_PRODUCT support?
     -> needs CI support
 - layer index submit
