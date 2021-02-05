@@ -118,6 +118,11 @@ rubygems_do_compile() {
     gem build -V ${GEM_SPEC_FILE} -o ${GEM_BUILT_FILE} || gem build -V ${GEM_SPEC_FILE}
 }
 
+rubygems_do_install_prepend_class-target() {
+    export CC="${TARGET_SYS}-gcc --sysroot=${STAGING_DIR_TARGET} ${TARGET_CC_ARCH}"
+    export CXX="${TARGET_SYS}-g++ --sysroot=${STAGING_DIR_TARGET} ${TARGET_CC_ARCH}"
+}
+
 rubygems_do_install() {
     export GEM_PATH=${GEM_PATH}
     export GEM_SPEC=${GEM_SPEC_CACHE}
