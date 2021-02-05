@@ -2,6 +2,9 @@ from rubygems_utils import RubyGemsTestUtils
 
 class RubyGemsTestrubygems_thor(RubyGemsTestUtils):
 
+    def test_exec_thor(self):
+        self.gem_exec_wrapper("thor")
+
     def test_gem_list_rubygems_thor(self):
         self.gem_is_installed("thor")
 
