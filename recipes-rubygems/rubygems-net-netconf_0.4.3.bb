@@ -4,7 +4,7 @@ DESCRIPTION = "Updated and maintained fork of the Juniper Ruby NetConf client"
 HOMEPAGE = "https://github.com/kkirsche/net-netconf"
 
 LICENSE = "BSD 2"
-LIC_FILES_CHKSUM = "file://TODO;md5=abcdef"
+LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/BSD-2-Clause;md5=cb641bc04cda31daea161b1bc15da69f"
 
 DEPENDS_class-native += "\
     rubygems-net-scp-native \

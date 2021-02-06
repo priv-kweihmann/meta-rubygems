@@ -28,4 +28,9 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
+do_generate_spec_append() {
+    # lift version restriction on net-telnet
+    sed -i 's#= 0.1.1#>= 0.1.1#g' ${GEM_SPEC_FILE}
+}
+
 BBCLASSEXTEND = "native"
