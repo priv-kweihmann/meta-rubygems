@@ -5,7 +5,9 @@ import sys
 class RubyGemsTestUtils(OERuntimeTestCase):
 
     EXEC_EXCEPTIONS = {
-        "htmldiff": 127
+        "htmldiff": 127,
+        "rwinrm": 1,
+        "rwinrmcp": 1
     }
 
     def gem_is_installed(self, gemname):

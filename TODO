@@ -16,3 +16,4 @@
     - save INSANE_SKIPs
     - extract LICENSE from scancode if still on TODO
 - move spec folder to dev or delete?
+- fixes from failing tests

@@ -10,6 +10,8 @@ export USE_SYSTEM_LIBYAJL2="1"
 export FORCE_FFI_YAJL="ffi"
 
 EXTRA_DEPENDS += "yajl rubygems-libyajl2"
+EXTRA_RDEPENDS += "yajl"
+
 GEM_INSTALL_FLAGS += "\
                       --with-opt=${RECIPE_SYSROOT} \
                       " 

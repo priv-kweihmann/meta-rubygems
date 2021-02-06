@@ -94,6 +94,11 @@ do_install_append() {
     rm -f ${GEM_HOME}/gems/chef-${PV}/spec/functional/assets/chefinittest
 }
 
+do_generate_spec_append() {
+    # remove the rc2 suffix
+    sed -i 's#1.1.0.rc2#1.1.0#g' ${GEM_SPEC_FILE}
+}
+
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
