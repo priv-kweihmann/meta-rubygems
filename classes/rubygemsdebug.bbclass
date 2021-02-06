@@ -2,7 +2,7 @@
 # Copyright (c) 2021, Konrad Weihmann
 
 python rubygems_debug_handler() {
-    # print out mkmf.log from failed
+    # print out mkmf.log and gem_make.out from failed
     # native compilation, this file is otherwise
     # deeply hidden but essential for debugging
     # failed tasks
@@ -11,12 +11,13 @@ python rubygems_debug_handler() {
     if not bb.data.inherits_class('rubygems', d):
         return
 
+    bb.warn("rubygems extension debug info:")
+
     for root, dirs, files in os.walk(d.expand("${GEM_HOME}")):
         for _file in files:
-            if os.path.basename(_file) == "mkmf.log":
+            if os.path.basename(_file) in ["mkmf.log", "gem_make.out"]:
                 with open(os.path.join(root, _file)) as i:
                     bb.warn(i.read())
-                break
 }
 
 addhandler rubygems_debug_handler
