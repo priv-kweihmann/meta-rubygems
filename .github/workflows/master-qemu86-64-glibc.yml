@@ -70,7 +70,7 @@ jobs:
         with:
           variable: INHERIT
           operation: " += "
-          value: rm_work_and_downloads
+          value: "rm_work_and_downloads rubygemsdebug"
       - name: build (core-image-minimal-rubygems)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
