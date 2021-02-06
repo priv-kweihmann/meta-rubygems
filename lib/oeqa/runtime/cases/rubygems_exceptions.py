@@ -11,7 +11,7 @@ class RubyGemsTestExceptions():
     }
 
     loadable_skips = {
-
+        "syslog-formatter": "module needs upfront configuration of a logging provider"
     }
 
     gem_list_skips = {
