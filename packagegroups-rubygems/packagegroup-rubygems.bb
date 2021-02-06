@@ -59,6 +59,7 @@ RDEPENDS_${PN} += "\
     rubygems-mixlib-shellout \
     rubygems-multi-json \
     rubygems-multipart-post \
+    rubygems-net-netconf \
     rubygems-net-scp \
     rubygems-net-sftp \
     rubygems-net-ssh \
@@ -74,6 +75,8 @@ RDEPENDS_${PN} += "\
     rubygems-proxifier \
     rubygems-pry \
     rubygems-public-suffix \
+    rubygems-puppet \
+    rubygems-puppetmodule-netdev-stdlib \
     rubygems-rack \
     rubygems-rspec \
     rubygems-rspec-core \
@@ -86,10 +89,15 @@ RDEPENDS_${PN} += "\
     rubygems-rubyntlm \
     rubygems-rubyzip \
     rubygems-semverse \
+    rubygems-serverspec \
+    rubygems-sfl \
+    rubygems-slop \
+    rubygems-specinfra \
     rubygems-sslshake \
     rubygems-strings \
     rubygems-strings-ansi \
     rubygems-syslog-logger \
+    rubygems-systemu \
     rubygems-thor \
     rubygems-thread-safe \
     rubygems-tilt \
@@ -113,5 +121,6 @@ RDEPENDS_${PN} += "\
     rubygems-wisper \
     rubygems-wmi-lite \
     rubygems-yajl-ruby \
+    rubygems-yard \
     rubygems-zeitwerk \
 "
