@@ -3,7 +3,7 @@ SUMMARY = "RubyGem: net-netconf"
 DESCRIPTION = "Updated and maintained fork of the Juniper Ruby NetConf client"
 HOMEPAGE = "https://github.com/kkirsche/net-netconf"
 
-LICENSE = "BSD 2"
+LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/BSD-2-Clause;md5=cb641bc04cda31daea161b1bc15da69f"
 
 DEPENDS_class-native += "\
