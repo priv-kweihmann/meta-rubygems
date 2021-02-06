@@ -21,6 +21,7 @@ LIC_FILES_CHKSUM = "\
 DEPENDS += "\
             gdbm \
             libffi \
+            libxcrypt-compat \
             libyaml \
             openssl \
             readline \
