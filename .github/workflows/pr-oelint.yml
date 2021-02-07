@@ -10,9 +10,7 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: setup (container)
-        uses: priv-kweihmann/meta-sca-ci-utils/preparecontainer@latest
-      - name: check (poky)
+      - name: checkout (pr code)
         uses: priv-kweihmann/meta-sca-ci-utils/oelint@latest
         with:
           sources: ${{ github.workspace }}
