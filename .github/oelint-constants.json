@@ -17,6 +17,6 @@
         "GEM_SPEC_FILENAME",
         "GEM_SRC",
         "GEM_VERSION",
-        "RUBY_SITEDIR",
+        "RUBY_SITEDIR"
     ]
 }
