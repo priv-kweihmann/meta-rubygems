@@ -28,9 +28,9 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/oelint@latest
         with:
           sources: ${{ github.workspace }}
-          custom-rule-dir: ${{ github.workspace }}/.github/oelint-custom
-          config-file: ${{ github.workspace }}/.github/oelint-rulefile.json
-          constant-file: ${{ github.workspace }}/.github/oelint-constants.json
+          custom-rule-dir: ${{ github.workspace }}/files/lint/oelint-custom
+          config-file: ${{ github.workspace }}/files/lint/oelint-rulefile.json
+          constant-file: ${{ github.workspace }}/files/lint/oelint-constants.json
           username: priv-kweihmann
           token: ${{ secrets.BOTTOKEN }}
           pull-request-repo-user: priv-kweihmann
