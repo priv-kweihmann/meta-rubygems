@@ -18,4 +18,6 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
+GEM_INSTALL_FLAGS += "--enable-system-libffi"
+
 BBCLASSEXTEND = "native"
