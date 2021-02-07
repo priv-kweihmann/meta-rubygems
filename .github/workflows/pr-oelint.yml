@@ -1,0 +1,24 @@
+name: "[pull-request-bot]"
+
+on: pull_request
+
+jobs:
+  check:
+    name: "build"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: check (poky)
+        uses: priv-kweihmann/meta-sca-ci-utils/oelint@latest
+        with:
+          sources: ${{ github.workspace }}
+          custom-rule-dir: ${{ github.workspace }}/.github/oelint-custom
+          config-file: ${{ github.workspace }}/.github/oelint-rulefile.json
+          constant-file: ${{ github.workspace }}/.github/oelint-constants.json
+          username: priv-kweihmann
+          token: ${{ secrets.BOTTOKEN }}
+          pull-request-repo-user: priv-kweihmann
+          pull-request-repo: meta-rubygems
+      
