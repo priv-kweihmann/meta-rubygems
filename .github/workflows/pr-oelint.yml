@@ -9,11 +9,17 @@ jobs:
 
     container:
       image: privkweihmann/yocto-sca-minimal:latest
+      volumes:
+        - ${{ github.workspace }}:/opt/build
       options: --privileged
 
     steps:
       - name: setup (container)
         uses: priv-kweihmann/meta-sca-ci-utils/preparecontainer@latest
+      - name: setup (workspace)
+        run: |
+          sudo chown "/__w/"
+        shell: bash
       - name: checkout
         uses: actions/checkout@v2
       - name: check (oelint)
