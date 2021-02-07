@@ -28,10 +28,10 @@ jobs:
       - name: check (oelint)
         uses: priv-kweihmann/meta-sca-ci-utils/oelint@latest
         with:
-          sources: ${{ github.workspace }}
-          custom-rule-dir: ${{ github.workspace }}/files/lint/oelint-custom
-          config-file: ${{ github.workspace }}/files/lint/oelint-rulefile.json
-          constant-file: ${{ github.workspace }}/files/lint/oelint-constants.json
+          sources: /__w/meta-rubygems/meta-rubygems/prcode
+          custom-rule-dir: /__w/meta-rubygems/meta-rubygems/prcode/files/lint/oelint-custom
+          config-file: /__w/meta-rubygems/meta-rubygems/prcode/files/lint/oelint-rulefile.json
+          constant-file: /__w/meta-rubygems/meta-rubygems/prcode/files/lint/oelint-constants.json
           username: priv-kweihmann
           token: ${{ secrets.BOTTOKEN }}
           pull-request-repo-user: priv-kweihmann
