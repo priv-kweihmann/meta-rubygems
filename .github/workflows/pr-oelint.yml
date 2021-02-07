@@ -24,6 +24,10 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
+      - name: wtf
+        run: |
+          find ${{ github.workspace }} -type d 
+        shell: bash
       - name: check (oelint)
         uses: priv-kweihmann/meta-sca-ci-utils/oelint@latest
         with:
