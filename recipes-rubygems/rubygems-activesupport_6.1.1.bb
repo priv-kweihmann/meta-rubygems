@@ -14,6 +14,8 @@ DEPENDS_class-native += "\
     rubygems-zeitwerk-native \
 "
 
+# an unrelated test change
+
 RDEPENDS_${PN}_class-target += "\
     rubygems-concurrent-ruby \
     rubygems-i18n \
