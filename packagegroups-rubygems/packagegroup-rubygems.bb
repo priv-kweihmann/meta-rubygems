@@ -130,4 +130,5 @@ RDEPENDS_${PN} += "\
     rubygems-wisper \
     rubygems-wmi-lite \
     rubygems-yajl-ruby \
+    rubygems-yard \
 "
