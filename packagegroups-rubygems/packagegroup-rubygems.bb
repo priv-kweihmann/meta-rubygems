@@ -85,4 +85,5 @@ RDEPENDS_${PN} += "\
     rubygems-puppet-resource-api \
     rubygems-puppetmodule-netdev-stdlib \
     rubygems-rack \
+    rubygems-rspec \
 "
