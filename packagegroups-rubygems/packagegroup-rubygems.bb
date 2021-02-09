@@ -126,4 +126,5 @@ RDEPENDS_${PN} += "\
     rubygems-uuidtools \
     rubygems-winrm \
     rubygems-winrm-elevated \
+    rubygems-winrm-fs \
 "
