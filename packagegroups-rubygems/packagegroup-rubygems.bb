@@ -87,4 +87,5 @@ RDEPENDS_${PN} += "\
     rubygems-rack \
     rubygems-rspec \
     rubygems-rspec-core \
+    rubygems-rspec-expectations \
 "
