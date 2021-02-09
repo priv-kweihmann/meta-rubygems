@@ -48,4 +48,5 @@ RDEPENDS_${PN} += "\
     rubygems-jmespath \
     rubygems-json \
     rubygems-libyajl2 \
+    rubygems-license-acceptance \
 "
