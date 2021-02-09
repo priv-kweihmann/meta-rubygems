@@ -3,6 +3,7 @@ openbsd builds, simply remove it.
 
 Upstream-Status: Pending
 RP - 2021/1/28
+Signed-off-by: Konrad Weihmann <kweihmann@outlook.com>
 
 Index: ruby-2.7.2/configure.ac
 ===================================================================
