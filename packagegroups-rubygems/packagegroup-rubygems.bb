@@ -9,4 +9,5 @@ RDEPENDS_${PN} += "\
     rubygems-aws-eventstream \
     rubygems-aws-partitions \
     rubygems-aws-sdk-core \
+    rubygems-aws-sigv4 \
 "
