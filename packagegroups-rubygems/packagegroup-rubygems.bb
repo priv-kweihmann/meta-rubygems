@@ -60,4 +60,5 @@ RDEPENDS_${PN} += "\
     rubygems-mixlib-archive \
     rubygems-mixlib-authentication \
     rubygems-mixlib-cli \
+    rubygems-mixlib-config \
 "
