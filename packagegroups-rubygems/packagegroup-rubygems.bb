@@ -98,4 +98,5 @@ RDEPENDS_${PN} += "\
     rubygems-scanf \
     rubygems-semantic-puppet \
     rubygems-semverse \
+    rubygems-serverspec \
 "
