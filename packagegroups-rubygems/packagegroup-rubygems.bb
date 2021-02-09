@@ -127,4 +127,5 @@ RDEPENDS_${PN} += "\
     rubygems-winrm \
     rubygems-winrm-elevated \
     rubygems-winrm-fs \
+    rubygems-wisper \
 "
