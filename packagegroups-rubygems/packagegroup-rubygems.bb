@@ -125,4 +125,5 @@ RDEPENDS_${PN} += "\
     rubygems-unicode-utils \
     rubygems-uuidtools \
     rubygems-winrm \
+    rubygems-winrm-elevated \
 "
