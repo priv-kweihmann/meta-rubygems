@@ -75,4 +75,5 @@ RDEPENDS_${PN} += "\
     rubygems-nori \
     rubygems-ohai \
     rubygems-parallel \
+    rubygems-parslet \
 "
