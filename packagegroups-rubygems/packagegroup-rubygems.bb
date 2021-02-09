@@ -66,4 +66,5 @@ RDEPENDS_${PN} += "\
     rubygems-multi-json \
     rubygems-multipart-post \
     rubygems-net-netconf \
+    rubygems-net-scp \
 "
