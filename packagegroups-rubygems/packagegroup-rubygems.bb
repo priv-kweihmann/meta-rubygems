@@ -131,4 +131,5 @@ RDEPENDS_${PN} += "\
     rubygems-wmi-lite \
     rubygems-yajl-ruby \
     rubygems-yard \
+    rubygems-zeitwerk \
 "
