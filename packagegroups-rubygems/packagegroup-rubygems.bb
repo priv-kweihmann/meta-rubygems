@@ -50,4 +50,5 @@ RDEPENDS_${PN} += "\
     rubygems-libyajl2 \
     rubygems-license-acceptance \
     rubygems-little-plugger \
+    rubygems-locale \
 "
