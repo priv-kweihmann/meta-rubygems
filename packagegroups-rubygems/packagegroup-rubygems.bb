@@ -111,4 +111,5 @@ RDEPENDS_${PN} += "\
     rubygems-thread-safe \
     rubygems-tilt \
     rubygems-tomlrb \
+    rubygems-train-core \
 "
