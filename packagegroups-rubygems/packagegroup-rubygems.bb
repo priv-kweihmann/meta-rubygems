@@ -109,4 +109,5 @@ RDEPENDS_${PN} += "\
     rubygems-systemu \
     rubygems-thor \
     rubygems-thread-safe \
+    rubygems-tilt \
 "
