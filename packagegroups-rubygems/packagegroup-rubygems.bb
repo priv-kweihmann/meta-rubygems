@@ -55,4 +55,5 @@ RDEPENDS_${PN} += "\
     rubygems-method-source \
     rubygems-mime-types \
     rubygems-mime-types-data \
+    rubygems-mini-portile2 \
 "
