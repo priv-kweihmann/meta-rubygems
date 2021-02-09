@@ -31,4 +31,5 @@ RDEPENDS_${PN} += "\
     rubygems-faraday-net-http \
     rubygems-fast-gettext \
     rubygems-ffi \
+    rubygems-ffi-libarchive \
 "
