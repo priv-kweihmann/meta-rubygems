@@ -115,4 +115,5 @@ RDEPENDS_${PN} += "\
     rubygems-train-winrm \
     rubygems-tty-box \
     rubygems-tty-color \
+    rubygems-tty-cursor \
 "
