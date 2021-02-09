@@ -119,4 +119,5 @@ RDEPENDS_${PN} += "\
     rubygems-tty-prompt \
     rubygems-tty-reader \
     rubygems-tty-screen \
+    rubygems-tty-table \
 "
