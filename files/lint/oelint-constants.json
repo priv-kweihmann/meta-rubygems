@@ -1,4 +1,7 @@
 {
+    "known_machines": [
+        "libcrypto"
+    ],
     "known_vars": [
         "EXTRA_DEPENDS",
         "EXTRA_RDEPENDS",
