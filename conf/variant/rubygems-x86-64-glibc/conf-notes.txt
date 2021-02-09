@@ -1,0 +1,3 @@
+### rubygems-Distro environment is setup. ###
+
+You can now run 'bitbake core-image-minimal-rubygems'
