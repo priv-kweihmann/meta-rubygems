@@ -58,4 +58,5 @@ RDEPENDS_${PN} += "\
     rubygems-mini-portile2 \
     rubygems-minitest \
     rubygems-mixlib-archive \
+    rubygems-mixlib-authentication \
 "
