@@ -107,4 +107,5 @@ RDEPENDS_${PN} += "\
     rubygems-strings-ansi \
     rubygems-syslog-logger \
     rubygems-systemu \
+    rubygems-thor \
 "
