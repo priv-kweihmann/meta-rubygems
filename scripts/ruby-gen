@@ -1,0 +1,300 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: BSD-2-Clause
+# Copyright (c) 2020, Konrad Weihmann
+import argparse
+import atexit
+import copy
+import glob
+import hashlib
+import json
+import os
+import re
+import subprocess
+import tarfile
+import tempfile
+
+from semantic_version import Version
+
+from license_util import get_license_info
+from recipe_util import check_depends
+from recipe_util import save_export
+from recipe_util import save_functions
+from recipe_util import save_variables
+
+_tempfolder = tempfile.TemporaryDirectory(prefix="rubygen_")
+
+
+def remove_tempfolder():
+    import shutil
+    try:
+        shutil.rmtree(_tempfolder)
+    except:
+        pass
+
+
+atexit.register(remove_tempfolder)
+
+TPL = """# SPDX-License-Identifier: MIT
+SUMMARY = "RubyGem: {name}"
+DESCRIPTION = "{__info}"
+HOMEPAGE = "{homepage_uri}"
+
+LICENSE = "{__license}"
+LIC_FILES_CHKSUM = "{__licensefile}"
+
+EXTRA_DEPENDS += "{__xtradep}"
+EXTRA_RDEPENDS += "{__xtrardep}"
+
+DEPENDS_class-native += "{__deps}"
+DEPENDS_class-target += "{__tdeps}"
+
+GEM_INSTALL_FLAGS += "{__install_flags}"
+
+SRC_URI[md5sum] = "{__md5sum}"
+SRC_URI[sha256sum] = "{__sha256sum}"
+
+GEM_NAME = "{name}"
+
+{__exports}
+
+{__class}
+
+{__functions}
+
+RDEPENDS_${PN}_class-target += "{__rdeps}"
+
+INSANE_SKIP_${PN} += "{__insaneskip}"
+BBCLASSEXTEND = "native"
+"""
+
+__seen_pkgs = []
+
+
+def get_description(args, pkgname):
+    try:
+        _output = subprocess.check_output(
+            ["curl", "-k",
+                "https://rubygems.org/api/v1/gems/{}.json".format(pkgname)],
+            universal_newlines=True, stderr=subprocess.DEVNULL)
+    except subprocess.CalledProcessError as e:
+        _output = "{}"
+    try:
+        res = json.loads(_output)
+    except json.JSONDecodeError as e:
+        print("Can't decode json -> {}".format(str(_output)))
+        res = {}
+    return res
+
+
+def prettify_list(_in):
+    res = " \\\n    ".join(sorted(_in))
+    if res:
+        res = "\\\n    " + res + " \\\n"
+    return res
+
+
+def sanitize_pkgname(raw):
+    return raw.replace("@", "").replace("/", "-").replace("_", "-")
+
+
+def create_depends(desc, old):
+    if not "dependencies" in desc:
+        return ""
+    if not "runtime" in desc["dependencies"]:
+        return ""
+    _tpl = "rubygems-{}-native"
+    res = [sanitize_pkgname(_tpl.format(k["name"]))
+           for k in desc["dependencies"]["runtime"]]
+    return prettify_list(res)
+
+
+def create_rdepends(desc, old):
+    if not "dependencies" in desc:
+        return ""
+    if not "runtime" in desc["dependencies"]:
+        return ""
+    _tpl = "rubygems-{}"
+    res = [sanitize_pkgname(_tpl.format(k["name"]))
+           for k in desc["dependencies"]["runtime"]]
+    return prettify_list(res)
+
+
+def get_best_version(desc, pkgname, version):
+    return desc["version"]
+
+
+def get_hashes(args, description, url):
+    __tempfile = os.path.join(_tempfolder.name, "rubygen.tmp")
+    try:
+        subprocess.check_call(["curl", "-k", url, "--output", __tempfile],
+                              stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
+    except subprocess.CalledProcessError as e:
+        print("Can't generate hashes for URL:{}".format(url))
+        return ("", "", "TODO", "abcdef")
+
+    _lic_hash = ""
+    _lic_path = "TODO"
+
+    tar = tarfile.open(__tempfile, 'r')
+    tar.extract("data.tar.gz", _tempfolder.name)
+
+    tar = tarfile.open(os.path.join(_tempfolder.name, "data.tar.gz"), 'r')
+    _lic_path, _lic_hash = get_license_info(tar, _tempfolder, [r".*gemspec"])
+    if not _lic_hash:
+        print("Can't extract license for {}".format(description["name"]))
+        _lic_hash = "abcdef"
+
+    os.remove(os.path.join(_tempfolder.name, "data.tar.gz"))
+
+    hash_md5 = hashlib.md5()
+    hash_sha256 = hashlib.sha256()
+    with open(__tempfile, "rb") as f:
+        for chunk in iter(lambda: f.read(4096), b""):
+            hash_md5.update(chunk)
+            hash_sha256.update(chunk)
+
+    return (hash_md5.hexdigest(), hash_sha256.hexdigest(), _lic_path, _lic_hash)
+
+
+def get_license(desc, old_recipes):
+    if "licenses" not in desc:
+        return "Unlicense"
+    if not desc["licenses"]:
+        _old = save_variables("LICENSE", None, old_recipes)
+        if _old:
+            return _old[0]
+        return "TODO"
+    return " & ".join(desc["licenses"])
+
+
+def check_existing(args, pkgname, version, _naming_pattern):
+    _matches = glob.glob(os.path.join(
+        args.basepath, _naming_pattern.format(sanitize_pkgname(pkgname), "*")))
+    if not _matches:
+        return ["/tmp/does/not/exists"]
+    res = []
+    for m in _matches:
+        try:
+            mversion = Version(os.path.basename(
+                m).replace(".bb", "").split("_")[1])
+            cversion = Version(version)
+        except ValueError:
+            mversion = int(os.path.basename(m).replace(
+                ".bb", "").split("_")[1].replace(".", ""))
+            cversion = int(version.replace(".", ""))
+        if mversion >= cversion and not args.force:
+            return []
+        if mversion < cversion:
+            res.append(m)
+    return res
+
+
+def check_for_stdgems(args, pkgname, _naming_pattern):
+    return any(glob.glob(os.path.join(args.basepath, "..",
+                                      "recipes-stdgems", _naming_pattern.format(sanitize_pkgname(pkgname), "*"))))
+
+
+def double_check_license(args, __licfile, __lichash, old_recipes):
+    _saved_items = save_variables("LIC_FILES_CHKSUM", None, old_recipes)
+    if __licfile == "TODO" and _saved_items:
+        return prettify_list(_saved_items)
+    return "file://{__licfile};md5={__lichash}".format(__licfile=__licfile, __lichash=__lichash)
+
+
+def create_tpl(args, pkgname, version):
+    global __seen_pkgs
+    _naming_pattern = "rubygems-{}_{}.bb"
+    if pkgname in __seen_pkgs:
+        return
+    _all_description = get_description(args, pkgname)
+    try:
+        _bestversion = get_best_version(_all_description, pkgname, version)
+    except ValueError:
+        print("Can't get useful version for {} with '{}'".format(pkgname, version))
+        return
+    if check_for_stdgems(args, pkgname, _naming_pattern):
+        print("Provided as stdgem by ruby")
+        return
+    _oldrecipes = check_existing(args, pkgname, _bestversion, _naming_pattern)
+    if not _oldrecipes:
+        print("Same or higher version recipe already exists")
+        return
+    _description = _all_description
+    _respath = os.path.join(args.basepath, _naming_pattern.format(
+        sanitize_pkgname(pkgname), _bestversion))
+    if _description:
+        # compute a few things first
+        _depends = create_depends(_description, _oldrecipes)
+        _rdepends = create_rdepends(_description, _oldrecipes)
+        _installflags = prettify_list(save_variables(
+            "GEM_INSTALL_FLAGS", None, _oldrecipes))
+        __calculated = {
+            "__class": ["rubygems", "rubygentest", "pkgconfig"],
+            "__cleanname": sanitize_pkgname(pkgname),
+            "__deps": _depends,
+            "__disttarball": _description["gem_uri"],
+            "__exports": "\n".join(save_export(_oldrecipes)),
+            "__functions": "\n".join(save_functions(_oldrecipes)),
+            "__info": re.sub(r'\n|"', "", _description["info"].split(". ")[0]).strip(),
+            "__insaneskip": prettify_list(save_variables("INSANE_SKIP_${PN}", None, _oldrecipes)),
+            "__install_flags": _installflags,
+            "__license": get_license(_description, _oldrecipes),
+            "__rdeps": _rdepends,
+            "__tdeps": prettify_list(save_variables("DEPENDS", ["class-target"], _oldrecipes)),
+            "__version": _bestversion,
+            "__xtradep": prettify_list(save_variables("EXTRA_RDEPENDS", None, _oldrecipes)),
+            "__xtrardep": prettify_list(save_variables("EXTRA_DEPENDS", None, _oldrecipes)),
+        }
+        __calculated["__class"] = "\n".join(
+            ["inherit {}".format(x) for x in __calculated["__class"]])
+        __calculated["__md5sum"], __calculated["__sha256sum"], __calculated["__licfile"], __calculated["__lichash"] = get_hashes(
+            args, _description, __calculated["__disttarball"])
+
+        __calculated["__licensefile"] = double_check_license(
+            args, __calculated["__licfile"], __calculated["__lichash"], _oldrecipes)
+
+        for m in _oldrecipes:
+            if not os.path.exists(m):
+                continue
+            print("Deleting old version {}".format(os.path.basename(m)))
+            os.remove(m)
+
+        __tpl = copy.deepcopy(TPL)
+        for k, v in _description.items():
+            __tpl = __tpl.replace("{{{}}}".format(k), str(v))
+        for k, v in __calculated.items():
+            __tpl = __tpl.replace("{{{}}}".format(k), str(v))
+
+        if not os.path.exists(_respath):
+            os.makedirs(os.path.dirname(_respath), exist_ok=True)
+            # strip empty assignment lines
+            _lines = __tpl.split("\n")
+            _lines = [x for x in _lines if not re.match(r'.*=\s""$', x)]
+            with open(_respath, "w") as o:
+                o.write(re.sub("\n{3,}", "\n\n", "\n".join(_lines)))
+
+        __seen_pkgs.append(pkgname)
+
+        if "dependencies" in _description and "runtime" in _description["dependencies"]:
+            for item in _description["dependencies"]["runtime"]:
+                create_tpl(args, item["name"], "1000.0")
+
+
+def create_parser():
+    parser = argparse.ArgumentParser(
+        description='Ruby recipe generator')
+    parser.add_argument("--force", default=False,
+                        action="store_true", help="enforce recipe generation")
+    parser.add_argument("basepath", help="base path to the recipes")
+    parser.add_argument("gemname", help="name of the gem package")
+    parser.add_argument("gemversion", help="version of the gem package")
+    return parser.parse_args()
+
+
+def main():
+    args = create_parser()
+    create_tpl(args, args.gemname, args.gemversion)
+
+
+if __name__ == '__main__':
+    main()
