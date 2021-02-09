@@ -45,4 +45,5 @@ RDEPENDS_${PN} += "\
     rubygems-iniparse \
     rubygems-inspec-core \
     rubygems-ipaddress \
+    rubygems-jmespath \
 "
