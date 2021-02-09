@@ -112,4 +112,5 @@ RDEPENDS_${PN} += "\
     rubygems-tilt \
     rubygems-tomlrb \
     rubygems-train-core \
+    rubygems-train-winrm \
 "
