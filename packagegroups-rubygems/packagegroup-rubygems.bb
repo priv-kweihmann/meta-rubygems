@@ -42,4 +42,5 @@ RDEPENDS_${PN} += "\
     rubygems-hocon \
     rubygems-httpclient \
     rubygems-i18n \
+    rubygems-iniparse \
 "
