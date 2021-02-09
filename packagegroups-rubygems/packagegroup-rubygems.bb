@@ -44,4 +44,5 @@ RDEPENDS_${PN} += "\
     rubygems-i18n \
     rubygems-iniparse \
     rubygems-inspec-core \
+    rubygems-ipaddress \
 "
