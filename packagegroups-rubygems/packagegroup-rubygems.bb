@@ -68,4 +68,5 @@ RDEPENDS_${PN} += "\
     rubygems-net-netconf \
     rubygems-net-scp \
     rubygems-net-sftp \
+    rubygems-net-ssh \
 "
