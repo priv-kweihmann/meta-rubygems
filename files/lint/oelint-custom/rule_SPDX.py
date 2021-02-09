@@ -11,6 +11,8 @@ class RubygemsSPDX(Rule):
 
     def check(self, _file, stash):
         res = []
+        if "recipes-rubygems/" not in _file:
+            return []
         items = stash.GetItemsFor(
             filename=_file, classifier=Comment.CLASSIFIER)
         found = any(x for x in items if "SPDX-License-Identifier: MIT" in x.Raw)
