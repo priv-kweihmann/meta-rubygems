@@ -11,4 +11,5 @@ RDEPENDS_${PN} += "\
     rubygems-aws-sdk-core \
     rubygems-aws-sigv4 \
     rubygems-bcrypt-pbkdf \
+    rubygems-builder \
 "
