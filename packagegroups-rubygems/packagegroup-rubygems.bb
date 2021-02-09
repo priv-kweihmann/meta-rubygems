@@ -63,4 +63,5 @@ RDEPENDS_${PN} += "\
     rubygems-mixlib-config \
     rubygems-mixlib-log \
     rubygems-mixlib-shellout \
+    rubygems-multi-json \
 "
