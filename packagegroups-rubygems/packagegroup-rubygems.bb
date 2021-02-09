@@ -95,4 +95,5 @@ RDEPENDS_${PN} += "\
     rubygems-ruby2-keywords \
     rubygems-rubyntlm \
     rubygems-rubyzip \
+    rubygems-scanf \
 "
