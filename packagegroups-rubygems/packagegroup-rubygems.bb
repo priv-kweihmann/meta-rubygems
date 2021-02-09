@@ -120,4 +120,5 @@ RDEPENDS_${PN} += "\
     rubygems-tty-reader \
     rubygems-tty-screen \
     rubygems-tty-table \
+    rubygems-tzinfo \
 "
