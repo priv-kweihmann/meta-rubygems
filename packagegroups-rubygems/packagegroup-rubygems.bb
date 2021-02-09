@@ -93,4 +93,5 @@ RDEPENDS_${PN} += "\
     rubygems-rspec-mocks \
     rubygems-rspec-support \
     rubygems-ruby2-keywords \
+    rubygems-rubyntlm \
 "
