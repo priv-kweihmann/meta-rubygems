@@ -80,4 +80,5 @@ RDEPENDS_${PN} += "\
     rubygems-plist \
     rubygems-proxifier \
     rubygems-pry \
+    rubygems-public-suffix \
 "
