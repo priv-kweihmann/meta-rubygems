@@ -27,4 +27,5 @@ RDEPENDS_${PN} += "\
     rubygems-erubis \
     rubygems-facter \
     rubygems-faraday \
+    rubygems-faraday-middleware \
 "
