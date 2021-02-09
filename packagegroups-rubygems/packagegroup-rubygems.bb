@@ -6,4 +6,5 @@ RDEPENDS_${PN} += "\
     rubygems-activemodel \
     rubygems-activesupport \
     rubygems-addressable \
+    rubygems-aws-eventstream \
 "
