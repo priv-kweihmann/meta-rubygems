@@ -1,0 +1,5 @@
+from rubygems_utils import RubyGemsTestUtils
+
+class RubyGemsTest{pn}(RubyGemsTestUtils):
+
+{tests}
