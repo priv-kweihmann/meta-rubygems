@@ -83,4 +83,5 @@ RDEPENDS_${PN} += "\
     rubygems-public-suffix \
     rubygems-puppet \
     rubygems-puppet-resource-api \
+    rubygems-puppetmodule-netdev-stdlib \
 "
