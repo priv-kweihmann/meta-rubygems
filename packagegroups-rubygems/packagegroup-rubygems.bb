@@ -100,4 +100,5 @@ RDEPENDS_${PN} += "\
     rubygems-semverse \
     rubygems-serverspec \
     rubygems-sfl \
+    rubygems-slop \
 "
