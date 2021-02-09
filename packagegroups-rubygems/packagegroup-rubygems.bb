@@ -34,4 +34,5 @@ RDEPENDS_${PN} += "\
     rubygems-ffi-libarchive \
     rubygems-ffi-yajl \
     rubygems-fuzzyurl \
+    rubygems-gssapi \
 "
