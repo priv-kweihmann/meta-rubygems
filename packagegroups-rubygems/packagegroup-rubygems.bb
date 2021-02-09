@@ -39,4 +39,5 @@ RDEPENDS_${PN} += "\
     rubygems-hashie \
     rubygems-hiera \
     rubygems-highline \
+    rubygems-hocon \
 "
