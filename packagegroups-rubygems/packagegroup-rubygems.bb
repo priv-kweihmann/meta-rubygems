@@ -57,4 +57,5 @@ RDEPENDS_${PN} += "\
     rubygems-mime-types-data \
     rubygems-mini-portile2 \
     rubygems-minitest \
+    rubygems-mixlib-archive \
 "
