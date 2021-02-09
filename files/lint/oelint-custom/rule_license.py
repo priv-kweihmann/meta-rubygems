@@ -251,6 +251,8 @@ class RubygemsLicense(Rule):
 
     def check(self, _file, stash):
         res = []
+        if "recipes-rubygems/" not in _file:
+            return []
         items = stash.GetItemsFor(
             filename=_file, classifier=Variable.CLASSIFIER,
             attribute=Variable.ATTR_VAR, attributeValue="LICENSE")

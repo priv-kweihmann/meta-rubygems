@@ -22,7 +22,8 @@ class RubygemsTestCase(Rule):
 
     def check(self, _file, stash):
         res = []
-
+        if "recipes-rubygems/" not in _file:
+            return []
         found = False
         _pn = expand_term(stash, _file, "${PN}")
         _layer_root = get_layer_root(_file)
