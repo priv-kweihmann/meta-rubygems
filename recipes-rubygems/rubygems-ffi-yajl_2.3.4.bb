@@ -14,7 +14,7 @@ EXTRA_RDEPENDS += "yajl"
 
 GEM_INSTALL_FLAGS += "\
                       --with-opt=${RECIPE_SYSROOT} \
-                      " 
+                      "
 
 DEPENDS_class-native += "\
     rubygems-libyajl2-native \
