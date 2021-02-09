@@ -123,4 +123,5 @@ RDEPENDS_${PN} += "\
     rubygems-tzinfo \
     rubygems-unicode-display-width \
     rubygems-unicode-utils \
+    rubygems-uuidtools \
 "
