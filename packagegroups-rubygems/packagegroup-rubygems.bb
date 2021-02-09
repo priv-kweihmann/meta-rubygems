@@ -97,4 +97,5 @@ RDEPENDS_${PN} += "\
     rubygems-rubyzip \
     rubygems-scanf \
     rubygems-semantic-puppet \
+    rubygems-semverse \
 "
