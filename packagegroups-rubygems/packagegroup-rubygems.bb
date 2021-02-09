@@ -73,4 +73,5 @@ RDEPENDS_${PN} += "\
     rubygems-net-ssh-multi \
     rubygems-nokogiri \
     rubygems-nori \
+    rubygems-ohai \
 "
