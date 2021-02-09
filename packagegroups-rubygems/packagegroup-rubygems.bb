@@ -81,4 +81,5 @@ RDEPENDS_${PN} += "\
     rubygems-proxifier \
     rubygems-pry \
     rubygems-public-suffix \
+    rubygems-puppet \
 "
