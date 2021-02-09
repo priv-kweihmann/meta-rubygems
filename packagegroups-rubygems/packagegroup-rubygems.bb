@@ -114,4 +114,5 @@ RDEPENDS_${PN} += "\
     rubygems-train-core \
     rubygems-train-winrm \
     rubygems-tty-box \
+    rubygems-tty-color \
 "
