@@ -8,4 +8,5 @@ RDEPENDS_${PN} += "\
     rubygems-addressable \
     rubygems-aws-eventstream \
     rubygems-aws-partitions \
+    rubygems-aws-sdk-core \
 "
