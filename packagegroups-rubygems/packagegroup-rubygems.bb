@@ -74,4 +74,5 @@ RDEPENDS_${PN} += "\
     rubygems-nokogiri \
     rubygems-nori \
     rubygems-ohai \
+    rubygems-parallel \
 "
