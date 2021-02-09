@@ -38,4 +38,5 @@ RDEPENDS_${PN} += "\
     rubygems-gyoku \
     rubygems-hashie \
     rubygems-hiera \
+    rubygems-highline \
 "
