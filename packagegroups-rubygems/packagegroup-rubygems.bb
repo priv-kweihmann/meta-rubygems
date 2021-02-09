@@ -70,4 +70,5 @@ RDEPENDS_${PN} += "\
     rubygems-net-sftp \
     rubygems-net-ssh \
     rubygems-net-ssh-gateway \
+    rubygems-net-ssh-multi \
 "
