@@ -105,4 +105,5 @@ RDEPENDS_${PN} += "\
     rubygems-sslshake \
     rubygems-strings \
     rubygems-strings-ansi \
+    rubygems-syslog-logger \
 "
