@@ -49,4 +49,5 @@ RDEPENDS_${PN} += "\
     rubygems-json \
     rubygems-libyajl2 \
     rubygems-license-acceptance \
+    rubygems-little-plugger \
 "
