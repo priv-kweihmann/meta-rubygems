@@ -20,4 +20,5 @@ RDEPENDS_${PN} += "\
     rubygems-chef-zero \
     rubygems-coderay \
     rubygems-concurrent-ruby \
+    rubygems-deep-merge \
 "
