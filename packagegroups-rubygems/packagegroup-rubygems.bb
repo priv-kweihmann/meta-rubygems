@@ -21,4 +21,5 @@ RDEPENDS_${PN} += "\
     rubygems-coderay \
     rubygems-concurrent-ruby \
     rubygems-deep-merge \
+    rubygems-diff-lcs \
 "
