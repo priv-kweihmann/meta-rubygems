@@ -24,4 +24,5 @@ RDEPENDS_${PN} += "\
     rubygems-diff-lcs \
     rubygems-ed25519 \
     rubygems-erubi \
+    rubygems-erubis \
 "
