@@ -129,4 +129,5 @@ RDEPENDS_${PN} += "\
     rubygems-winrm-fs \
     rubygems-wisper \
     rubygems-wmi-lite \
+    rubygems-yajl-ruby \
 "
