@@ -102,4 +102,5 @@ RDEPENDS_${PN} += "\
     rubygems-sfl \
     rubygems-slop \
     rubygems-specinfra \
+    rubygems-sslshake \
 "
