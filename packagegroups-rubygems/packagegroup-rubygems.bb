@@ -91,4 +91,5 @@ RDEPENDS_${PN} += "\
     rubygems-rspec-its \
     rubygems-rspec-junit-formatter \
     rubygems-rspec-mocks \
+    rubygems-rspec-support \
 "
