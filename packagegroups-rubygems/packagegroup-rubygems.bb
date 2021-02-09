@@ -41,4 +41,5 @@ RDEPENDS_${PN} += "\
     rubygems-highline \
     rubygems-hocon \
     rubygems-httpclient \
+    rubygems-i18n \
 "
