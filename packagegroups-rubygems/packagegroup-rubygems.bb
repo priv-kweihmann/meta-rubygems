@@ -110,4 +110,5 @@ RDEPENDS_${PN} += "\
     rubygems-thor \
     rubygems-thread-safe \
     rubygems-tilt \
+    rubygems-tomlrb \
 "
