@@ -52,4 +52,5 @@ RDEPENDS_${PN} += "\
     rubygems-little-plugger \
     rubygems-locale \
     rubygems-logging \
+    rubygems-method-source \
 "
