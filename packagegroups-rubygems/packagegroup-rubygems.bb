@@ -76,4 +76,5 @@ RDEPENDS_${PN} += "\
     rubygems-ohai \
     rubygems-parallel \
     rubygems-parslet \
+    rubygems-pastel \
 "
