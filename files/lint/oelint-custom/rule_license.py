@@ -241,12 +241,19 @@ class RubygemsLicense(Rule):
 
     def __get_combined_licenses(self, _file):
         res = set(RubygemsLicense.POKY_KNOWN_VALID_EXPRESSIONS)
+        # add different variations (+, -or-later, -only)
+        res.update(["{}+".format(x) for x in RubygemsLicense.POKY_KNOWN_VALID_EXPRESSIONS])
+        res.update(["{}-or-later".format(x) for x in RubygemsLicense.POKY_KNOWN_VALID_EXPRESSIONS])
+        res.update(["{}-only".format(x) for x in RubygemsLicense.POKY_KNOWN_VALID_EXPRESSIONS])
         __layer_root = get_layer_root(_file)
         for _, _, files in os.walk(os.path.join(__layer_root, RubygemsLicense.LAYER_LICENSE_DIR)):
             for f in files:
                 _name = os.path.basename(f)
                 if not _name.startswith("."):
                     res.add(_name)
+                    res.add("{}+".format(_name))
+                    res.add("{}-or-later".format(_name))
+                    res.add("{}-only".format(_name))
         return res
 
     def check(self, _file, stash):
