@@ -101,4 +101,5 @@ RDEPENDS_${PN} += "\
     rubygems-serverspec \
     rubygems-sfl \
     rubygems-slop \
+    rubygems-specinfra \
 "
