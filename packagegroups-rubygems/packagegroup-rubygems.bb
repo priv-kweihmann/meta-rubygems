@@ -23,4 +23,5 @@ RDEPENDS_${PN} += "\
     rubygems-deep-merge \
     rubygems-diff-lcs \
     rubygems-ed25519 \
+    rubygems-erubi \
 "
