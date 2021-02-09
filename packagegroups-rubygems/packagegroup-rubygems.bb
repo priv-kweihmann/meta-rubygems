@@ -13,4 +13,5 @@ RDEPENDS_${PN} += "\
     rubygems-bcrypt-pbkdf \
     rubygems-builder \
     rubygems-chef \
+    rubygems-chef-config \
 "
