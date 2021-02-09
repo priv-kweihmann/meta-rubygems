@@ -118,4 +118,5 @@ RDEPENDS_${PN} += "\
     rubygems-tty-cursor \
     rubygems-tty-prompt \
     rubygems-tty-reader \
+    rubygems-tty-screen \
 "
