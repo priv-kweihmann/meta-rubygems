@@ -18,4 +18,5 @@ RDEPENDS_${PN} += "\
     rubygems-chef-utils \
     rubygems-chef-vault \
     rubygems-chef-zero \
+    rubygems-coderay \
 "
