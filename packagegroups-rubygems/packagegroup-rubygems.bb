@@ -15,4 +15,5 @@ RDEPENDS_${PN} += "\
     rubygems-chef \
     rubygems-chef-config \
     rubygems-chef-telemetry \
+    rubygems-chef-utils \
 "
