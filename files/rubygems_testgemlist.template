@@ -1,0 +1,2 @@
+    def test_gem_list_{pn}(self):
+        self.gem_is_installed("{gemname}")

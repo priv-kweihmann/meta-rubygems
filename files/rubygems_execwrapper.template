@@ -1,0 +1,2 @@
+    def test_exec_{sanitize_app}(self):
+        self.gem_exec_wrapper("{exec}")
