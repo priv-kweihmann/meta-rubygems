@@ -94,4 +94,5 @@ RDEPENDS_${PN} += "\
     rubygems-rspec-support \
     rubygems-ruby2-keywords \
     rubygems-rubyntlm \
+    rubygems-rubyzip \
 "
