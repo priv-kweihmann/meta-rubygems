@@ -116,4 +116,5 @@ RDEPENDS_${PN} += "\
     rubygems-tty-box \
     rubygems-tty-color \
     rubygems-tty-cursor \
+    rubygems-tty-prompt \
 "
