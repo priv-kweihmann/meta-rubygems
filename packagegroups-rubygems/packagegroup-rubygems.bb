@@ -36,4 +36,5 @@ RDEPENDS_${PN} += "\
     rubygems-fuzzyurl \
     rubygems-gssapi \
     rubygems-gyoku \
+    rubygems-hashie \
 "
