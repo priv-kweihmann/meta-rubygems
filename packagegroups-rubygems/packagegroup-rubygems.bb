@@ -37,4 +37,5 @@ RDEPENDS_${PN} += "\
     rubygems-gssapi \
     rubygems-gyoku \
     rubygems-hashie \
+    rubygems-hiera \
 "
