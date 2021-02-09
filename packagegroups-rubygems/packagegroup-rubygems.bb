@@ -89,4 +89,5 @@ RDEPENDS_${PN} += "\
     rubygems-rspec-core \
     rubygems-rspec-expectations \
     rubygems-rspec-its \
+    rubygems-rspec-junit-formatter \
 "
