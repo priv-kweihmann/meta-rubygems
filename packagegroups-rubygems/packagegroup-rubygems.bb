@@ -10,4 +10,5 @@ RDEPENDS_${PN} += "\
     rubygems-aws-partitions \
     rubygems-aws-sdk-core \
     rubygems-aws-sigv4 \
+    rubygems-bcrypt-pbkdf \
 "
