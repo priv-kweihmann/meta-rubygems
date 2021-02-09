@@ -32,4 +32,5 @@ RDEPENDS_${PN} += "\
     rubygems-fast-gettext \
     rubygems-ffi \
     rubygems-ffi-libarchive \
+    rubygems-ffi-yajl \
 "
