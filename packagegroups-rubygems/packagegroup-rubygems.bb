@@ -14,4 +14,5 @@ RDEPENDS_${PN} += "\
     rubygems-builder \
     rubygems-chef \
     rubygems-chef-config \
+    rubygems-chef-telemetry \
 "
