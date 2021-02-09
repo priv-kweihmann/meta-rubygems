@@ -30,4 +30,5 @@ RDEPENDS_${PN} += "\
     rubygems-faraday-middleware \
     rubygems-faraday-net-http \
     rubygems-fast-gettext \
+    rubygems-ffi \
 "
