@@ -79,4 +79,5 @@ RDEPENDS_${PN} += "\
     rubygems-pastel \
     rubygems-plist \
     rubygems-proxifier \
+    rubygems-pry \
 "
