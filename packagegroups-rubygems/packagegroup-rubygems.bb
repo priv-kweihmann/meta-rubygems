@@ -77,4 +77,5 @@ RDEPENDS_${PN} += "\
     rubygems-parallel \
     rubygems-parslet \
     rubygems-pastel \
+    rubygems-plist \
 "
