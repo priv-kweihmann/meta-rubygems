@@ -82,4 +82,5 @@ RDEPENDS_${PN} += "\
     rubygems-pry \
     rubygems-public-suffix \
     rubygems-puppet \
+    rubygems-puppet-resource-api \
 "
