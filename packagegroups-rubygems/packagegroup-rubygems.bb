@@ -51,4 +51,5 @@ RDEPENDS_${PN} += "\
     rubygems-license-acceptance \
     rubygems-little-plugger \
     rubygems-locale \
+    rubygems-logging \
 "
