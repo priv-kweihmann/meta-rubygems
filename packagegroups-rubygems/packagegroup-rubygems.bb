@@ -72,4 +72,5 @@ RDEPENDS_${PN} += "\
     rubygems-net-ssh-gateway \
     rubygems-net-ssh-multi \
     rubygems-nokogiri \
+    rubygems-nori \
 "
