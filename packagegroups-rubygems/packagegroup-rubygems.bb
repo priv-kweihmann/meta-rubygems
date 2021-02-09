@@ -43,4 +43,5 @@ RDEPENDS_${PN} += "\
     rubygems-httpclient \
     rubygems-i18n \
     rubygems-iniparse \
+    rubygems-inspec-core \
 "
