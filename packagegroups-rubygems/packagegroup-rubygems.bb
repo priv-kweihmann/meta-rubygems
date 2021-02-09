@@ -53,4 +53,5 @@ RDEPENDS_${PN} += "\
     rubygems-locale \
     rubygems-logging \
     rubygems-method-source \
+    rubygems-mime-types \
 "
