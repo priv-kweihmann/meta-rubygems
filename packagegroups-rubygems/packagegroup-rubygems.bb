@@ -7,4 +7,5 @@ RDEPENDS_${PN} += "\
     rubygems-activesupport \
     rubygems-addressable \
     rubygems-aws-eventstream \
+    rubygems-aws-partitions \
 "
