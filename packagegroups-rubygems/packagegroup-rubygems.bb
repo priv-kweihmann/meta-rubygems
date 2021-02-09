@@ -25,5 +25,6 @@ RDEPENDS_${PN} += "\
     rubygems-ed25519 \
     rubygems-erubi \
     rubygems-erubis \
+    rubygems-facter \
     rubygems-faraday \
 "
