@@ -113,4 +113,5 @@ RDEPENDS_${PN} += "\
     rubygems-tomlrb \
     rubygems-train-core \
     rubygems-train-winrm \
+    rubygems-tty-box \
 "
