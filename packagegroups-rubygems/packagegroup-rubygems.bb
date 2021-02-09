@@ -104,4 +104,5 @@ RDEPENDS_${PN} += "\
     rubygems-specinfra \
     rubygems-sslshake \
     rubygems-strings \
+    rubygems-strings-ansi \
 "
