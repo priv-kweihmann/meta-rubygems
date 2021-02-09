@@ -28,4 +28,5 @@ RDEPENDS_${PN} += "\
     rubygems-facter \
     rubygems-faraday \
     rubygems-faraday-middleware \
+    rubygems-faraday-net-http \
 "
