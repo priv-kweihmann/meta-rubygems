@@ -108,4 +108,5 @@ RDEPENDS_${PN} += "\
     rubygems-syslog-logger \
     rubygems-systemu \
     rubygems-thor \
+    rubygems-thread-safe \
 "
