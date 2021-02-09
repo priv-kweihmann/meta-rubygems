@@ -47,4 +47,5 @@ RDEPENDS_${PN} += "\
     rubygems-ipaddress \
     rubygems-jmespath \
     rubygems-json \
+    rubygems-libyajl2 \
 "
