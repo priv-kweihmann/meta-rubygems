@@ -22,4 +22,5 @@ RDEPENDS_${PN} += "\
     rubygems-concurrent-ruby \
     rubygems-deep-merge \
     rubygems-diff-lcs \
+    rubygems-ed25519 \
 "
