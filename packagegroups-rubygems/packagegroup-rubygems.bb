@@ -65,4 +65,5 @@ RDEPENDS_${PN} += "\
     rubygems-mixlib-shellout \
     rubygems-multi-json \
     rubygems-multipart-post \
+    rubygems-net-netconf \
 "
