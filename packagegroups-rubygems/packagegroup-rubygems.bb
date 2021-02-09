@@ -54,4 +54,5 @@ RDEPENDS_${PN} += "\
     rubygems-logging \
     rubygems-method-source \
     rubygems-mime-types \
+    rubygems-mime-types-data \
 "
