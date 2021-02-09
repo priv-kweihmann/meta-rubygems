@@ -19,4 +19,5 @@ RDEPENDS_${PN} += "\
     rubygems-chef-vault \
     rubygems-chef-zero \
     rubygems-coderay \
+    rubygems-concurrent-ruby \
 "
