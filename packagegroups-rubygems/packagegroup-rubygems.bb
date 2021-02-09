@@ -121,4 +121,5 @@ RDEPENDS_${PN} += "\
     rubygems-tty-screen \
     rubygems-tty-table \
     rubygems-tzinfo \
+    rubygems-unicode-display-width \
 "
