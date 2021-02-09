@@ -12,4 +12,5 @@ RDEPENDS_${PN} += "\
     rubygems-aws-sigv4 \
     rubygems-bcrypt-pbkdf \
     rubygems-builder \
+    rubygems-chef \
 "
