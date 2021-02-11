@@ -6,6 +6,8 @@ HOMEPAGE = "https://github.com/puppetlabs/puppet"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=72bcf758cb771bfde198d175d9e48429"
 
+SRC_URI_append = " file://0001-Replace-URI.escape-with-CGI.escape.patch"
+
 DEPENDS_class-native += "\
     rubygems-concurrent-ruby-native \
     rubygems-deep-merge-native \
