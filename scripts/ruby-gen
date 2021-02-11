@@ -45,6 +45,8 @@ LIC_FILES_CHKSUM = "{__licensefile}"
 EXTRA_DEPENDS += "{__xtradep}"
 EXTRA_RDEPENDS += "{__xtrardep}"
 
+SRC_URI_append = " {__srcuri}"
+
 DEPENDS_class-native += "{__deps}"
 DEPENDS_class-target += "{__tdeps}"
 
@@ -240,6 +242,7 @@ def create_tpl(args, pkgname, version):
             "__install_flags": _installflags,
             "__license": get_license(_description, _oldrecipes),
             "__rdeps": _rdepends,
+            "__srcuri", prettify_list(save_variables("SRC_URI", None, _oldrecipes)),
             "__tdeps": prettify_list(save_variables("DEPENDS", ["class-target"], _oldrecipes)),
             "__version": _bestversion,
             "__xtradep": prettify_list(save_variables("EXTRA_RDEPENDS", None, _oldrecipes)),
