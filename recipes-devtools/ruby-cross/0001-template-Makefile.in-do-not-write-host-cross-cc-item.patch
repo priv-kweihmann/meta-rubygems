@@ -6,7 +6,7 @@ Subject: [PATCH] template/Makefile.in: do not write host cross-cc items into
 
 This helps reproducibility.
 
-Upstream-Status: Inappropriate [oe-specific]
+Upstream-Status: Inapproppriate [oe-specific]
 Signed-off-by: Alexander Kanavin <alex.kanavin@gmail.com>
 ---
  template/Makefile.in | 4 ++--

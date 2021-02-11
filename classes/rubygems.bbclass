@@ -3,7 +3,7 @@
 ## Copyright (c) 2015, Michaël Burtin
 ## Copyright (c) 2020, Konrad Weihmann
 
-GEMLIB_VERSION = "2.7.0"
+GEMLIB_VERSION = "3.0.0"
 
 GEM_SRC ?= "http://rubygems.org/gems"
 
@@ -175,6 +175,7 @@ FILES_${PN} += "\
     ${GEM_DIR}/specifications \
     ${RUBY_SITEDIR} \
     ${bindir} \
+    ${libdir}/ruby/gems/${GEMLIB_VERSION}/plugins \
 "
 
 RDEPENDS_${PN}_append_class-target = " ruby"
