@@ -53,6 +53,19 @@ jobs:
           ref: c5acdbe0939981aa6a4919620aab93ac2b2e14af
           branch: none
           add-layer: "0"
+      - name: setup (caches)
+        run: |
+          mkdir -p ${WORKSPACE}/sstate-cache
+      - name: configure (caches)
+        uses: actions/cache@v2
+        with:
+          path: /opt/build/sstate-cache
+          key: rubygems-x86-64-glibc
+      - name: activate (caches)
+        uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
+        with:
+          variable: SSTATE_MIRRORS
+          value: "file://.* file:///${WORKSPACE}/sstate-cache/PATH"
       - if: env.BUILD_GLIBC == '1'
         name: build (glibc)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
