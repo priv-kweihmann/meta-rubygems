@@ -71,6 +71,7 @@ RDEPENDS_${PN} += "\
     rubygems-net-ssh \
     rubygems-net-ssh-gateway \
     rubygems-net-ssh-multi \
+    rubygems-net-telnet \
     rubygems-nokogiri \
     rubygems-nori \
     rubygems-ohai \
@@ -124,6 +125,7 @@ RDEPENDS_${PN} += "\
     rubygems-unicode-display-width \
     rubygems-unicode-utils \
     rubygems-uuidtools \
+    rubygems-webrick \
     rubygems-winrm \
     rubygems-winrm-elevated \
     rubygems-winrm-fs \
