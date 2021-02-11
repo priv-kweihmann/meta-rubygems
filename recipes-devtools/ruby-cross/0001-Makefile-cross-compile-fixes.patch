@@ -3,8 +3,8 @@ From: Konrad Weihmann <kweihmann@outlook.com>
 Date: Wed, 16 Dec 2020 21:14:51 +0100
 Subject: [PATCH] Makefile: cross compile fixes
 
-Signed-off-by: Konrad Weihmann <kweihmann@outlook.com>
 Upstream-Status: Inappropriate [oe-specific]
+Signed-off-by: Konrad Weihmann <kweihmann@outlook.com>
 ---
  template/Makefile.in | 29 ++++++++++++++++++++++-------
  1 file changed, 22 insertions(+), 7 deletions(-)
