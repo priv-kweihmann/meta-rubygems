@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "Meta package for webrick"
-DESCRIPTION = "As webrick is provided by ruby, this recipe is just here to provide a reference"
+SUMMARY = "Meta package for find"
+DESCRIPTION = "As find is provided by ruby, this recipe is just here to provide a reference"
 
 LICENSE = "Ruby"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/Ruby;md5=105fc57d3f4d3122db32912f3e6107d0"
