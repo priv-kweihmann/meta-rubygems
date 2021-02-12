@@ -12,6 +12,7 @@ RDEPENDS_${PN} += "\
     rubygems-aws-sigv4 \
     rubygems-bcrypt-pbkdf \
     rubygems-builder \
+    rubygems-bundler \
     rubygems-chef \
     rubygems-chef-config \
     rubygems-chef-telemetry \
@@ -84,6 +85,7 @@ RDEPENDS_${PN} += "\
     rubygems-puppet \
     rubygems-puppet-resource-api \
     rubygems-puppetmodule-netdev-stdlib \
+    rubygems-racc \
     rubygems-rack \
     rubygems-rspec \
     rubygems-rspec-core \
