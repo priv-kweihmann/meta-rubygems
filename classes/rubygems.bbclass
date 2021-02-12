@@ -81,6 +81,7 @@ python () {
         d.appendVarFlag('do_unpack_gem', 'depends', ' ruby-cross-%s:do_populate_sysroot' % d.getVar("TARGET_ARCH", True))
 }
 
+do_unpack_gem[vardepsexclude] += "prefix_native"
 addtask unpack_gem after do_unpack before do_patch
 
 do_generate_spec() {
@@ -101,6 +102,7 @@ do_generate_spec() {
     fi
 }
 
+do_generate_spec[vardepsexclude] += "prefix_native"
 addtask generate_spec after do_unpack_gem before do_patch
 
 rubygems_do_compile() {
