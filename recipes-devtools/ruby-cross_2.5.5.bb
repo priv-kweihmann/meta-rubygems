@@ -12,10 +12,10 @@ HOMEPAGE = "http://www.ruby-lang.org/"
 SECTION = "devel/ruby"
 LICENSE = "Ruby | BSD | GPLv2"
 LIC_FILES_CHKSUM = "\
-    file://COPYING;md5=5b8c87559868796979806100db3f3805 \
+    file://COPYING;md5=340948e1882e579731841bf49cdc22c1 \
     file://BSDL;md5=19aaf65c88a40b508d17ae4be539c4b5\
     file://GPL;md5=b234ee4d69f5fce4486a80fdaf4a4263\
-    file://LEGAL;md5=2b6d62dc0d608f34d510ca3f428110ec \
+    file://LEGAL;md5=23a79bb4c1a40f6cc9bcb6f4e7c39799 \
 "
 
 DEPENDS += "\
@@ -37,17 +37,15 @@ SHRT_VER = "${@oe.utils.trim_version("${PV}", 2)}"
 
 SRC_URI_append = " \
                   http://cache.ruby-lang.org/pub/ruby/${SHRT_VER}/ruby-${PV}.tar.gz \
-                  file://0001-extmk-fix-cross-compilation-of-external-gems.patch \
+                  file://extmk.patch \
                   file://0002-Obey-LDFLAGS-for-the-link-of-libruby.patch \
-                  file://remove_has_include_macros.patch \
-                  file://0001-Modify-shebang-of-libexec-y2racc-and-libexec-racc2y.patch \
-                  file://0001-template-Makefile.in-do-not-write-host-cross-cc-item.patch \
+                  file://0001-configure.ac-check-finite-isinf-isnan-as-macros-firs.patch \
+                  file://fix-CVE-2019-16254.patch \
                   file://0001-Makefile-cross-compile-fixes.patch \
-                  file://autoconf270.patch \
                  "
 
-SRC_URI[md5sum] = "2d4a28dcfa38352a627a597f6057c465"
-SRC_URI[sha256sum] = "6e5706d0d4ee4e1e2f883db9d768586b4d06567debea353c796ec45e8321c3d4"
+SRC_URI[md5sum] = "7e156fb526b8f4bb1b30a3dd8a7ce400"
+SRC_URI[sha256sum] = "28a945fdf340e6ba04fc890b98648342e3cccfd6d223a48f3810572f11b2514c"
 
 S = "${WORKDIR}/ruby-${PV}"
 
@@ -59,8 +57,11 @@ PACKAGECONFIG[ipv6] = "--enable-ipv6, --disable-ipv6,"
 
 inherit autotools cross
 
+EXTRA_AUTORECONF += "--exclude=aclocal"
+
 EXTRA_OECONF = "\
     --disable-versioned-paths \
+    --enable-shared \
     --enable-shared \
     --enable-load-relative \
     --host=${TARGET_SYS} \
@@ -70,6 +71,7 @@ EXTRA_OECONF = "\
     --sbindir='$''{exec_prefix}/sbin' \
     --libexecdir='$''{exec_prefix}/libexec' \
     --with-coroutine=copy \
+    --with-pkg-config=pkg-config \
 "
 
 # This snippet lets compiled extensions which rely on external libraries,
@@ -105,7 +107,7 @@ do_install() {
     oe_runmake 'DESTDIR=${D}' install-cross
 }
 
-FILES_${PN} = "${libdir}/ruby/*/*"
+FILES_${PN} += "${libdir}/ruby/*/*"
 FILES_${PN}-dbg += "${libdir}/ruby/*/.debug \
                     ${libdir}/ruby/*/*/.debug \
                     ${libdir}/ruby/*/*/*/.debug"

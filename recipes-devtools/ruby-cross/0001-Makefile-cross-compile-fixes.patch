@@ -1,19 +1,19 @@
-From 505bc69aeac0065184a0fc95b843a8dbed6f36a9 Mon Sep 17 00:00:00 2001
+From 4c222045ca8312e580de562848ca3edf8da6c253 Mon Sep 17 00:00:00 2001
 From: Konrad Weihmann <kweihmann@outlook.com>
-Date: Wed, 16 Dec 2020 21:14:51 +0100
+Date: Fri, 12 Feb 2021 16:10:51 +0100
 Subject: [PATCH] Makefile: cross compile fixes
 
-Signed-off-by: Konrad Weihmann <kweihmann@outlook.com>
 Upstream-Status: Inappropriate [oe-specific]
+Signed-off-by: Konrad Weihmann <kweihmann@outlook.com>
 ---
- template/Makefile.in | 29 ++++++++++++++++++++++-------
+ Makefile.in | 29 ++++++++++++++++++++++-------
  1 file changed, 22 insertions(+), 7 deletions(-)
 
-diff --git a/template/Makefile.in b/template/Makefile.in
-index 940ee07..882af9d 100644
---- a/template/Makefile.in
-+++ b/template/Makefile.in
-@@ -320,19 +320,34 @@ rbconfig.rb: $(RBCONFIG)
+diff --git a/Makefile.in b/Makefile.in
+index c2cfa47..ce1d8d6 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -275,19 +275,34 @@ rbconfig.rb: $(RBCONFIG)
  install-cross: $(arch)-fake.rb $(RBCONFIG) rbconfig.rb $(arch_hdrdir)/ruby/config.h \
  	$(LIBRUBY_A) $(LIBRUBY_SO) $(ARCHFILE)
  	$(ECHO) installing cross-compiling stuff
@@ -53,7 +53,7 @@ index 940ee07..882af9d 100644
 +	$(INSTALL_DATA) $(LIBRUBY_A) $(DESTDIR)$(XRUBY_RUBYLIBDIR)/$(arch)-cross
 +	$(INSTALL_PROGRAM) $(LIBRUBY_SO) $(DESTDIR)$(XRUBY_RUBYLIBDIR)/$(arch)-cross
  
- Makefile:	$(srcdir)/template/Makefile.in $(srcdir)/enc/Makefile.in
+ Makefile:	$(srcdir)/Makefile.in $(srcdir)/enc/Makefile.in
  
 -- 
 2.25.1
