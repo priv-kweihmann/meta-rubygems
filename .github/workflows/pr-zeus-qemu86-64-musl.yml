@@ -1,6 +1,9 @@
 name: "[pr]-[musl]-[qemux86-64]"
 
-on: pull_request
+on: 
+  pull_request:
+    branches:
+      - zeus
 
 jobs:
   buildrun:
