@@ -50,6 +50,7 @@ python do_rubygems_gen_test() {
 }
 
 do_rubygems_gen_test[doc] = "generate automatic test cases for rubygems"
+do_rubygems_gen_test[vardepsexclude] += "RUBYGEMS_LAYERDIR"
 addtask do_rubygems_gen_test after do_package before do_package_qa
 
 python() {
