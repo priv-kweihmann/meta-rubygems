@@ -51,7 +51,6 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
           repo: git://git.openembedded.org/meta-openembedded
-          ref: fc09f711624f66720cbf8eab175a674556bf38d9
           branch: zeus
           add-layer: "0"
       - if: env.BUILD_GLIBC == '1'
