@@ -15,7 +15,7 @@ python rubygems_debug_handler() {
 
     for root, dirs, files in os.walk(d.expand("${GEM_HOME}")):
         for _file in files:
-            if os.path.basename(_file) in ["mkmf.log", "gem_make.out"]:
+            if os.path.basename(_file) in ["mkmf.log", "make.out", "gem_make.out"]:
                 with open(os.path.join(root, _file)) as i:
                     bb.warn(i.read())
 }
