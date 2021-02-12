@@ -1,9 +1,6 @@
-name: "[master]-[glibc]-[qemux86-64]"
+name: "[pr]-[glibc]-[qemux86-64]"
 
-on:
-  push:
-    branches:
-      - master
+on: pull_request
 
 jobs:
   buildrun:
@@ -35,40 +32,25 @@ jobs:
     steps:
       - name: setup (container)
         uses: priv-kweihmann/meta-sca-ci-utils/preparecontainer@latest
-      - name: setup (caches)
-        run: |
-          mkdir -p ${WORKSPACE}/sstate-cache
-        shell: bash
-      - name: additional setup (caches)
-        uses: actions/cache@v2
-        with:
-          path: /opt/build/sstate-cache
-          key: rubygems-x86-64-glibc
       - name: checkout (poky)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
           repo: git://git.yoctoproject.org/poky.git
-          ref: 3.3_M2
-          branch: none
+          branch: zeus
           add-layer: "0"
       - name: checkout (meta-rubygems)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
-          repo: https://github.com/priv-kweihmann/meta-rubygems.git
-          branch: init
+          repo: auto-determine
+          branch: auto-determine
+          gh-event-file: "1"
           add-layer: "0"
       - name: checkout (meta-openembedded)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
           repo: git://git.openembedded.org/meta-openembedded
-          ref: fc09f711624f66720cbf8eab175a674556bf38d9
-          branch: none
+          branch: zeus
           add-layer: "0"
-      - name: configure (caches)
-        uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
-        with:
-          variable: SSTATE_DIR
-          value: /opt/build/sstate-cache
       - if: env.BUILD_GLIBC == '1'
         name: build (glibc)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
