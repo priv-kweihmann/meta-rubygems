@@ -240,6 +240,7 @@ def create_tpl(args, pkgname, version):
             "__install_flags": _installflags,
             "__license": get_license(_description, _oldrecipes),
             "__rdeps": _rdepends,
+            "__srcuri": prettify_list(save_variables("SRC_URI", None, _oldrecipes)),
             "__tdeps": prettify_list(save_variables("DEPENDS", ["class-target"], _oldrecipes)),
             "__version": _bestversion,
             "__xtradep": prettify_list(save_variables("EXTRA_RDEPENDS", None, _oldrecipes)),
