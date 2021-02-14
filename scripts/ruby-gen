@@ -45,7 +45,7 @@ LIC_FILES_CHKSUM = "{__licensefile}"
 EXTRA_DEPENDS += "{__xtradep}"
 EXTRA_RDEPENDS += "{__xtrardep}"
 
-SRC_URI_append = " {__srcuri}"
+SRC_URI_append = "{__srcuri}"
 
 DEPENDS_class-native += "{__deps}"
 DEPENDS_class-target += "{__tdeps}"
@@ -230,6 +230,7 @@ def create_tpl(args, pkgname, version):
         _rdepends = create_rdepends(_description, _oldrecipes)
         _installflags = prettify_list(save_variables(
             "GEM_INSTALL_FLAGS", None, _oldrecipes))
+        _src_uri = prettify_list([x for x in save_variables("SRC_URI", None, _oldrecipes) if "://" in x])
         __calculated = {
             "__class": ["rubygems", "rubygentest", "pkgconfig"],
             "__cleanname": sanitize_pkgname(pkgname),
@@ -242,7 +243,7 @@ def create_tpl(args, pkgname, version):
             "__install_flags": _installflags,
             "__license": get_license(_description, _oldrecipes),
             "__rdeps": _rdepends,
-            "__srcuri": prettify_list(save_variables("SRC_URI", None, _oldrecipes)),
+            "__srcuri": " " + _src_uri if _src_uri else "",
             "__tdeps": prettify_list(save_variables("DEPENDS", ["class-target"], _oldrecipes)),
             "__version": _bestversion,
             "__xtradep": prettify_list(save_variables("EXTRA_RDEPENDS", None, _oldrecipes)),
