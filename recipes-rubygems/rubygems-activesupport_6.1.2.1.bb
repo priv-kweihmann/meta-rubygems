@@ -14,6 +14,15 @@ DEPENDS_class-native += "\
     rubygems-zeitwerk-native \
 "
 
+SRC_URI[md5sum] = "86ec790a2a10eedf3a704d43a7c04a0d"
+SRC_URI[sha256sum] = "7155b715636faa2970123501f2356d3dc7390dcd9f2f9cb455f91e5d5b4ee250"
+
+GEM_NAME = "activesupport"
+
+inherit rubygems
+inherit rubygentest
+inherit pkgconfig
+
 RDEPENDS_${PN}_class-target += "\
     rubygems-concurrent-ruby \
     rubygems-i18n \
@@ -21,14 +30,5 @@ RDEPENDS_${PN}_class-target += "\
     rubygems-tzinfo \
     rubygems-zeitwerk \
 "
-
-SRC_URI[md5sum] = "94fae5877c0d1e6fa2e839e11211768e"
-SRC_URI[sha256sum] = "a1d7d91586b2bbebb93f931802e5b1ceab565137d0769c55d9941052de85ea22"
-
-GEM_NAME = "activesupport"
-
-inherit rubygems
-inherit rubygentest
-inherit pkgconfig
 
 BBCLASSEXTEND = "native"
