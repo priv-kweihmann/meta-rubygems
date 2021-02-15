@@ -37,7 +37,7 @@ atexit.register(remove_tempfolder)
 TPL = """# SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: {name}"
 DESCRIPTION = "{__info}"
-HOMEPAGE = "{homepage_uri}"
+HOMEPAGE = "{__homepage_uri}"
 
 LICENSE = "{__license}"
 LIC_FILES_CHKSUM = "{__licensefile}"
@@ -231,6 +231,7 @@ def create_tpl(args, pkgname, version):
         _installflags = prettify_list(save_variables(
             "GEM_INSTALL_FLAGS", None, _oldrecipes))
         _src_uri = prettify_list([x for x in save_variables("SRC_URI", None, _oldrecipes) if "://" in x])
+        __homepage_uri = _description["homepage_uri"] or " ".join(save_variables("HOMEPAGE", None, _oldrecipes))
         __calculated = {
             "__class": ["rubygems", "rubygentest", "pkgconfig"],
             "__cleanname": sanitize_pkgname(pkgname),
@@ -238,6 +239,7 @@ def create_tpl(args, pkgname, version):
             "__disttarball": _description["gem_uri"],
             "__exports": "\n".join(save_export(_oldrecipes)),
             "__functions": "\n".join(save_functions(_oldrecipes)),
+            "__homepage_uri": __homepage_uri,
             "__info": re.sub(r'\n|"', "", _description["info"].split(". ")[0]).strip(),
             "__insaneskip": prettify_list(save_variables("INSANE_SKIP_${PN}", None, _oldrecipes)),
             "__install_flags": _installflags,
