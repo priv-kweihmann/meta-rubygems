@@ -8,8 +8,8 @@ LIC_FILES_CHKSUM = "\
     file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10 \
 "
 
-SRC_URI[md5sum] = "524d61a4e9aa03e8f9e9b5af633c72a2"
-SRC_URI[sha256sum] = "5b136ecdb88e87d2a171582b10bdff1ecf56955de4980e15f1cbe2d9b4ac3245"
+SRC_URI[md5sum] = "6524d7aaa9e81cc1deda61d298364f99"
+SRC_URI[sha256sum] = "dfe5460fad0233cbd641e98b09f997356e21244d85f8238c2377353eb1e7edec"
 
 GEM_NAME = "aws-partitions"
 
