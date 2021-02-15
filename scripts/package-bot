@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+import argparse
+import datetime
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+
+from packagebot.github import GitHub
+from packagebot.git import Git
+from packagebot.gems import Gems
+from packagebot.bitbake import Bitbake
+
+
+def create_argpaser():
+    parser = argparse.ArgumentParser(description='Package update bot')
+    parser.add_argument(
+        "--repo_path", default=os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+    parser.add_argument("--bitbake_default",
+                        default="core-image-minimal-rubygems")
+    parser.add_argument("--bitbake_pkggroup",
+                        default="packagegroup-rubygems")
+    parser.add_argument("--git_user", default=os.environ.get("GIT_USER"))
+    parser.add_argument("--git_mail", default=os.environ.get("GIT_MAIL"))
+    parser.add_argument(
+        "--github_user", default=os.environ.get("GIT_USERNAME"))
+    parser.add_argument("--github_pat", default=os.environ.get("GIT_PASSWORD"))
+    parser.add_argument("--github_repo_user",
+                        default=os.environ.get("GITHUB_REPO_USER"))
+    parser.add_argument("--github_repo", default=os.environ.get("GITHUB_REPO"))
+
+    # export askpass reference
+    os.environ["GIT_ASKPASS"] = os.path.join(
+        os.path.dirname(__file__), "packagebot", "askpass.py")
+
+    return parser.parse_args()
+
+
+def main():
+    _args = create_argpaser()
+
+    _git = Git(_args.repo_path, _args.git_user, _args.git_mail)
+    _github = GitHub(_args.github_user, _args.github_pat,
+                     _args.github_repo_user, _args.github_repo)
+    _bitbake = Bitbake(_args.bitbake_default)
+
+    # create branch
+    _git.create_branch("package_update_{}".format(
+        datetime.datetime.now().strftime("%Y%m%d")))
+
+    _gems = Gems(_args.repo_path, _git, _bitbake,
+                 _github, _args.bitbake_pkggroup)
+
+    _gems.build()
+
+
+if __name__ == '__main__':
+    main()
