@@ -1,4 +1,3 @@
-import fnmatch
 import glob
 import os
 import subprocess
@@ -74,7 +73,7 @@ class Gem():
     def __run_ruby_gen(self, args):
         try:
             subprocess.check_call(args)
-        except:
+        except Exception:
             pass
 
     def __patch_packagegroup(self, newrecipes):

@@ -1,7 +1,6 @@
 import os
 
 import git
-from git import index
 
 
 class Git():
