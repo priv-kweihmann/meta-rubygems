@@ -1,0 +1,12 @@
+[flake8]
+ignore = 
+    # E302 expected 2 blank lines, found 1
+    E302
+    # W391 blank line at end of file
+    W391
+    # E501 line too long (97 > 79 characters)
+    E501
+exclude =
+    .git,
+    __pycache__,
+    lib/oeqa/runtime/cases/rubygems_rubygems_*
