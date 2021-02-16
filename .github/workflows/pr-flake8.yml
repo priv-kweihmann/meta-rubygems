@@ -1,0 +1,37 @@
+name: "[pull-request-bot-flake8]"
+
+on: pull_request
+
+jobs:
+  check:
+    name: "build"
+    runs-on: ubuntu-latest
+
+    container:
+      image: privkweihmann/yocto-sca-minimal:latest
+      volumes:
+        - ${{ github.workspace }}:/opt/build
+      options: --privileged
+
+    steps:
+      - name: setup (container)
+        uses: priv-kweihmann/meta-sca-ci-utils/preparecontainer@latest
+      - name: setup (workspace)
+        run: |
+          sudo chmod -R 0777 "/__w/"
+        shell: bash
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: prcode
+      - name: check (flake8)
+        uses: priv-kweihmann/meta-sca-ci-utils/flake8@latest
+        with:
+          sources: /__w/meta-rubygems/meta-rubygems/prcode
+          config-file: /__w/meta-rubygems/meta-rubygems/prcode/.flake8
+          username: priv-kweihmann
+          token: ${{ secrets.BOTTOKEN }}
+          pull-request-repo-user: priv-kweihmann
+          pull-request-repo: meta-rubygems
+      
