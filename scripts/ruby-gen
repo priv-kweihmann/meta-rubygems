@@ -16,7 +16,6 @@ import tempfile
 from semantic_version import Version
 
 from license_util import get_license_info
-from recipe_util import check_depends
 from recipe_util import save_export
 from recipe_util import save_functions
 from recipe_util import save_variables
@@ -28,7 +27,7 @@ def remove_tempfolder():
     import shutil
     try:
         shutil.rmtree(_tempfolder)
-    except:
+    except Exception:
         pass
 
 
@@ -78,11 +77,11 @@ def get_description(args, pkgname):
             ["curl", "-k",
                 "https://rubygems.org/api/v1/gems/{}.json".format(pkgname)],
             universal_newlines=True, stderr=subprocess.DEVNULL)
-    except subprocess.CalledProcessError as e:
+    except subprocess.CalledProcessError:
         _output = "{}"
     try:
         res = json.loads(_output)
-    except json.JSONDecodeError as e:
+    except json.JSONDecodeError:
         print("Can't decode json -> {}".format(str(_output)))
         res = {}
     return res
@@ -100,9 +99,9 @@ def sanitize_pkgname(raw):
 
 
 def create_depends(desc, old):
-    if not "dependencies" in desc:
+    if "dependencies" not in desc:
         return ""
-    if not "runtime" in desc["dependencies"]:
+    if "runtime" not in desc["dependencies"]:
         return ""
     _tpl = "rubygems-{}-native"
     res = [sanitize_pkgname(_tpl.format(k["name"]))
@@ -111,9 +110,9 @@ def create_depends(desc, old):
 
 
 def create_rdepends(desc, old):
-    if not "dependencies" in desc:
+    if "dependencies" not in desc:
         return ""
-    if not "runtime" in desc["dependencies"]:
+    if "runtime" not in desc["dependencies"]:
         return ""
     _tpl = "rubygems-{}"
     res = [sanitize_pkgname(_tpl.format(k["name"]))
@@ -130,7 +129,7 @@ def get_hashes(args, description, url):
     try:
         subprocess.check_call(["curl", "-k", url, "--output", __tempfile],
                               stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
-    except subprocess.CalledProcessError as e:
+    except subprocess.CalledProcessError:
         print("Can't generate hashes for URL:{}".format(url))
         return ("", "", "TODO", "abcdef")
 

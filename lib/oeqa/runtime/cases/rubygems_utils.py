@@ -12,7 +12,7 @@ class RubyGemsTestUtils(OERuntimeTestCase):
         status, output = self.target.run("gem list")
         sys.stderr.write(output + "\n")
         output = output.split("\n")
-        self.assertTrue(any(x.startswith(gemname + " ") for x in output), 
+        self.assertTrue(any(x.startswith(gemname + " ") for x in output),
                         msg="%s should be installed. Installed %s" % (gemname, ",".join(output)))
 
     def gem_is_loadable(self, require):

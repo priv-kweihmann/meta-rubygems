@@ -27,7 +27,7 @@ def __get_from_file(tarball):
                 for chunk in iter(lambda: f.read(4096), b""):
                     hash_md5.update(chunk)
             _lic_hash = hash_md5.hexdigest()
-        except:
+        except Exception:
             _lic_path = ""
             _lic_hash = ""
     return (os.path.basename(_lic_path), _lic_hash)
@@ -35,7 +35,7 @@ def __get_from_file(tarball):
 
 def __get_from_scancode(tarball, temp_folder, excludes):
     _dir = tempfile.mkdtemp()
-    _l = tarball.extractall(path=_dir)
+    tarball.extractall(path=_dir)
 
     try:
         subprocess.check_call(
@@ -51,12 +51,12 @@ def __get_from_scancode(tarball, temp_folder, excludes):
             for f in j["files"]:
                 if any([re.match(x, f["path"]) for x in excludes]):
                     continue
-                for l in f["licenses"]:
+                for license in f["licenses"]:
                     if f["path"] not in res:
                         res[f["path"]] = {"start": 99999999999, "end": -1}
                     res[f["path"]]["start"] = min(
-                        res[f["path"]]["start"], l["start_line"])
-                    res[f["path"]]["end"] = max(res[f["path"]]["end"], l["end_line"])
+                        res[f["path"]]["start"], license["start_line"])
+                    res[f["path"]]["end"] = max(res[f["path"]]["end"], license["end_line"])
 
     _lic_path = ""
     _lic_hash = ""
@@ -65,7 +65,7 @@ def __get_from_scancode(tarball, temp_folder, excludes):
             _lic_path = k
             hash_md5 = hashlib.md5()
             with open(os.path.join(_dir, _lic_path), "r") as f:
-                _lines = "".join(f.readlines()[v["start"]-1:v["end"]])
+                _lines = "".join(f.readlines()[v["start"] - 1:v["end"]])
                 hash_md5.update(_lines.encode('utf-8'))
             _lic_hash = hash_md5.hexdigest()
             _lic_path += ";beginline={};endline={}".format(v["start"], v["end"])

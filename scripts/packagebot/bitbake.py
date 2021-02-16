@@ -17,7 +17,7 @@ class Bitbake():
                 ["bitbake", "-e", self.__default_target], universal_newlines=True)
             for m in re.finditer(r"^(?P<var>.*?)=\"(?P<value>.*)\"$", out, re.MULTILINE):
                 res[m.group("var")] = m.group("value")
-        except:
+        except Exception:
             pass
         return res
 
