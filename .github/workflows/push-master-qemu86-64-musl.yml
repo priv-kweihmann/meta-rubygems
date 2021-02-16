@@ -43,7 +43,8 @@ jobs:
         uses: actions/cache@v2
         with:
           path: /opt/build/sstate-cache
-          key: rubygems-x86-64-musl
+          key: rubygems-x86-64-musl-${{ github.head_ref }}
+          restore-keys: rubygems-x86-64-musl
       - name: checkout (poky)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
