@@ -23,4 +23,3 @@ GEM_INSTALL_FLAGS += "\
 "
 
 BBCLASSEXTEND = "native"
-INSANE_SKIP_${PN} += "ldflags"
