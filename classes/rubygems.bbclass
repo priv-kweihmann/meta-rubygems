@@ -103,6 +103,46 @@ do_generate_spec() {
 
 addtask generate_spec after do_unpack_gem before do_patch
 
+python do_patch_arch_config() {
+    import re
+    if bb.data.inherits_class('native', d):
+        return
+    _map = {
+        "AR": d.expand("${AR}"),
+        "AS": d.expand("${AS}"),
+        "CC": d.expand("${CC}"),
+        "CFLAGS": d.expand("${CFLAGS}"),
+        "CPP": d.expand("${CPP}"),
+        "CPPFLAGS": d.expand("${CPPFLAGS}"),
+        "CXX": d.expand("${CXX}"),
+        "CXXFLAGS": d.expand("${CFLAGS}"),
+        "LDFLAGS": d.expand("${LDFLAGS}"),
+        "NM": d.expand("${NM}"),
+        "OBJDUMP": d.expand("${OBJDUMP}"),
+        "RANLIB": d.expand("${RANLIB}"),
+        "STRIP": d.expand("${STRIP}"),
+        "cppflags": d.expand("${CPPFLAGS}"),
+        "SOEXT": d.expand("so.${PV}"),
+        "DLEXT": d.expand("so.${PV}"),
+    }
+
+    cnt = ""
+    with open(d.expand("${RUBYLIB}/rbconfig.rb")) as i:
+        cnt = i.read()
+
+    for m in re.finditer(r'^(\s+|\t+)CONFIG\[\"(?P<var>.*)\"\]\s+=\s+\"(?P<value>.*)\"$', cnt, re.MULTILINE):
+        if m.group("var") in _map:
+            _rpl = '  CONFIG["{}"] = "{}"'.format(m.group("var"), _map[m.group("var")])
+            bb.note("Replace {} by {}".format(m.group(0), _rpl))
+            cnt = cnt.replace(m.group(0), _rpl)
+
+    with open(d.expand("${RUBYLIB}/rbconfig.rb"), "w") as o:
+        o.write(cnt)
+}
+
+do_patch_arch_config[doc] = "patches the correct compiler settings into the cross template"
+addtask do_patch_arch_config after generate_spec do_unpack_gem before do_compile
+
 rubygems_do_compile() {
     export GEM_PATH=${GEM_PATH}
     export GEM_HOME=${GEM_HOME}
@@ -113,9 +153,25 @@ rubygems_do_compile() {
     export LANGUAGE="en_US.UTF-8"
     export LC_ALL="en_US.UTF-8"
 
-    # Older versions of gem build don't understand -o flag, so try it once more without 
+    # Older versions of gem build don't understand -o flag, so try it once more without
     # it, if the command is failing
     gem build -V ${GEM_SPEC_FILE} -o ${GEM_BUILT_FILE} || gem build -V ${GEM_SPEC_FILE}
+}
+
+python do_rubygems_fix_libs() {
+    # as ruby dynloader expects the shared .so files
+    # without extension we will create symlinks to the
+    # properly versioned file
+    for root, dirs, files in os.walk(d.expand("${GEM_HOME}")):
+        for f in files:
+            if f.endswith(d.expand("so.${PV}")):
+                _filename = os.path.basename(f)
+                while "." in _filename:
+                    try:
+                        os.symlink(os.path.basename(f), os.path.join(root, _filename))
+                    except:
+                        pass
+                    _filename, _ = os.path.splitext(_filename)
 }
 
 rubygems_do_install() {
@@ -127,15 +183,12 @@ rubygems_do_install() {
 
     gem install --local --bindir ${D}${bindir} ${GEM_BUILT_FILE} --install-dir=${GEM_HOME} -E --no-user-install --ignore-dependencies --force --conservative -V -- ${GEM_INSTALL_FLAGS}
 
-    install -d ${D}${RUBY_SITEDIR}/${GEM_NAME}
-    find ${GEM_HOME} -name "*.so" -type f -exec sh -c "cp {} ${D}${RUBY_SITEDIR}/${GEM_NAME}/\$(basename {})" \;
-
     # remove all object files
     find ${GEM_HOME} -name "*.o" -type f -exec rm -f {} \;
-
 }
 
 EXPORT_FUNCTIONS do_compile do_install
+do_install[postfuncs] += "do_rubygems_fix_libs"
 
 PACKAGES =+ "${PN}-examples ${PN}-tests"
 
@@ -182,9 +235,10 @@ RDEPENDS_${PN}_append_class-target = " ruby"
 UPSTREAM_CHECK_URI ?= "https://rubygems.org/gems/${GEM_NAME}/versions"
 UPSTREAM_CHECK_REGEX ?= "/gems/${GEM_NAME}/versions/(?P<pver>(\d+\.*)*\d+)$"
 
-# Skip automatically, as this is an intended side effect
+# the ruby dynamic linker just uses plain .so files
+# so we have to supply symlinks as part of the base package
 INSANE_SKIP_${PN} += "dev-so"
 # we don't care what is actually needed for the dev-package
-INSANE_SKIP_${PN}-dev += "file-rdeps dev-elf ldflags"
+INSANE_SKIP_${PN}-dev += "file-rdeps"
 
 inherit rubygentest
