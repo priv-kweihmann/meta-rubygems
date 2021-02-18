@@ -53,14 +53,18 @@ jobs:
           ref: c5acdbe0939981aa6a4919620aab93ac2b2e14af
           branch: none
           add-layer: "0"
+          remove-git: "0"
       - name: setup (caches)
         run: |
+          sudo mkdir -p /__w/_temp/_runner_file_commands
+          sudo chmod -R 0777 /__w/_temp/_runner_file_commands
+          sudo echo "rubygems_master_rev=$(git -C /opt/build/sources/meta-rubygems/ rev-parse ${{ github.base_ref }})" >> $GITHUB_ENV
           mkdir -p ${WORKSPACE}/sstate-cache
       - name: configure (caches)
         uses: actions/cache@v2
         with:
           path: /opt/build/sstate-cache
-          key: rubygems-x86-64-musl
+          key: rubygems-x86-64-musl-${{ env.rubygems_master_rev }}
       - name: activate (caches)
         uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
         with:
