@@ -46,6 +46,7 @@ jobs:
           branch: auto-determine
           gh-event-file: "1"
           add-layer: "0"
+          remove-git: "0"
       - name: checkout (meta-openembedded)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
@@ -55,12 +56,15 @@ jobs:
           add-layer: "0"
       - name: setup (caches)
         run: |
+          sudo mkdir -p /__w/_temp/_runner_file_commands
+          sudo chmod -R 0777 /__w/_temp/_runner_file_commands
+          sudo echo "rubygems_master_rev=$(git -C /opt/build/sources/meta-rubygems/ rev-parse ${{ github.base_ref }})" >> $GITHUB_ENV
           mkdir -p ${WORKSPACE}/sstate-cache
       - name: configure (caches)
         uses: actions/cache@v2
         with:
           path: /opt/build/sstate-cache
-          key: rubygems-x86-64-glibc
+          key: rubygems-x86-64-glibc-${{ env.rubygems_master_rev }}
       - name: activate (caches)
         uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
         with:
