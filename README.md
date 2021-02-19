@@ -13,6 +13,13 @@ The following variants are tested regularly:
 Other variants most likely will work.
 Feel free to contribute any needed patches.
 
+### Tested revisions
+
+Up to the following revisions automated checks being done
+
+* poky: f5188da2f12bee03e087c20d90720250e65e2922
+* meta-openembedded: c5acdbe0939981aa6a4919620aab93ac2b2e14af
+
 ## Support
 
 This layer is a rolling release.
