@@ -36,6 +36,14 @@ class Git():
         _changes = self.__repo.git.status("--porcelain")
         return set(x.strip().split(" ")[1] for x in _changes.split("\n") if " " in x and x.startswith("??"))
 
+    @property
+    def current_revision(self):
+        return self.__repo.git.log("-1", "--pretty=format:%H")
+
+    @property
+    def upstream_head(self):
+        return self.__repo.rev_parse("origin/{}".format(self.branch))
+
     def __relative_paths(self, _list):
         _sanitized_changes = set()
         for c in _list:
