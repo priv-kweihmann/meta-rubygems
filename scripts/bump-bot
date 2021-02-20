@@ -1,0 +1,81 @@
+#!/usr/bin/env python3
+import argparse
+import datetime
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+
+from packagebot.bitbake import Bitbake
+from packagebot.git import Git
+from packagebot.github import GitHub
+
+def create_argpaser():
+    parser = argparse.ArgumentParser(description='Package update bot')
+    parser.add_argument(
+        "--repo_path", default=os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+    parser.add_argument("--git_user", default=os.environ.get("GIT_USER"))
+    parser.add_argument("--git_mail", default=os.environ.get("GIT_MAIL"))
+    parser.add_argument(
+        "--github_user", default=os.environ.get("GIT_USERNAME"))
+    parser.add_argument("--github_pat", default=os.environ.get("GIT_PASSWORD"))
+    parser.add_argument("--github_repo_user",
+                        default=os.environ.get("GITHUB_REPO_USER"))
+    parser.add_argument("--github_repo", default=os.environ.get("GITHUB_REPO"))
+    parser.add_argument("branch")
+    parser.add_argument("repodirs", default=[], nargs="+")
+
+    # export askpass reference
+    os.environ["GIT_ASKPASS"] = os.path.join(
+        os.path.dirname(__file__), "packagebot", "askpass.py")
+
+    return parser.parse_args()
+
+
+def __sed(source, needle, replacement):
+    cnt = ""
+    with open(source) as i:
+        cnt = i.read()
+
+    with open(source, "w") as o:
+        o.write(cnt.replace(needle, replacement))
+
+def change_log(map):
+    res = []
+    for k, v in map.items():
+        res.append("* update {} to {}".format(os.path.basename(k.rstrip("/")), v.upstream_head))
+    return "\n".join(res)
+
+def main():
+    _args = create_argpaser()
+
+    _main_git = Git(_args.repo_path, _args.git_user, _args.git_mail)
+    _github = GitHub(_args.github_user, _args.github_pat,
+                     _args.github_repo_user, _args.github_repo)
+
+    _map_repo = {}
+    for _dir in _args.repodirs:
+        _map_repo[_dir] = Git(_dir, _args.git_user, _args.git_mail)
+
+    _main_git.create_branch("rev_bump_{}".format(
+        datetime.datetime.now().strftime("%Y%m%d")))
+
+    for root, dirs, files in os.walk(_main_git.root):
+        for _f in files:
+            _filename, _ext = os.path.splitext(_f)
+            if _ext in [".yml", ".md"]:
+                for _, v in _map_repo.items():
+                    __sed(os.path.join(root, _f), str(
+                        v.current_revision), str(v.upstream_head))
+
+    # commit
+    _main_git.commit(_main_git.changes, "Bump revisions", change_log(_map_repo))
+    # publish branch
+    _main_git.publish()
+    # create pull request
+    _github.create_pullrequest(
+        _main_git.branch, "Bump layer revisions", change_log(_map_repo))
+
+
+if __name__ == '__main__':
+    main()
