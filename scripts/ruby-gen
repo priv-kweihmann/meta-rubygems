@@ -168,6 +168,12 @@ def get_license(desc, old_recipes):
         return "TODO"
     return " & ".join(desc["licenses"])
 
+def __sanitizies_version(_input):
+    _dotcnt = sum(1 for x in _input if x == ".")
+    _ver = _input.replace(".", "")
+    _ver += "0" * (3 - _dotcnt)
+    return int(_ver)
+
 
 def check_existing(args, pkgname, version, _naming_pattern):
     _matches = glob.glob(os.path.join(
@@ -181,9 +187,8 @@ def check_existing(args, pkgname, version, _naming_pattern):
                 m).replace(".bb", "").split("_")[1])
             cversion = Version(version)
         except ValueError:
-            mversion = int(os.path.basename(m).replace(
-                ".bb", "").split("_")[1].replace(".", ""))
-            cversion = int(version.replace(".", ""))
+            mversion = int(__sanitizies_version(os.path.basename(m).replace(".bb", "").split("_")[1]))
+            cversion = int(__sanitizies_version(version))
         if mversion >= cversion and not args.force:
             return []
         if mversion < cversion:
