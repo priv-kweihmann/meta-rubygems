@@ -96,10 +96,10 @@ jobs:
           value: "1"
       - name: build (package update)
         run: |
-          GIT_USER=${{ secrets.BOTNAME }} \
-          GIT_MAIL=${{ secrets.BOTMAIL }} \
-          GIT_USERNAME=${{ secrets.BOTGITUSER }} \
-          GIT_PASSWORD=${{ secrets.BOTTOKEN }} \
+          GIT_USER="${{ secrets.BOTNAME }}" \
+          GIT_MAIL="${{ secrets.BOTMAIL }}" \
+          GIT_USERNAME="${{ secrets.BOTGITUSER }}" \
+          GIT_PASSWORD="${{ secrets.BOTTOKEN }}" \
           GITHUB_REPO_USER=priv-kweihmann \
           GITHUB_REPO=meta-rubygems \
           ${WORKSPACE}/sources/meta-rubygems/scripts/package-bot
