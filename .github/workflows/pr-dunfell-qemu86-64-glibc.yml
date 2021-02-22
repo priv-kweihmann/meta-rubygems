@@ -39,8 +39,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
           repo: git://git.yoctoproject.org/poky.git
-          ref: 3.3_M2
-          branch: none
+          branch: ${{ env.SCM_BRANCH }}
           add-layer: "0"
       - name: checkout (meta-rubygems)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
@@ -53,8 +52,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
           repo: git://git.openembedded.org/meta-openembedded
-          ref: fc09f711624f66720cbf8eab175a674556bf38d9
-          branch: none
+          branch: ${{ env.SCM_BRANCH }}
           add-layer: "0"
       - if: env.BUILD_GLIBC == '1'
         name: build (glibc)
