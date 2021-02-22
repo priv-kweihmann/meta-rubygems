@@ -6,7 +6,6 @@ import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 
-from packagebot.bitbake import Bitbake
 from packagebot.git import Git
 from packagebot.github import GitHub
 
