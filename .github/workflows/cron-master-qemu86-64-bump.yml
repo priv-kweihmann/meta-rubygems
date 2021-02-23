@@ -49,12 +49,14 @@ jobs:
           repo: git://git.yoctoproject.org/poky.git
           ref: f5188da2f12bee03e087c20d90720250e65e2922
           branch: none
+          remove-git: "0"
           add-layer: "0"
       - name: checkout (meta-rubygems)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
           repo: https://github.com/priv-kweihmann/meta-rubygems.git
           branch: ${{ env.SCM_BRANCH }}
+          remove-git: "0"
           add-layer: "0"
       - name: checkout (meta-openembedded)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
@@ -62,6 +64,7 @@ jobs:
           repo: git://git.openembedded.org/meta-openembedded
           ref: c5acdbe0939981aa6a4919620aab93ac2b2e14af
           branch: none
+          remove-git: "0"
           add-layer: "0"
       - name: activate (caches)
         uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
