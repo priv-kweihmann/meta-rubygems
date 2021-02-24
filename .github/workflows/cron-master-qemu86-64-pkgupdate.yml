@@ -1,6 +1,8 @@
 name: "[cron]-[glibc]-[qemux86-64]-[pkgupdate]"
 
 on:
+  repository_dispatch:
+    types: do-package-update
   schedule:
     - cron: "0 2 * * 6"
 
