@@ -58,7 +58,7 @@ jobs:
         run: |
           sudo mkdir -p /__w/_temp/_runner_file_commands
           sudo chmod -R 0777 /__w/_temp/_runner_file_commands
-          sudo echo "rubygems_master_rev=$(git -C /opt/build/sources/meta-rubygems/ rev-parse ${{ github.base_ref }})" >> $GITHUB_ENV
+          sudo echo "rubygems_master_rev=$(git -C /opt/build/sources/meta-rubygems/ rev-parse origin/master)" >> $GITHUB_ENV
           mkdir -p ${WORKSPACE}/sstate-cache
       - name: configure (caches)
         uses: actions/cache@v2
