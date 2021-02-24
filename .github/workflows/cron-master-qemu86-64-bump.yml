@@ -40,11 +40,6 @@ jobs:
         run: |
           mkdir -p ${WORKSPACE}/sstate-cache
         shell: bash
-      - name: additional setup (caches)
-        uses: actions/cache@v2
-        with:
-          path: /opt/build/sstate-cache
-          key: rubygems-x86-64-glibc-${{ github.sha }}
       - name: checkout (poky)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
@@ -68,37 +63,6 @@ jobs:
           branch: none
           remove-git: "0"
           add-layer: "0"
-      - name: activate (caches)
-        uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
-        with:
-          variable: SSTATE_MIRRORS
-          value: "file://.* file:///${WORKSPACE}/sstate-cache/PATH"
-      - if: env.BUILD_GLIBC == '1'
-        name: build (glibc)
-        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
-        with:
-          target: glibc
-      - if: env.BUILD_KERNEL == '1'
-        name: build (kernel)
-        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
-        with:
-          target: linux-yocto
-      - if: env.BUILD_QEMUSYSTEM == '1'
-        name: build (qemu-system)
-        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
-        with:
-          target: qemu-system-native
-      - name: setup (rm_work_and_downloads)
-        uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
-        with:
-          variable: INHERIT
-          operation: " += "
-          value: "rm_work_and_downloads rubygemsdebug"
-      - name: setup (generate test files)
-        uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
-        with:
-          variable: RUBYGEMS_AUTOGEN_TESTS
-          value: "1"
       - name: build (revision update)
         run: |
           GIT_USER="${{ secrets.BOTNAME }}" \
