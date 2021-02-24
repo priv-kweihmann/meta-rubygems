@@ -4,6 +4,8 @@
 # Requires GIT_USERNAME and GIT_PASSWORD environment variables,
 # intended to be called by Git via GIT_ASKPASS.
 #
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2021, Konrad Weihmann
 
 from sys import argv
 from os import environ
