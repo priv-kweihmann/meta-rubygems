@@ -45,7 +45,8 @@ def __sed(source, needle, replacement):
 def change_log(map):
     res = []
     for k, v in map.items():
-        res.append("* update {} to {}".format(os.path.basename(k.rstrip("/")), v.upstream_head))
+        if v.upstream_head != v.current_revision:
+            res.append("* update {} to {}".format(os.path.basename(k.rstrip("/")), v.upstream_head))
     return "\n".join(res)
 
 def main():
@@ -70,13 +71,14 @@ def main():
                     __sed(os.path.join(root, _f), str(
                         v.current_revision), str(v.upstream_head))
 
-    # commit
-    _main_git.commit(_main_git.changes, "Bump revisions", change_log(_map_repo))
-    # publish branch
-    _main_git.publish()
-    # create pull request
-    _github.create_pullrequest(
-        _main_git.branch, "Bump layer revisions", change_log(_map_repo))
+    if any(_main_git.changes):
+        # commit
+        _main_git.commit(_main_git.changes, "Bump revisions", change_log(_map_repo))
+        # publish branch
+        _main_git.publish()
+        # create pull request
+        _github.create_pullrequest(
+            _main_git.branch, "Bump layer revisions", change_log(_map_repo))
 
 
 if __name__ == '__main__':
