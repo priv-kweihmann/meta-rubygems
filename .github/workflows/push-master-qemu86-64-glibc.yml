@@ -94,8 +94,3 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: core-image-minimal-rubygems
-      - name: test (core-image-minimal-rubygems)
-        uses: priv-kweihmann/meta-sca-ci-utils/testimage@latest
-        with:
-          target: core-image-minimal-rubygems
-          tapgen: "0"
