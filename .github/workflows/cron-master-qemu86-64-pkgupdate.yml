@@ -97,6 +97,11 @@ jobs:
         with:
           variable: RUBYGEMS_AUTOGEN_TESTS
           value: "1"
+      - name: install (additional packages)
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends curl
+        shell: bash
       - name: build (package update)
         run: |
           GIT_USER="${{ secrets.BOTNAME }}" \
