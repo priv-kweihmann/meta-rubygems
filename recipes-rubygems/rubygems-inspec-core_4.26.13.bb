@@ -30,6 +30,16 @@ DEPENDS_class-native += "\
     rubygems-tty-prompt-native \
     rubygems-tty-table-native \
 "
+
+SRC_URI[md5sum] = "12b84a487d7d2614dab1450c94a5e1c6"
+SRC_URI[sha256sum] = "94e0777d29d7387c2d496374158daaeeaa08728beecebdfa67cd6887cbf96b12"
+
+GEM_NAME = "inspec-core"
+
+inherit rubygems
+inherit rubygentest
+inherit pkgconfig
+
 RDEPENDS_${PN}_class-target += "\
     rubygems-addressable \
     rubygems-chef-telemetry \
@@ -54,16 +64,5 @@ RDEPENDS_${PN}_class-target += "\
     rubygems-tty-prompt \
     rubygems-tty-table \
 "
-
-SRC_URI[md5sum] = "0677b92b6dc38f48dfd578023066b30c"
-SRC_URI[sha256sum] = "e80e5f7ae8e0ca8cccd5a2ed34fda4a0e75445f4bd64c8ae39507956bc252d5b"
-
-GEM_NAME = "inspec-core"
-
-
-
-inherit rubygems
-inherit rubygentest
-inherit pkgconfig
 
 BBCLASSEXTEND = "native"
