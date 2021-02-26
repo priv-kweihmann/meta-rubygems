@@ -9,19 +9,18 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 DEPENDS_class-native += "\
     rubygems-chef-utils-native \
 "
-RDEPENDS_${PN}_class-target += "\
-    rubygems-chef-utils \
-"
 
-SRC_URI[md5sum] = "8eeb0bae928790721f2396e35443a562"
-SRC_URI[sha256sum] = "e90bc2af9bc1fcaacab9e51b2453302a9f3ca135489dbf91d5ebc236e1053f78"
+SRC_URI[md5sum] = "fc8718167959d7bfa6a8185eb56afc1c"
+SRC_URI[sha256sum] = "121a54005e52b6596a945f7bfc95bbcbd7d8ee7685cb3736dd3cef5ff46029bd"
 
 GEM_NAME = "mixlib-shellout"
-
-
 
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS_${PN}_class-target += "\
+    rubygems-chef-utils \
+"
 
 BBCLASSEXTEND = "native"
