@@ -44,6 +44,25 @@ DEPENDS_class-native += "\
     rubygems-tty-table-native \
     rubygems-uuidtools-native \
 "
+
+SRC_URI[md5sum] = "755bb008c1cec862337b4579601ec520"
+SRC_URI[sha256sum] = "f9eb4f49cddb8d6f94067411b425f306cab6605e63cce51fd727d62dc996c17a"
+
+GEM_NAME = "chef"
+
+inherit rubygems
+inherit rubygentest
+inherit pkgconfig
+
+do_generate_spec_append() {
+    # remove the rc2 suffix
+    sed -i 's#1.1.0.rc2#1.1.0#g' ${GEM_SPEC_FILE}
+}
+
+do_install_append() {
+    rm -f ${GEM_HOME}/gems/chef-${PV}/spec/functional/assets/chefinittest
+}
+
 RDEPENDS_${PN}_class-target += "\
     rubygems-addressable \
     rubygems-bcrypt-pbkdf \
@@ -82,23 +101,5 @@ RDEPENDS_${PN}_class-target += "\
     rubygems-tty-table \
     rubygems-uuidtools \
 "
-
-SRC_URI[md5sum] = "e83e39e7c359d68ee14f41bf1e696f25"
-SRC_URI[sha256sum] = "f40a0718e1b304a3a9b971c7b274de278cfadaa95efdb987c7b5eb994e3afeca"
-
-GEM_NAME = "chef"
-
-do_install_append() {
-    rm -f ${GEM_HOME}/gems/chef-${PV}/spec/functional/assets/chefinittest
-}
-
-do_generate_spec_append() {
-    # remove the rc2 suffix
-    sed -i 's#1.1.0.rc2#1.1.0#g' ${GEM_SPEC_FILE}
-}
-
-inherit rubygems
-inherit rubygentest
-inherit pkgconfig
 
 BBCLASSEXTEND = "native"
