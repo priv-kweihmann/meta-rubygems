@@ -6,8 +6,8 @@ HOMEPAGE = "https://github.com/mime-types/mime-types-data/"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://Licence.md;md5=3dcdb500ebc9fc19d575024c9e60873d"
 
-SRC_URI[md5sum] = "296a95a186a2bf206ca272e06757f632"
-SRC_URI[sha256sum] = "4fb1eeb8e3fbe88059c751adc6a96322b8f2c89403db8928bb9bda64b9f3f246"
+SRC_URI[md5sum] = "cae124aa2bde9284460d6dc30e2dac3b"
+SRC_URI[sha256sum] = "b1bae3b70776fc81794da9e727a53b60c38715ad7839e24fe337de0ffec10cde"
 
 GEM_NAME = "mime-types-data"
 
