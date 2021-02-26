@@ -104,6 +104,8 @@ jobs:
         shell: bash
       - name: build (package update)
         run: |
+          source /github/actions/scripts/utils
+          setup_bitbake
           GIT_USER="${{ secrets.BOTNAME }}" \
           GIT_MAIL="${{ secrets.BOTMAIL }}" \
           GIT_USERNAME="${{ secrets.BOTGITUSER }}" \
