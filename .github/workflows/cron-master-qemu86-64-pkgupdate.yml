@@ -99,8 +99,8 @@ jobs:
           value: "1"
       - name: install (additional packages)
         run: |
-          apt-get update
-          apt-get install -y --no-install-recommends curl
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends curl
         shell: bash
       - name: build (package update)
         run: |
