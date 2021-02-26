@@ -72,6 +72,12 @@ EXTRA_OECONF = "\
     --with-coroutine=copy \
 "
 
+EXTRA_OECONF_append_libc-musl = " \
+    LIBS='-lucontext' \
+    ac_cv_func_isnan=yes \
+    ac_cv_func_isinf=yes \
+"
+
 # This snippet lets compiled extensions which rely on external libraries,
 # such as zlib, compile properly.  If we don't do this, then when extmk.rb
 # runs, it uses the native libraries instead of the target libraries, and so
