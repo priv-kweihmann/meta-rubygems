@@ -6,16 +6,21 @@ HOMEPAGE = "https://github.com/ruby-i18n/i18n"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://MIT-LICENSE;md5=c0e4b0e10e0acf26e4e423343ccf78f8"
 
-DEPENDS_class-native += "rubygems-concurrent-ruby-native"
-RDEPENDS_${PN}_class-target += "rubygems-concurrent-ruby"
+DEPENDS_class-native += "\
+    rubygems-concurrent-ruby-native \
+"
 
-SRC_URI[md5sum] = "df6f6da16b388f79740fc35c74312392"
-SRC_URI[sha256sum] = "7adb9849c22f4230c1e6d22d3a0cbba2e3de6a6fa40da64ddf385050f91df84c"
+SRC_URI[md5sum] = "eb6d2f8a637b693c687ecf5846bf1866"
+SRC_URI[sha256sum] = "62a877ff6b5fdb4c20ca614c6bfcd6abd7b426d883069e59ce41a6744758e622"
 
 GEM_NAME = "i18n"
 
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS_${PN}_class-target += "\
+    rubygems-concurrent-ruby \
+"
 
 BBCLASSEXTEND = "native"
