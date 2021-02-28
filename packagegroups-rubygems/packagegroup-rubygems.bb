@@ -6,10 +6,12 @@ RDEPENDS_${PN} += "\
     rubygems-activemodel \
     rubygems-activesupport \
     rubygems-addressable \
+    rubygems-ast \
     rubygems-aws-eventstream \
     rubygems-aws-partitions \
     rubygems-aws-sdk-core \
     rubygems-aws-sigv4 \
+    rubygems-axiom-types \
     rubygems-bcrypt-pbkdf \
     rubygems-builder \
     rubygems-chef \
@@ -18,11 +20,17 @@ RDEPENDS_${PN} += "\
     rubygems-chef-utils \
     rubygems-chef-vault \
     rubygems-chef-zero \
+    rubygems-codeclimate-engine-rb \
     rubygems-coderay \
+    rubygems-coercible \
     rubygems-concurrent-ruby \
+    rubygems-connection-pool \
     rubygems-deep-merge \
+    rubygems-descendants-tracker \
     rubygems-diff-lcs \
+    rubygems-docile \
     rubygems-ed25519 \
+    rubygems-equalizer \
     rubygems-erubi \
     rubygems-erubis \
     rubygems-facter \
@@ -33,7 +41,10 @@ RDEPENDS_${PN} += "\
     rubygems-ffi \
     rubygems-ffi-libarchive \
     rubygems-ffi-yajl \
+    rubygems-flay \
+    rubygems-flog \
     rubygems-fuzzyurl \
+    rubygems-gauntlet \
     rubygems-gssapi \
     rubygems-gyoku \
     rubygems-hashie \
@@ -42,11 +53,14 @@ RDEPENDS_${PN} += "\
     rubygems-hocon \
     rubygems-httpclient \
     rubygems-i18n \
+    rubygems-ice-nine \
     rubygems-iniparse \
     rubygems-inspec-core \
     rubygems-ipaddress \
     rubygems-jmespath \
     rubygems-json \
+    rubygems-kwalify \
+    rubygems-launchy \
     rubygems-libyajl2 \
     rubygems-license-acceptance \
     rubygems-little-plugger \
@@ -65,6 +79,7 @@ RDEPENDS_${PN} += "\
     rubygems-mixlib-shellout \
     rubygems-multi-json \
     rubygems-multipart-post \
+    rubygems-net-http-persistent \
     rubygems-net-netconf \
     rubygems-net-scp \
     rubygems-net-sftp \
@@ -75,8 +90,10 @@ RDEPENDS_${PN} += "\
     rubygems-nori \
     rubygems-ohai \
     rubygems-parallel \
+    rubygems-parser \
     rubygems-parslet \
     rubygems-pastel \
+    rubygems-path-expander \
     rubygems-plist \
     rubygems-proxifier \
     rubygems-pry \
@@ -85,6 +102,8 @@ RDEPENDS_${PN} += "\
     rubygems-puppet-resource-api \
     rubygems-puppetmodule-netdev-stdlib \
     rubygems-rack \
+    rubygems-rainbow \
+    rubygems-reek \
     rubygems-rspec \
     rubygems-rspec-core \
     rubygems-rspec-expectations \
@@ -92,14 +111,20 @@ RDEPENDS_${PN} += "\
     rubygems-rspec-junit-formatter \
     rubygems-rspec-mocks \
     rubygems-rspec-support \
+    rubygems-ruby-parser \
     rubygems-ruby2-keywords \
+    rubygems-rubycritic \
     rubygems-rubyntlm \
     rubygems-rubyzip \
     rubygems-scanf \
     rubygems-semantic-puppet \
     rubygems-semverse \
     rubygems-serverspec \
+    rubygems-sexp-processor \
     rubygems-sfl \
+    rubygems-simplecov \
+    rubygems-simplecov-html \
+    rubygems-simplecov-json-formatter \
     rubygems-slop \
     rubygems-specinfra \
     rubygems-sslshake \
@@ -120,10 +145,12 @@ RDEPENDS_${PN} += "\
     rubygems-tty-reader \
     rubygems-tty-screen \
     rubygems-tty-table \
+    rubygems-tty-which \
     rubygems-tzinfo \
     rubygems-unicode-display-width \
     rubygems-unicode-utils \
     rubygems-uuidtools \
+    rubygems-virtus \
     rubygems-winrm \
     rubygems-winrm-elevated \
     rubygems-winrm-fs \
