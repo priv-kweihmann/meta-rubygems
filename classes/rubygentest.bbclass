@@ -30,7 +30,7 @@ python do_rubygems_gen_test() {
         __tests.add(_tpl_require.format(
             pn=sanitize_name(d.getVar("BPN")),
             require=_filename,
-            sanitize_name=sanitize_name(_filename)))
+            sanitize_name=sanitize_name(_filename).replace(".", "_")))
 
     for _file in glob.glob(d.expand("${PKGDEST}/${PN}/${bindir}/*")):
         _filename = os.path.basename(_file)
