@@ -9,9 +9,75 @@ RDEPENDS_${PN} += "\
     rubygems-ast \
     rubygems-aws-eventstream \
     rubygems-aws-partitions \
+    rubygems-aws-sdk-apigateway \
+    rubygems-aws-sdk-apigatewayv2 \
+    rubygems-aws-sdk-applicationautoscaling \
+    rubygems-aws-sdk-athena \
+    rubygems-aws-sdk-autoscaling \
+    rubygems-aws-sdk-batch \
+    rubygems-aws-sdk-budgets \
+    rubygems-aws-sdk-cloudformation \
+    rubygems-aws-sdk-cloudfront \
+    rubygems-aws-sdk-cloudhsm \
+    rubygems-aws-sdk-cloudhsmv2 \
+    rubygems-aws-sdk-cloudtrail \
+    rubygems-aws-sdk-cloudwatch \
+    rubygems-aws-sdk-cloudwatchevents \
+    rubygems-aws-sdk-cloudwatchlogs \
+    rubygems-aws-sdk-codecommit \
+    rubygems-aws-sdk-codedeploy \
+    rubygems-aws-sdk-codepipeline \
+    rubygems-aws-sdk-cognitoidentity \
+    rubygems-aws-sdk-cognitoidentityprovider \
+    rubygems-aws-sdk-configservice \
     rubygems-aws-sdk-core \
+    rubygems-aws-sdk-costandusagereportservice \
+    rubygems-aws-sdk-databasemigrationservice \
+    rubygems-aws-sdk-dynamodb \
+    rubygems-aws-sdk-ec2 \
+    rubygems-aws-sdk-ecr \
+    rubygems-aws-sdk-ecs \
+    rubygems-aws-sdk-efs \
+    rubygems-aws-sdk-eks \
+    rubygems-aws-sdk-elasticache \
+    rubygems-aws-sdk-elasticbeanstalk \
+    rubygems-aws-sdk-elasticloadbalancing \
+    rubygems-aws-sdk-elasticloadbalancingv2 \
+    rubygems-aws-sdk-elasticsearchservice \
+    rubygems-aws-sdk-firehose \
+    rubygems-aws-sdk-glue \
+    rubygems-aws-sdk-guardduty \
+    rubygems-aws-sdk-iam \
+    rubygems-aws-sdk-kafka \
+    rubygems-aws-sdk-kinesis \
+    rubygems-aws-sdk-kms \
+    rubygems-aws-sdk-lambda \
+    rubygems-aws-sdk-organizations \
+    rubygems-aws-sdk-ram \
+    rubygems-aws-sdk-rds \
+    rubygems-aws-sdk-redshift \
+    rubygems-aws-sdk-route53 \
+    rubygems-aws-sdk-route53domains \
+    rubygems-aws-sdk-route53resolver \
+    rubygems-aws-sdk-s3 \
+    rubygems-aws-sdk-secretsmanager \
+    rubygems-aws-sdk-securityhub \
+    rubygems-aws-sdk-servicecatalog \
+    rubygems-aws-sdk-ses \
+    rubygems-aws-sdk-shield \
+    rubygems-aws-sdk-sms \
+    rubygems-aws-sdk-sns \
+    rubygems-aws-sdk-sqs \
+    rubygems-aws-sdk-ssm \
+    rubygems-aws-sdk-states \
+    rubygems-aws-sdk-transfer \
     rubygems-aws-sigv4 \
     rubygems-axiom-types \
+    rubygems-azure-graph-rbac \
+    rubygems-azure-mgmt-key-vault \
+    rubygems-azure-mgmt-resources \
+    rubygems-azure-mgmt-security \
+    rubygems-azure-mgmt-storage \
     rubygems-bcrypt-pbkdf \
     rubygems-builder \
     rubygems-chef \
@@ -25,16 +91,22 @@ RDEPENDS_${PN} += "\
     rubygems-coercible \
     rubygems-concurrent-ruby \
     rubygems-connection-pool \
+    rubygems-declarative \
+    rubygems-declarative-option \
     rubygems-deep-merge \
     rubygems-descendants-tracker \
     rubygems-diff-lcs \
     rubygems-docile \
+    rubygems-docker-api \
+    rubygems-domain-name \
     rubygems-ed25519 \
     rubygems-equalizer \
     rubygems-erubi \
     rubygems-erubis \
+    rubygems-excon \
     rubygems-facter \
     rubygems-faraday \
+    rubygems-faraday-cookie-jar \
     rubygems-faraday-middleware \
     rubygems-faraday-net-http \
     rubygems-fast-gettext \
@@ -45,20 +117,31 @@ RDEPENDS_${PN} += "\
     rubygems-flog \
     rubygems-fuzzyurl \
     rubygems-gauntlet \
+    rubygems-gems \
+    rubygems-google-api-client \
+    rubygems-google-apis-core \
+    rubygems-google-apis-discovery-v1 \
+    rubygems-google-apis-generator \
+    rubygems-googleauth \
     rubygems-gssapi \
     rubygems-gyoku \
     rubygems-hashie \
     rubygems-hiera \
     rubygems-highline \
     rubygems-hocon \
+    rubygems-http-cookie \
     rubygems-httpclient \
     rubygems-i18n \
     rubygems-ice-nine \
+    rubygems-inifile \
     rubygems-iniparse \
+    rubygems-inspec \
+    rubygems-inspec-bin \
     rubygems-inspec-core \
     rubygems-ipaddress \
     rubygems-jmespath \
     rubygems-json \
+    rubygems-jwt \
     rubygems-kwalify \
     rubygems-launchy \
     rubygems-libyajl2 \
@@ -66,9 +149,11 @@ RDEPENDS_${PN} += "\
     rubygems-little-plugger \
     rubygems-locale \
     rubygems-logging \
+    rubygems-memoist \
     rubygems-method-source \
     rubygems-mime-types \
     rubygems-mime-types-data \
+    rubygems-mini-mime \
     rubygems-mini-portile2 \
     rubygems-minitest \
     rubygems-mixlib-archive \
@@ -77,6 +162,8 @@ RDEPENDS_${PN} += "\
     rubygems-mixlib-config \
     rubygems-mixlib-log \
     rubygems-mixlib-shellout \
+    rubygems-ms-rest \
+    rubygems-ms-rest-azure \
     rubygems-multi-json \
     rubygems-multipart-post \
     rubygems-net-http-persistent \
@@ -89,6 +176,7 @@ RDEPENDS_${PN} += "\
     rubygems-nokogiri \
     rubygems-nori \
     rubygems-ohai \
+    rubygems-os \
     rubygems-parallel \
     rubygems-parser \
     rubygems-parslet \
@@ -104,6 +192,8 @@ RDEPENDS_${PN} += "\
     rubygems-rack \
     rubygems-rainbow \
     rubygems-reek \
+    rubygems-representable \
+    rubygems-retriable \
     rubygems-rspec \
     rubygems-rspec-core \
     rubygems-rspec-expectations \
@@ -122,6 +212,7 @@ RDEPENDS_${PN} += "\
     rubygems-serverspec \
     rubygems-sexp-processor \
     rubygems-sfl \
+    rubygems-signet \
     rubygems-simplecov \
     rubygems-simplecov-html \
     rubygems-simplecov-json-formatter \
@@ -135,8 +226,12 @@ RDEPENDS_${PN} += "\
     rubygems-thor \
     rubygems-thread-safe \
     rubygems-tilt \
+    rubygems-timeliness \
     rubygems-tomlrb \
+    rubygems-train \
+    rubygems-train-aws \
     rubygems-train-core \
+    rubygems-train-habitat \
     rubygems-train-winrm \
     rubygems-tty-box \
     rubygems-tty-color \
@@ -147,6 +242,9 @@ RDEPENDS_${PN} += "\
     rubygems-tty-table \
     rubygems-tty-which \
     rubygems-tzinfo \
+    rubygems-uber \
+    rubygems-unf \
+    rubygems-unf-ext \
     rubygems-unicode-display-width \
     rubygems-unicode-utils \
     rubygems-uuidtools \
