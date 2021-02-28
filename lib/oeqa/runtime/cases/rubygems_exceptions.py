@@ -26,6 +26,7 @@ class RubyGemsTestExceptions():
         "ruby27_parser": "not the parser you are looking for",
         "simplecov-html": "needs extra configuration -> uninitialized constant SimpleCov (NameError)",
         "syslog-formatter": "module needs upfront configuration of a logging provider",
+        "version": "needs extra configuration -> uninitialized constant Azure (NameError)",
     }
 
     gem_list_skips = {
