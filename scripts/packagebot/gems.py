@@ -108,10 +108,21 @@ class Gem():
         if any(_new_recipes):
             self.__patch_packagegroup(_new_recipes)
 
+    def __refresh_self_info(self):
+        for c in self.__gitref.newfiles:
+            if c.endswith(".bb"):
+                name, version, depends = self.__extract_info(os.path.join(self.__gitref.root, c))
+                if name == self.__gem_name:
+                    self.__gem_version = version
+                    self.__depends_on = depends
+
     def attempt_update(self, repo_root, script="scripts/ruby-gen"):
         print("Attempt update of {}...".format(self.recipename), end="")
         self.__run_ruby_gen(
             [os.path.join(repo_root, script), self.__dir, self.__gem_name, "9.9.9"])
+
+        # Extract the new versions and depends
+        self.__refresh_self_info()
 
         if any(self.__gitref.changes):
             # returns a tuple (status, log)
