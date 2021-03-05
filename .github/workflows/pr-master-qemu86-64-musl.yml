@@ -46,6 +46,7 @@ jobs:
           branch: auto-determine
           gh-event-file: "1"
           add-layer: "0"
+          remove-git: "0"
       - name: checkout (meta-openembedded)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
@@ -53,7 +54,6 @@ jobs:
           ref: bb743fc71d3b0bc22b6c4a6ada44b63c38914dc4
           branch: none
           add-layer: "0"
-          remove-git: "0"
       - name: setup (caches)
         run: |
           sudo mkdir -p /__w/_temp/_runner_file_commands
