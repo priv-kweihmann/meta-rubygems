@@ -4,17 +4,15 @@ DESCRIPTION = "Official AWS Ruby gem for AWS CodePipeline (CodePipeline)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "\
-    file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10 \
-"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
 DEPENDS_class-native += "\
     rubygems-aws-sdk-core-native \
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "d4b97f7d8dec2d4e5103dc37b42f470d"
-SRC_URI[sha256sum] = "79b4b62e18139ede8366a61e23b38b8ca5c51b34c4a59ae8690a97304db3e806"
+SRC_URI[md5sum] = "2dc83016e3965e1cfa5bafa9de345fcd"
+SRC_URI[sha256sum] = "e50913b87e021661e23741a587b57bd1ade54500b796fea7dec360c885adaacc"
 
 GEM_NAME = "aws-sdk-codepipeline"
 
