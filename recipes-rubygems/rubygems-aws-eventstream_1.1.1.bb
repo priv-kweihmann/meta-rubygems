@@ -4,10 +4,10 @@ DESCRIPTION = "Amazon Web Services event stream library"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-SRC_URI[md5sum] = "50f4916f0e7bdc4527f30fe02ad9197f"
-SRC_URI[sha256sum] = "65b3b364861f4e2663359793e7632da70be9418d0d1f1b9bcbb365ec8db11764"
+SRC_URI[md5sum] = "15511340519ce63d360f33d8ae2c34a4"
+SRC_URI[sha256sum] = "034a72c408c77fc8d08132897be5025dcd414cd891ecd758b11465376389d349"
 
 GEM_NAME = "aws-eventstream"
 
