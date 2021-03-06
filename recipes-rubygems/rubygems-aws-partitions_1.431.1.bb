@@ -4,12 +4,10 @@ DESCRIPTION = "Provides interfaces to enumerate AWS partitions, regions, and ser
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "\
-    file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10 \
-"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-SRC_URI[md5sum] = "a577f4f65cd8f4a3d14de0dfd6e82784"
-SRC_URI[sha256sum] = "7dabe2c7a10febd02f4b29d24fd8b9bf3d4154bc104e903025557511813a868e"
+SRC_URI[md5sum] = "76ba50bf0c2c2367a07fffd01a56ea64"
+SRC_URI[sha256sum] = "7494d9ce0e8ac91dd9b5ff4a20eb7c148d2d101281bd05fb013f0dec5f27a720"
 
 GEM_NAME = "aws-partitions"
 
