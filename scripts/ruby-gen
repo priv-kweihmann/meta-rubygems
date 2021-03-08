@@ -71,11 +71,27 @@ BBCLASSEXTEND = "native"
 __seen_pkgs = []
 
 
-def get_description(args, pkgname):
+def get_versions(args, pkgname):
     try:
         _output = subprocess.check_output(
             ["curl", "-k",
-                "https://rubygems.org/api/v1/gems/{}.json".format(pkgname)],
+                "https://rubygems.org/api/v1/versions/{}.json".format(pkgname)],
+            universal_newlines=True, stderr=subprocess.DEVNULL)
+    except subprocess.CalledProcessError:
+        _output = "{}"
+    try:
+        res = json.loads(_output)
+    except json.JSONDecodeError:
+        print("Can't decode json -> {}".format(str(_output)))
+        res = {}
+    return res
+
+
+def get_description(args, pkgname, version):
+    try:
+        _output = subprocess.check_output(
+            ["curl", "-k",
+                "https://rubygems.org/api/v2/rubygems/{}/versions/{}.json".format(pkgname, version)],
             universal_newlines=True, stderr=subprocess.DEVNULL)
     except subprocess.CalledProcessError:
         _output = "{}"
@@ -120,8 +136,26 @@ def create_rdepends(desc, old):
     return prettify_list(res)
 
 
-def get_best_version(desc, pkgname, version):
-    return desc["version"]
+def get_best_version(args, _versions, pkgname, version):
+    for ver in _versions:
+        if ver.get("prerelease", False):
+            continue
+        try:
+            _raw = re.sub(r">|=|\s+|\~", "", ver.get("ruby_version", "0") or "0")
+            if _raw != "0":
+                try:
+                    _ruby_version_required = __sanitizies_version(_raw)
+                    _ruby_version_available = __sanitizies_version(args.rubyversion)
+                except Exception:
+                    # invalid version, such as "dev"
+                    continue
+                if _ruby_version_required > _ruby_version_available:
+                    continue
+            print("Pick {} for {}".format(ver["number"], pkgname))
+        except Exception as e:
+            print("{} -> {}".format(e, ver))
+        return ver["number"]
+    raise ValueError()
 
 
 def get_hashes(args, description, url):
@@ -167,6 +201,7 @@ def get_license(desc, old_recipes):
         return "TODO"
     return " & ".join(desc["licenses"])
 
+
 def __sanitizies_version(_input):
     _dotcnt = sum(1 for x in _input if x == ".")
     _ver = _input.replace(".", "")
@@ -186,7 +221,8 @@ def check_existing(args, pkgname, version, _naming_pattern):
                 m).replace(".bb", "").split("_")[1])
             cversion = Version(version)
         except ValueError:
-            mversion = int(__sanitizies_version(os.path.basename(m).replace(".bb", "").split("_")[1]))
+            mversion = int(__sanitizies_version(
+                os.path.basename(m).replace(".bb", "").split("_")[1]))
             cversion = int(__sanitizies_version(version))
         if mversion >= cversion and not args.force:
             return []
@@ -212,12 +248,13 @@ def create_tpl(args, pkgname, version):
     _naming_pattern = "rubygems-{}_{}.bb"
     if pkgname in __seen_pkgs:
         return
-    _all_description = get_description(args, pkgname)
+    _versions = get_versions(args, pkgname)
     try:
-        _bestversion = get_best_version(_all_description, pkgname, version)
+        _bestversion = get_best_version(args, _versions, pkgname, version)
     except ValueError:
         print("Can't get useful version for {} with '{}'".format(pkgname, version))
         return
+    _all_description = get_description(args, pkgname, _bestversion)
     if check_for_stdgems(args, pkgname, _naming_pattern):
         print("Provided as stdgem by ruby")
         return
@@ -234,8 +271,10 @@ def create_tpl(args, pkgname, version):
         _rdepends = create_rdepends(_description, _oldrecipes)
         _installflags = prettify_list(save_variables(
             "GEM_INSTALL_FLAGS", None, _oldrecipes))
-        _src_uri = prettify_list([x for x in save_variables("SRC_URI", None, _oldrecipes) if "://" in x])
-        __homepage_uri = _description["homepage_uri"] or " ".join(save_variables("HOMEPAGE", None, _oldrecipes))
+        _src_uri = prettify_list([x for x in save_variables(
+            "SRC_URI", None, _oldrecipes) if "://" in x])
+        __homepage_uri = _description["homepage_uri"] or " ".join(
+            save_variables("HOMEPAGE", None, _oldrecipes))
         __calculated = {
             "__class": ["rubygems", "rubygentest", "pkgconfig"],
             "__cleanname": sanitize_pkgname(pkgname),
@@ -287,7 +326,7 @@ def create_tpl(args, pkgname, version):
 
         if "dependencies" in _description and "runtime" in _description["dependencies"]:
             for item in _description["dependencies"]["runtime"]:
-                create_tpl(args, item["name"], "1000.0")
+                create_tpl(args, item["name"], "9.9.9")
 
 
 def create_parser():
@@ -295,6 +334,8 @@ def create_parser():
         description='Ruby recipe generator')
     parser.add_argument("--force", default=False,
                         action="store_true", help="enforce recipe generation")
+    parser.add_argument("--rubyversion", default="9.9.9",
+                        help="Has to support ruby version x.x.x")
     parser.add_argument("basepath", help="base path to the recipes")
     parser.add_argument("gemname", help="name of the gem package")
     parser.add_argument("gemversion", help="version of the gem package")
