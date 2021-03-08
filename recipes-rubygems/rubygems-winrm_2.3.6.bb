@@ -16,6 +16,16 @@ DEPENDS_class-native += "\
     rubygems-nori-native \
     rubygems-rubyntlm-native \
 "
+
+SRC_URI[md5sum] = "a99f8e81343f61caa441eb1397a1c6ae"
+SRC_URI[sha256sum] = "11351dd050447823a1c83adb3c55041f4aefe55f6ee513b70dae87768832ae5b"
+
+GEM_NAME = "winrm"
+
+inherit rubygems
+inherit rubygentest
+inherit pkgconfig
+
 RDEPENDS_${PN}_class-target += "\
     rubygems-builder \
     rubygems-erubi \
@@ -26,16 +36,5 @@ RDEPENDS_${PN}_class-target += "\
     rubygems-nori \
     rubygems-rubyntlm \
 "
-
-SRC_URI[md5sum] = "a99f8e81343f61caa441eb1397a1c6ae"
-SRC_URI[sha256sum] = "11351dd050447823a1c83adb3c55041f4aefe55f6ee513b70dae87768832ae5b"
-
-GEM_NAME = "winrm"
-
-
-
-inherit rubygems
-inherit rubygentest
-inherit pkgconfig
 
 BBCLASSEXTEND = "native"

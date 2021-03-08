@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "90262d760ea4a94cc2ae8d58205277a343409c288cbe7c29416b1826bd
 
 GEM_NAME = "strings-ansi"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "b922d0cf2313b6b7136ada6645ce7154ffc86418ca07d53b058efe9eb7
 
 GEM_NAME = "unicode_utils"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

@@ -11,21 +11,20 @@ DEPENDS_class-native += "\
     rubygems-tty-screen-native \
     rubygems-wisper-native \
 "
-RDEPENDS_${PN}_class-target += "\
-    rubygems-tty-cursor \
-    rubygems-tty-screen \
-    rubygems-wisper \
-"
 
 SRC_URI[md5sum] = "c31a13e1210fb397e25fd9e115c5f8e0"
 SRC_URI[sha256sum] = "c62972c985c0b1566f0e56743b6a7882f979d3dc32ff491ed490a076f899c2b1"
 
 GEM_NAME = "tty-reader"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS_${PN}_class-target += "\
+    rubygems-tty-cursor \
+    rubygems-tty-screen \
+    rubygems-wisper \
+"
 
 BBCLASSEXTEND = "native"

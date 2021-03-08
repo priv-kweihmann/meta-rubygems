@@ -13,11 +13,8 @@ EXTRA_DEPENDS += "libxcrypt"
 
 GEM_NAME = "ed25519"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
 BBCLASSEXTEND = "native"
-INSANE_SKIP_${PN} += "ldflags"

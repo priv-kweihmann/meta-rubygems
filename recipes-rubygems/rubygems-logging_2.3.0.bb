@@ -10,20 +10,19 @@ DEPENDS_class-native += "\
     rubygems-little-plugger-native \
     rubygems-multi-json-native \
 "
-RDEPENDS_${PN}_class-target += "\
-    rubygems-little-plugger \
-    rubygems-multi-json \
-"
 
 SRC_URI[md5sum] = "bd8cbc98f36af473775cb7b748b0dcbf"
 SRC_URI[sha256sum] = "c98298313ea08725f822facc59c801bceca876ee34fd57f022e752143b83755e"
 
 GEM_NAME = "logging"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS_${PN}_class-target += "\
+    rubygems-little-plugger \
+    rubygems-multi-json \
+"
 
 BBCLASSEXTEND = "native"

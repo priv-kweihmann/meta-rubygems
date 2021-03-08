@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "fd6ca2c8075f8085065dffcee0805c5b3f88d643d5c954acdc3282f463
 
 GEM_NAME = "mixlib-log"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

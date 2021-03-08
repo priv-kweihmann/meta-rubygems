@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "c4aed168141746d2357ce907626b83998084aeb3c6ac16670ae902a462
 
 GEM_NAME = "uuidtools"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "f468bcf6b72ec6d1585ed6744eb4817c1932a5bf91895ed056e69b7f12
 
 GEM_NAME = "plist"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

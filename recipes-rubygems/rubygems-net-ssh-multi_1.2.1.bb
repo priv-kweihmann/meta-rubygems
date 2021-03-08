@@ -10,20 +10,19 @@ DEPENDS_class-native += "\
     rubygems-net-ssh-gateway-native \
     rubygems-net-ssh-native \
 "
-RDEPENDS_${PN}_class-target += "\
-    rubygems-net-ssh \
-    rubygems-net-ssh-gateway \
-"
 
 SRC_URI[md5sum] = "618b8f5fe6d80e6823bdf53c1d5d7c3d"
 SRC_URI[sha256sum] = "e154105859d5cd30e132aaf9eff735d1f766d756f713a21bab29bf6956fa7d8e"
 
 GEM_NAME = "net-ssh-multi"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS_${PN}_class-target += "\
+    rubygems-net-ssh \
+    rubygems-net-ssh-gateway \
+"
 
 BBCLASSEXTEND = "native"

@@ -9,9 +9,9 @@ LIC_FILES_CHKSUM = "file://README.md;beginline=348;endline=370;md5=a89e7f76c3931
 SRC_URI[md5sum] = "d37a95462b8c7261c4de6158dcca653d"
 SRC_URI[sha256sum] = "ce17bc5c3a166f241a2e6613848b025c8146fce2defba505920c1d1f3f88fae6"
 
+EXTRA_RDEPENDS += "rubygems-pry"
+
 GEM_NAME = "wisper"
-
-
 
 inherit rubygems
 inherit rubygentest

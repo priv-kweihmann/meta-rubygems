@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "43e49f3d8b16c99d04ec1b273d3f9aa6eceac30903693f684e67595e88
 
 GEM_NAME = "mixlib-authentication"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

@@ -18,4 +18,3 @@ inherit rubygentest
 inherit pkgconfig
 
 BBCLASSEXTEND = "native"
-INSANE_SKIP_${PN} += "ldflags"

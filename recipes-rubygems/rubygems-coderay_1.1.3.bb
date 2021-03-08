@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "dc530018a4684512f8f38143cd2a096c9f02a1fc2459edcfe534787a7f
 
 GEM_NAME = "coderay"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

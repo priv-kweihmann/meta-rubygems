@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "2951e4991214464c3e92107e46438527d23048e634f3aee91c719e0bdf
 
 GEM_NAME = "httpclient"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

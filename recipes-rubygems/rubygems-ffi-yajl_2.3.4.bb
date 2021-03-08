@@ -19,9 +19,6 @@ GEM_INSTALL_FLAGS += "\
 DEPENDS_class-native += "\
     rubygems-libyajl2-native \
 "
-RDEPENDS_${PN}_class-target += "\
-    rubygems-libyajl2 \
-"
 
 SRC_URI[md5sum] = "ecde2c1dd66435b0a9ffa591d9235380"
 SRC_URI[sha256sum] = "a54b70a7539745701f79bb38602a3193527c89e939a9ae56096cb07c1fb0d5dd"
@@ -32,6 +29,8 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-BBCLASSEXTEND = "native"
+RDEPENDS_${PN}_class-target += "\
+    rubygems-libyajl2 \
+"
 
-INSANE_SKIP_${PN} += "ldflags"
+BBCLASSEXTEND = "native"

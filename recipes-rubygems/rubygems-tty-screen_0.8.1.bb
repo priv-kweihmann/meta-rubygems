@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "6508657c38f32bdca64880abe201ce237d80c94146e1f9b911cba3c782
 
 GEM_NAME = "tty-screen"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

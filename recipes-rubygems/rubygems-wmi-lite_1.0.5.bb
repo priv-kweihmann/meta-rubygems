@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "14efa710be3226e281a66ab93f7ebc92f5e0807029e02b9cf1d3f39d15
 
 GEM_NAME = "wmi-lite"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

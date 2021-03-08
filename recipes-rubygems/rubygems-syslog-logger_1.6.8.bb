@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "7541f34681c7d10ed63e8ee82733b0a60f79264a6ef3f489a20dce80e1
 
 GEM_NAME = "syslog-logger"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

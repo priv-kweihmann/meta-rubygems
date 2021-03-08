@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "5196155ab0d4060e4b4a482c1c1bd43198149605bd925fee4d40c494af
 
 GEM_NAME = "rubyzip"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
