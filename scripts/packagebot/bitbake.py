@@ -67,3 +67,15 @@ class Bitbake():
         except subprocess.CalledProcessError:
             pass
         return ""
+
+    def get_version(self, target):
+        try:
+            out = subprocess.check_output(
+                ["bitbake-layers", "show-recipes", "-b", target], universal_newlines=True)
+            m = re.search(r"(?P<pver>\d+\.\d+\.\d+)", out)
+            if m:
+                return m.group("pver")
+            return False
+        except subprocess.CalledProcessError:
+            # find failing task and task log
+            return False

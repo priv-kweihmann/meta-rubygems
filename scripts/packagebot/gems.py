@@ -116,10 +116,14 @@ class Gem():
                     self.__gem_version = version
                     self.__depends_on = depends
 
-    def attempt_update(self, repo_root, script="scripts/ruby-gen"):
+    def attempt_update(self, repo_root, script="scripts/ruby-gen", rubyversion=None):
         print("Attempt update of {}...".format(self.recipename), end="")
-        self.__run_ruby_gen(
-            [os.path.join(repo_root, script), self.__dir, self.__gem_name, "9.9.9"])
+
+        _args = [os.path.join(repo_root, script)]
+        if rubyversion:
+            _args += ["--rubyversion={}".format(rubyversion)]
+        _args += [self.__dir, self.__gem_name]
+        self.__run_ruby_gen(_args)
 
         # Extract the new versions and depends
         self.__refresh_self_info()
@@ -160,6 +164,9 @@ class Gems():
 
         self.__populates_gems()
 
+        self.__rubyversion = self.__bitbakeref.get_version("ruby")
+        print("Ruby used version is {}".format(self.__rubyversion))
+
     def __populates_gems(self):
         for _file in glob.glob(os.path.join(self.__repo, self.__search_path, "*.bb")):
             self.__gems.append(
@@ -184,7 +191,7 @@ class Gems():
         _updated_gems = []
 
         for gem in [v for _, v in sorted(__map.items(), key=lambda item: item[1][0], reverse=True)]:
-            _updated_gems += gem[1].attempt_update(self.__repo)
+            _updated_gems += gem[1].attempt_update(self.__repo, rubyversion=self.__rubyversion)
 
         # finally build the whole image
         _build = self.__bitbakeref.build()
