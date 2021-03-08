@@ -90,7 +90,7 @@ def get_description(args, pkgname, version):
     try:
         _output = subprocess.check_output(
             ["curl", "-k",
-                "https://rubygems.org/api/v2/rubygems/{}/versions/{}.json".format(pkgname, version)],
+                "https://rubygems.org/api/v2/rubygems/{}/versions/{}.json?platform=ruby".format(pkgname, version)],
             universal_newlines=True, stderr=subprocess.DEVNULL)
     except subprocess.CalledProcessError as e:
         _output = "{}"
@@ -327,7 +327,10 @@ def create_tpl(args, pkgname, version):
 
         if "dependencies" in _description and "runtime" in _description["dependencies"]:
             for item in _description["dependencies"]["runtime"]:
-                create_tpl(args, item["name"], None)
+                version = None # equals latest applicable
+                if item["requirements"].startswith("= "):
+                    version = item["requirements"].strip("= ")
+                create_tpl(args, item["name"], version)
 
 
 def create_parser():
