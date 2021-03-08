@@ -64,11 +64,15 @@ def __get_from_scancode(tarball, temp_folder, excludes):
         for k, v in res.items():
             _lic_path = k
             hash_md5 = hashlib.md5()
-            with open(os.path.join(_dir, _lic_path), "r") as f:
-                _lines = "".join(f.readlines()[v["start"] - 1:v["end"]])
-                hash_md5.update(_lines.encode('utf-8'))
-            _lic_hash = hash_md5.hexdigest()
-            _lic_path += ";beginline={};endline={}".format(v["start"], v["end"])
+            try:
+                with open(os.path.join(_dir, _lic_path), "r") as f:
+                    _lines = "".join(f.readlines()[v["start"] - 1:v["end"]])
+                    hash_md5.update(_lines.encode('utf-8'))
+                _lic_hash = hash_md5.hexdigest()
+                _lic_path += ";beginline={};endline={}".format(v["start"], v["end"])
+            except UnicodeDecodeError:
+                print("License file {} is not readable".format(_lic_path))
+                continue
 
     shutil.rmtree(_dir, ignore_errors=True)
     return (_lic_path, _lic_hash)
