@@ -15,6 +15,11 @@ Following items needs to be installed on your host
 * build the recipes `bitbake ruby-<gemname> ruby-<gemname>-native`
 * add the new recipes to `packagegroups-rubygems/packagegroup-rubygems.bb`
 
+### Adding gems for a different version of ruby
+
+In case you want to generate gem recipes for a different ruby version than the one on master use
+`ruby-gen <path to meta-rubygems>/recipes-rubygems --rubyversion=<rubyversion> <gemname> <gemversion>`
+
 ## Testing changes
 
 * run `bitbake core-image-minimal-rubygems`
