@@ -11,14 +11,19 @@ Following items needs to be installed on your host
 ## Add a new ruby gem
 
 * add `RUBYGEMS_AUTOGEN_TESTS = "1"` to your local.conf
-* generate the recipe by running `ruby-gen <path to meta-rubygems>/recipes-rubygems <gemname> <gemversion>`
+* generate the recipe by running `ruby-gen <path to meta-rubygems>/recipes-rubygems <gemname>`
 * build the recipes `bitbake ruby-<gemname> ruby-<gemname>-native`
 * add the new recipes to `packagegroups-rubygems/packagegroup-rubygems.bb`
 
 ### Adding gems for a different version of ruby
 
 In case you want to generate gem recipes for a different ruby version than the one on master use
-`ruby-gen <path to meta-rubygems>/recipes-rubygems --rubyversion=<rubyversion> <gemname> <gemversion>`
+`ruby-gen <path to meta-rubygems>/recipes-rubygems --rubyversion=<rubyversion> <gemname>`
+
+### Adding gems for a specific version of the gem
+
+In case you want to generate gem recipes for a specific gem version use
+`ruby-gen <path to meta-rubygems>/recipes-rubygems --gemversion=<gemversion> <gemname>`
 
 ## Testing changes
 
