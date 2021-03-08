@@ -325,12 +325,13 @@ def create_tpl(args, pkgname, version):
 
         __seen_pkgs.append(pkgname)
 
-        if "dependencies" in _description and "runtime" in _description["dependencies"]:
-            for item in _description["dependencies"]["runtime"]:
-                version = None # equals latest applicable
-                if item["requirements"].startswith("= "):
-                    version = item["requirements"].strip("= ")
-                create_tpl(args, item["name"], version)
+        if not args.norec:
+            if "dependencies" in _description and "runtime" in _description["dependencies"]:
+                for item in _description["dependencies"]["runtime"]:
+                    version = None  # equals latest applicable
+                    if item["requirements"].startswith("= "):
+                        version = item["requirements"].strip("= ")
+                    create_tpl(args, item["name"], version)
 
 
 def create_parser():
@@ -342,6 +343,8 @@ def create_parser():
                         help="Has to support ruby version x.x.x")
     parser.add_argument("--gemversion", default=None,
                         help="version of the gem package. If unspecified latest is picked")
+    parser.add_argument("--norec", default=False, action="store_true",
+                        help="Do not recurse over dependencies")
     parser.add_argument("basepath", help="base path to the recipes")
     parser.add_argument("gemname", help="name of the gem package")
     return parser.parse_args()
