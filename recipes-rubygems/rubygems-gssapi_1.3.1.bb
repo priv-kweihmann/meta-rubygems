@@ -11,19 +11,18 @@ EXTRA_RDEPENDS += "libgssapi-krb5"
 DEPENDS_class-native += "\
     rubygems-ffi-native \
 "
-RDEPENDS_${PN}_class-target += "\
-    rubygems-ffi \
-"
 
 SRC_URI[md5sum] = "4bd2df09d8e0ab4c6d2e1828c344eba1"
 SRC_URI[sha256sum] = "c51cf30842ee39bd93ce7fc33e20405ff8a04cda9dec6092071b61258284aee1"
 
 GEM_NAME = "gssapi"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS_${PN}_class-target += "\
+    rubygems-ffi \
+"
 
 BBCLASSEXTEND = "native"

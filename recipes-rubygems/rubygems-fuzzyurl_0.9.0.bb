@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "542efa80f2bcaadbdc402c2f0b572f2e335a1d53e375aecad68bbb3d86
 
 GEM_NAME = "fuzzyurl"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

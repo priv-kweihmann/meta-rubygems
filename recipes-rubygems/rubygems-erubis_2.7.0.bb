@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "63653f5174a7997f6f1d6f465fbe1494dcc4bdab1fb8e635f6216989fb
 
 GEM_NAME = "erubis"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

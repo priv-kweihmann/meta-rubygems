@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "79534185e6a777888d88628b14b6a1fdf5154a603f285f80b1753e1908
 
 GEM_NAME = "tty-cursor"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

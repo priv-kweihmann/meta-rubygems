@@ -9,19 +9,18 @@ LIC_FILES_CHKSUM = "file://MIT-LICENSE;md5=02933c5230585b35a44f9d13993f7a84"
 DEPENDS_class-native += "\
     rubygems-builder-native \
 "
-RDEPENDS_${PN}_class-target += "\
-    rubygems-builder \
-"
 
 SRC_URI[md5sum] = "7af7a2b4fac7bf7ec15eff1026b1495d"
 SRC_URI[sha256sum] = "b0c5c825718df093437ab6bf84a25f39711816ab52a3bb3d2dcfa44102d5c0f2"
 
 GEM_NAME = "gyoku"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS_${PN}_class-target += "\
+    rubygems-builder \
+"
 
 BBCLASSEXTEND = "native"

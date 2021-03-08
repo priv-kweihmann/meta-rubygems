@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "55ec39f2a0bb8c8c3f0480200b28edbedd70473c27b84c5359531a8998
 
 GEM_NAME = "unicode-display_width"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

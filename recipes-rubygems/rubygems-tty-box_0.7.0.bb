@@ -11,21 +11,20 @@ DEPENDS_class-native += "\
     rubygems-strings-native \
     rubygems-tty-cursor-native \
 "
-RDEPENDS_${PN}_class-target += "\
-    rubygems-pastel \
-    rubygems-strings \
-    rubygems-tty-cursor \
-"
 
 SRC_URI[md5sum] = "4a2c97513449fb7da0d1c8020ff977b0"
 SRC_URI[sha256sum] = "17f453a0c1df43871fdb6de461ee797b78574dacc652372fa2ae98a00785df8b"
 
 GEM_NAME = "tty-box"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS_${PN}_class-target += "\
+    rubygems-pastel \
+    rubygems-strings \
+    rubygems-tty-cursor \
+"
 
 BBCLASSEXTEND = "native"

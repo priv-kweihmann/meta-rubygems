@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "d779455a2b5666a079ce58577bfad8534f571af7cec8107f4dce328f09
 
 GEM_NAME = "method_source"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

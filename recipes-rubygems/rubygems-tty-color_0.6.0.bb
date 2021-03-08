@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "6f9c37ca3a4e2367fb2e6d09722762647d6f455c111f05b59f35730eeb
 
 GEM_NAME = "tty-color"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

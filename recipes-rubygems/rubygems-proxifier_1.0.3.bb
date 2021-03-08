@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "40fef4d2c79313a12b8be2799146cb225b35665975a238ba0d513a96c6
 
 GEM_NAME = "proxifier"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

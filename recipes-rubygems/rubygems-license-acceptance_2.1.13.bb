@@ -12,22 +12,21 @@ DEPENDS_class-native += "\
     rubygems-tty-box-native \
     rubygems-tty-prompt-native \
 "
-RDEPENDS_${PN}_class-target += "\
-    rubygems-pastel \
-    rubygems-tomlrb \
-    rubygems-tty-box \
-    rubygems-tty-prompt \
-"
 
 SRC_URI[md5sum] = "75443ee553d5e52d3e381fee22dffa95"
 SRC_URI[sha256sum] = "eecb259b87adaebf162cd25e613b0e0f6d3005c92ffd76ddeca0c053e450058a"
 
 GEM_NAME = "license-acceptance"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS_${PN}_class-target += "\
+    rubygems-pastel \
+    rubygems-tomlrb \
+    rubygems-tty-box \
+    rubygems-tty-prompt \
+"
 
 BBCLASSEXTEND = "native"

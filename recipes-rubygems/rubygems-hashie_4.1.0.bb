@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "7890dcb9ec18a4b66acec797018c73824b89cef5eb8cda36e8e8501845
 
 GEM_NAME = "hashie"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

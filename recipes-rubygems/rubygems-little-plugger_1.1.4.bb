@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "d5f347c00d9d648040ef7c17d6eb09d3d0719adf19ca30d1a3b6fb26d0
 
 GEM_NAME = "little-plugger"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

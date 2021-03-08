@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "85640c4f9194c26937afc8c78e3074a8e7c97d5d1210358d1440f01034
 
 GEM_NAME = "ipaddress"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

@@ -11,21 +11,20 @@ DEPENDS_class-native += "\
     rubygems-winrm-fs-native \
     rubygems-winrm-native \
 "
-RDEPENDS_${PN}_class-target += "\
-    rubygems-winrm \
-    rubygems-winrm-elevated \
-    rubygems-winrm-fs \
-"
 
 SRC_URI[md5sum] = "10048c2ed0d14a65757d20f78a729181"
 SRC_URI[sha256sum] = "303facef3ec480e30f83373260834dba4d6d97065f751899f4e304381d1e365a"
 
 GEM_NAME = "train-winrm"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS_${PN}_class-target += "\
+    rubygems-winrm \
+    rubygems-winrm-elevated \
+    rubygems-winrm-fs \
+"
 
 BBCLASSEXTEND = "native"

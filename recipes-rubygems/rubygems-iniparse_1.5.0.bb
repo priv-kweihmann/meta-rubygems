@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "36a165e98d8a250b7631c4a7f9afba32af78f089970cd6446a39771189
 
 GEM_NAME = "iniparse"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

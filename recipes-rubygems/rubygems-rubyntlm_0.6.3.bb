@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "5b321456dba3130351f7451f8669f1afa83a0d26fd63cdec285b7b88e6
 
 GEM_NAME = "rubyntlm"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig

@@ -11,8 +11,6 @@ SRC_URI[sha256sum] = "8905c1f9209fb216c59cc631c2e4085b1a9660598da6de0f20323264d9
 
 GEM_NAME = "net-ssh"
 
-
-
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
