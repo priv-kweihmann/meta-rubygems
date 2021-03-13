@@ -4,17 +4,15 @@ DESCRIPTION = "Official AWS Ruby gem for AWS Cost and Usage Report Service"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "\
-    file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10 \
-"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
 DEPENDS_class-native += "\
     rubygems-aws-sdk-core-native \
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "5bbd22300090903cf661b7cdb361d873"
-SRC_URI[sha256sum] = "f37ab812a8c993ddfdbffdff4fb1466d534d19cfb77295f9338648e43a82ebb7"
+SRC_URI[md5sum] = "51044be98195a0b3cfa5231dedba08e5"
+SRC_URI[sha256sum] = "237cf9ece5cc32cd819070b46505b6209a1b43263c9f69529682b43e070085ea"
 
 GEM_NAME = "aws-sdk-costandusagereportservice"
 
