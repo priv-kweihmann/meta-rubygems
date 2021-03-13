@@ -247,8 +247,8 @@ def create_tpl(args, pkgname, version):
             "__srcuri": " " + _src_uri if _src_uri else "",
             "__tdeps": prettify_list(save_variables("DEPENDS", ["class-target"], _oldrecipes)),
             "__version": _bestversion,
-            "__xtradep": prettify_list(save_variables("EXTRA_RDEPENDS", None, _oldrecipes)),
-            "__xtrardep": prettify_list(save_variables("EXTRA_DEPENDS", None, _oldrecipes)),
+            "__xtradep": prettify_list(save_variables("EXTRA_DEPENDS", None, _oldrecipes)),
+            "__xtrardep": prettify_list(save_variables("EXTRA_RDEPENDS", None, _oldrecipes)),
         }
         __calculated["__class"] = "\n".join(
             ["inherit {}".format(x) for x in __calculated["__class"]])
