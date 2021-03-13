@@ -4,9 +4,7 @@ DESCRIPTION = "Official AWS Ruby gem for Amazon Simple Storage Service (Amazon S
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "\
-    file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10 \
-"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
 DEPENDS_class-native += "\
     rubygems-aws-sdk-core-native \
@@ -14,8 +12,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "07a4ab1fa9ce346ded2991f0370a5c8e"
-SRC_URI[sha256sum] = "7b41b9f782556d967e714b4d4ff4dec4731dad9075766b567dc361a96fedf657"
+SRC_URI[md5sum] = "b3f256af360f6e5b9211fe102a70a1c7"
+SRC_URI[sha256sum] = "38c38fa9f97662aa1a58359397894e43bdcaaa301b13ed793ef1d3d1d2fb436f"
 
 GEM_NAME = "aws-sdk-s3"
 
