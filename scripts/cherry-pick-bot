@@ -1,0 +1,116 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2021, Konrad Weihmann
+
+import argparse
+import datetime
+import fnmatch
+import os
+import sys
+
+from packagebot.git import Git
+from packagebot.github import GitHub
+
+sys.path.insert(0, os.path.dirname(__file__))
+
+
+def create_argpaser():
+    parser = argparse.ArgumentParser(description='Cherry-pick bot')
+    parser.add_argument(
+        "--repo_path", default=os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+    parser.add_argument("--git_user", default=os.environ.get("GIT_USER"))
+    parser.add_argument("--git_mail", default=os.environ.get("GIT_MAIL"))
+    parser.add_argument(
+        "--github_user", default=os.environ.get("GIT_USERNAME"))
+    parser.add_argument("--github_pat", default=os.environ.get("GIT_PASSWORD"))
+    parser.add_argument("--github_repo_user",
+                        default=os.environ.get("GITHUB_REPO_USER"))
+    parser.add_argument("--github_repo", default=os.environ.get("GITHUB_REPO"))
+    parser.add_argument(
+        "--cpmode", choices=["all", "firstcommon"], default="firstcommon")
+    parser.add_argument("source_branch")
+    parser.add_argument("target_branch")
+    parser.add_argument("ignore_file")
+    parser.add_argument("repodirs", default=[], nargs="+")
+
+    # export askpass reference
+    os.environ["GIT_ASKPASS"] = os.path.join(
+        os.path.dirname(__file__), "packagebot", "askpass.py")
+
+    return parser.parse_args()
+
+
+def __sed(source, needle, replacement):
+    cnt = ""
+    with open(source) as i:
+        cnt = i.read()
+
+    with open(source, "w") as o:
+        o.write(cnt.replace(needle, replacement))
+
+
+def change_log(map):
+    res = []
+    for k, v in map.items():
+        if v.upstream_head != v.current_revision:
+            res.append(
+                "* update {} to {}".format(os.path.basename(k.rstrip("/")), v.upstream_head))
+    return "\n".join(res)
+
+
+def get_ignore_file(ignore_file):
+    with open(ignore_file) as i:
+        return [x.strip() for x in i.readlines() if x.strip()]
+    return []
+
+
+def get_matchings_commits(git, source, target, ignore_file, mode):
+    _commits = git.get_fresh_source_commits(source, target, mode)
+
+    _ignores = get_ignore_file(ignore_file)
+    res = []
+    for commit in _commits:
+        pick = True
+        for f in commit.stats.files.keys():
+            if any(fnmatch.fnmatch(f, x) for x in _ignores):
+                pick = False
+                break
+        if pick:
+            res.append(commit)
+    return res
+
+
+def main():
+    _args = create_argpaser()
+
+    _main_git = Git(_args.repo_path, _args.git_user, _args.git_mail)
+    _github = GitHub(_args.github_user, _args.github_pat,
+                     _args.github_repo_user, _args.github_repo)
+
+    _map_repo = {}
+    for _dir in _args.repodirs:
+        _map_repo[_dir] = Git(_dir, _args.git_user, _args.git_mail)
+
+    _commits = get_matchings_commits(
+        _main_git, _args.source_branch, _args.target_branch, _args.ignore_file, _args.cpmode)
+
+    if any(_commits):
+        _new_branch_name = "cherry_pick_{}".format(
+            datetime.datetime.now().strftime("%Y%m%d"))
+        _main_git.create_branch(
+            _new_branch_name, from_branch=_args.target_branch)
+
+        _cherry_picks = 0
+        for c in _commits:
+            _cherry_picks += _main_git.cherrypick(c)
+
+        if _cherry_picks:
+            # publish branch
+            _main_git.publish()
+            # create pull request
+            _github.create_pullrequest(
+                _main_git.branch, "Cherry pick from {}".format(_args.source_branch), change_log(_map_repo))
+
+
+if __name__ == '__main__':
+    main()

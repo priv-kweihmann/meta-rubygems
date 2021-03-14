@@ -47,6 +47,9 @@ class Git():
     def upstream_head(self):
         return self.__repo.rev_parse("origin/{}".format(self.branch))
 
+    def upstream_head_branch(self, branch):
+        return self.__repo.rev_parse("origin/{}".format(branch))
+
     def __relative_paths(self, _list):
         _sanitized_changes = set()
         for c in _list:
@@ -57,19 +60,49 @@ class Git():
             _sanitized_changes.add(c)
         return _sanitized_changes
 
+    def commits_since(self, branch, since):
+        return list(self.__repo.iter_commits(branch, since=since))
+
+    def get_fresh_source_commits(self, src, target, mode):
+        _src = list(self.__repo.iter_commits(src))
+        _dst = list(self.__repo.iter_commits(target))
+        _dst = [x.message for x in _dst]
+
+        _res = []
+
+        for _, _commit in enumerate(reversed(_src)):
+            if mode == "all":
+                if _commit.message not in _dst:
+                    _res.append(_commit)
+            else:
+                if _commit.message in _dst:
+                    _res = reversed(list(self.__repo.iter_commits(
+                        "{}..{}".format(_commit.hexsha, self.upstream_head_branch(src)))))
+        return _res
+
     def commit(self, changes, summary, body):
         self.__repo.git.add("*")
         self.__repo.index.commit("{}\n\n{}".format(
             summary, body), author=self.__user, committer=self.__user)
 
+    def cherrypick(self, commit):
+        try:
+            self.__repo.git.execute(["git", "cherry-pick", commit.hexsha])
+            return 1
+        except git.exc.GitCommandError:
+            print("Skipping '{}' due to conflict".format(commit.summary))
+            self.__repo.git.execute(["git", "cherry-pick", "--abort"])
+            return 0
+
     def revert(self, changes):
         self.__repo.git.checkout('-f')
         self.__repo.git.clean('-xfd')
 
-    def create_branch(self, name):
+    def create_branch(self, name, from_branch="master", checkout=True):
         if name not in self.__repo.branches:
-            self.__repo.git.branch(name)
-        self.__repo.git.checkout(name)
+            self.__repo.git.branch(name, from_branch)
+        if checkout:
+            self.__repo.git.checkout(name)
 
     def publish(self):
         self.__repo.git.push('origin', self.branch)
