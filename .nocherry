@@ -1,0 +1,10 @@
+.github/*
+recipes-stdgems/*
+conf/*
+scripts/packagebot/*
+scripts/bump-bot
+scripts/package-bot
+scripts/trigger_*
+recipes-devtools/ruby-cross_*
+recipes-devtools/ruby-cross/*
+README.md
