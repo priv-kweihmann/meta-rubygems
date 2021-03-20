@@ -6,8 +6,8 @@ HOMEPAGE = "https://github.com/puppetlabs/hiera"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://COPYING;md5=67c01e92d4ae704f266de057db62d718"
 
-SRC_URI[md5sum] = "c1975a0cad3df4ba6cf64d07be219f75"
-SRC_URI[sha256sum] = "a77b182673a04955b444001dc80c15fe549dfc707254790be572a76dfcecf954"
+SRC_URI[md5sum] = "24fd0b1e4f449d09a81bf7688e0dcbde"
+SRC_URI[sha256sum] = "0a5dd57f260a7fb86d1326c060a7c0061e9dd9a6dee3fbc8187a53b2d6532bbc"
 
 GEM_NAME = "hiera"
 
