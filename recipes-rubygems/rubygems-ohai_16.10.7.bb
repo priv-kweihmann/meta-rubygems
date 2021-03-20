@@ -20,6 +20,16 @@ DEPENDS_class-native += "\
     rubygems-train-core-native \
     rubygems-wmi-lite-native \
 "
+
+SRC_URI[md5sum] = "73e6d3752dbedf3620ae9dc6b0d3e7d2"
+SRC_URI[sha256sum] = "0483139fe0bf54b66f3cd6fae99f9313ac42f1a7e850a8319681d328adf9e4dc"
+
+GEM_NAME = "ohai"
+
+inherit rubygems
+inherit rubygentest
+inherit pkgconfig
+
 RDEPENDS_${PN}_class-target += "\
     rubygems-chef-config \
     rubygems-chef-utils \
@@ -34,16 +44,5 @@ RDEPENDS_${PN}_class-target += "\
     rubygems-train-core \
     rubygems-wmi-lite \
 "
-
-SRC_URI[md5sum] = "e4dabebe107a05061bec6c7cf0fba4aa"
-SRC_URI[sha256sum] = "b835806e585faea4ac8346b68c722fb5fc29a29f73fd7e3a022f9073132dec22"
-
-GEM_NAME = "ohai"
-
-
-
-inherit rubygems
-inherit rubygentest
-inherit pkgconfig
 
 BBCLASSEXTEND = "native"
