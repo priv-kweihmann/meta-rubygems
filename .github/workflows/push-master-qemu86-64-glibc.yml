@@ -87,7 +87,11 @@ jobs:
       - name: build (ruby)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
-          target: ruby ruby-cross
+          target: ruby
+      - name: build (ruby-cross)
+        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
+        with:
+          target: ruby-cross
       - name: build (core-image-minimal-rubygems)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
