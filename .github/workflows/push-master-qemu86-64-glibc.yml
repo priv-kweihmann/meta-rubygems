@@ -84,14 +84,10 @@ jobs:
           variable: INHERIT
           operation: " += "
           value: "rm_work_and_downloads rubygemsdebug"
-      - name: build (ruby)
+      - name: build (tools)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
-          target: ruby
-      - name: build (ruby-cross)
-        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
-        with:
-          target: ruby-cross
+          target: "ruby gmp yajl libxml2 libxslt krb5 libffi"
       - name: build (core-image-minimal-rubygems)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
