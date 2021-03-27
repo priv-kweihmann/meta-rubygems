@@ -10,8 +10,8 @@ DEPENDS_class-native += "\
     rubygems-ms-rest-azure-native \
 "
 
-SRC_URI[md5sum] = "1eccf606033b36abe82b353635b8d38b"
-SRC_URI[sha256sum] = "6c876854318c8ff71561270dd3d8c4a3e4fd78723abb46f610b5e6ce400069c1"
+SRC_URI[md5sum] = "03ab36de027939b5f0fe9fc15e8dea13"
+SRC_URI[sha256sum] = "a3cecdd5df10e05c43559d08c3f5a9d0ef7367ebb3425468751129d88fd290dc"
 
 GEM_NAME = "azure_mgmt_resources"
 

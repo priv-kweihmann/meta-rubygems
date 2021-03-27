@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-redshift"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Redshift"
+SUMMARY = "RubyGem: aws-sdk-codedeploy"
+DESCRIPTION = "Official AWS Ruby gem for AWS CodeDeploy (CodeDeploy)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -11,10 +11,10 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "c5fc7c3d7557281fce95ff25bb2935a0"
-SRC_URI[sha256sum] = "eef479c2fb81d7587e82d02bbe1452bec958dcd6f1ca3a080d89e0dfc38ed2b5"
+SRC_URI[md5sum] = "9957ec214a7b87422876d1ae49f4d381"
+SRC_URI[sha256sum] = "14fb7dbb9951c446c4455e0c77c9f859826e44ddb9fcdd3a1d0faa01c615958a"
 
-GEM_NAME = "aws-sdk-redshift"
+GEM_NAME = "aws-sdk-codedeploy"
 
 inherit rubygems
 inherit rubygentest
