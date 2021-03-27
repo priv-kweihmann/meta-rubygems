@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-sqs"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Simple Queue Service (Amazon SQS)"
+SUMMARY = "RubyGem: aws-sdk-batch"
+DESCRIPTION = "Official AWS Ruby gem for AWS Batch"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -11,10 +11,10 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "25e17d7d31ceabac12251ed7c236231f"
-SRC_URI[sha256sum] = "a3cf5277395ea80e188dc6219d5ae468f76bd8272f59d91a32f82f0497dcb9e7"
+SRC_URI[md5sum] = "fa96481cea52ebbede84216ccccf8cb1"
+SRC_URI[sha256sum] = "108e1bb22c8e873b4e1c99a15a6970fdbf9f53cbf26730c3bd6603e0cf5623bb"
 
-GEM_NAME = "aws-sdk-sqs"
+GEM_NAME = "aws-sdk-batch"
 
 inherit rubygems
 inherit rubygentest

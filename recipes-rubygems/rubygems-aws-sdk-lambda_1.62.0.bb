@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-cloudwatchevents"
-DESCRIPTION = "Official AWS Ruby gem for Amazon CloudWatch Events"
+SUMMARY = "RubyGem: aws-sdk-lambda"
+DESCRIPTION = "Official AWS Ruby gem for AWS Lambda"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -11,10 +11,10 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "470229668faabd16f07cfb5621a2e4d0"
-SRC_URI[sha256sum] = "71f07a2b6eb83e20f8113310a6cb6e6f186733a7882c6afb1334895788164509"
+SRC_URI[md5sum] = "b5a2eb84f8797e949abc19ec3029094d"
+SRC_URI[sha256sum] = "e55137d18c6b58ca60451c91320b37f58d4ff48892e0961c5ff493b44aceac65"
 
-GEM_NAME = "aws-sdk-cloudwatchevents"
+GEM_NAME = "aws-sdk-lambda"
 
 inherit rubygems
 inherit rubygentest
