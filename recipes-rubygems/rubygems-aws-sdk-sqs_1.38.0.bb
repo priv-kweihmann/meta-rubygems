@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-lambda"
-DESCRIPTION = "Official AWS Ruby gem for AWS Lambda"
+SUMMARY = "RubyGem: aws-sdk-sqs"
+DESCRIPTION = "Official AWS Ruby gem for Amazon Simple Queue Service (Amazon SQS)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -11,10 +11,10 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "f92a36c165964bd048921d01c07c2946"
-SRC_URI[sha256sum] = "f6b9a460dc6247c618dabb942df401dce7a5aa4a2b480c0b571eb39f32d2eee8"
+SRC_URI[md5sum] = "245814e123abf05157aad7d59440d2e5"
+SRC_URI[sha256sum] = "2e42127c10908dc6e59c49d73c8917bd5618435c858343b7ecd1114c3ca2a206"
 
-GEM_NAME = "aws-sdk-lambda"
+GEM_NAME = "aws-sdk-sqs"
 
 inherit rubygems
 inherit rubygentest
