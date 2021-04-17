@@ -6,8 +6,8 @@ HOMEPAGE = "https://github.com/mperham/connection_pool"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=52789255e9a79d4ae4a5ab6831d80fd1"
 
-SRC_URI[md5sum] = "1ccc96dc7feb55947fe7ec6799ba19b3"
-SRC_URI[sha256sum] = "8e5bf44b6bfa96f5c94a5c30ae2447fce3dbcc0828a855a6c513fdb015a133e2"
+SRC_URI[md5sum] = "498bdfe245ece1c2025fd3727a3dc7e3"
+SRC_URI[sha256sum] = "13a8fc3921ce4df8e04fb65f1037251decb08d74757b41163688bd1c1feccd39"
 
 GEM_NAME = "connection_pool"
 
