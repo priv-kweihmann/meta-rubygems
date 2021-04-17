@@ -230,6 +230,7 @@ RDEPENDS_${PN} += "\
     rubygems-tilt \
     rubygems-timeliness \
     rubygems-tomlrb \
+    rubygems-trailblazer-option \
     rubygems-train \
     rubygems-train-aws \
     rubygems-train-core \
