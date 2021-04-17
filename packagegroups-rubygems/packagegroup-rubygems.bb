@@ -107,8 +107,10 @@ RDEPENDS_${PN} += "\
     rubygems-facter \
     rubygems-faraday \
     rubygems-faraday-cookie-jar \
+    rubygems-faraday-excon \
     rubygems-faraday-middleware \
     rubygems-faraday-net-http \
+    rubygems-faraday-net-http-persistent \
     rubygems-fast-gettext \
     rubygems-ffi \
     rubygems-ffi-libarchive \
