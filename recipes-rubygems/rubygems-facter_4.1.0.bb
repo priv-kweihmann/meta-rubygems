@@ -13,8 +13,8 @@ DEPENDS_class-native += "\
     rubygems-thor-native \
 "
 
-SRC_URI[md5sum] = "506d3387aab8140ae5c4b297a392c27f"
-SRC_URI[sha256sum] = "7be62cc1c5a057f149164c1045fccbbf40b85747b188393ccf685c0d17e93469"
+SRC_URI[md5sum] = "508055b1781d3c694902ca876022dc73"
+SRC_URI[sha256sum] = "1b71b799fe6403c76c653d4d8d6d2685b84d63dad4c469d1dc904e38eb07df83"
 
 GEM_NAME = "facter"
 
