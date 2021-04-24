@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-elasticache"
-DESCRIPTION = "Official AWS Ruby gem for Amazon ElastiCache"
+SUMMARY = "RubyGem: aws-sdk-cognitoidentityprovider"
+DESCRIPTION = "Official AWS Ruby gem for Amazon Cognito Identity Provider"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -11,10 +11,10 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "7c439b3963d8c549ab0a96d385063288"
-SRC_URI[sha256sum] = "28d95966312711360ea413f37762e4d2754ce1535584a7debd59b0bd42175cc8"
+SRC_URI[md5sum] = "fe8e4662635bd80ce0c5ceab9d2d6bfe"
+SRC_URI[sha256sum] = "779ea1263954f624f3cb8d7b0dd21f6a062ece50b18f8a100875d4a39019a963"
 
-GEM_NAME = "aws-sdk-elasticache"
+GEM_NAME = "aws-sdk-cognitoidentityprovider"
 
 inherit rubygems
 inherit rubygentest

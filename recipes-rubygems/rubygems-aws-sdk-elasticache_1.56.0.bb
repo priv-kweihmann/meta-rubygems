@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-cloudformation"
-DESCRIPTION = "Official AWS Ruby gem for AWS CloudFormation"
+SUMMARY = "RubyGem: aws-sdk-elasticache"
+DESCRIPTION = "Official AWS Ruby gem for Amazon ElastiCache"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -11,10 +11,10 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "978854a191a7eaaa1ecab155976216f3"
-SRC_URI[sha256sum] = "e7fa6bcaa568290bfaf51d06d9c54a250584383494d3a21ac7b0a35d2bf3a6e3"
+SRC_URI[md5sum] = "53db22cce8fc17e714ea7cf1d73bfcbc"
+SRC_URI[sha256sum] = "0341fabd0b9e532afadaaffab19f740459f49af6a84135af37981cb17ae5ed6c"
 
-GEM_NAME = "aws-sdk-cloudformation"
+GEM_NAME = "aws-sdk-elasticache"
 
 inherit rubygems
 inherit rubygentest
