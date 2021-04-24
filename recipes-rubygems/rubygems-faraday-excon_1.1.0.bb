@@ -6,21 +6,13 @@ HOMEPAGE = "https://github.com/lostisland/faraday-excon"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=20830660ee48a0c845a62aad77c18f4a"
 
-DEPENDS_class-native += "\
-    rubygems-excon-native \
-"
-
-SRC_URI[md5sum] = "5ed5b512d2ee9da451dd02a58be52a69"
-SRC_URI[sha256sum] = "0594549fb0a158d4a49a45794ba0d1a2a63181b9ffcc7b084f30f143ef2e6882"
+SRC_URI[md5sum] = "91d075ce12868a30a520af0588930927"
+SRC_URI[sha256sum] = "b055c842376734d7f74350fe8611542ae2000c5387348d9ba9708109d6e40940"
 
 GEM_NAME = "faraday-excon"
 
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
-
-RDEPENDS_${PN}_class-target += "\
-    rubygems-excon \
-"
 
 BBCLASSEXTEND = "native"
