@@ -10,8 +10,8 @@ DEPENDS_class-native += "\
     rubygems-inspec-native \
 "
 
-SRC_URI[md5sum] = "938038f70eb3db8b5d2b778af9645d15"
-SRC_URI[sha256sum] = "949acbd636efe4f0d333f352ca8d49755a644fb3d1f8d2da10ab437f387a5bf2"
+SRC_URI[md5sum] = "cb76c47d5b7fe88cc12adc3ad1e6dd79"
+SRC_URI[sha256sum] = "02e492ff7bd334b05c37343e9f2c606e25675e6bb4314fdf4516b948834bb1a9"
 
 GEM_NAME = "inspec-bin"
 
