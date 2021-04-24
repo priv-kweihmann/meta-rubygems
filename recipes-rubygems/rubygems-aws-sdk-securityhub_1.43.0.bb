@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "78a321766d10efa50a99ec2242c2abae"
-SRC_URI[sha256sum] = "9f34b501a374f38551a5c0bd97670039a5ab37d6b47c049660042e301c0745ff"
+SRC_URI[md5sum] = "c432579a0f2cdb352d2e9a4f03e05583"
+SRC_URI[sha256sum] = "dcb76d3a9eb48ffc0f35197a508cedc145c73c2faf28c2aad039af28aa35d399"
 
 GEM_NAME = "aws-sdk-securityhub"
 
