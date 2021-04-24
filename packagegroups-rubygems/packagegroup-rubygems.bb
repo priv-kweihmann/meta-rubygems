@@ -36,6 +36,7 @@ RDEPENDS_${PN} += "\
     rubygems-aws-sdk-dynamodb \
     rubygems-aws-sdk-ec2 \
     rubygems-aws-sdk-ecr \
+    rubygems-aws-sdk-ecrpublic \
     rubygems-aws-sdk-ecs \
     rubygems-aws-sdk-efs \
     rubygems-aws-sdk-eks \
