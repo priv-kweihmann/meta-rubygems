@@ -6,8 +6,8 @@ HOMEPAGE = "https://github.com/jwt/ruby-jwt"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=b7c5ddc412bf0298cd997114a6c994c5"
 
-SRC_URI[md5sum] = "33d01d792216c68b0f964aed0858635c"
-SRC_URI[sha256sum] = "56a47115e514b9cfba93b8067332462a74ecbcea843a0784bc7a208203f6d693"
+SRC_URI[md5sum] = "a25cbd9b40f8da7a40faad7a26b8153c"
+SRC_URI[sha256sum] = "da2d43a5f7ff46037abd426574ce558adf1409ac83f09a88aee58804982bd10c"
 
 GEM_NAME = "jwt"
 
