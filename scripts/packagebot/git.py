@@ -45,10 +45,16 @@ class Git():
 
     @property
     def upstream_head(self):
-        return self.__repo.rev_parse("origin/{}".format(self.branch))
+        _branch = self.branch
+        if not _branch.startswith("origin/"):
+            _branch = "origin/" + self.branch
+        return self.__repo.rev_parse(_branch)
 
     def upstream_head_branch(self, branch):
-        return self.__repo.rev_parse("origin/{}".format(branch))
+        _branch = branch
+        if not _branch.startswith("origin/"):
+            _branch = "origin/" + branch
+        return self.__repo.rev_parse(_branch)
 
     def __relative_paths(self, _list):
         _sanitized_changes = set()
