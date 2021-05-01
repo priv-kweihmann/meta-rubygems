@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "d95370b6e3a802a12dd8d24c7cd29a95"
-SRC_URI[sha256sum] = "997e5676729b4631d7ad27496944fa3745a1fc26c1a56ab92e4e5ed88fa92793"
+SRC_URI[md5sum] = "dd47cfe6a58d1d3a4da6c3dbc2e4a253"
+SRC_URI[sha256sum] = "47e1d3c949b56714fcf6588dd8214ba9b392a7758741074904cd77cde0483b01"
 
 GEM_NAME = "aws-sdk-cloudformation"
 
