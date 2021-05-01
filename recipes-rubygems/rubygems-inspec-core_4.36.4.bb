@@ -31,8 +31,8 @@ DEPENDS_class-native += "\
     rubygems-tty-table-native \
 "
 
-SRC_URI[md5sum] = "d80b9c307e916781286f48ee71bc2b93"
-SRC_URI[sha256sum] = "f1eb380b00f251563ece4dd91da58e8ecc7a3ff133aa1e2cb90ca509dc18e042"
+SRC_URI[md5sum] = "4d81a3aca0be893c58e801060cdea29b"
+SRC_URI[sha256sum] = "f1f595361da8062931bfb544bc059f79a16799f14f79c2b5c88af87380d9d9f0"
 
 GEM_NAME = "inspec-core"
 
