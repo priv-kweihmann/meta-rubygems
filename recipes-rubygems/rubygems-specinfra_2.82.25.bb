@@ -13,8 +13,8 @@ DEPENDS_class-native += "\
     rubygems-sfl-native \
 "
 
-SRC_URI[md5sum] = "7434f8ba5124ff928097fdfb487312b2"
-SRC_URI[sha256sum] = "68463aa378d5b5fd48ae149b4b9d7747e40d4890e313c04a0b781ce1c76f3f5b"
+SRC_URI[md5sum] = "67be1709d9af6159b9090f9784ce1f5f"
+SRC_URI[sha256sum] = "bfeb5bf4cd4f75b5d2d075c4e62e8e25b1b2519fc7e7eac428a45cc9f490667d"
 
 GEM_NAME = "specinfra"
 
