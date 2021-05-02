@@ -9,7 +9,6 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 DEPENDS_class-native += "\
     rubygems-addressable-native \
     rubygems-bcrypt-pbkdf-native \
-    rubygems-bundler-native \
     rubygems-chef-config-native \
     rubygems-chef-utils-native \
     rubygems-chef-vault-native \
@@ -45,8 +44,8 @@ DEPENDS_class-native += "\
     rubygems-uuidtools-native \
 "
 
-SRC_URI[md5sum] = "b7d63cb50c302f7628765ac191754e50"
-SRC_URI[sha256sum] = "cc38c2f8b64fc7f37cf5e8ee18bb20a084f8fe0507d3c443f2c7c2cfd86919ab"
+SRC_URI[md5sum] = "114636a477643f69a6d0e5fdc9066038"
+SRC_URI[sha256sum] = "958f9a6bd73a1ecb34187368ca0d72735e2f1c2b4b43e6ca69920ca54a6d565f"
 
 GEM_NAME = "chef"
 
@@ -66,7 +65,6 @@ do_install_append() {
 RDEPENDS_${PN}_class-target += "\
     rubygems-addressable \
     rubygems-bcrypt-pbkdf \
-    rubygems-bundler \
     rubygems-chef-config \
     rubygems-chef-utils \
     rubygems-chef-vault \
