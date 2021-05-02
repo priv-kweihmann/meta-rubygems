@@ -4,17 +4,15 @@ DESCRIPTION = "New version of Facter"
 HOMEPAGE = "https://github.com/puppetlabs/facter"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "\
-    file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302 \
-"
+LIC_FILES_CHKSUM = "file://lib/facter/custom_facts/core/legacy_facter.rb;beginline=7;endline=17;md5=c8fc292a3d6f5f2a01e376d7df456c89"
 
 DEPENDS_class-native += "\
     rubygems-hocon-native \
     rubygems-thor-native \
 "
 
-SRC_URI[md5sum] = "508055b1781d3c694902ca876022dc73"
-SRC_URI[sha256sum] = "1b71b799fe6403c76c653d4d8d6d2685b84d63dad4c469d1dc904e38eb07df83"
+SRC_URI[md5sum] = "4efbab3bd854c2bff992b641f08f2712"
+SRC_URI[sha256sum] = "a4d61a61783e2ed61053492b2a1c2547dc7faded05305888d13e07ec78a9db12"
 
 GEM_NAME = "facter"
 
