@@ -34,6 +34,7 @@ DEPENDS_class-native += "\
     rubygems-aws-sdk-dynamodb-native \
     rubygems-aws-sdk-ec2-native \
     rubygems-aws-sdk-ecr-native \
+    rubygems-aws-sdk-ecrpublic-native \
     rubygems-aws-sdk-ecs-native \
     rubygems-aws-sdk-efs-native \
     rubygems-aws-sdk-eks-native \
@@ -71,8 +72,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sdk-transfer-native \
 "
 
-SRC_URI[md5sum] = "c47135215430849bb7cd9d515572dcf7"
-SRC_URI[sha256sum] = "232a43e018c34dcd99e5af0b86a21621cfd0f213be6cb378688f0a65decc8e66"
+SRC_URI[md5sum] = "58c0e65acc54427760af2b2005353bfb"
+SRC_URI[sha256sum] = "96eaa07c453ed871edc04dfa583972ee6f0c7c29bb1c0de24118b3cd124261ed"
 
 GEM_NAME = "train-aws"
 
@@ -108,6 +109,7 @@ RDEPENDS_${PN}_class-target += "\
     rubygems-aws-sdk-dynamodb \
     rubygems-aws-sdk-ec2 \
     rubygems-aws-sdk-ecr \
+    rubygems-aws-sdk-ecrpublic \
     rubygems-aws-sdk-ecs \
     rubygems-aws-sdk-efs \
     rubygems-aws-sdk-eks \
