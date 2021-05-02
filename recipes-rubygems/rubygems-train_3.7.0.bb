@@ -21,8 +21,8 @@ DEPENDS_class-native += "\
     rubygems-train-winrm-native \
 "
 
-SRC_URI[md5sum] = "1193a3a249e65d32cb769d528fdcc8f1"
-SRC_URI[sha256sum] = "2fb8aa1aaa3e747dcf2fe9c78ad86cb9ec5091ecfdeee585aa3ad845f911822e"
+SRC_URI[md5sum] = "951c9b337ee10df22c7a7a5e0a32a1dc"
+SRC_URI[sha256sum] = "fdbe7774028bbe11e9b48d8973893c43b9801b27d7e4a15054e01d24504cc34f"
 
 GEM_NAME = "train"
 
