@@ -14,8 +14,8 @@ DEPENDS_class-native += "\
     rubygems-ast-native \
 "
 
-SRC_URI[md5sum] = "ffd129ad759bc598758c10e0303dfebf"
-SRC_URI[sha256sum] = "c85b1a45f0ca95dec189e29515b1d829dd234fccef523697367dad1c13223113"
+SRC_URI[md5sum] = "86a99e6f0794dcb398cca9e7f905b36d"
+SRC_URI[sha256sum] = "d2ded2eab569bb7bee861790a54a81e71ce4b4a25bf908bfeb06945f6288badf"
 
 GEM_NAME = "parser"
 
