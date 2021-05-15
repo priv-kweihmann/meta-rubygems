@@ -15,8 +15,8 @@ DEPENDS_class-native += "\
     rubygems-tomlrb-native \
 "
 
-SRC_URI[md5sum] = "57719f2b0ddf7dd8cb9f6b06bec44708"
-SRC_URI[sha256sum] = "b4e0bf818d582295fa51b4e45eb717e60cfb0b912d57d8b62a893217c3642a4a"
+SRC_URI[md5sum] = "e322a98e092274a9c8711e68c49d4f8b"
+SRC_URI[sha256sum] = "826f3cf5feaba38164d6947aea8599375cc22f06f01ad405ad0572f6eb6c3537"
 
 GEM_NAME = "chef-config"
 
