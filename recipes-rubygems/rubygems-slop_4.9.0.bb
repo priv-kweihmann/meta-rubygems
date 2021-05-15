@@ -6,8 +6,8 @@ HOMEPAGE = "http://github.com/leejarvis/slop"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=40575ded674b04c083ce6818c01f0282"
 
-SRC_URI[md5sum] = "f6d6720a1fef617e77ae2feab9e71456"
-SRC_URI[sha256sum] = "a3d5be3ad304b9dbd00b7c18a0a067b09ff6fd28485d4c6b05adb294d1eea115"
+SRC_URI[md5sum] = "a5b97ab00624c4d1272293d50af1f734"
+SRC_URI[sha256sum] = "32a396ad5e092f6a7b36122976570ac778fbe04f19be2a0dc683ac7189d4c626"
 
 GEM_NAME = "slop"
 
