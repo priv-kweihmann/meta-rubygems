@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "bcf364fa84b3407e7acdc2cd55ce725a"
-SRC_URI[sha256sum] = "1ba200d6986689fb445cc7eb60a200c6d5fa8f1262fa158d5ca24bf47abe8842"
+SRC_URI[md5sum] = "b2e8463f3a9a44bc1b653701a023d447"
+SRC_URI[sha256sum] = "d8219d19bc57d411e1d63348c2c7f36c272232b06b258d43276294745e25b817"
 
 GEM_NAME = "aws-sdk-elasticsearchservice"
 
