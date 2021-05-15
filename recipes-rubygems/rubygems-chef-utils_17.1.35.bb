@@ -10,8 +10,8 @@ DEPENDS_class-native += "\
     rubygems-concurrent-ruby-native \
 "
 
-SRC_URI[md5sum] = "66cb37aa745139e70d52c903b2180034"
-SRC_URI[sha256sum] = "bb7970dc43199ce891ed3472935881626fc676c5fbc1a7348aee50d478cc3a49"
+SRC_URI[md5sum] = "6d93872cc0140290adec05a083d14d1c"
+SRC_URI[sha256sum] = "3e1768ebb0498e48cd36200ec61b7570b6c6ff7494731d2a93a287d7ec7b6adb"
 
 GEM_NAME = "chef-utils"
 
