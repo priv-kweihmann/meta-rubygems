@@ -8,18 +8,15 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 
 DEPENDS_class-native += "\
     rubygems-addressable-native \
-    rubygems-bcrypt-pbkdf-native \
     rubygems-chef-config-native \
     rubygems-chef-utils-native \
     rubygems-chef-vault-native \
     rubygems-chef-zero-native \
     rubygems-diff-lcs-native \
-    rubygems-ed25519-native \
     rubygems-erubis-native \
     rubygems-ffi-libarchive-native \
     rubygems-ffi-native \
     rubygems-ffi-yajl-native \
-    rubygems-highline-native \
     rubygems-iniparse-native \
     rubygems-inspec-core-native \
     rubygems-license-acceptance-native \
@@ -29,23 +26,17 @@ DEPENDS_class-native += "\
     rubygems-mixlib-log-native \
     rubygems-mixlib-shellout-native \
     rubygems-net-sftp-native \
-    rubygems-net-ssh-multi-native \
-    rubygems-net-ssh-native \
     rubygems-ohai-native \
-    rubygems-pastel-native \
     rubygems-plist-native \
     rubygems-proxifier-native \
     rubygems-syslog-logger-native \
     rubygems-train-core-native \
     rubygems-train-winrm-native \
-    rubygems-tty-prompt-native \
-    rubygems-tty-screen-native \
-    rubygems-tty-table-native \
     rubygems-uuidtools-native \
 "
 
-SRC_URI[md5sum] = "114636a477643f69a6d0e5fdc9066038"
-SRC_URI[sha256sum] = "958f9a6bd73a1ecb34187368ca0d72735e2f1c2b4b43e6ca69920ca54a6d565f"
+SRC_URI[md5sum] = "044041ebdf6443a86f501aca7381a4c3"
+SRC_URI[sha256sum] = "55589012ef8e01dc6bb7fc77b662c45a8339aba24b68c6448d13fae2c65b863d"
 
 GEM_NAME = "chef"
 
@@ -64,18 +55,15 @@ do_install_append() {
 
 RDEPENDS_${PN}_class-target += "\
     rubygems-addressable \
-    rubygems-bcrypt-pbkdf \
     rubygems-chef-config \
     rubygems-chef-utils \
     rubygems-chef-vault \
     rubygems-chef-zero \
     rubygems-diff-lcs \
-    rubygems-ed25519 \
     rubygems-erubis \
     rubygems-ffi \
     rubygems-ffi-libarchive \
     rubygems-ffi-yajl \
-    rubygems-highline \
     rubygems-iniparse \
     rubygems-inspec-core \
     rubygems-license-acceptance \
@@ -85,18 +73,12 @@ RDEPENDS_${PN}_class-target += "\
     rubygems-mixlib-log \
     rubygems-mixlib-shellout \
     rubygems-net-sftp \
-    rubygems-net-ssh \
-    rubygems-net-ssh-multi \
     rubygems-ohai \
-    rubygems-pastel \
     rubygems-plist \
     rubygems-proxifier \
     rubygems-syslog-logger \
     rubygems-train-core \
     rubygems-train-winrm \
-    rubygems-tty-prompt \
-    rubygems-tty-screen \
-    rubygems-tty-table \
     rubygems-uuidtools \
 "
 
