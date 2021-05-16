@@ -59,7 +59,7 @@ bitbake core-image-minimal-rubygems -c testimage
 
 on opening a pull request
 
-* your chances will be build and tested against all supported variants
+* your changes will be build and tested against all supported variants
 * a few automated checks will be performed
 
 all pipelines need to pass before your change can be merged
