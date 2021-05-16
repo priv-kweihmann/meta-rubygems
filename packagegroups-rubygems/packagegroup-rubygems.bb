@@ -90,6 +90,7 @@ RDEPENDS_${PN} += "\
     rubygems-codeclimate-engine-rb \
     rubygems-coderay \
     rubygems-coercible \
+    rubygems-colorator \
     rubygems-concurrent-ruby \
     rubygems-connection-pool \
     rubygems-declarative \
@@ -101,9 +102,11 @@ RDEPENDS_${PN} += "\
     rubygems-docker-api \
     rubygems-domain-name \
     rubygems-ed25519 \
+    rubygems-em-websocket \
     rubygems-equalizer \
     rubygems-erubi \
     rubygems-erubis \
+    rubygems-eventmachine \
     rubygems-excon \
     rubygems-facter \
     rubygems-faraday \
@@ -118,6 +121,7 @@ RDEPENDS_${PN} += "\
     rubygems-ffi-yajl \
     rubygems-flay \
     rubygems-flog \
+    rubygems-forwardable-extended \
     rubygems-fuzzyurl \
     rubygems-gauntlet \
     rubygems-gems \
@@ -133,6 +137,7 @@ RDEPENDS_${PN} += "\
     rubygems-highline \
     rubygems-hocon \
     rubygems-http-cookie \
+    rubygems-http-parser.rb \
     rubygems-httpclient \
     rubygems-i18n \
     rubygems-ice-nine \
@@ -142,17 +147,25 @@ RDEPENDS_${PN} += "\
     rubygems-inspec-bin \
     rubygems-inspec-core \
     rubygems-ipaddress \
+    rubygems-jekyll \
+    rubygems-jekyll-sass-converter \
+    rubygems-jekyll-watch \
     rubygems-jmespath \
     rubygems-json \
     rubygems-jwt \
+    rubygems-kramdown \
+    rubygems-kramdown-parser-gfm \
     rubygems-kwalify \
     rubygems-launchy \
     rubygems-libyajl2 \
     rubygems-license-acceptance \
+    rubygems-liquid \
+    rubygems-listen \
     rubygems-little-plugger \
     rubygems-locale \
     rubygems-logging \
     rubygems-memoist \
+    rubygems-mercenary \
     rubygems-method-source \
     rubygems-mime-types \
     rubygems-mime-types-data \
@@ -185,6 +198,7 @@ RDEPENDS_${PN} += "\
     rubygems-parslet \
     rubygems-pastel \
     rubygems-path-expander \
+    rubygems-pathutil \
     rubygems-plist \
     rubygems-proxifier \
     rubygems-pry \
@@ -194,9 +208,12 @@ RDEPENDS_${PN} += "\
     rubygems-puppetmodule-netdev-stdlib \
     rubygems-rack \
     rubygems-rainbow \
+    rubygems-rb-fsevent \
+    rubygems-rb-inotify \
     rubygems-reek \
     rubygems-representable \
     rubygems-retriable \
+    rubygems-rouge \
     rubygems-rspec \
     rubygems-rspec-core \
     rubygems-rspec-expectations \
@@ -209,6 +226,8 @@ RDEPENDS_${PN} += "\
     rubygems-rubycritic \
     rubygems-rubyntlm \
     rubygems-rubyzip \
+    rubygems-safe-yaml \
+    rubygems-sassc \
     rubygems-scanf \
     rubygems-semantic-puppet \
     rubygems-semverse \
@@ -226,6 +245,7 @@ RDEPENDS_${PN} += "\
     rubygems-strings-ansi \
     rubygems-syslog-logger \
     rubygems-systemu \
+    rubygems-terminal-table \
     rubygems-thor \
     rubygems-thread-safe \
     rubygems-tilt \
