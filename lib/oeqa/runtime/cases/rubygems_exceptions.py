@@ -15,6 +15,7 @@ class RubyGemsTestExceptions():
         "gauntlet_flay": "causes a SIGKILL",
         "gauntlet_flog": "causes a SIGKILL",
         "gauntlet_grep": "causes a SIGKILL",
+        "jekyll-sass-converter": "module:Jekyll: uninitialized constant Jekyll::Page (NameError)",
         "gauntlet_parser": "causes a SIGKILL",
         "ruby20_parser": "not the parser you are looking for",
         "ruby21_parser": "not the parser you are looking for",
