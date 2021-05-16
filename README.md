@@ -6,16 +6,16 @@ A layer providing gems for Ruby.
 
 The following variants are tested regularly:
 
-| variant     | glibc                                                                                                                                             | musl                                                                                                                                            |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| qemux86-64  | ![[master]-[glibc]-[qemux86-64]](https://github.com/priv-kweihmann/meta-rubygems/workflows/%5Bmaster%5D-%5Bglibc%5D-%5Bqemux86-64%5D/badge.svg)   | ![[master]-[musl]-[qemux86-64]](https://github.com/priv-kweihmann/meta-rubygems/workflows/%5Bmaster%5D-%5Bmusl%5D-%5Bqemux86-64%5D/badge.svg)   |
+| variant    | glibc                                                                                                                                           | musl                                                                                                                                          |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| qemux86-64 | ![[master]-[glibc]-[qemux86-64]](https://github.com/priv-kweihmann/meta-rubygems/workflows/%5Bmaster%5D-%5Bglibc%5D-%5Bqemux86-64%5D/badge.svg) | ![[master]-[musl]-[qemux86-64]](https://github.com/priv-kweihmann/meta-rubygems/workflows/%5Bmaster%5D-%5Bmusl%5D-%5Bqemux86-64%5D/badge.svg) |
 
 Other variants most likely will work.
 Feel free to contribute any needed patches.
 
 ### Tested revisions
 
-Up to the following revisions automated checks being done
+Up to the following revisions automated checks being performed
 
 * poky: bb490c7ea9170fc1b3c2dd15466daf6a9fad735c
 * meta-openembedded: 3c259f977e8647ac9c54097d0faab70719a5553e
@@ -25,6 +25,18 @@ Up to the following revisions automated checks being done
 This layer is a rolling release.
 Integration is continuously checked against the HEAD of the corresponding poky layer.
 Don't expect tags or any kind of versioning.
+
+### poky release mapping
+
+please check the following table to pick the correct branch matching your poky version
+
+| poky release | suggested meta-rubygems branch | ruby version |
+| ------------ | ------------------------------ | ------------ |
+| master       | master                         | 3.x          |
+| hardknott    | master                         | 3.x          |
+| gatesgarth   | dunfell                        | 2.7.x        |
+| dunfell      | dunfell                        | 2.7.x        |
+| zeus         | zeus                           | 2.5.x        |
 
 ## License
 
