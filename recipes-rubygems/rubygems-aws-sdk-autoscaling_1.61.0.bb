@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "405483e30ced0daa679752f8011c2774"
-SRC_URI[sha256sum] = "b757f3083832462d40a22bcf47b804d801f284486bb0a9588d69c17e27bfd256"
+SRC_URI[md5sum] = "548366d19de7daa5ec6ac8f4839eeff2"
+SRC_URI[sha256sum] = "b2846b90bc08042b4f0d2cbfb34b49f0fddd8f3661f4b971baa9970b2de330ff"
 
 GEM_NAME = "aws-sdk-autoscaling"
 
