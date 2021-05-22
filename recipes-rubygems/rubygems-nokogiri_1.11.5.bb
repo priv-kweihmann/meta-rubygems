@@ -23,8 +23,8 @@ GEM_INSTALL_FLAGS += "\
     --use-system-libraries \
 "
 
-SRC_URI[md5sum] = "26e4e5edaa30354c5468be7416051412"
-SRC_URI[sha256sum] = "2bdd84d3bb168ab21a0e8d65f43194593f3b77b0016fa5de2dfaeac951fc2e17"
+SRC_URI[md5sum] = "c0b5af6e1a97086fd92203359a32e140"
+SRC_URI[sha256sum] = "15f0f270afbf9e3d4db0b0661d9742b2c02ae3bc8f17ec42c61fab1a8cb700c5"
 
 GEM_NAME = "nokogiri"
 
