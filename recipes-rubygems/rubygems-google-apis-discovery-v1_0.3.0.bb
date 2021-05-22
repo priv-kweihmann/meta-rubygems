@@ -10,8 +10,8 @@ DEPENDS_class-native += "\
     rubygems-google-apis-core-native \
 "
 
-SRC_URI[md5sum] = "8a61a47c66ecdf6ed8c395903edd9108"
-SRC_URI[sha256sum] = "054a5d8988e354f99559c5e419875c22985efb6cf24d0011ac0863bba64c995c"
+SRC_URI[md5sum] = "20a9649b3bc2a3d9d2526d83ff01ee48"
+SRC_URI[sha256sum] = "ad8bf88b9ad12e6b10ca6f31a50b1cf71614e4048ce147c4c650046eb75b14e5"
 
 GEM_NAME = "google-apis-discovery_v1"
 
