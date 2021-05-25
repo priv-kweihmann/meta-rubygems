@@ -44,7 +44,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
           repo: git://git.yoctoproject.org/poky.git
-          ref: fb26a7c9b86488f46aef707c7836c2cd406d9b8a
+          ref: 0411a1e027955d11763698ec8fd52e5fda634d40
           branch: none
           remove-git: "0"
           add-layer: "0"
@@ -59,7 +59,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
           repo: git://git.openembedded.org/meta-openembedded
-          ref: 70cc5a64485b3470e6c3779f2c6f9894720e2979
+          ref: aace2a3b916eee0f7faceeb8e69a8feacd45954c
           branch: none
           remove-git: "0"
           add-layer: "0"
