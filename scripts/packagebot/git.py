@@ -78,12 +78,12 @@ class Git():
 
         for _, _commit in enumerate(reversed(_src)):
             if mode == "all":
-                if _commit.message not in _dst:
-                    _res.append(_commit)
+                _res.append(_commit)
             else:
                 if _commit.message in _dst:
                     _res = reversed(list(self.__repo.iter_commits(
                         "{}..{}".format(_commit.hexsha, self.upstream_head_branch(src)))))
+                    break
         return _res
 
     def commit(self, changes, summary, body):
