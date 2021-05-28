@@ -110,5 +110,8 @@ class Git():
         if checkout:
             self.__repo.git.checkout(name)
 
-    def publish(self):
-        self.__repo.git.push('origin', self.branch)
+    def checkout(self, name):
+        self.__repo.git.checkout(name)
+
+    def publish(self, branch=None):
+        self.__repo.git.push('origin', branch or self.branch)
