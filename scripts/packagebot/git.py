@@ -94,11 +94,11 @@ class Git():
     def cherrypick(self, commit):
         try:
             self.__repo.git.execute(["git", "cherry-pick", commit.hexsha])
-            return 1
+            return [commit]
         except git.exc.GitCommandError:
             print("Skipping '{}' due to conflict".format(commit.summary))
             self.__repo.git.execute(["git", "cherry-pick", "--abort"])
-            return 0
+            return []
 
     def revert(self, changes):
         self.__repo.git.checkout('-f')
