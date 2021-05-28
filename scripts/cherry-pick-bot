@@ -49,13 +49,8 @@ def __sed(source, needle, replacement):
         o.write(cnt.replace(needle, replacement))
 
 
-def change_log(map):
-    res = []
-    for k, v in map.items():
-        if v.upstream_head != v.current_revision:
-            res.append(
-                "* update {} to {}".format(os.path.basename(k.rstrip("/")), v.upstream_head))
-    return "\n".join(res)
+def change_log(commits):
+    return "\n".join("* {}".format(c.summary) for c in commits)
 
 
 def get_ignore_file(ignore_file):
@@ -87,10 +82,6 @@ def main():
     _github = GitHub(_args.github_user, _args.github_pat,
                      _args.github_repo_user, _args.github_repo)
 
-    _map_repo = {}
-    for _dir in _args.repodirs:
-        _map_repo[_dir] = Git(_dir, _args.git_user, _args.git_mail)
-
     _commits = get_matchings_commits(
         _main_git, _args.source_branch, _args.target_branch, _args.ignore_file, _args.cpmode)
 
@@ -100,16 +91,17 @@ def main():
         _main_git.create_branch(
             _new_branch_name, from_branch=_args.target_branch)
 
-        _cherry_picks = 0
+        _cherry_picks = []
         for c in _commits:
             _cherry_picks += _main_git.cherrypick(c)
 
+        print("Found {} pickable changes".format(len(_cherry_picks)))
         if _cherry_picks:
             # publish branch
             _main_git.publish()
             # create pull request
             _github.create_pullrequest(
-                _main_git.branch, "Cherry pick from {}".format(_args.source_branch), change_log(_map_repo))
+                _main_git.branch, "Cherry pick from {}".format(_args.source_branch), change_log(_cherry_picks))
 
 
 if __name__ == '__main__':
