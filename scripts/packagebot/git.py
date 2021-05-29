@@ -86,6 +86,9 @@ class Git():
                     break
         return _res
 
+    def log(self, add_opt=[]):
+        return self.__repo.git.execute(["git", "log"] + add_opt)
+
     def commit(self, changes, summary, body):
         self.__repo.git.add("*")
         self.__repo.index.commit("{}\n\n{}".format(
@@ -95,8 +98,9 @@ class Git():
         try:
             self.__repo.git.execute(["git", "cherry-pick", commit.hexsha])
             return [commit]
-        except git.exc.GitCommandError:
-            print("Skipping '{}' due to conflict".format(commit.summary))
+        except git.exc.GitCommandError as e:
+            _log = self.log(['--first-parent', '--oneline', '-5'])
+            print("Skipping '{}' due to conflict :: {} :: {}".format(commit.summary, _log, e))
             self.__repo.git.execute(["git", "cherry-pick", "--abort"])
             return []
 
