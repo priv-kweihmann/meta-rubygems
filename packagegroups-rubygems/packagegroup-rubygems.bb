@@ -45,6 +45,7 @@ RDEPENDS_${PN} += "\
     rubygems-aws-sdk-elasticloadbalancing \
     rubygems-aws-sdk-elasticloadbalancingv2 \
     rubygems-aws-sdk-elasticsearchservice \
+    rubygems-aws-sdk-eventbridge \
     rubygems-aws-sdk-firehose \
     rubygems-aws-sdk-glue \
     rubygems-aws-sdk-guardduty \
