@@ -76,6 +76,13 @@ def get_matchings_commits(git, source, target, ignore_file, mode):
 def main():
     _args = create_argpaser()
 
+    # export some git variables so we don't need to set them
+    # globally
+    os.environ["GIT_AUTHOR_NAME"] = _args.git_user
+    os.environ["GIT_COMMITTER_NAME"] = _args.git_user
+    os.environ["GIT_AUTHOR_EMAIL"] = _args.git_mail
+    os.environ["GIT_COMMITTER_EMAIL"] = _args.git_mail
+
     _main_git = Git(_args.repo_path, _args.git_user, _args.git_mail)
     _github = GitHub(_args.github_user, _args.github_pat,
                      _args.github_repo_user, _args.github_repo)
