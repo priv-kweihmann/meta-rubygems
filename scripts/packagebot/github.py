@@ -11,6 +11,6 @@ class GitHub():
     def create_ticket(self, summary, body, labels):
         self.__repo.create_issue(title=summary, body=body, labels=labels)
 
-    def create_pullrequest(self, branch, summary, body):
-        self.__repo.create_pull(title=summary, body=body, base=self.__repo.default_branch,
+    def create_pullrequest(self, branch, summary, body, target=None):
+        self.__repo.create_pull(title=summary, body=body, base=target or self.__repo.default_branch,
                                 head="{}:{}".format(self.__repouser, branch))
