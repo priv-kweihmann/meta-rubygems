@@ -43,6 +43,7 @@ DEPENDS_class-native += "\
     rubygems-aws-sdk-elasticloadbalancing-native \
     rubygems-aws-sdk-elasticloadbalancingv2-native \
     rubygems-aws-sdk-elasticsearchservice-native \
+    rubygems-aws-sdk-eventbridge-native \
     rubygems-aws-sdk-firehose-native \
     rubygems-aws-sdk-glue-native \
     rubygems-aws-sdk-guardduty-native \
@@ -72,8 +73,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sdk-transfer-native \
 "
 
-SRC_URI[md5sum] = "58c0e65acc54427760af2b2005353bfb"
-SRC_URI[sha256sum] = "96eaa07c453ed871edc04dfa583972ee6f0c7c29bb1c0de24118b3cd124261ed"
+SRC_URI[md5sum] = "926844e704452e5d55bb825606a06686"
+SRC_URI[sha256sum] = "ceb60c4fffd7b5be7e53ed1970d4bcd3d05e998efe8c44097588ccc5742eff14"
 
 GEM_NAME = "train-aws"
 
@@ -118,6 +119,7 @@ RDEPENDS_${PN}_class-target += "\
     rubygems-aws-sdk-elasticloadbalancing \
     rubygems-aws-sdk-elasticloadbalancingv2 \
     rubygems-aws-sdk-elasticsearchservice \
+    rubygems-aws-sdk-eventbridge \
     rubygems-aws-sdk-firehose \
     rubygems-aws-sdk-glue \
     rubygems-aws-sdk-guardduty \
