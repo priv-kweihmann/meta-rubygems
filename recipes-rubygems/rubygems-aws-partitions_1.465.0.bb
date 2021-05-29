@@ -6,8 +6,8 @@ HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-SRC_URI[md5sum] = "233bfda61339b8ba3d3f4d506722626a"
-SRC_URI[sha256sum] = "abb61e42ae184c54552132b81ac550da82544b191f5cc8a43601cd06f52f9d3f"
+SRC_URI[md5sum] = "09f616bb878976ebe5333c4899a4edf0"
+SRC_URI[sha256sum] = "b1561f8f24eaeb996f901dc70de40da8dfe246183413663e80bf72328d77433b"
 
 GEM_NAME = "aws-partitions"
 
