@@ -111,6 +111,8 @@ RDEPENDS_${PN} += "\
     rubygems-facter \
     rubygems-faraday \
     rubygems-faraday-cookie-jar \
+    rubygems-faraday-em-http \
+    rubygems-faraday-em-synchrony \
     rubygems-faraday-excon \
     rubygems-faraday-middleware \
     rubygems-faraday-net-http \
