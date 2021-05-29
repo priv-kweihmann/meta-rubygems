@@ -6,8 +6,8 @@ HOMEPAGE = "https://github.com/excon/excon"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=8b04a0291ec55b31563a50b191b72cb1"
 
-SRC_URI[md5sum] = "cec0507827e05f04e7d53cf865e4f729"
-SRC_URI[sha256sum] = "e7c78b2114c42e06024fb9812fc5a6b9a984ed973f585c09c67f5ae6e7b6e5a5"
+SRC_URI[md5sum] = "751bef9cb67f86c4e6b73a12b6bd5aac"
+SRC_URI[sha256sum] = "6a1641e9b5725ee9a973869458a7d740ae72e3f60d976eb0e7a2341dabf6a984"
 
 GEM_NAME = "excon"
 
