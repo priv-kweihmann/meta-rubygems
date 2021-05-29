@@ -109,7 +109,8 @@ def main():
             _main_git.publish(_new_branch_name)
             # create pull request
             _github.create_pullrequest(
-                _main_git.branch, "Cherry pick from {}".format(_args.source_branch), change_log(_cherry_picks))
+                _args.target_branch.replace("origin/", "", 1),
+                "Cherry pick from {}".format(_args.source_branch), change_log(_cherry_picks))
 
 
 if __name__ == '__main__':
