@@ -149,6 +149,7 @@ RDEPENDS_${PN} += "\
     rubygems-inspec \
     rubygems-inspec-bin \
     rubygems-inspec-core \
+    rubygems-io-wait \
     rubygems-ipaddress \
     rubygems-jekyll \
     rubygems-jekyll-sass-converter \
@@ -185,8 +186,10 @@ RDEPENDS_${PN} += "\
     rubygems-ms-rest-azure \
     rubygems-multi-json \
     rubygems-multipart-post \
+    rubygems-net-ftp \
     rubygems-net-http-persistent \
     rubygems-net-netconf \
+    rubygems-net-protocol \
     rubygems-net-scp \
     rubygems-net-sftp \
     rubygems-net-ssh \
@@ -252,6 +255,7 @@ RDEPENDS_${PN} += "\
     rubygems-thor \
     rubygems-thread-safe \
     rubygems-tilt \
+    rubygems-time \
     rubygems-timeliness \
     rubygems-tomlrb \
     rubygems-trailblazer-option \
