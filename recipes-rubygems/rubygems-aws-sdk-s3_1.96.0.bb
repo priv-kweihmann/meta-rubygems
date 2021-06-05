@@ -12,8 +12,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "e45e52e9e7198c4a805861e49232b77e"
-SRC_URI[sha256sum] = "fb9f61a0af7c730eb2231db3e93dd866c028cbb6ac2a3eaba7251400e932a956"
+SRC_URI[md5sum] = "b2b019223be81dd7cf9a51c548f2c1a0"
+SRC_URI[sha256sum] = "8431733e33b1fe31321637ac29db1c02a3c07ef20246773a30aa5f6353d886bc"
 
 GEM_NAME = "aws-sdk-s3"
 
