@@ -72,6 +72,7 @@ jobs:
           GITHUB_REPO_USER=priv-kweihmann \
           GITHUB_REPO=meta-rubygems \
           ${WORKSPACE}/sources/meta-rubygems/scripts/cherry-pick-bot \
+          --cpmode=firstcommon \
           origin/master \
           origin/dunfell \
           ${WORKSPACE}/sources/meta-rubygems/.nocherry
