@@ -10,11 +10,10 @@ DEPENDS_class-native += "\
     rubygems-axiom-types-native \
     rubygems-coercible-native \
     rubygems-descendants-tracker-native \
-    rubygems-equalizer-native \
 "
 
-SRC_URI[md5sum] = "83051103a3439993d685a0c023b5f9f2"
-SRC_URI[sha256sum] = "d3053b9ff62d3f8b7b233f7e1aa9530b73ed7e541bee2c62f2c711362287371a"
+SRC_URI[md5sum] = "9a3cd6a019c80c3465ce783ea9091cf5"
+SRC_URI[sha256sum] = "8841dae4eb7fcc097320ba5ea516bf1839e5d056c61ee27138aa4bddd6e3d1c2"
 
 GEM_NAME = "virtus"
 
@@ -26,7 +25,6 @@ RDEPENDS_${PN}_class-target += "\
     rubygems-axiom-types \
     rubygems-coercible \
     rubygems-descendants-tracker \
-    rubygems-equalizer \
 "
 
 BBCLASSEXTEND = "native"
