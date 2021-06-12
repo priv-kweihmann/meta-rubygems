@@ -10,8 +10,8 @@ DEPENDS_class-native += "\
     rubygems-domain-name-native \
 "
 
-SRC_URI[md5sum] = "6a5ebc9f1b1f3628794c71b30ce7e5ec"
-SRC_URI[sha256sum] = "2f11269d817bc52ab2af2721e89a377660a961078de2a3a55fc696d7897e8c00"
+SRC_URI[md5sum] = "72925abeaa57cf214e93fee5ec101bbd"
+SRC_URI[sha256sum] = "89a64e1b9e3ed823b559b2030e0b62ad850d0d11325a0589145ebf93d80267a4"
 
 GEM_NAME = "http-cookie"
 
