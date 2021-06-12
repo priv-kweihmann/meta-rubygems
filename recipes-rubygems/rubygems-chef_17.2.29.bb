@@ -35,8 +35,8 @@ DEPENDS_class-native += "\
     rubygems-uuidtools-native \
 "
 
-SRC_URI[md5sum] = "044041ebdf6443a86f501aca7381a4c3"
-SRC_URI[sha256sum] = "55589012ef8e01dc6bb7fc77b662c45a8339aba24b68c6448d13fae2c65b863d"
+SRC_URI[md5sum] = "e436da7f78fa680648cda071551a7ec6"
+SRC_URI[sha256sum] = "eaa653e081b5f677a6f8f86f6e0ae311628e5c79a247909160592ca19412b067"
 
 GEM_NAME = "chef"
 
