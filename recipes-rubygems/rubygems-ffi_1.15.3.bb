@@ -15,8 +15,8 @@ GEM_INSTALL_FLAGS += "\
     --with-opt-dir=${RECIPE_SYSROOT} \
 "
 
-SRC_URI[md5sum] = "63f782c2c7dc4db127da72b5bcec53c6"
-SRC_URI[sha256sum] = "d125ee6a8b88405926f8af9b3d25a75ae93e1c782cd50bd62e81e20cce16d696"
+SRC_URI[md5sum] = "7cbf44ea1c86e5ae67f60be71bf62716"
+SRC_URI[sha256sum] = "98d5c5c4281c9c0466acc60cf0e79124bf3c311417fd97e7473e41722953fbf1"
 
 GEM_NAME = "ffi"
 
