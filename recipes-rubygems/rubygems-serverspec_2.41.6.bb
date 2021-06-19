@@ -12,20 +12,21 @@ DEPENDS_class-native += "\
     rubygems-rspec-native \
     rubygems-specinfra-native \
 "
-RDEPENDS_${PN}_class-target += "\
-    rubygems-multi-json \
-    rubygems-rspec \
-    rubygems-rspec-its \
-    rubygems-specinfra \
-"
 
-SRC_URI[md5sum] = "6b9b309ee4dc1a1570a8317e4ef15ce9"
-SRC_URI[sha256sum] = "d68b1f3ae40e3cdcd870011fbe8e76093b389438a5edb478fc34c7bf2f6be34e"
+SRC_URI[md5sum] = "bd045d8100901f9a3ce6eaa5cc097202"
+SRC_URI[sha256sum] = "90c9b73ee7320c2707a7671493a0b023f1c7265604cb9a40f2805bb27cdbe4af"
 
 GEM_NAME = "serverspec"
 
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS_${PN}_class-target += "\
+    rubygems-multi-json \
+    rubygems-rspec \
+    rubygems-rspec-its \
+    rubygems-specinfra \
+"
 
 BBCLASSEXTEND = "native"
