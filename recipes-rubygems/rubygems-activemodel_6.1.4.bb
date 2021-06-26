@@ -10,8 +10,8 @@ DEPENDS_class-native += "\
     rubygems-activesupport-native \
 "
 
-SRC_URI[md5sum] = "663ad8020b8549e16437a9dec9b32213"
-SRC_URI[sha256sum] = "5459410a49855d18b89ecf2d509cb74924e37559a01a991b41d9fb4c201cedbe"
+SRC_URI[md5sum] = "7cc71c8aa1ad204ca96529c4a077cd87"
+SRC_URI[sha256sum] = "27f3223172e81b8e60e7da7f3b812bba046472716def6793d89c177b9e435e76"
 
 GEM_NAME = "activemodel"
 
