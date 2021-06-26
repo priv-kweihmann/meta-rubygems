@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "82e47b50896879f65e42e62bbdb764f2"
-SRC_URI[sha256sum] = "6218116e13fe2d2d41a2f6567b2ff389c567503fe50dda29b18652de5adcdef5"
+SRC_URI[md5sum] = "842ab516196c74a577d5d97cebe6f598"
+SRC_URI[sha256sum] = "f656112028bba844731e213ca5a3e19dfede606409152f4d61094fe91f41ccbb"
 
 GEM_NAME = "aws-sdk-cloudwatchevents"
 
