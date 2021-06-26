@@ -19,8 +19,8 @@ DEPENDS_class-native += "\
     rubygems-semantic-puppet-native \
 "
 
-SRC_URI[md5sum] = "81cfcab6f6998bf7cfbcf0c91a72a469"
-SRC_URI[sha256sum] = "4f28baea61b0f879d51567dc775e1c2df79c9f09b334e8fd4051cd7f01014445"
+SRC_URI[md5sum] = "a22a67dd03161889d9e1ecf848da0535"
+SRC_URI[sha256sum] = "a192df83b9e4c775cf14e557bb4114805335b9125b673042c3f67b4ed5f07ffa"
 
 GEM_NAME = "puppet"
 
