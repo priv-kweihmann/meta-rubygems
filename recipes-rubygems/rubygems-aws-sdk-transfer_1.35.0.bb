@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "2ce127f9c0e384805b8528139267c8e4"
-SRC_URI[sha256sum] = "f62121bf12994d62ac494988673497022f6dd9be987f6c8f47236cad31bbff04"
+SRC_URI[md5sum] = "13ff979362e9d46b07fe510c9726b28b"
+SRC_URI[sha256sum] = "a3446473628075d0e9677a774b4e0002990302ed9f86e3be2689f70a6ab22245"
 
 GEM_NAME = "aws-sdk-transfer"
 
