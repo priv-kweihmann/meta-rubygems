@@ -13,8 +13,8 @@ DEPENDS_class-native += "\
     rubygems-jmespath-native \
 "
 
-SRC_URI[md5sum] = "088b216e725a533ba6aee2725a4da803"
-SRC_URI[sha256sum] = "ccb1c219f9b79a4269ed8534810af9f518a9537e8e552608630430ea882f9383"
+SRC_URI[md5sum] = "7a95ddd58115f245452dd2b11e5aea2f"
+SRC_URI[sha256sum] = "b88401fb9cee40e4699f808da48e792206fff269651bb0e18e62494b242f9a19"
 
 GEM_NAME = "aws-sdk-core"
 
