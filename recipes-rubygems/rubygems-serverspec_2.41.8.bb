@@ -13,8 +13,8 @@ DEPENDS_class-native += "\
     rubygems-specinfra-native \
 "
 
-SRC_URI[md5sum] = "bd045d8100901f9a3ce6eaa5cc097202"
-SRC_URI[sha256sum] = "90c9b73ee7320c2707a7671493a0b023f1c7265604cb9a40f2805bb27cdbe4af"
+SRC_URI[md5sum] = "0a6e7e3c1b9345af4e05d39d8ce0a204"
+SRC_URI[sha256sum] = "c18d9e29cc499c3233d73ebe40b8d701f6bee447b8a34944586a66efde19f5aa"
 
 GEM_NAME = "serverspec"
 
