@@ -14,8 +14,8 @@ DEPENDS_class-native += "\
     rubygems-zeitwerk-native \
 "
 
-SRC_URI[md5sum] = "1863d3975e3f2f631abc802791d43159"
-SRC_URI[sha256sum] = "d9074834deca6676aabd432f16c392e991eca1f675cbcefc38671a0a7d6b5db3"
+SRC_URI[md5sum] = "765f79e5e623c45cef6decfc965cab80"
+SRC_URI[sha256sum] = "b37564f4fc3bc66f3f98d3032b8bb8cbdbd23ba0f7c02648287048463cf70f4f"
 
 GEM_NAME = "activesupport"
 
