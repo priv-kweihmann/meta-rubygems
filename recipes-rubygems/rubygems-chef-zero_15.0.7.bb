@@ -14,6 +14,16 @@ DEPENDS_class-native += "\
     rubygems-uuidtools-native \
     rubygems-webrick-native \
 "
+
+SRC_URI[md5sum] = "fd2ec3b3ee341f8c5192271a1d136581"
+SRC_URI[sha256sum] = "20c37db613c66dda47d4d032a7838904bbec53b67f0c6727fd2ab5008ae1b83d"
+
+GEM_NAME = "chef-zero"
+
+inherit rubygems
+inherit rubygentest
+inherit pkgconfig
+
 RDEPENDS_${PN}_class-target += "\
     rubygems-ffi-yajl \
     rubygems-hashie \
@@ -22,16 +32,5 @@ RDEPENDS_${PN}_class-target += "\
     rubygems-uuidtools \
     rubygems-webrick \
 "
-
-SRC_URI[md5sum] = "a00156fa94546e3dac6d3182c97f37c2"
-SRC_URI[sha256sum] = "8d776ea3b4e0a5c3acf429ca2343643e5c6ae5c8cf8d228756710ff7eec0bb1b"
-
-GEM_NAME = "chef-zero"
-
-
-
-inherit rubygems
-inherit rubygentest
-inherit pkgconfig
 
 BBCLASSEXTEND = "native"
