@@ -7,12 +7,14 @@ import datetime
 import fnmatch
 import os
 import sys
+import time
 
 from packagebot.git import Git
 from packagebot.github import GitHub
 
 sys.path.insert(0, os.path.dirname(__file__))
 
+AUTO_IGNORE_BEFORE = 1209600
 
 def create_argpaser():
     parser = argparse.ArgumentParser(description='Cherry-pick bot')
@@ -27,6 +29,7 @@ def create_argpaser():
                         default=os.environ.get("GITHUB_REPO_USER"))
     parser.add_argument("--github_repo", default=os.environ.get("GITHUB_REPO"))
     parser.add_argument("--cpmode", choices=["all", "firstcommon"], default="all")
+    parser.add_argument("--ignorebefore", type=int, default=time.time() - AUTO_IGNORE_BEFORE)
     parser.add_argument("source_branch")
     parser.add_argument("target_branch")
     parser.add_argument("ignore_file")
@@ -57,7 +60,7 @@ def get_ignore_file(ignore_file):
     return []
 
 
-def get_matchings_commits(git, source, target, ignore_file, mode):
+def get_matchings_commits(git, source, target, ignore_file, mode, ignore_before):
     _commits = git.get_fresh_source_commits(source, target, mode)
 
     _ignores = get_ignore_file(ignore_file)
@@ -68,6 +71,8 @@ def get_matchings_commits(git, source, target, ignore_file, mode):
             if any(fnmatch.fnmatch(f, x) for x in _ignores):
                 pick = False
                 break
+        if commit.committed_date < ignore_before:
+            continue
         if pick:
             res.append(commit)
     return res
@@ -88,7 +93,8 @@ def main():
                      _args.github_repo_user, _args.github_repo)
 
     _commits = get_matchings_commits(
-        _main_git, _args.source_branch, _args.target_branch, _args.ignore_file, _args.cpmode)
+        _main_git, _args.source_branch, _args.target_branch, _args.ignore_file, _args.cpmode,
+        _args.ignorebefore)
 
     if any(_commits):
         _new_branch_name = "cherry_pick_{}".format(
