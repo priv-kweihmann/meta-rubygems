@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "4d1b298fcf65717aedb803fca110ca02"
-SRC_URI[sha256sum] = "6e343f5fce6f4aac18e2e8f906442df811944a572c5fda3a93e6c7b155540898"
+SRC_URI[md5sum] = "58b66140b1366279ae4191738cb927e5"
+SRC_URI[sha256sum] = "496562b5c4480ec938fa24089c556e456a7eff0c72a0da9f53765aa68ca81ecf"
 
 GEM_NAME = "aws-sdk-glue"
 
