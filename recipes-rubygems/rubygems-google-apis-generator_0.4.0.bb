@@ -14,8 +14,8 @@ DEPENDS_class-native += "\
     rubygems-thor-native \
 "
 
-SRC_URI[md5sum] = "12bd10f3f70b71bb0d2c500e74c3e5c4"
-SRC_URI[sha256sum] = "f7078384e265caffbd1e9f295951c74fd5f022d5f9fd5158c775db2e59c74f6e"
+SRC_URI[md5sum] = "9e0e37d1932108d8d5c9f9f347734f12"
+SRC_URI[sha256sum] = "7d5fec45d8a997f2ad1f4a89cba221c504d0c48cbd5b862377827b623a08dc4b"
 
 GEM_NAME = "google-apis-generator"
 
