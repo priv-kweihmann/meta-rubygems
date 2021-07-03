@@ -14,12 +14,11 @@ DEPENDS_class-native += "\
     rubygems-representable-native \
     rubygems-retriable-native \
     rubygems-rexml-native \
-    rubygems-signet-native \
     rubygems-webrick-native \
 "
 
-SRC_URI[md5sum] = "386faccbb3941397db176406edacd9bb"
-SRC_URI[sha256sum] = "4a04e1daa6397781e5ef289e9dcb9274fbb2d8018ea47869bfa875e97c94a4cb"
+SRC_URI[md5sum] = "3d0687b3c815ad736c9fe282e6a65f34"
+SRC_URI[sha256sum] = "7a0028c41b134f7925bf6c7b60226fd3f24753e48ae1eefc9e974637e7af7ee0"
 
 GEM_NAME = "google-apis-core"
 
@@ -35,7 +34,6 @@ RDEPENDS_${PN}_class-target += "\
     rubygems-representable \
     rubygems-retriable \
     rubygems-rexml \
-    rubygems-signet \
     rubygems-webrick \
 "
 
