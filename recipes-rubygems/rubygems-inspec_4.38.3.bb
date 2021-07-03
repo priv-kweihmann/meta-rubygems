@@ -17,8 +17,8 @@ DEPENDS_class-native += "\
     rubygems-train-winrm-native \
 "
 
-SRC_URI[md5sum] = "2a70e269ac610db2ae609e2b0dc31863"
-SRC_URI[sha256sum] = "dacda21b817c89cfc57004a89e4cc3b645db03a02cb9cdfde2fdcc144115d6d9"
+SRC_URI[md5sum] = "7a9dcfbd9120a87776215ba502ef787f"
+SRC_URI[sha256sum] = "331f3adff5ddbc5a0e0e3adb90543490945b12ae41298ae401f3e5321bbe9c3e"
 
 GEM_NAME = "inspec"
 
