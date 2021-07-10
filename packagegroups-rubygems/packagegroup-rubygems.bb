@@ -115,9 +115,11 @@ RDEPENDS_${PN} += "\
     rubygems-faraday-em-http \
     rubygems-faraday-em-synchrony \
     rubygems-faraday-excon \
+    rubygems-faraday-httpclient \
     rubygems-faraday-middleware \
     rubygems-faraday-net-http \
     rubygems-faraday-net-http-persistent \
+    rubygems-faraday-patron \
     rubygems-fast-gettext \
     rubygems-ffi \
     rubygems-ffi-libarchive \
