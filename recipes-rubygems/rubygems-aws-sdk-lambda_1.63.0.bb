@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "b5a2eb84f8797e949abc19ec3029094d"
-SRC_URI[sha256sum] = "e55137d18c6b58ca60451c91320b37f58d4ff48892e0961c5ff493b44aceac65"
+SRC_URI[md5sum] = "f072994111f8f9d849ab2054309a7f0a"
+SRC_URI[sha256sum] = "7f3ffc279f476475cfdb8c991f11a49b78a6f9cd7dc62fb5ec3707e93eb58909"
 
 GEM_NAME = "aws-sdk-lambda"
 
