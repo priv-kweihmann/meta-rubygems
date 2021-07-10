@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "c5f10e3cb407b8333e40543a4f2b95bb"
-SRC_URI[sha256sum] = "d4edeab774a8b4fd725f809582be6fb46ee60a133c6f5d345cb7e012e640ba62"
+SRC_URI[md5sum] = "9e04ba31852a94ca472260b335cadb31"
+SRC_URI[sha256sum] = "3d7bea60f91bda08e3084794bddd1442649fb16379298f2f47dc797daefbb057"
 
 GEM_NAME = "aws-sdk-cloudfront"
 
