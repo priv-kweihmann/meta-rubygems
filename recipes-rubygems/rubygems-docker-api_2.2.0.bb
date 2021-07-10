@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-multi-json-native \
 "
 
-SRC_URI[md5sum] = "ab260641c4981f44e48dbb3d9f030f42"
-SRC_URI[sha256sum] = "1989a3b52f42ad64e7495c01843b0a7f5784c15f427638975ba7ffd4f6d5092c"
+SRC_URI[md5sum] = "3809e11562816a421e38030ddbe50ad4"
+SRC_URI[sha256sum] = "be2b7ef6462080fbbc5ee3f5e1ae9725379412900076e3b5a06395f0a35ded3c"
 
 GEM_NAME = "docker-api"
 
