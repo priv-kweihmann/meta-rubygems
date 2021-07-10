@@ -10,8 +10,8 @@ DEPENDS_class-native += "\
     rubygems-aws-eventstream-native \
 "
 
-SRC_URI[md5sum] = "31f1b1fdf70e5f63a143a42b04747088"
-SRC_URI[sha256sum] = "5cd54a4bf2ccc077d890e5a004e72961f21672d287fbf3ee9cdfdd3a62853fb5"
+SRC_URI[md5sum] = "dc1674c1675fea2b561433e3632c3be5"
+SRC_URI[sha256sum] = "c0e5b98aafc39f8b7ef258495de1c58698a79149c8c5aecdf464a70e9e866931"
 
 GEM_NAME = "aws-sigv4"
 
