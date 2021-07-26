@@ -17,8 +17,8 @@ DEPENDS_class-native += "\
     rubygems-webrick-native \
 "
 
-SRC_URI[md5sum] = "3d0687b3c815ad736c9fe282e6a65f34"
-SRC_URI[sha256sum] = "7a0028c41b134f7925bf6c7b60226fd3f24753e48ae1eefc9e974637e7af7ee0"
+SRC_URI[md5sum] = "db03b189498cd9f1febb787b4a2b613f"
+SRC_URI[sha256sum] = "1e334ff47ce35680f0bb701abeaa94cbb48af77d7f62b96aa3293fca8c91ffdb"
 
 GEM_NAME = "google-apis-core"
 
