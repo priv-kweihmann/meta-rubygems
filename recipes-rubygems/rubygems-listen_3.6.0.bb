@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-rb-inotify-native \
 "
 
-SRC_URI[md5sum] = "13acebd3800bdea503c24808f61a3847"
-SRC_URI[sha256sum] = "d2f6425068347454936c75bf3b9fc0f925b40d17ba7df752031c8c083b195b40"
+SRC_URI[md5sum] = "263bd6742583d73d1628d77914193e6c"
+SRC_URI[sha256sum] = "f095d31f66f8cef7142d0658697961900f3ee3d3223980a3bc8ca9a449f307b7"
 
 GEM_NAME = "listen"
 
