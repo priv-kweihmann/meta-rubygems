@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "afca8496e9f58a3a4e86e818274a9862"
-SRC_URI[sha256sum] = "bc3aecf86923ce62e21f179701a350d53e244c130a83893d7ec9c3edc07978fb"
+SRC_URI[md5sum] = "2d81f8e6f539c3ecc92e47b4e68de72a"
+SRC_URI[sha256sum] = "16671fa65ebaa0961517b817052c625efcd1d0674fcddb32a393f82afd1540ec"
 
 GEM_NAME = "aws-sdk-elasticloadbalancingv2"
 
