@@ -21,8 +21,8 @@ DEPENDS_class-native += "\
     rubygems-wmi-lite-native \
 "
 
-SRC_URI[md5sum] = "6fb471f3ed24be521945114e7a2e8920"
-SRC_URI[sha256sum] = "064261cfc51f2c2a841d0081a2b94705491382871dfc64c3e916ab57f736b511"
+SRC_URI[md5sum] = "b9a991973d58e273a95eb80f3e6540c7"
+SRC_URI[sha256sum] = "b641f92758c21696b642131d1b268ec013a13d0f8f36387624bcba43eccc6cd9"
 
 GEM_NAME = "ohai"
 
