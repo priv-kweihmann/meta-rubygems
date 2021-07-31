@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-concurrent-ruby-native \
 "
 
-SRC_URI[md5sum] = "972ecbac8182c4116c6789b38d157f4e"
-SRC_URI[sha256sum] = "8ba5064939789122ee2afffcd4dda4112507a8b129a4440dec7ba4ef5b470b53"
+SRC_URI[md5sum] = "f36634eb90ad4f480c9726e2935eac02"
+SRC_URI[sha256sum] = "bd004fd20cd0677936d3ada881b1d318185a76186e1774634542366707633151"
 
 GEM_NAME = "chef-telemetry"
 
