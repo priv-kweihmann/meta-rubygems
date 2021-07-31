@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "1531b648ffe4ac93c22d929b43239b17"
-SRC_URI[sha256sum] = "d9ed93d220c8c40eacae93f29c0ec5f651fed094ea930a9ac5f7a619ed109106"
+SRC_URI[md5sum] = "0ec57f5de7a001e14ecc411112f5b554"
+SRC_URI[sha256sum] = "14f9b8dd53fb406e60ba95408ca68ba98f523794cbfb13c95ea446a1ae3c62c9"
 
 GEM_NAME = "aws-sdk-apigatewayv2"
 
