@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "96a2e75c39247cb52d29fb35fc23e5d4"
-SRC_URI[sha256sum] = "4c09b74c1117e2d8dd54ae50c32e1b1251440c400c80277bc0c9b73d4bd6a666"
+SRC_URI[md5sum] = "322947cabc35f3916ea3318b8f0e4433"
+SRC_URI[sha256sum] = "85eed1b1b0cfa664ff5cdb80bf712fdbeef875c028cf4eb587444c0c93bdee99"
 
 GEM_NAME = "aws-sdk-ram"
 
