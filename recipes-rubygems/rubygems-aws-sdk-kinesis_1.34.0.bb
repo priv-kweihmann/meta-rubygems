@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "da16e1c534194d77c75ec07939e2ad37"
-SRC_URI[sha256sum] = "de14529dad941fc4471c74e3e1111f32d435a5e380404f8930821b589582e675"
+SRC_URI[md5sum] = "d70383dcd5e6b51e438868942f2d7e1d"
+SRC_URI[sha256sum] = "5fcd58517f65dacac774f61a5dcbe59133dd4557a43326c3a4b28e977fe5a7f3"
 
 GEM_NAME = "aws-sdk-kinesis"
 
