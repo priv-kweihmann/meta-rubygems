@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "3a965f0f4de5192dd2edb897615936b9"
-SRC_URI[sha256sum] = "b5a5791acb45b0cb9053d2d392823effdec5e05c12ccfd949a4e0aebd13e150b"
+SRC_URI[md5sum] = "7b9ff507199e913819ca9fa57809cc92"
+SRC_URI[sha256sum] = "d0b62e9840ecdbcfcdee0b8a60915a6aa6336d66d810a1c0131aefe34b9357e6"
 
 GEM_NAME = "aws-sdk-cognitoidentityprovider"
 
