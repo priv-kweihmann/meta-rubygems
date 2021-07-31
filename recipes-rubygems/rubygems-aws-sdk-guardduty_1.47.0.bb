@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "6a1e558bde0439cc7445e010ebec999a"
-SRC_URI[sha256sum] = "7e0a438efd0b8c193625eb6d3ee0a74991a3bec83ac563fb4c21537f5cc27562"
+SRC_URI[md5sum] = "1cc5ff5d47abe37f49d9c815669a4047"
+SRC_URI[sha256sum] = "fb91fd4f46af07cf9454567f59c79218356d2714371df77a1709a9817d63135d"
 
 GEM_NAME = "aws-sdk-guardduty"
 
