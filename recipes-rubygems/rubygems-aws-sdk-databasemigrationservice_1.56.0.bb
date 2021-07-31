@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "0ea2149498393f7e37dcaf91cb19a5de"
-SRC_URI[sha256sum] = "624f5f4acb3cd688fc8865b4e3adc6da8256758416ee3e760b800b5df75cdc8d"
+SRC_URI[md5sum] = "9a6d79fafcb78e8bd1a92c2516770a25"
+SRC_URI[sha256sum] = "54d92a111a0d246b0340a9087b7a422e55cdad5f883d455900ac4bdb40820d0b"
 
 GEM_NAME = "aws-sdk-databasemigrationservice"
 
