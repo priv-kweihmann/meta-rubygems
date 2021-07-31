@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "4e948f7078635dbf43f7ab49f7da2f7a"
-SRC_URI[sha256sum] = "718438609e3353a92dc5aa45c36c2ac016f96d1ad03c4f07f49c56117d1a7d76"
+SRC_URI[md5sum] = "81d93cdf37d499ac5db89c5380979544"
+SRC_URI[sha256sum] = "c9b6d9a4068876618d897b25ce8f252087cec912ee787b6eb72bb0c10bf0bee6"
 
 GEM_NAME = "aws-sdk-secretsmanager"
 
