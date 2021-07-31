@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "e20143b2bb17cbcc237e53e0472abe15"
-SRC_URI[sha256sum] = "5093d594860a3257e54d9034e945cf7148e7e24bc7a47699774a531edd080f49"
+SRC_URI[md5sum] = "2df4efa10784c3e4ad95e5c8af5db1f8"
+SRC_URI[sha256sum] = "7d830b13a2e4b575e68e4375ad4957a48f6c6920068fa93238ba135c2837691c"
 
 GEM_NAME = "aws-sdk-codepipeline"
 
