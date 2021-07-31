@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "a5c2f0c1714e0560df5c0f4fcd7f6046"
-SRC_URI[sha256sum] = "55cfb0b324aa997ce0491e29b04b64f47e559c1a781f34e0770979cddff30710"
+SRC_URI[md5sum] = "7646739a4d2f862412cf88f5ef3fce42"
+SRC_URI[sha256sum] = "2ad16898f4d1408ab09aa0986d6e585940d408267b1a2990d780d375cba7e040"
 
 GEM_NAME = "aws-sdk-kms"
 
