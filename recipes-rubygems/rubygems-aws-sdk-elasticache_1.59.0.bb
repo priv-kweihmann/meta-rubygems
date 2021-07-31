@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "f89297a72624ece5441d48e8d8025e10"
-SRC_URI[sha256sum] = "d4e6cdae3b4b659731c85c5f10f3bf4edada247a01890b9c50264f5518610dba"
+SRC_URI[md5sum] = "1057ebd00dfced38ba6a28e8c5c64892"
+SRC_URI[sha256sum] = "fac50e51f4d2fe2b505c8784bea3388eae0cc8fff26d740cbdbcff757c5a8781"
 
 GEM_NAME = "aws-sdk-elasticache"
 
