@@ -15,8 +15,8 @@ DEPENDS_class-native += "\
     rubygems-signet-native \
 "
 
-SRC_URI[md5sum] = "aa1c2f1c3bf0905782308e9b4f51f4a7"
-SRC_URI[sha256sum] = "057c72865a94a5c55d51fb8702635dfb0fe02085f67a417542285cb61022c75f"
+SRC_URI[md5sum] = "a6659347f51ba2d81c7a24c96fe9321b"
+SRC_URI[sha256sum] = "988594556ca5319e5fca21b263f152a9b97df1e1024ccdf780d828563a7e020c"
 
 GEM_NAME = "googleauth"
 
