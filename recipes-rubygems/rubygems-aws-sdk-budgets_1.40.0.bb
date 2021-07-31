@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "200244da9dffacabf60eee838ece9891"
-SRC_URI[sha256sum] = "dd841360e99583c877344cfc9ba12f9d0415cda713729620795deeb32bb10b13"
+SRC_URI[md5sum] = "b9f089439a43a8fd9fba73515077cda7"
+SRC_URI[sha256sum] = "5b40d5c2dde2e88d1c5cca835f995eab36a470c4ac4c1ee8f3bf01cb2e65ecf1"
 
 GEM_NAME = "aws-sdk-budgets"
 
