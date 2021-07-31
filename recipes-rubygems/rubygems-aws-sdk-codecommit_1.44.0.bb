@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "d6010fcaf3d9406073a8e507850e64d1"
-SRC_URI[sha256sum] = "d0fed017872442c244a5327d38bdc47627976e621048fc91e0296d2b9fc7e901"
+SRC_URI[md5sum] = "f2cbc8659753c2cfd1b47f93079c6993"
+SRC_URI[sha256sum] = "f775c2eacb028553653908bad8377dc2b4bb4cb3cf9f36bc3d44b6ff0422c4a7"
 
 GEM_NAME = "aws-sdk-codecommit"
 
