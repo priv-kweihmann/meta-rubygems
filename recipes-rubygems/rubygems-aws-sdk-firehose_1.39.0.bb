@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "4b32d3a4757988a95f583322d4f4376f"
-SRC_URI[sha256sum] = "2ff1d6ee3e08bedb0991721fd0967bbb438ddca2f242113016533116f69782fa"
+SRC_URI[md5sum] = "9a3d4d057d2782113348c31143e65ef0"
+SRC_URI[sha256sum] = "5e5e0d099019931fb74c75d117f519aedbfc6ee72b094abbfa2ce5122613c258"
 
 GEM_NAME = "aws-sdk-firehose"
 
