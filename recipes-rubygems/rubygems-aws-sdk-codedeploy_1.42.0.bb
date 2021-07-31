@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "9957ec214a7b87422876d1ae49f4d381"
-SRC_URI[sha256sum] = "14fb7dbb9951c446c4455e0c77c9f859826e44ddb9fcdd3a1d0faa01c615958a"
+SRC_URI[md5sum] = "94645cea42309babffb88dc927d51227"
+SRC_URI[sha256sum] = "5b2594e6579f80307bcff9fb88c20faa2ac367294a5943d3add5e5759bc0b9e8"
 
 GEM_NAME = "aws-sdk-codedeploy"
 
