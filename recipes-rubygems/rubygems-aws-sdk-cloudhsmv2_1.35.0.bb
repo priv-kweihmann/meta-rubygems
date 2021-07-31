@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "3dee6b27d9d608863402eadc7e2c55eb"
-SRC_URI[sha256sum] = "7a7a06c174a7c4c1fe386d6f0ba056df38d17ad9497826cc239987464e1bbee4"
+SRC_URI[md5sum] = "85a69faa0c00f56e2c2c22d93ed20a18"
+SRC_URI[sha256sum] = "cea5a786b6a08a79ff65a88c92f0a6bc697328c1cefa32ba35bad9ce74426d5a"
 
 GEM_NAME = "aws-sdk-cloudhsmv2"
 
