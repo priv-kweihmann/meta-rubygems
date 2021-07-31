@@ -15,8 +15,8 @@ DEPENDS_class-native += "\
     rubygems-net-ssh-native \
 "
 
-SRC_URI[md5sum] = "81d5f5ba4008de4bfe4d1e5729508fe2"
-SRC_URI[sha256sum] = "fbfe3eb8240572309102057e9c1435c716a3b0b4431ef3868fabd26b3b5483dc"
+SRC_URI[md5sum] = "62d83edf7d31319de0b3acd8cb707600"
+SRC_URI[sha256sum] = "d710aae3fb1d799be344a7e59c287afd57621f64b4a4987585999abeb79ebc1b"
 
 GEM_NAME = "train-core"
 
