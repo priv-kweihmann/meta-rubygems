@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "376a1114ba27cbfc41e167b4be074740"
-SRC_URI[sha256sum] = "80b99350e9977ad9958bd664c96f6241d0d16594382c0443490ad6d6f7f6a875"
+SRC_URI[md5sum] = "2445aad836b8118e989a74b801dbafa2"
+SRC_URI[sha256sum] = "22c772ef8347b51f52d9ead02593d76b624b13b772707cc8144203ab2bf8885e"
 
 GEM_NAME = "aws-sdk-batch"
 
