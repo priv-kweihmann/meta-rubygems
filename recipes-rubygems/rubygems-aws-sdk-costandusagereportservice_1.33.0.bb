@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "51044be98195a0b3cfa5231dedba08e5"
-SRC_URI[sha256sum] = "237cf9ece5cc32cd819070b46505b6209a1b43263c9f69529682b43e070085ea"
+SRC_URI[md5sum] = "6efea5b6da058ab6d222568123e60da0"
+SRC_URI[sha256sum] = "862452df500abfa40c166a552c375b07c57f81529b1c484b85764dde167e7794"
 
 GEM_NAME = "aws-sdk-costandusagereportservice"
 
