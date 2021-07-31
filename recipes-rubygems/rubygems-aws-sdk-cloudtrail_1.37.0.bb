@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "441c24f4dcf7122aa9cf24cab852baf0"
-SRC_URI[sha256sum] = "baf0c3f8583044b79b48af1a058fc7864f16c9228bf39a83fe85bf61ad7af644"
+SRC_URI[md5sum] = "d8b591f926d5e74c69ed5f79adae4556"
+SRC_URI[sha256sum] = "a4097d9a93a3669ebcaa73aef97f3e1573d4237198a86ceb43c253a260d06d7a"
 
 GEM_NAME = "aws-sdk-cloudtrail"
 
