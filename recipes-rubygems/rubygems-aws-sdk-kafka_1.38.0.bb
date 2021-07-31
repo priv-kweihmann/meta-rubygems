@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "6fc0099178cb5a18867a715264f84154"
-SRC_URI[sha256sum] = "0ceebef8b5a9271fce759a84a7feed54d0a5bfa9d03fe1f19be7f9bb1c9b7c5d"
+SRC_URI[md5sum] = "6ac85f79ddcd1f6ff514558898a18e2b"
+SRC_URI[sha256sum] = "c79ebf768a2413ddb730d980220c44f3607e0c2157f4bbd7b3067c5087e3fcf3"
 
 GEM_NAME = "aws-sdk-kafka"
 
