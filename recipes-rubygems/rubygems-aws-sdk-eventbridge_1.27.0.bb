@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "004fcd40e89f3923f2387d22fd0add6d"
-SRC_URI[sha256sum] = "8bc6244a5f05ae5ab8f0a291370be1a5309bbc3f8b5bfbe5d503297ba50b93b1"
+SRC_URI[md5sum] = "5fcf973b1e80c60db400c1b224e2c07b"
+SRC_URI[sha256sum] = "f70f6216ffe64209119a72a470a5addf0f9051f981f68803a2fb8f4777ef0619"
 
 GEM_NAME = "aws-sdk-eventbridge"
 
