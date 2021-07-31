@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "b9ae4d067598ce0e0c1b1c5b6553bc66"
-SRC_URI[sha256sum] = "e23f07446ec5b9e6e836b39805b38a7026d3c361e1c42775365aa5e9a4432e25"
+SRC_URI[md5sum] = "6f48aeac26eb54a708e66c38f1da8af4"
+SRC_URI[sha256sum] = "ef0424af3465bf3b160fcab4556a62b030db8b142c3a1a6fbf11ca84edecffc3"
 
 GEM_NAME = "aws-sdk-elasticbeanstalk"
 
