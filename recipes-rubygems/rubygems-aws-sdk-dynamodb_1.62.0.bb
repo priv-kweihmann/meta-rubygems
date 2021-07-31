@@ -11,8 +11,8 @@ DEPENDS_class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "0bdedc1a816b8ca39736d84b6e741679"
-SRC_URI[sha256sum] = "23068906fc5945b30ec06ea8d9a7bf12b7553bbfe999c2fef4f1b3b4ffacdab5"
+SRC_URI[md5sum] = "1d965a6edfa3fa739d57bf8852ef0c79"
+SRC_URI[sha256sum] = "5adff277d3a6a3129d53a1af816b15a3d8aa5f50379453180e8d7a64e8abaa25"
 
 GEM_NAME = "aws-sdk-dynamodb"
 
