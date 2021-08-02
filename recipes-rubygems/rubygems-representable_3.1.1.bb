@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/trailblazer/representable/"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=05037c2d4aa35dcc8c2db40a1b0e6a14"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-declarative-native \
     rubygems-trailblazer-option-native \
     rubygems-uber-native \
@@ -21,7 +21,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-declarative \
     rubygems-trailblazer-option \
     rubygems-uber \

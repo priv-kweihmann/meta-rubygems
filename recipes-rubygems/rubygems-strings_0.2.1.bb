@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/piotrmurach/strings"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=45969ce099096fcbcda3634c24c5bb87"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-strings-ansi-native \
     rubygems-unicode-display-width-native \
     rubygems-unicode-utils-native \
@@ -21,7 +21,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-strings-ansi \
     rubygems-unicode-display-width \
     rubygems-unicode-utils \

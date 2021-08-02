@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://README.rdoc;beginline=42;endline=65;md5=5db85eba7780a
 
 EXTRA_RDEPENDS += "rubygems-gauntlet"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-path-expander-native \
     rubygems-ruby-parser-native \
     rubygems-sexp-processor-native \
@@ -23,12 +23,12 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-do_install_append() {
+do_install:append() {
     # some scripts point to wrong ruby intepreter, propably hardcoded
     find ${D} -type f -exec sed -i "s#/usr/local/bin/ruby#${bindir}/ruby#g" {} \;
 }
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-path-expander \
     rubygems-ruby-parser \
     rubygems-sexp-processor \

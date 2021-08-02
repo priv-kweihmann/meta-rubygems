@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/inspec/inspec/tree/master/inspec-bin"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=81b0e16be045534c5330969d1e542bb4"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-inspec-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-inspec \
 "
 

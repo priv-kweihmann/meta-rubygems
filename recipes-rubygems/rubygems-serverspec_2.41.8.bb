@@ -6,7 +6,7 @@ HOMEPAGE = "http://serverspec.org/"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=9f1e84c559b0d54e801ddbe1457c114a"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-multi-json-native \
     rubygems-rspec-its-native \
     rubygems-rspec-native \
@@ -22,7 +22,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-multi-json \
     rubygems-rspec \
     rubygems-rspec-its \

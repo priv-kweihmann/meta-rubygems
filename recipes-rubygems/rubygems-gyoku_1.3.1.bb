@@ -6,10 +6,10 @@ HOMEPAGE = "https://github.com/savonrb/gyoku"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://MIT-LICENSE;md5=02933c5230585b35a44f9d13993f7a84"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-builder-native \
 "
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-builder \
 "
 

@@ -6,12 +6,12 @@ HOMEPAGE = "https://ttytoolkit.org"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=6adc4a015a61d9bf2e369197f18fb7a3"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-tty-cursor-native \
     rubygems-tty-screen-native \
     rubygems-wisper-native \
 "
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-tty-cursor \
     rubygems-tty-screen \
     rubygems-wisper \

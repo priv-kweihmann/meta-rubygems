@@ -13,7 +13,7 @@ def rubygems_get_ruby_testcases(d):
         res.add(os.path.basename(_file))
     return " ".join(res)
 
-IMAGE_INSTALL_append = " dropbear packagegroup-rubygems"
+IMAGE_INSTALL:append = " dropbear packagegroup-rubygems"
 RUBYGEMS_TEST_SUITE ?= "${@rubygems_get_ruby_testcases(d)}"
 DEFAULT_TEST_SUITES = "${RUBYGEMS_TEST_SUITE}"
 

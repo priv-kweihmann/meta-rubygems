@@ -6,10 +6,10 @@ HOMEPAGE = "https://github.com/net-ssh/net-ssh-gateway"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=6c99c0cc0901fbc3607fe997f9898d69"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-net-ssh-native \
 "
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-net-ssh \
 "
 

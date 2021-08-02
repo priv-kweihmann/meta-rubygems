@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/guard/listen"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=5cce4e14a2b69c74e9c91d66a93c7b65"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-rb-fsevent-native \
     rubygems-rb-inotify-native \
 "
@@ -20,7 +20,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-rb-fsevent \
     rubygems-rb-inotify \
 "

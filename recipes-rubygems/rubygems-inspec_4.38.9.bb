@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "\
     file://lib/plugins/inspec-init/templates/profiles/gcp/inspec.yml;beginline=6;endline=6;md5=cfb5ff7823bc166fac8853e293b76fd7 \
 "
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-faraday-middleware-native \
     rubygems-inspec-core-native \
     rubygems-train-aws-native \
@@ -26,7 +26,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-faraday-middleware \
     rubygems-inspec-core \
     rubygems-train \

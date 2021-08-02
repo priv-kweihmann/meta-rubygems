@@ -11,8 +11,8 @@ do_install[noexec] = "1"
 
 PACKAGES = "${PN}"
 
-RDEPENDS_${PN} = "ruby"
-ALLOW_EMPTY_${PN} = "1"
-FILES_${PN} = ""
+RDEPENDS:${PN} = "ruby"
+ALLOW_EMPTY:${PN} = "1"
+FILES:${PN} = ""
 
 BBCLASSEXTEND = "native"

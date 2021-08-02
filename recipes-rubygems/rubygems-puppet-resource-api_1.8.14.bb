@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/puppetlabs/puppet-resource_api"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=e3fc50a88d0a364313df4b21ef20c29e"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-hocon-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-hocon \
 "
 

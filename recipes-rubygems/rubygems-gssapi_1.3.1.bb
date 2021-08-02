@@ -8,10 +8,10 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=97fb757cd9918aafc0a447460b5897cd"
 
 EXTRA_RDEPENDS += "libgssapi-krb5"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-ffi-native \
 "
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-ffi \
 "
 

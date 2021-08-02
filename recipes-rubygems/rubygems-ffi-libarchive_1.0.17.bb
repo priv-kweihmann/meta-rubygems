@@ -14,7 +14,7 @@ EXTRA_RDEPENDS += "\
     libarchive \
 "
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-ffi-native \
 "
 
@@ -27,7 +27,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-ffi \
 "
 

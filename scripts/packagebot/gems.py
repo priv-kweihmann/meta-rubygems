@@ -64,7 +64,7 @@ class Gem():
         for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue="GEM_NAME"):
             name = item.VarValueStripped
         depends = set()
-        for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue="RDEPENDS_${PN}"):
+        for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue="RDEPENDS:${PN}"):
             depends.update([expand_term(_stash, path, y)
                             for y in item.get_items() if y not in ["\\", "\\\n", '"']])
         for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue="EXTRA_RDEPENDS"):
@@ -88,7 +88,7 @@ class Gem():
 
         _rdepends = set([self.__get_recipename(name=x) for x in newrecipes])
 
-        for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue="RDEPENDS_${PN}"):
+        for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue="RDEPENDS:${PN}"):
             _rdepends.update(item.get_items())
             item.RealRaw = '{}{}"\\\n    {} \\\n"'.format(item.VarName, item.VarOp, " \\\n    ".join(sorted(_rdepends)))
             item.Raw = item.RealRaw

@@ -6,7 +6,7 @@ HOMEPAGE = "https://www.chef.io"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-addressable-native \
     rubygems-aws-sdk-secretsmanager-native \
     rubygems-chef-config-native \
@@ -45,16 +45,16 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-do_generate_spec_append() {
+do_generate_spec:append() {
     # remove the rc2 suffix
     sed -i 's#1.1.0.rc2#1.1.0#g' ${GEM_SPEC_FILE}
 }
 
-do_install_append() {
+do_install:append() {
     rm -f ${GEM_HOME}/gems/chef-${PV}/spec/functional/assets/chefinittest
 }
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-addressable \
     rubygems-aws-sdk-secretsmanager \
     rubygems-chef-config \

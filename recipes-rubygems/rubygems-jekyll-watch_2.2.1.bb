@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/jekyll/jekyll-watch"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-listen-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-listen \
 "
 
