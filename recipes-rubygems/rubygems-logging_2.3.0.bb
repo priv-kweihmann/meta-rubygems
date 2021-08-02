@@ -6,11 +6,11 @@ HOMEPAGE = "http://rubygems.org/gems/logging"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=e6b49bc59d892746c7eda6db23862f61"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-little-plugger-native \
     rubygems-multi-json-native \
 "
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-little-plugger \
     rubygems-multi-json \
 "

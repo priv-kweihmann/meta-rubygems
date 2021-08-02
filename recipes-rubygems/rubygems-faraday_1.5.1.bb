@@ -6,7 +6,7 @@ HOMEPAGE = "https://lostisland.github.io/faraday"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=eeb478a3bdc6cd7919e354aeb42b94e4"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-faraday-em-http-native \
     rubygems-faraday-em-synchrony-native \
     rubygems-faraday-excon-native \
@@ -27,7 +27,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-faraday-em-http \
     rubygems-faraday-em-synchrony \
     rubygems-faraday-excon \

@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/knu/ruby-domain_name"
 LICENSE = "BSD-2-Clause & BSD-3-Clause & MPL-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=7721babccb76dfe86c736034209739e9"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-unf-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-unf \
 "
 

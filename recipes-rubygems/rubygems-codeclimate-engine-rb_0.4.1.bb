@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=56b47d379805ed45bc0c1aff19d7364b"
 
 EXTRA_RDEPENDS += "bash"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-virtus-native \
 "
 
@@ -21,7 +21,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-virtus \
 "
 

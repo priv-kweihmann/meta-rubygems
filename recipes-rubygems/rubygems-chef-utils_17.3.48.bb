@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/chef/chef/tree/master/chef-utils"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-concurrent-ruby-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-concurrent-ruby \
 "
 

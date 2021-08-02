@@ -6,12 +6,12 @@ HOMEPAGE = "https://github.com/rspec/rspec-its"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=0bfc9ee7f57ee14d322e7a142ee4d55e"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-rspec-core-native \
     rubygems-rspec-expectations-native \
 "
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-rspec-core \
     rubygems-rspec-expectations \
 "
@@ -25,7 +25,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-do_install_append() {
+do_install:append() {
     # get rid of a bash dependency
     rm -rf ${GEM_HOME}/gems/rspec-its-${PV}/script/
 }

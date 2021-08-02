@@ -6,12 +6,12 @@ HOMEPAGE = "https://ttytoolkit.org"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=8a34fdc5240f4b23e21fb8e468f44256"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-pastel-native \
     rubygems-strings-native \
     rubygems-tty-cursor-native \
 "
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-pastel \
     rubygems-strings \
     rubygems-tty-cursor \

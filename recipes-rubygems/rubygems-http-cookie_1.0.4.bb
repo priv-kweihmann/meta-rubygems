@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/sparklemotion/http-cookie"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=f217a5829e26ed04a05e5ba14eaf2128"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-domain-name-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-domain-name \
 "
 

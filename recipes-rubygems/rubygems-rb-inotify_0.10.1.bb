@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/guard/rb-inotify"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=98201cb3e99717097b99fa767e46ffbb"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-ffi-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-ffi \
 "
 

@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/tj/terminal-table"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=1be7620aed40ef7f9125c19d23513d14"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-unicode-display-width-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-unicode-display-width \
 "
 

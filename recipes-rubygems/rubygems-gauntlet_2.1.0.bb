@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/seattlerb/gauntlet"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://README.txt;beginline=46;endline=69;md5=9729e7cc2f0b6cd88813876ac0335063"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-net-http-persistent-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-net-http-persistent \
 "
 

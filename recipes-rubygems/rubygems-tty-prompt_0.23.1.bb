@@ -6,7 +6,7 @@ HOMEPAGE = "https://ttytoolkit.org"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=ccb3f6c9399ae36f003ef2debf871be1"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-pastel-native \
     rubygems-tty-reader-native \
 "
@@ -20,7 +20,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-pastel \
     rubygems-tty-reader \
 "

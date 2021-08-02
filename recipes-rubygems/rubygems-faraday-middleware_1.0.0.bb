@@ -6,10 +6,10 @@ HOMEPAGE = "https://github.com/lostisland/faraday_middleware"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=a59d0c4589d25cc5037028f3465378d6"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-faraday-native \
 "
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-faraday \
 "
 

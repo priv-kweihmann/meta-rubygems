@@ -6,7 +6,7 @@ HOMEPAGE = "https://aka.ms/azure-sdk-for-ruby"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=6000442264015a23894024af9930539b"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-concurrent-ruby-native \
     rubygems-faraday-native \
     rubygems-timeliness-native \
@@ -21,7 +21,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-concurrent-ruby \
     rubygems-faraday \
     rubygems-timeliness \

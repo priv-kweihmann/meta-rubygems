@@ -6,7 +6,7 @@ HOMEPAGE = "http://github.com/igrigorik/em-websocket"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENCE;md5=4380eb54de8fb059e00993d1f4a8537f"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-eventmachine-native \
     rubygems-http-parser.rb-native \
 "
@@ -20,7 +20,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-eventmachine \
     rubygems-http-parser.rb \
 "

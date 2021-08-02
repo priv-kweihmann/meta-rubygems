@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/inspec/train-aws"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=f16f9b4dd2d3afd4d244ba4e5d9e715e"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-aws-sdk-apigateway-native \
     rubygems-aws-sdk-apigatewayv2-native \
     rubygems-aws-sdk-applicationautoscaling-native \
@@ -82,7 +82,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-aws-sdk-apigateway \
     rubygems-aws-sdk-apigatewayv2 \
     rubygems-aws-sdk-applicationautoscaling \

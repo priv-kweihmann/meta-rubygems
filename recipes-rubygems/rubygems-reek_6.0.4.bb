@@ -10,7 +10,7 @@ EXTRA_RDEPENDS += "\
     rubygems-codeclimate-engine-rb \
 "
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-kwalify-native \
     rubygems-parser-native \
     rubygems-psych-native \
@@ -26,7 +26,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-kwalify \
     rubygems-parser \
     rubygems-psych \

@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/dkubb/descendants_tracker"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=a424947e9eb86ed8d34d6b437a077b9b"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-thread-safe-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-thread-safe \
 "
 
