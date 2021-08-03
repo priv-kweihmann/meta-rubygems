@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/dkubb/axiom-types"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=bb2f5305df40093372eea3bbf265a14c"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-descendants-tracker-native \
     rubygems-ice-nine-native \
     rubygems-thread-safe-native \
@@ -21,7 +21,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-descendants-tracker \
     rubygems-ice-nine \
     rubygems-thread-safe \

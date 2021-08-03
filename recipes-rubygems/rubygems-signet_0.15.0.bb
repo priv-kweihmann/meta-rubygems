@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/googleapis/signet"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=f124bfaefacd4e1a4080065d403bc1d4"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-addressable-native \
     rubygems-faraday-native \
     rubygems-jwt-native \
@@ -22,7 +22,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-addressable \
     rubygems-faraday \
     rubygems-jwt \

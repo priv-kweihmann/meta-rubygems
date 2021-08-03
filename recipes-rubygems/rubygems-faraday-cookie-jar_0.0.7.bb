@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/miyagawa/faraday-cookie_jar"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=b90bc684ef2518794f21ae39c3f065c6"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-faraday-native \
     rubygems-http-cookie-native \
 "
@@ -20,7 +20,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-faraday \
     rubygems-http-cookie \
 "

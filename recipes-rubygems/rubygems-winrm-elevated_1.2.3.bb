@@ -6,12 +6,12 @@ HOMEPAGE = "https://github.com/WinRb/winrm-elevated"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-erubi-native \
     rubygems-winrm-fs-native \
     rubygems-winrm-native \
 "
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-erubi \
     rubygems-winrm \
     rubygems-winrm-fs \

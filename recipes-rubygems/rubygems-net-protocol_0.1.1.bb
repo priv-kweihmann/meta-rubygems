@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/ruby/net-protocol"
 LICENSE = "Ruby & BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=19aaf65c88a40b508d17ae4be539c4b5"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-io-wait-native \
     rubygems-timeout-native \
 "
@@ -20,7 +20,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-io-wait \
     rubygems-timeout \
 "

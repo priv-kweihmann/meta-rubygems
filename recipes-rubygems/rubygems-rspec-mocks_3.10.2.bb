@@ -6,12 +6,12 @@ HOMEPAGE = "https://github.com/rspec/rspec-mocks"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=3d96800bd9b5ffa0ed091438eaea6f01"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-diff-lcs-native \
     rubygems-rspec-support-native \
 "
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-diff-lcs \
     rubygems-rspec-support \
 "

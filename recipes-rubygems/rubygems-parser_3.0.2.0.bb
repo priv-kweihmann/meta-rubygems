@@ -10,7 +10,7 @@ EXTRA_RDEPENDS += "\
     rubygems-gauntlet \
 "
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-ast-native \
 "
 
@@ -23,7 +23,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-ast \
 "
 

@@ -6,7 +6,7 @@ HOMEPAGE = "https://jekyllrb.com"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=bf9972594da0ef277f46d8d9e5902582"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-addressable-native \
     rubygems-colorator-native \
     rubygems-em-websocket-native \
@@ -33,7 +33,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-addressable \
     rubygems-colorator \
     rubygems-em-websocket \

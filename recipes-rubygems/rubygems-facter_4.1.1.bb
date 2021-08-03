@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/puppetlabs/facter"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://lib/facter/custom_facts/core/legacy_facter.rb;beginline=7;endline=17;md5=c8fc292a3d6f5f2a01e376d7df456c89"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-hocon-native \
     rubygems-thor-native \
 "
@@ -20,7 +20,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-hocon \
     rubygems-thor \
 "

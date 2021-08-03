@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/WinRb/WinRM"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=d273d63619c9aeaf15cdaf76422c4f87"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-builder-native \
     rubygems-erubi-native \
     rubygems-gssapi-native \
@@ -16,7 +16,7 @@ DEPENDS_class-native += "\
     rubygems-nori-native \
     rubygems-rubyntlm-native \
 "
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-builder \
     rubygems-erubi \
     rubygems-gssapi \

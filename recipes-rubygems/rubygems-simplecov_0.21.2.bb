@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/simplecov-ruby/simplecov"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=0372eac36f921e2a3d78dcb0bb6c4f76"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-docile-native \
     rubygems-simplecov-html-native \
     rubygems-simplecov-json-formatter-native \
@@ -21,7 +21,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-docile \
     rubygems-simplecov-html \
     rubygems-simplecov-json-formatter \

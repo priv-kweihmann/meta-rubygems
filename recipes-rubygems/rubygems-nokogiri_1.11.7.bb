@@ -11,11 +11,11 @@ EXTRA_DEPENDS += "\
     libxslt \
 "
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-mini-portile2-native \
     rubygems-racc-native \
 "
-DEPENDS_class-target += "\
+DEPENDS:class-target += "\
     rubygems-mini-portile2 \
 "
 
@@ -32,7 +32,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-mini-portile2 \
     rubygems-racc \
 "

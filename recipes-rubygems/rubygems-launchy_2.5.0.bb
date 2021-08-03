@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/copiousfreetime/launchy"
 LICENSE = "ISC"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=631319c3fb7bf218f4538f4c4d406090"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-addressable-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-addressable \
 "
 

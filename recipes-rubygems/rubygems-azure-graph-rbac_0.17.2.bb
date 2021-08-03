@@ -6,7 +6,7 @@ HOMEPAGE = "https://aka.ms/azure-sdk-for-ruby"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=092360f323f49d1b492399cde2d257b1"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-ms-rest-azure-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-ms-rest-azure \
 "
 

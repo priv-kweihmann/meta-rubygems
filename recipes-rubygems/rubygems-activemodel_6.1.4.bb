@@ -6,7 +6,7 @@ HOMEPAGE = "https://rubyonrails.org"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://MIT-LICENSE;md5=beb6db6f575459e4eb88269312cddd4e"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-activesupport-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-activesupport \
 "
 

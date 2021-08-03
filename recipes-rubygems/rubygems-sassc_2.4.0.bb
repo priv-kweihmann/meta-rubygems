@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=c4af8b2031d4dad9d1923cb8311870fc"
 
 EXTRA_DEPENDS = "libsass"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-ffi-native \
 "
 
@@ -25,7 +25,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-ffi \
 "
 

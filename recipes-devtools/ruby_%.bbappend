@@ -1,2 +1,2 @@
 # SPDX-License-Identifier: MIT
-EXTRA_OECONF_remove = "--disable-rpath"
+EXTRA_OECONF:remove = "--disable-rpath"

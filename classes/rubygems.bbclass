@@ -26,8 +26,8 @@ GEM_SPEC_CACHE ?= "${T}/.gems"
 GEM_DIR = "${libdir}/ruby/gems/${GEMLIB_VERSION}"
 RUBY_SITEDIR = "${libdir}/ruby/site_ruby/"
 GEM_HOME = "${D}${GEM_DIR}"
-GEM_PATH_class-target = "${RECIPE_SYSROOT}${GEM_DIR}:${RECIPE_SYSROOT}${GEM_DIR}:${GEM_HOME}"
-GEM_PATH_class-native = "${RECIPE_SYSROOT_NATIVE}${GEM_DIR}:${GEM_HOME}"
+GEM_PATH:class-target = "${RECIPE_SYSROOT}${GEM_DIR}:${RECIPE_SYSROOT}${GEM_DIR}:${GEM_HOME}"
+GEM_PATH:class-native = "${RECIPE_SYSROOT_NATIVE}${GEM_DIR}:${GEM_HOME}"
 
 # Disable the very strict versioning with ~>
 GEM_DISABLE_STRICT_VER ?= "1"
@@ -39,8 +39,8 @@ GEM_INSTALL_FLAGS ?= ""
 EXTRA_RDEPENDS ?= ""
 EXTRA_DEPENDS ?= ""
 
-RUBYLIB_class-target = "${STAGING_LIBDIR_NATIVE}/ruby/${GEMLIB_VERSION}/${@get_cross_platform_folder(d)}"
-CFLAGS_append = " -DHAVE_GCC_CAS"
+RUBYLIB:class-target = "${STAGING_LIBDIR_NATIVE}/ruby/${GEMLIB_VERSION}/${@get_cross_platform_folder(d)}"
+CFLAGS:append = " -DHAVE_GCC_CAS"
 
 def get_gem_name_from_bpn(d):
     bpn = (d.getVar('BPN', True) or "")
@@ -69,9 +69,9 @@ do_unpack_gem() {
     gem unpack -V ${GEM_FILE}
 }
 
-DEPENDS_append_class-target = " ruby ruby-cross-${TARGET_ARCH}"
-RDEPENDS_${PN}_append_class-target = " ${EXTRA_RDEPENDS}"
-DEPENDS_append = " ${EXTRA_DEPENDS}"
+DEPENDS:append:class-target = " ruby ruby-cross-${TARGET_ARCH}"
+RDEPENDS:${PN}:append:class-target = " ${EXTRA_RDEPENDS}"
+DEPENDS:append = " ${EXTRA_DEPENDS}"
 
 python () {
     # unpack_gem need ruby to be installed in sysroot to succeed
@@ -194,14 +194,14 @@ do_install[postfuncs] += "do_rubygems_fix_libs"
 
 PACKAGES =+ "${PN}-examples ${PN}-tests"
 
-FILES_${PN}-dbg += "\
+FILES:${PN}-dbg += "\
     /usr/src/debug/* \
     ${libdir}/ruby/**/.debug \
 "
-FILES_${PN}-staticdev += "\
+FILES:${PN}-staticdev += "\
     ${libdir}/ruby/gems/gems/**/.libs/*.a \
 "
-FILES_${PN}-dev += "\
+FILES:${PN}-dev += "\
 	${GEM_DIR}/extensions/*/*/*/gem_make.out \
 	${GEM_DIR}/extensions/*/*/*/mkmf.log \
     ${GEM_DIR}/build_info \
@@ -212,19 +212,19 @@ FILES_${PN}-dev += "\
     ${GEM_DIR}/gems/*/lib/generators \
     ${GEM_DIR}/gems/*/patches \
 "
-FILES_${PN}-tests = "\
+FILES:${PN}-tests = "\
     ${GEM_DIR}/gems/*/tests \
     ${GEM_DIR}/gems/*/test \
 "
-FILES_${PN}-examples = "\
+FILES:${PN}-examples = "\
     ${GEM_DIR}/gems/*/example \
     ${GEM_DIR}/gems/*/samples \
 "
-FILES_${PN}-doc += "\
+FILES:${PN}-doc += "\
     ${GEM_DIR}/gems/*/doc \
     ${GEM_DIR}/doc \
 "
-FILES_${PN} += "\
+FILES:${PN} += "\
     ${GEM_DIR}/extensions \
     ${GEM_DIR}/gems \
     ${GEM_DIR}/specifications \
@@ -232,16 +232,16 @@ FILES_${PN} += "\
     ${bindir} \
 "
 
-RDEPENDS_${PN}_append_class-target = " ruby"
-RDEPENDS_${PN}-tests_append_class-target = " ruby"
+RDEPENDS:${PN}:append:class-target = " ruby"
+RDEPENDS:${PN}-tests:append:class-target = " ruby"
 
 UPSTREAM_CHECK_URI ?= "https://rubygems.org/gems/${GEM_NAME}/versions"
 UPSTREAM_CHECK_REGEX ?= "/gems/${GEM_NAME}/versions/(?P<pver>(\d+\.*)*\d+)$"
 
 # the ruby dynamic linker just uses plain .so files
 # so we have to supply symlinks as part of the base package
-INSANE_SKIP_${PN} += "dev-so"
+INSANE_SKIP:${PN} += "dev-so"
 # we don't care what is actually needed for the dev-package
-INSANE_SKIP_${PN}-dev += "file-rdeps"
+INSANE_SKIP:${PN}-dev += "file-rdeps"
 
 inherit rubygentest

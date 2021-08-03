@@ -4,7 +4,7 @@
 # Copyright (c) 2020, Konrad Weihmann
 # Copyright (c) 2020, Yocto maintainers
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/ruby-cross:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/ruby-cross:"
 
 SUMMARY = "An interpreter of object-oriented scripting language"
 DESCRIPTION = "Ruby cross variant"
@@ -35,7 +35,7 @@ TARGET_ARCH[vardepvalue] = "${TARGET_ARCH}"
 
 SHRT_VER = "${@oe.utils.trim_version("${PV}", 2)}"
 
-SRC_URI_append = " \
+SRC_URI:append = " \
                   http://cache.ruby-lang.org/pub/ruby/${SHRT_VER}/ruby-${PV}.tar.gz \
                   file://0001-extmk-fix-cross-compilation-of-external-gems.patch \
                   file://0002-Obey-LDFLAGS-for-the-link-of-libruby.patch \
@@ -72,7 +72,7 @@ EXTRA_OECONF = "\
     --with-coroutine=copy \
 "
 
-EXTRA_OECONF_append_libc-musl = " \
+EXTRA_OECONF:append:libc-musl = " \
     LIBS='-lucontext' \
     ac_cv_func_isnan=yes \
     ac_cv_func_isinf=yes \
@@ -84,7 +84,7 @@ EXTRA_OECONF_append_libc-musl = " \
 # none of the linking operations succeed -- which makes extconf.rb think
 # that the libraries aren't available and hence that the extension can't be
 # built.
-do_configure_prepend() {
+do_configure:prepend() {
     sed -i "s#%%TARGET_CFLAGS%%#$TARGET_CFLAGS#; s#%%TARGET_LDFLAGS%%#$TARGET_LDFLAGS#" ${S}/common.mk
     rm -rf ${S}/ruby/
 }
@@ -111,8 +111,8 @@ do_install() {
     oe_runmake 'DESTDIR=${D}' install-cross
 }
 
-FILES_${PN} = "${libdir}/ruby/*/*"
-FILES_${PN}-dbg += "${libdir}/ruby/*/.debug \
+FILES:${PN} = "${libdir}/ruby/*/*"
+FILES:${PN}-dbg += "${libdir}/ruby/*/.debug \
                     ${libdir}/ruby/*/*/.debug \
                     ${libdir}/ruby/*/*/*/.debug"
 SYSROOT_PREPROCESS_FUNCS += "ruby_cross_populate"

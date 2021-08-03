@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/ruby-i18n/i18n"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://MIT-LICENSE;md5=c0e4b0e10e0acf26e4e423343ccf78f8"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-concurrent-ruby-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-concurrent-ruby \
 "
 

@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/drbrain/net-http-persistent"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://README.rdoc;beginline=59;endline=82;md5=e3fe655d8a232a8b4e8bde0439a4518f"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-connection-pool-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-connection-pool \
 "
 

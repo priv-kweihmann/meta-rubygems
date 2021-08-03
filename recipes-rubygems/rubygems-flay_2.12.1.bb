@@ -8,7 +8,7 @@ LIC_FILES_CHKSUM = "file://README.rdoc;beginline=100;endline=123;md5=9729e7cc2f0
 
 EXTRA_RDEPENDS += "rubygems-gauntlet"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-erubis-native \
     rubygems-path-expander-native \
     rubygems-ruby-parser-native \
@@ -24,7 +24,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-erubis \
     rubygems-path-expander \
     rubygems-ruby-parser \
