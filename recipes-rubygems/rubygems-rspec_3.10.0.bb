@@ -6,13 +6,13 @@ HOMEPAGE = "http://github.com/rspec"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=3d68fc2cfabf7ef564c5e9d537c8da05"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-rspec-core-native \
     rubygems-rspec-expectations-native \
     rubygems-rspec-mocks-native \
 "
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-rspec-core \
     rubygems-rspec-expectations \
     rubygems-rspec-mocks \

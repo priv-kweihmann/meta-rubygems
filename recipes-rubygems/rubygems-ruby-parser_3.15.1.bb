@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/seattlerb/ruby_parser"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://README.rdoc;beginline=86;endline=109;md5=5db85eba7780ac1765a03fe0e5ec1657"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-sexp-processor-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-sexp-processor \
 "
 

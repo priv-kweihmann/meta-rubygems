@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/google/google-api-ruby-client"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=7e6820981d59cdfac1e6538d3aacfd11"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-activesupport-native \
     rubygems-gems-native \
     rubygems-google-apis-core-native \
@@ -23,7 +23,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-activesupport \
     rubygems-gems \
     rubygems-google-apis-core \

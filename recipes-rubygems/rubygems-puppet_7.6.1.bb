@@ -6,9 +6,9 @@ HOMEPAGE = "https://github.com/puppetlabs/puppet"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=72bcf758cb771bfde198d175d9e48429"
 
-SRC_URI_append = " file://0001-Replace-URI.escape-with-CGI.escape.patch"
+SRC_URI:append = " file://0001-Replace-URI.escape-with-CGI.escape.patch"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-concurrent-ruby-native \
     rubygems-deep-merge-native \
     rubygems-facter-native \
@@ -30,7 +30,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-do_install_append() {
+do_install:append() {
     # remove stuff we don't really need
     # also avoid additional dependencies from
     # creeping in
@@ -39,7 +39,7 @@ do_install_append() {
     rm -rf ${GEM_HOME}/gems/puppet-${PV}/ext/solaris/smf/puppet
 }
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-concurrent-ruby \
     rubygems-deep-merge \
     rubygems-facter \

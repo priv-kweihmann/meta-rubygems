@@ -6,10 +6,10 @@ HOMEPAGE = "https://github.com/puppetlabs/netdev_stdlib"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=feb02a60806816ccd6f8bb5febc9ab68"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-puppet-native \
 "
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-puppet \
 "
 

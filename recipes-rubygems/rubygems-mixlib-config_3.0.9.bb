@@ -6,10 +6,10 @@ HOMEPAGE = "https://github.com/chef/mixlib-config"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-tomlrb-native \
 "
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-tomlrb \
 "
 

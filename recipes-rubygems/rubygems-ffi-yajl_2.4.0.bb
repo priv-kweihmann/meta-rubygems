@@ -14,7 +14,7 @@ EXTRA_RDEPENDS += "\
     yajl \
 "
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-libyajl2-native \
 "
 
@@ -35,7 +35,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-libyajl2 \
 "
 

@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/solnic/virtus"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3e82a465aa1c29f8f04f81d00041f1cf"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-axiom-types-native \
     rubygems-coercible-native \
     rubygems-descendants-tracker-native \
@@ -21,7 +21,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-axiom-types \
     rubygems-coercible \
     rubygems-descendants-tracker \

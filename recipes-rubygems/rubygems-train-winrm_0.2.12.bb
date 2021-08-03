@@ -6,12 +6,12 @@ HOMEPAGE = "https://github.com/inspec/train-winrm"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=86d3f3a95c324c9479bd8986968f4327"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-winrm-elevated-native \
     rubygems-winrm-fs-native \
     rubygems-winrm-native \
 "
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-winrm \
     rubygems-winrm-elevated \
     rubygems-winrm-fs \

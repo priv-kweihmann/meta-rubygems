@@ -6,7 +6,7 @@ HOMEPAGE = "http://github.com/envygeeks/pathutil"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=f940cffeb4fe06731c38f620cdcd7767"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-forwardable-extended-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-forwardable-extended \
 "
 

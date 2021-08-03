@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/kramdown/parser-gfm"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://COPYING;md5=22e426aa1c3c4ebfeb7201e70fcefa60"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-kramdown-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-kramdown \
 "
 

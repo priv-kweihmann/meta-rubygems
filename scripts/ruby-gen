@@ -44,10 +44,10 @@ LIC_FILES_CHKSUM = "{__licensefile}"
 EXTRA_DEPENDS += "{__xtradep}"
 EXTRA_RDEPENDS += "{__xtrardep}"
 
-SRC_URI_append = "{__srcuri}"
+SRC_URI:append = "{__srcuri}"
 
-DEPENDS_class-native += "{__deps}"
-DEPENDS_class-target += "{__tdeps}"
+DEPENDS:class-native += "{__deps}"
+DEPENDS:class-target += "{__tdeps}"
 
 GEM_INSTALL_FLAGS += "{__install_flags}"
 
@@ -62,9 +62,9 @@ GEM_NAME = "{name}"
 
 {__functions}
 
-RDEPENDS_${PN}_class-target += "{__rdeps}"
+RDEPENDS:${PN}:class-target += "{__rdeps}"
 
-INSANE_SKIP_${PN} += "{__insaneskip}"
+INSANE_SKIP:${PN} += "{__insaneskip}"
 BBCLASSEXTEND = "native"
 """
 
@@ -288,7 +288,7 @@ def create_tpl(args, pkgname, version):
             "__functions": "\n".join(save_functions(_oldrecipes)),
             "__homepage_uri": __homepage_uri,
             "__info": re.sub(r'\n|"', "", _description["info"].split(". ")[0]).strip(),
-            "__insaneskip": prettify_list(save_variables("INSANE_SKIP_${PN}", None, _oldrecipes)),
+            "__insaneskip": prettify_list(save_variables("INSANE_SKIP:${PN}", None, _oldrecipes)),
             "__install_flags": _installflags,
             "__license": get_license(_description, _oldrecipes),
             "__rdeps": _rdepends,

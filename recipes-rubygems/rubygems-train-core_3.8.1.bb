@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/inspec/train"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-addressable-native \
     rubygems-ffi-native \
     rubygems-json-native \
@@ -24,7 +24,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-addressable \
     rubygems-ffi \
     rubygems-json \

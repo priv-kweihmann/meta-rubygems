@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/whitesmith/rubycritic"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=ebcb01890999ed287441ae4afce9a346"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-flay-native \
     rubygems-flog-native \
     rubygems-launchy-native \
@@ -28,7 +28,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-flay \
     rubygems-flog \
     rubygems-launchy \

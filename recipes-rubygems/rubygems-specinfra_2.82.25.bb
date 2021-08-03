@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/mizzy/specinfra"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=9f1e84c559b0d54e801ddbe1457c114a"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-net-scp-native \
     rubygems-net-ssh-native \
     rubygems-net-telnet-native \
@@ -22,12 +22,12 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-do_generate_spec_append() {
+do_generate_spec:append() {
     # lift version restriction on net-telnet
     sed -i 's#= 0.1.1#>= 0.1.1#g' ${GEM_SPEC_FILE}
 }
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-net-scp \
     rubygems-net-ssh \
     rubygems-net-telnet \

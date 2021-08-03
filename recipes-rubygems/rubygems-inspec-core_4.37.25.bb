@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/inspec/inspec"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=38becae1e765aa7075044208bbab2ea4"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-addressable-native \
     rubygems-chef-telemetry-native \
     rubygems-faraday-middleware-native \
@@ -40,7 +40,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-addressable \
     rubygems-chef-telemetry \
     rubygems-faraday \

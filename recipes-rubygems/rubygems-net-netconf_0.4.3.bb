@@ -6,12 +6,12 @@ HOMEPAGE = "https://github.com/kkirsche/net-netconf"
 LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/BSD-2-Clause;md5=cb641bc04cda31daea161b1bc15da69f"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-net-scp-native \
     rubygems-net-ssh-native \
     rubygems-nokogiri-native \
 "
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-net-scp \
     rubygems-net-ssh \
     rubygems-nokogiri \

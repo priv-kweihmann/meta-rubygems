@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/googleapis/google-auth-library-ruby"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=10c2a85445c418fe8265c4ad0963535b"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-faraday-native \
     rubygems-jwt-native \
     rubygems-memoist-native \
@@ -24,12 +24,12 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-do_install_append() {
+do_install:append() {
     # to avoid bash dependency
     rm -rf ${D}${libdir}/ruby/gems/${GEMLIB_VERSION}/gems/${GEM_NAME}-${PV}/.kokoro/
 }
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-faraday \
     rubygems-jwt \
     rubygems-memoist \

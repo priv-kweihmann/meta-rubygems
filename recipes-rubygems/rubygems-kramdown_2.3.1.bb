@@ -6,7 +6,7 @@ HOMEPAGE = "http://kramdown.gettalong.org"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://COPYING;md5=efa42ef946dcb15e4ee38ea3aeedf2b0"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-rexml-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-rexml \
 "
 

@@ -15,7 +15,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-do_install_append() {
+do_install:append() {
     # avoid unwanted dependencies: we do not support java
     rm -f ${D}/${libdir}/ruby/gems/3.0.0/gems/eventmachine-${PV}/lib/jeventmachine.rb
 }

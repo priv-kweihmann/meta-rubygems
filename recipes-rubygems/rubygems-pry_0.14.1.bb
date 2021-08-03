@@ -6,7 +6,7 @@ HOMEPAGE = "http://pry.github.io"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=36c4b1806b2aadea5cbee4bbbdeb341c"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-coderay-native \
     rubygems-method-source-native \
 "
@@ -20,7 +20,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-coderay \
     rubygems-method-source \
 "

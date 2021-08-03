@@ -6,10 +6,10 @@ HOMEPAGE = "https://ttytoolkit.org"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=51301a5886c31f0a5f89c467cb243c7f"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-tty-color-native \
 "
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-tty-color \
 "
 

@@ -6,7 +6,7 @@ HOMEPAGE = "https://rubyonrails.org"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://MIT-LICENSE;md5=a2e0e281b9b6c47f722da2255eca5d68"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-concurrent-ruby-native \
     rubygems-i18n-native \
     rubygems-minitest-native \
@@ -23,7 +23,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-concurrent-ruby \
     rubygems-i18n \
     rubygems-minitest \

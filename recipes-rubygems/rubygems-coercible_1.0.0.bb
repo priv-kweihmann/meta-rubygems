@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/solnic/coercible"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=a2f3cab50161b5e2aaef2d9570e55703"
 
-DEPENDS_class-native += "\
+DEPENDS:class-native += "\
     rubygems-descendants-tracker-native \
 "
 
@@ -19,7 +19,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-RDEPENDS_${PN}_class-target += "\
+RDEPENDS:${PN}:class-target += "\
     rubygems-descendants-tracker \
 "
 
