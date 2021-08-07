@@ -17,8 +17,8 @@ DEPENDS:class-native += "\
     rubygems-rainbow-native \
 "
 
-SRC_URI[md5sum] = "275f3a29a87228a4f6b2de3940dbf532"
-SRC_URI[sha256sum] = "b70bc41d2f2a34eba744060337752c4575e0b5ac4cf10a86b3afaaf78fc3054a"
+SRC_URI[md5sum] = "80ce170c086b22b07009256658dd7e36"
+SRC_URI[sha256sum] = "98b83ad7e96015d3db55f6efab795aff45e8eefbcb17db01894e0636e859d3e9"
 
 GEM_NAME = "reek"
 
