@@ -9,19 +9,18 @@ LIC_FILES_CHKSUM = "file://LICENSE.md;md5=a59d0c4589d25cc5037028f3465378d6"
 DEPENDS:class-native += "\
     rubygems-faraday-native \
 "
-RDEPENDS:${PN}:class-target += "\
-    rubygems-faraday \
-"
 
-SRC_URI[md5sum] = "3fe1c76b1a7ad0a0b38ca0a7e4b74a93"
-SRC_URI[sha256sum] = "19e808539681bbf2e65df30dfbe27bb402bde916a1dceb4c7496dbe8de14334a"
+SRC_URI[md5sum] = "651322519b2b961bf27f78bf54fe8f92"
+SRC_URI[sha256sum] = "442288d81bdb48dccadf5463e256582850a2cc654ef5cd281f941c7b1cbcec4d"
 
 GEM_NAME = "faraday_middleware"
-
-
 
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS:${PN}:class-target += "\
+    rubygems-faraday \
+"
 
 BBCLASSEXTEND = "native"
