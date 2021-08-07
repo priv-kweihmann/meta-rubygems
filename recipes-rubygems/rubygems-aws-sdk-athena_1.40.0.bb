@@ -11,8 +11,8 @@ DEPENDS:class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "93eb90180a2fe7afc216cd102828d68b"
-SRC_URI[sha256sum] = "e00537359c38c90ee062175038ca3d468c811410f406c60987db7857754f788b"
+SRC_URI[md5sum] = "224ee9828b309fd8c58ea736d9a31d34"
+SRC_URI[sha256sum] = "5f4dd3d56132f85667949102980450b9561e69de6d4b04c248dd262cee05dc16"
 
 GEM_NAME = "aws-sdk-athena"
 
