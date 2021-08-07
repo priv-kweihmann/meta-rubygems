@@ -14,12 +14,13 @@ DEPENDS:class-native += "\
     rubygems-faraday-net-http-native \
     rubygems-faraday-net-http-persistent-native \
     rubygems-faraday-patron-native \
+    rubygems-faraday-rack-native \
     rubygems-multipart-post-native \
     rubygems-ruby2-keywords-native \
 "
 
-SRC_URI[md5sum] = "a813238de0bc88b12cb4f8f9d7a96175"
-SRC_URI[sha256sum] = "c3e4bbf81f80defffc43a0f5bb44b4beeada3bae02f52afad74f5165084ff8f6"
+SRC_URI[md5sum] = "fb36ece9dede937e9ed73057f633b0a7"
+SRC_URI[sha256sum] = "fe8941d7424911c4624379b2c0b2cff3efcd623b834c01fd66315a9da807b176"
 
 GEM_NAME = "faraday"
 
@@ -35,6 +36,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-faraday-net-http \
     rubygems-faraday-net-http-persistent \
     rubygems-faraday-patron \
+    rubygems-faraday-rack \
     rubygems-multipart-post \
     rubygems-ruby2-keywords \
 "
