@@ -120,6 +120,7 @@ RDEPENDS:${PN} += "\
     rubygems-faraday-net-http \
     rubygems-faraday-net-http-persistent \
     rubygems-faraday-patron \
+    rubygems-faraday-rack \
     rubygems-fast-gettext \
     rubygems-ffi \
     rubygems-ffi-libarchive \
