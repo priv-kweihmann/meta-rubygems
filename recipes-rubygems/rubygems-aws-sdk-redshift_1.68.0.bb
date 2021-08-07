@@ -11,8 +11,8 @@ DEPENDS:class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "60bc106452fa5dc8eda9b967cf63bc4e"
-SRC_URI[sha256sum] = "e3ad1f1814a81c287e082bb2d0a5e9f5964a157be5fc6d372f88940a1e780245"
+SRC_URI[md5sum] = "562990bb96c8d53d9c52bb59c74bdc1a"
+SRC_URI[sha256sum] = "f0719ff2bb10e740169695bed2f0e93e34b8b46afb0f68a703da975072215b10"
 
 GEM_NAME = "aws-sdk-redshift"
 
