@@ -65,7 +65,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
           repo: git://git.openembedded.org/meta-openembedded
-          ref: 566049b4f1ddc049c1f89a5838d1a71bb429faa3
+          ref: 3cf2475ea059184820525bb949c11c3da0e64af8
           branch: none
           add-layer: "0"
       - name: activate (caches)
