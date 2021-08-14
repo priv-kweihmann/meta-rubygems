@@ -69,8 +69,8 @@ do_gem_unpack() {
     gem unpack -V ${GEM_FILE}
 }
 
-DEPENDS += "${EXTRA_DEPENDS}"
-DEPENDS:append:class-target = " ruby ruby-cross-${TARGET_ARCH}"
+DEPENDS:append = " ${EXTRA_DEPENDS}"
+DEPENDS:append:class-target = " ruby ruby-cross-${TARGET_ARCH} ${EXTRA_DEPENDS}"
 
 python () {
     # unpack_gem need ruby to be installed in sysroot to succeed
