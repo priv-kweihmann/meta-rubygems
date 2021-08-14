@@ -4,10 +4,10 @@ DESCRIPTION = "Platform independent implementation of Unix which command."
 HOMEPAGE = "https://ttytoolkit.org"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=c9f5a91217b4b11751b2084dda90ff19"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=ccb3f6c9399ae36f003ef2debf871be1"
 
-SRC_URI[md5sum] = "2418a6f6dbe3eda6d1af13c11b3e4f3e"
-SRC_URI[sha256sum] = "0ac45f416555041882c632602aeb733379fec08b08a3123d92e78283741823ce"
+SRC_URI[md5sum] = "77e756ed899c6cf83a6e7fc66c5a626b"
+SRC_URI[sha256sum] = "5824055f0d6744c97e7c4426544f01d519c40d1806ef2ef47d9854477993f466"
 
 GEM_NAME = "tty-which"
 
