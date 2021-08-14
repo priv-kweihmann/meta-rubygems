@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/troessner/reek"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://License.txt;md5=59252b93b9ae85dab91487d72990f77c"
 
-EXTRA_RDEPENDS:append = " \
+EXTRA_DEPENDS:append = " \
     rubygems-codeclimate-engine-rb \
 "
 

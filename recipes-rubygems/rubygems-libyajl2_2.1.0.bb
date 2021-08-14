@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/chef/libyajl2-gem"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=6c4db32a2fa8717faffa1d4f10136f47"
 
-EXTRA_RDEPENDS:append = " \
+EXTRA_DEPENDS:append = " \
     gmp \
 "
 

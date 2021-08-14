@@ -6,7 +6,7 @@ HOMEPAGE = "http://ruby.sadi.st/"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://README.rdoc;beginline=42;endline=65;md5=5db85eba7780ac1765a03fe0e5ec1657"
 
-EXTRA_RDEPENDS:append = " rubygems-gauntlet"
+EXTRA_DEPENDS:append = " rubygems-gauntlet"
 
 DEPENDS:class-native += "\
     rubygems-path-expander-native \

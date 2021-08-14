@@ -6,7 +6,7 @@ HOMEPAGE = "https://nokogiri.org"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE-DEPENDENCIES.md;md5=2fcfc4989eb71e592d2e85d26d7fa91c"
 
-EXTRA_RDEPENDS:append = " \
+EXTRA_DEPENDS:append = " \
     libxml2 \
     libxslt \
 "
