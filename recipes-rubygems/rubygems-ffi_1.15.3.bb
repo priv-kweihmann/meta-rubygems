@@ -10,7 +10,7 @@ EXTRA_RDEPENDS:append = " \
     libffi \
 "
 
-GEM_INSTALL_FLAGS += "\
+GEM_INSTALL_FLAGS:append = " \
     --enable-system-libffi \
     --with-opt-dir=${RECIPE_SYSROOT} \
 "

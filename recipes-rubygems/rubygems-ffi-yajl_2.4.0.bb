@@ -18,7 +18,7 @@ DEPENDS:class-native += "\
     rubygems-libyajl2-native \
 "
 
-GEM_INSTALL_FLAGS += "\
+GEM_INSTALL_FLAGS:append = " \
     --with-opt=${RECIPE_SYSROOT} \
 "
 
