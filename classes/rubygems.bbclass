@@ -52,14 +52,14 @@ def get_gem_name_from_bpn(d):
     return gemName
 
 def get_cross_platform_folder(d):
-    target_arch = d.getVar("TARGET_ARCH",True)
-    target_os = d.getVar("TARGET_OS",True)
+    target_arch = d.getVar("TARGET_ARCH")
+    target_os = d.getVar("TARGET_OS")
     if target_os.endswith("linux"):
         target_os = target_os.replace('linux', 'linux-gnu')
     return target_arch + "-" + target_os + "-cross"
 
 
-do_unpack_gem() {
+do_gem_unpack() {
     export RUBYLIB=${RUBYLIB}
 
     cd ${WORKDIR}
@@ -76,13 +76,13 @@ DEPENDS:append = " ${EXTRA_DEPENDS}"
 python () {
     # unpack_gem need ruby to be installed in sysroot to succeed
     if bb.data.inherits_class('native', d):
-        d.appendVarFlag('do_unpack_gem', 'depends', ' ruby-native:do_populate_sysroot')
+        d.appendVarFlag('do_gem_unpack', 'depends', ' ruby-native:do_populate_sysroot')
     else:
-        d.appendVarFlag('do_unpack_gem', 'depends', ' ruby-cross-%s:do_populate_sysroot' % d.getVar("TARGET_ARCH", True))
+        d.appendVarFlag('do_gem_unpack', 'depends', ' ruby-cross-%s:do_populate_sysroot' % d.getVar("TARGET_ARCH", True))
 }
 
-do_unpack_gem[vardepsexclude] += "prefix_native"
-addtask unpack_gem after do_unpack before do_patch
+do_gem_unpack[vardepsexclude] += "prefix_native"
+addtask do_gem_unpack after do_unpack before do_patch
 
 do_generate_spec() {
     export RUBYLIB=${RUBYLIB}
@@ -103,9 +103,9 @@ do_generate_spec() {
 }
 
 do_generate_spec[vardepsexclude] += "prefix_native"
-addtask generate_spec after do_unpack_gem before do_patch
+addtask do_generate_spec after do_unpack_gem before do_patch
 
-python do_patch_arch_config() {
+python do_arch_patch_config() {
     import re
     if bb.data.inherits_class('native', d):
         return
@@ -142,8 +142,8 @@ python do_patch_arch_config() {
         o.write(cnt)
 }
 
-do_patch_arch_config[doc] = "patches the correct compiler settings into the cross template"
-addtask do_patch_arch_config after generate_spec do_unpack_gem before do_compile
+do_arch_patch_config[doc] = "patches the correct compiler settings into the cross template"
+addtask do_arch_patch_config after do_generate_spec do_gem_unpack before do_compile
 
 rubygems_do_compile() {
     export GEM_PATH=${GEM_PATH}
@@ -202,8 +202,8 @@ FILES:${PN}-staticdev += "\
     ${libdir}/ruby/gems/gems/**/.libs/*.a \
 "
 FILES:${PN}-dev += "\
-	${GEM_DIR}/extensions/*/*/*/gem_make.out \
-	${GEM_DIR}/extensions/*/*/*/mkmf.log \
+    ${GEM_DIR}/extensions/*/*/*/gem_make.out \
+    ${GEM_DIR}/extensions/*/*/*/mkmf.log \
     ${GEM_DIR}/build_info \
     ${GEM_DIR}/cache \
     ${GEM_DIR}/gems/*/debian.template \
@@ -229,7 +229,6 @@ FILES:${PN} += "\
     ${GEM_DIR}/gems \
     ${GEM_DIR}/specifications \
     ${RUBY_SITEDIR} \
-    ${bindir} \
     ${libdir}/ruby/gems/${GEMLIB_VERSION}/plugins \
 "
 
@@ -244,5 +243,3 @@ UPSTREAM_CHECK_REGEX ?= "/gems/${GEM_NAME}/versions/(?P<pver>(\d+\.*)*\d+)$"
 INSANE_SKIP:${PN} += "dev-so"
 # we don't care what is actually needed for the dev-package
 INSANE_SKIP:${PN}-dev += "file-rdeps"
-
-inherit rubygentest
