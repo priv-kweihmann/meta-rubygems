@@ -41,8 +41,8 @@ HOMEPAGE = "{__homepage_uri}"
 LICENSE = "{__license}"
 LIC_FILES_CHKSUM = "{__licensefile}"
 
-EXTRA_DEPENDS += "{__xtradep}"
-EXTRA_RDEPENDS += "{__xtrardep}"
+EXTRA_DEPENDS:append = " {__xtradep}"
+EXTRA_RDEPENDS:append = " {__xtrardep}"
 
 SRC_URI:append = "{__srcuri}"
 
