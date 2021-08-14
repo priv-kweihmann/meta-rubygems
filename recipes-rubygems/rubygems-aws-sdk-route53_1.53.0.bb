@@ -11,8 +11,8 @@ DEPENDS:class-native += "\
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "2d3b9a9505c64199cf900a98b85ef24f"
-SRC_URI[sha256sum] = "9b60edbcf82aad0e5bc34d0e1a7b904e6a4197beeba4b8edbdb47dd6afc40cc7"
+SRC_URI[md5sum] = "20435e9326969b4470f978e0e9a953fa"
+SRC_URI[sha256sum] = "aa69e80ccff3e6d3b412f401041d51dbb5a18a5258f83be9a698ac5850f01bf3"
 
 GEM_NAME = "aws-sdk-route53"
 
