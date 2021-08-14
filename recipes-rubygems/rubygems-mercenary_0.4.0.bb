@@ -11,7 +11,7 @@ SRC_URI[sha256sum] = "b25a1e4a59adca88665e08e24acf0af30da5b5d859f7d8f38fba52c28f
 
 GEM_NAME = "mercenary"
 
-EXTRA_RDEPENDS += "bash"
+EXTRA_RDEPENDS:append = " bash"
 
 inherit rubygems
 inherit rubygentest

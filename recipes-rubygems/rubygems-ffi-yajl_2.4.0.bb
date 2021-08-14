@@ -6,11 +6,11 @@ HOMEPAGE = "http://github.com/chef/ffi-yajl"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=84928ddb161eab99f094cbe0c187e855"
 
-EXTRA_DEPENDS += "\
+EXTRA_RDEPENDS:append = " \
     rubygems-libyajl2 \
     yajl \
 "
-EXTRA_RDEPENDS += "\
+EXTRA_RDEPENDS:append = " \
     yajl \
 "
 

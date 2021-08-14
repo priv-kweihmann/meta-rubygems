@@ -11,7 +11,7 @@ SRC_URI[sha256sum] = "a6ac2d64b7eb027bdeeca1851fe7e7af0d668e133e8a88066a0c6f7087
 
 GEM_NAME = "safe_yaml"
 
-EXTRA_RDEPENDS += "bash"
+EXTRA_RDEPENDS:append = " bash"
 
 inherit rubygems
 inherit rubygentest
