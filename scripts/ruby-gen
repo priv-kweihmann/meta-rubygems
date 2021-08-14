@@ -49,7 +49,7 @@ SRC_URI:append = "{__srcuri}"
 DEPENDS:class-native += "{__deps}"
 DEPENDS:class-target += "{__tdeps}"
 
-GEM_INSTALL_FLAGS += "{__install_flags}"
+GEM_INSTALL_FLAGS:append = " {__install_flags}"
 
 SRC_URI[md5sum] = "{__md5sum}"
 SRC_URI[sha256sum] = "{__sha256sum}"
