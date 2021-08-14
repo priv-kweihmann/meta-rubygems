@@ -19,8 +19,8 @@ DEPENDS:class-native += "\
     rubygems-ruby2-keywords-native \
 "
 
-SRC_URI[md5sum] = "fb36ece9dede937e9ed73057f633b0a7"
-SRC_URI[sha256sum] = "fe8941d7424911c4624379b2c0b2cff3efcd623b834c01fd66315a9da807b176"
+SRC_URI[md5sum] = "117e30a93b1d94c66c2ebb6957f53032"
+SRC_URI[sha256sum] = "6bbb2f4d0bb19cbc13b85012f7402572af25541363b20d8694a62fbdbd98d164"
 
 GEM_NAME = "faraday"
 
