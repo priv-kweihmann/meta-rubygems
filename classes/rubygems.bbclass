@@ -69,9 +69,8 @@ do_gem_unpack() {
     gem unpack -V ${GEM_FILE}
 }
 
+DEPENDS += "${EXTRA_DEPENDS}"
 DEPENDS:append:class-target = " ruby ruby-cross-${TARGET_ARCH}"
-RDEPENDS:${PN}:append:class-target = " ${EXTRA_RDEPENDS}"
-DEPENDS:append = " ${EXTRA_DEPENDS}"
 
 python () {
     # unpack_gem need ruby to be installed in sysroot to succeed
@@ -231,7 +230,7 @@ FILES:${PN} += "\
     ${RUBY_SITEDIR} \
 "
 
-RDEPENDS:${PN}:append:class-target = " ruby"
+RDEPENDS:${PN}:append:class-target = " ruby ${EXTRA_RDEPENDS}"
 RDEPENDS:${PN}-tests:append:class-target = " ruby"
 
 UPSTREAM_CHECK_URI ?= "https://rubygems.org/gems/${GEM_NAME}/versions"
