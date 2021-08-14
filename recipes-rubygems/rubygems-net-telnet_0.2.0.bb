@@ -11,7 +11,7 @@ SRC_URI[sha256sum] = "253007c0f8dc3fd66e569d53ebbce5ef6e94d6246ab9c04d73a7629b0e
 
 GEM_NAME = "net-telnet"
 
-EXTRA_RDEPENDS += "bash"
+EXTRA_RDEPENDS:append = " bash"
 
 inherit rubygems
 inherit rubygentest
