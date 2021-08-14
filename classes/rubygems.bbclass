@@ -103,7 +103,7 @@ do_generate_spec() {
 }
 
 do_generate_spec[vardepsexclude] += "prefix_native"
-addtask do_generate_spec after do_unpack_gem before do_patch
+addtask do_generate_spec after do_gem_unpack before do_patch
 
 python do_arch_patch_config() {
     import re
