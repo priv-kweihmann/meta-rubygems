@@ -17,7 +17,7 @@ SRC_URI[sha256sum] = "4c60a2b0a3b36685c83b80d5789401c2f678c1652e3288315a1551d811
 
 GEM_NAME = "sassc"
 
-GEM_INSTALL_FLAGS += "\
+GEM_INSTALL_FLAGS:append = " \
     --disable-strip \
 "
 

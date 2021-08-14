@@ -19,7 +19,7 @@ DEPENDS:class-target += "\
     rubygems-mini-portile2 \
 "
 
-GEM_INSTALL_FLAGS += "\
+GEM_INSTALL_FLAGS:append = " \
     --use-system-libraries \
 "
 
