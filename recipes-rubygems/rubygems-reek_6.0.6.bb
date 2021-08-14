@@ -13,12 +13,11 @@ EXTRA_RDEPENDS += "\
 DEPENDS:class-native += "\
     rubygems-kwalify-native \
     rubygems-parser-native \
-    rubygems-psych-native \
     rubygems-rainbow-native \
 "
 
-SRC_URI[md5sum] = "80ce170c086b22b07009256658dd7e36"
-SRC_URI[sha256sum] = "98b83ad7e96015d3db55f6efab795aff45e8eefbcb17db01894e0636e859d3e9"
+SRC_URI[md5sum] = "7cf7847d9e221fa47d0b08a137867ca0"
+SRC_URI[sha256sum] = "baf919d91746450b12780522705a8c06f16cd22a3b2a057ed6c9c93491e1c1f0"
 
 GEM_NAME = "reek"
 
@@ -29,7 +28,6 @@ inherit pkgconfig
 RDEPENDS:${PN}:class-target += "\
     rubygems-kwalify \
     rubygems-parser \
-    rubygems-psych \
     rubygems-rainbow \
 "
 
