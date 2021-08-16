@@ -6,7 +6,7 @@ HOMEPAGE = "https://github.com/andyw8/codeclimate-engine-rb"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=56b47d379805ed45bc0c1aff19d7364b"
 
-EXTRA_RDEPENDS += "bash"
+EXTRA_RDEPENDS_append = " bash"
 
 DEPENDS:class-native += "\
     rubygems-virtus-native \

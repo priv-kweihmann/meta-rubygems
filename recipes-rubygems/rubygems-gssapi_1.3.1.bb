@@ -6,7 +6,7 @@ HOMEPAGE = "http://github.com/zenchild/gssapi"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://COPYING;md5=97fb757cd9918aafc0a447460b5897cd"
 
-EXTRA_RDEPENDS += "libgssapi-krb5"
+EXTRA_RDEPENDS_append = " libgssapi-krb5"
 
 DEPENDS:class-native += "\
     rubygems-ffi-native \
