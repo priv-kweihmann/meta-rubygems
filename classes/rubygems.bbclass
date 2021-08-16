@@ -242,5 +242,3 @@ UPSTREAM_CHECK_REGEX ?= "/gems/${GEM_NAME}/versions/(?P<pver>(\d+\.*)*\d+)$"
 INSANE_SKIP:${PN} += "dev-so"
 # we don't care what is actually needed for the dev-package
 INSANE_SKIP:${PN}-dev += "file-rdeps"
-
-inherit rubygentest
