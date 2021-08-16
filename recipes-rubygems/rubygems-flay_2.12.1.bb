@@ -6,7 +6,7 @@ HOMEPAGE = "http://ruby.sadi.st/"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://README.rdoc;beginline=100;endline=123;md5=9729e7cc2f0b6cd88813876ac0335063"
 
-EXTRA_RDEPENDS += "rubygems-gauntlet"
+EXTRA_RDEPENDS_append = " rubygems-gauntlet"
 
 DEPENDS:class-native += "\
     rubygems-erubis-native \
