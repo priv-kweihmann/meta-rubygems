@@ -62,7 +62,8 @@ class Gem():
 
         version = expand_term(_stash, path, "${PV}")
         for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue="GEM_NAME"):
-            name = item.VarValueStripped
+            if item.VarValueStripped:
+                name = item.VarValueStripped
         depends = set()
         for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue="RDEPENDS:${PN}"):
             depends.update([expand_term(_stash, path, y)
@@ -123,6 +124,8 @@ class Gem():
         if rubyversion:
             _args += ["--rubyversion={}".format(rubyversion)]
         _args += [self.__dir, self.__gem_name]
+        if not self.__gem_name:
+            return []
         self.__run_ruby_gen(_args)
 
         # Extract the new versions and depends
