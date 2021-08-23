@@ -20,8 +20,10 @@ def __get_info_from_stash(_filepath, name, modifiers):
     _stash = Stash(quiet=True)
     _stash.AddFile(_filepath)
 
-    for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue=name):
+    for item in _stash.GetItemsFor(filename=_filepath, attribute=Variable.ATTR_VAR, attributeValue=name, nolink=True):
         if modifiers and not all(x in modifiers for x in item.SubItems):
+            continue
+        if item.Origin.endswith(".bbclass"):
             continue
         _result.update([expand_term(_stash, _filepath, y)
                         for y in item.get_items() if y not in ["\\", "\\\n", '"']])
@@ -35,7 +37,7 @@ def __get_raw_stash(_filepath, classifier):
     _stash = Stash(quiet=True)
     _stash.AddFile(_filepath)
 
-    for item in _stash.GetItemsFor(classifier=classifier):
+    for item in _stash.GetItemsFor(filename=_filepath, classifier=classifier, nolink=True):
         _result.add(item.Raw)
 
     return _result
