@@ -65,7 +65,7 @@ class Gem():
             if item.VarValueStripped:
                 name = item.VarValueStripped
         depends = set()
-        for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue="RDEPENDS:${PN}"):
+        for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue="RDEPENDS"):
             depends.update([expand_term(_stash, path, y)
                             for y in item.get_items() if y not in ["\\", "\\\n", '"']])
         for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue="EXTRA_RDEPENDS"):
@@ -89,12 +89,12 @@ class Gem():
 
         _rdepends = set([self.__get_recipename(name=x) for x in newrecipes])
 
-        for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue="RDEPENDS:${PN}"):
+        for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue="RDEPENDS"):
             _rdepends.update(item.get_items())
             item.RealRaw = '{}{}"\\\n    {} \\\n"'.format(item.VarName, item.VarOp, " \\\n    ".join(sorted(_rdepends)))
             item.Raw = item.RealRaw
 
-        items = _stash.GetItemsFor(filename=_path, nolink=True)
+        items = [x for x in _stash.GetItemsFor(filename=_path, nolink=True) if not x.Origin.endswith(".bbclass")]
         with open(_path, "w") as o:
             o.write("".join([x.RealRaw for x in items]))
             o.write("\n")
