@@ -49,7 +49,7 @@ def check_depends(depends, rdepends, oldrecipes):
     for x in oldrecipes:
         _depends.update(__get_info_from_stash(x, "DEPENDS", ["class-native"]))
         _rdepends.update(__get_info_from_stash(
-            x, "RDEPENDS:${PN}", ["class-target"]))
+            x, "RDEPENDS", ["${PN}", "class-target"]))
 
     depends = set(list(depends) + list(_depends))
     rdepends = set(list(rdepends) + list(_rdepends))
