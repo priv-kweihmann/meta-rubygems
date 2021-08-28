@@ -6,13 +6,18 @@ HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-aws-sdk-core-native \
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "6059565c5913ddfc195beb6e0facf2be"
-SRC_URI[sha256sum] = "01a5b57bb1e92d6d3519327929b27709a48b4aa78d630645d37653fd97958b50"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "2b0579e0dcb564090fbe99e66278fd2a"
+SRC_URI[sha256sum] = "ca94559bd9e452b301e44f8444ff6e903584d4ccadec31012a0475a8ee7bbb04"
 
 GEM_NAME = "aws-sdk-glue"
 
