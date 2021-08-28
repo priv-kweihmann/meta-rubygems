@@ -6,6 +6,9 @@ HOMEPAGE = "https://www.chef.io"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-addressable-native \
     rubygems-aws-sdk-secretsmanager-native \
@@ -36,8 +39,10 @@ DEPENDS:class-native += "\
     rubygems-uuidtools-native \
 "
 
-SRC_URI[md5sum] = "472986bbad120568c5b5aaf82912cae1"
-SRC_URI[sha256sum] = "d985a90d07e49b92092bc667ee7837861e8135e0231c473cd726fd7b1e3d1696"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "b91f92bc7e1fadc30b97d49ef03defd4"
+SRC_URI[sha256sum] = "f4b628be76c23e2aee38f6a1c1162faf469e8d36466c2891d27909e771025496"
 
 GEM_NAME = "chef"
 
