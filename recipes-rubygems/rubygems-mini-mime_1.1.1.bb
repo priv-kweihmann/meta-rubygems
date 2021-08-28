@@ -6,8 +6,13 @@ HOMEPAGE = "https://github.com/discourse/mini_mime"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=4778dbd817e04a19ab6050d5e59bb853"
 
-SRC_URI[md5sum] = "aab3c6a3973d16336157d2c36ec43142"
-SRC_URI[sha256sum] = "30f2cca8a3c62b5c067f73a1834479dbd85d71f1291d65ffac933dc90796674d"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "9a465e0e0d332b6d0104c6519ac8ab0e"
+SRC_URI[sha256sum] = "d49f705f7d87721dd2aad2fa2787cd65ed5e2cefaa0d8495a13af48d37b96d9c"
 
 GEM_NAME = "mini_mime"
 
