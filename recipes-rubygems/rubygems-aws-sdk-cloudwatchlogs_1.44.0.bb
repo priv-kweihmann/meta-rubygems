@@ -6,13 +6,18 @@ HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-aws-sdk-core-native \
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "cd2c129577d7745a5f297b6ee1678935"
-SRC_URI[sha256sum] = "a9cf2b7be44078eec4515505783fd0bf65637742363601b15220477897ab6101"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "4391ad5f09db11998eb75dbd87fdd3f6"
+SRC_URI[sha256sum] = "548c0bfcfd5dc90540278013cc51fcc5387f5d8012465fa4e84efaf5c6cbcba3"
 
 GEM_NAME = "aws-sdk-cloudwatchlogs"
 
