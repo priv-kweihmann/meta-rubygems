@@ -6,6 +6,9 @@ HOMEPAGE = "https://rubyonrails.org"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://MIT-LICENSE;md5=a2e0e281b9b6c47f722da2255eca5d68"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-concurrent-ruby-native \
     rubygems-i18n-native \
@@ -14,8 +17,10 @@ DEPENDS:class-native += "\
     rubygems-zeitwerk-native \
 "
 
-SRC_URI[md5sum] = "765f79e5e623c45cef6decfc965cab80"
-SRC_URI[sha256sum] = "b37564f4fc3bc66f3f98d3032b8bb8cbdbd23ba0f7c02648287048463cf70f4f"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "0a841f7aaffd3f337c22523b00c74512"
+SRC_URI[sha256sum] = "44b781877c2189aa15ca5451e2d310dcedfd16c01df1106f68a91b82990cfda5"
 
 GEM_NAME = "activesupport"
 
