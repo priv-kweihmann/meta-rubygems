@@ -6,6 +6,9 @@ HOMEPAGE = "https://github.com/inspec/inspec"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=38becae1e765aa7075044208bbab2ea4"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-addressable-native \
     rubygems-chef-telemetry-native \
@@ -31,8 +34,10 @@ DEPENDS:class-native += "\
     rubygems-tty-table-native \
 "
 
-SRC_URI[md5sum] = "85f8103faf3d27bbd89bdec72fb2db17"
-SRC_URI[sha256sum] = "20c173248f8a4524906529e53fb6fcadc6bea37beec92cd0dba6ee411320d36b"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "b5427e9aaffa11e5f6113f8639aa6f01"
+SRC_URI[sha256sum] = "3d1b65855adcb8d4cf8336b5bb1e0c2e86063077e5257d497287ef5b10a9293a"
 
 GEM_NAME = "inspec-core"
 
