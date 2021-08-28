@@ -6,7 +6,8 @@ HOMEPAGE = "https://github.com/puppetlabs/puppet"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=72bcf758cb771bfde198d175d9e48429"
 
-SRC_URI:append = " file://0001-Replace-URI.escape-with-CGI.escape.patch"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-concurrent-ruby-native \
@@ -21,8 +22,10 @@ DEPENDS:class-native += "\
     rubygems-semantic-puppet-native \
 "
 
-SRC_URI[md5sum] = "f0b9a3f44dd7d1fce1e147693e971908"
-SRC_URI[sha256sum] = "48febcb3edfe9cc97ec929876f8e552cc33982cd5f8116b34a9581d1bfe6d35a"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "801e1945b1c483d1d5a4cb9b1caf7578"
+SRC_URI[sha256sum] = "4bc8e4597f7dbafb9bca17afb2e9815dbce0e822012e039c36e4742fcde7d82d"
 
 GEM_NAME = "puppet"
 
