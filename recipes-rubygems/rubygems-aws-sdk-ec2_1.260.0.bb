@@ -6,13 +6,18 @@ HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-aws-sdk-core-native \
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "8857328e37b9c530ae43afde73bd76d3"
-SRC_URI[sha256sum] = "d115a5857b56561e09821ff34efd5ea965132dd1a4d5d8a59a119c4e9a7b707d"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "6fe9f26bd2c808e2f6a9fe670601be71"
+SRC_URI[sha256sum] = "64a525b1a8024aecd8ebe5451ca8796ae54c3d1e471f71d8c2824c979ab6891e"
 
 GEM_NAME = "aws-sdk-ec2"
 
