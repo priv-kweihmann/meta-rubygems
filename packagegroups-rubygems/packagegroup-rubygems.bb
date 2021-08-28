@@ -81,6 +81,7 @@ RDEPENDS:${PN} += "\
     rubygems-azure-mgmt-security \
     rubygems-azure-mgmt-storage \
     rubygems-bcrypt-pbkdf \
+    rubygems-bson \
     rubygems-builder \
     rubygems-chef \
     rubygems-chef-config \
@@ -185,6 +186,7 @@ RDEPENDS:${PN} += "\
     rubygems-mixlib-config \
     rubygems-mixlib-log \
     rubygems-mixlib-shellout \
+    rubygems-mongo \
     rubygems-ms-rest \
     rubygems-ms-rest-azure \
     rubygems-multi-json \
@@ -292,7 +294,3 @@ RDEPENDS:${PN} += "\
     rubygems-yard \
     rubygems-zeitwerk \
 "
-
-
-
-
