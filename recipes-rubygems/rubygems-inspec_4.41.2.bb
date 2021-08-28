@@ -4,21 +4,25 @@ DESCRIPTION = "InSpec provides a framework for creating end-to-end infrastructur
 HOMEPAGE = "https://github.com/inspec/inspec"
 
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "\
-    file://lib/plugins/inspec-init/templates/profiles/gcp/inspec.yml;beginline=6;endline=6;md5=cfb5ff7823bc166fac8853e293b76fd7 \
-"
+LIC_FILES_CHKSUM = "file://lib/plugins/inspec-init/templates/profiles/gcp/inspec.yml;beginline=6;endline=6;md5=cfb5ff7823bc166fac8853e293b76fd7"
+
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-faraday-middleware-native \
     rubygems-inspec-core-native \
+    rubygems-mongo-native \
     rubygems-train-aws-native \
     rubygems-train-habitat-native \
     rubygems-train-native \
     rubygems-train-winrm-native \
 "
 
-SRC_URI[md5sum] = "d4eb6368c64334ce49dff15840d35a15"
-SRC_URI[sha256sum] = "256fcad08903b980baa0a91e861dba5ff72cba209c5163232af5af96927e7924"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "322d95d719c28e8677c40d66b3a906fb"
+SRC_URI[sha256sum] = "280e90468cac90bba60c04dfd1f0e3576e7fe48d51fbc43cc6d484f86f02bbac"
 
 GEM_NAME = "inspec"
 
@@ -29,6 +33,7 @@ inherit pkgconfig
 RDEPENDS:${PN}:class-target += "\
     rubygems-faraday-middleware \
     rubygems-inspec-core \
+    rubygems-mongo \
     rubygems-train \
     rubygems-train-aws \
     rubygems-train-habitat \
