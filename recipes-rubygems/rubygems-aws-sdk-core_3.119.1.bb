@@ -6,6 +6,9 @@ HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-aws-eventstream-native \
     rubygems-aws-partitions-native \
@@ -13,8 +16,10 @@ DEPENDS:class-native += "\
     rubygems-jmespath-native \
 "
 
-SRC_URI[md5sum] = "f5d2b0e9e97527f45cd4b473c7d64cb6"
-SRC_URI[sha256sum] = "e088f128218a6af8e395df763f63da610f9956176182cc78ca01072261b1feab"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "95cb2050f42194e3329d09720b02d0f7"
+SRC_URI[sha256sum] = "5c1cb1d957996d26aad7f577d8543a2a3fe388ac9d61690b9368f8a19ce40950"
 
 GEM_NAME = "aws-sdk-core"
 
