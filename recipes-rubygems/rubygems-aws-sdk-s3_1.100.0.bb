@@ -6,14 +6,19 @@ HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-aws-sdk-core-native \
     rubygems-aws-sdk-kms-native \
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "e4c53ecebca9fc69c05964f32c284ca8"
-SRC_URI[sha256sum] = "892f9fa187fec0ae81d0187717a2df0813b82edbc8c35f663a96758664b0291d"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "069d01cdb60cd42d9856e61ef0196830"
+SRC_URI[sha256sum] = "f0dc1126d7ce1399cc895f7921e1fc97f968ac07518fde6a0941e5ad0ec49d15"
 
 GEM_NAME = "aws-sdk-s3"
 
