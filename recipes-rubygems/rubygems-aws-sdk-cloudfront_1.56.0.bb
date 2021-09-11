@@ -6,13 +6,18 @@ HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-aws-sdk-core-native \
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "7ea0c8f5c886c6c1280fb4b0eed0b65b"
-SRC_URI[sha256sum] = "1f94148020b5b3ce8526e7121f8931e91d114fb484155efda368a5b818f2e148"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "b6271c90565049f6ccd914c13b2ca0d0"
+SRC_URI[sha256sum] = "4d8a5c9b01287a9fb2f49b094baecb35d18201dbfcf8725d6701329a7797855e"
 
 GEM_NAME = "aws-sdk-cloudfront"
 
