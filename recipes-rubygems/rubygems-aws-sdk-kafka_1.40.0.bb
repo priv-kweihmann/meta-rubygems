@@ -6,13 +6,18 @@ HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-aws-sdk-core-native \
     rubygems-aws-sigv4-native \
 "
 
-SRC_URI[md5sum] = "6ac85f79ddcd1f6ff514558898a18e2b"
-SRC_URI[sha256sum] = "c79ebf768a2413ddb730d980220c44f3607e0c2157f4bbd7b3067c5087e3fcf3"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "767a178b820f467114e6b7fa9400a1ff"
+SRC_URI[sha256sum] = "195c2666cdb36610d9ddba2fc1a9e59693ea5c16db58015f8746e4c8b6122b0d"
 
 GEM_NAME = "aws-sdk-kafka"
 
