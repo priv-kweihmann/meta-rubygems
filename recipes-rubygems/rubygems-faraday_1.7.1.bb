@@ -6,6 +6,9 @@ HOMEPAGE = "https://lostisland.github.io/faraday"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=eeb478a3bdc6cd7919e354aeb42b94e4"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-faraday-em-http-native \
     rubygems-faraday-em-synchrony-native \
@@ -19,8 +22,10 @@ DEPENDS:class-native += "\
     rubygems-ruby2-keywords-native \
 "
 
-SRC_URI[md5sum] = "117e30a93b1d94c66c2ebb6957f53032"
-SRC_URI[sha256sum] = "6bbb2f4d0bb19cbc13b85012f7402572af25541363b20d8694a62fbdbd98d164"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "71d79df5b2b52212b84fe293e505d20b"
+SRC_URI[sha256sum] = "47451a77df07e9a757ce805c47d804e78ae0b544d587e15e42965ac4c1c69829"
 
 GEM_NAME = "faraday"
 
