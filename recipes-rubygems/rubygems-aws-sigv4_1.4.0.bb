@@ -6,12 +6,17 @@ HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-aws-eventstream-native \
 "
 
-SRC_URI[md5sum] = "dc1674c1675fea2b561433e3632c3be5"
-SRC_URI[sha256sum] = "c0e5b98aafc39f8b7ef258495de1c58698a79149c8c5aecdf464a70e9e866931"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "addb440cc9427db9ddb6ede8519a3758"
+SRC_URI[sha256sum] = "0a3be41096724a617fcfde8bb96f711c16335db42b9d2afc7a9f68b0d3f101f2"
 
 GEM_NAME = "aws-sigv4"
 
