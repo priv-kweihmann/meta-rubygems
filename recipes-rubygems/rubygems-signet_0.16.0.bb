@@ -6,6 +6,9 @@ HOMEPAGE = "https://github.com/googleapis/signet"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=f124bfaefacd4e1a4080065d403bc1d4"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-addressable-native \
     rubygems-faraday-native \
@@ -13,8 +16,10 @@ DEPENDS:class-native += "\
     rubygems-multi-json-native \
 "
 
-SRC_URI[md5sum] = "e51923e16752e1d362573aebe9a75d74"
-SRC_URI[sha256sum] = "0f184cb36951f56de355a4cf6357a77e2a78a240ac63a47b19b7c399aaab7def"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "762519d2b84fe6336024469dab5eac80"
+SRC_URI[sha256sum] = "939464142cf004d379985a5dde3cc51cbb6c6b528f89ba379decce777353f531"
 
 GEM_NAME = "signet"
 
