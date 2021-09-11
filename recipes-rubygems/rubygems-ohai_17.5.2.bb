@@ -6,6 +6,9 @@ HOMEPAGE = "https://github.com/chef/ohai/"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-chef-config-native \
     rubygems-chef-utils-native \
@@ -21,8 +24,10 @@ DEPENDS:class-native += "\
     rubygems-wmi-lite-native \
 "
 
-SRC_URI[md5sum] = "b9a991973d58e273a95eb80f3e6540c7"
-SRC_URI[sha256sum] = "b641f92758c21696b642131d1b268ec013a13d0f8f36387624bcba43eccc6cd9"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "f1e12b1b7f5844a235ef3602372d64fa"
+SRC_URI[sha256sum] = "2e3c8bcc03718859d0bebfdf75f337cdacea326001b4230fdc5f1e39cb90a9bf"
 
 GEM_NAME = "ohai"
 
