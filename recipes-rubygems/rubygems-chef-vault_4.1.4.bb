@@ -6,12 +6,15 @@ HOMEPAGE = "https://github.com/chef/chef-vault"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 
-SRC_URI[md5sum] = "5c8885bba2b6d9b64e158dc15824146c"
-SRC_URI[sha256sum] = "241d031d9dd54dd612aa6fc22b580eeb30aa4a044427ee8099fbbfc6d57fece6"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "d81fd4d8fdd8c411eee35ee8e6ca32b9"
+SRC_URI[sha256sum] = "e1f585ca8e99da84b4bedcd5db3706e492de12721e500b9d424134981d46fea7"
 
 GEM_NAME = "chef-vault"
-
-
 
 inherit rubygems
 inherit rubygentest
