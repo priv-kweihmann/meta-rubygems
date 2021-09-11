@@ -9,6 +9,8 @@ RDEPENDS:${PN} += "\
     rubygems-ast \
     rubygems-aws-eventstream \
     rubygems-aws-partitions \
+    rubygems-aws-sdk-alexaforbusiness \
+    rubygems-aws-sdk-amplify \
     rubygems-aws-sdk-apigateway \
     rubygems-aws-sdk-apigatewayv2 \
     rubygems-aws-sdk-applicationautoscaling \
@@ -54,6 +56,9 @@ RDEPENDS:${PN} += "\
     rubygems-aws-sdk-kinesis \
     rubygems-aws-sdk-kms \
     rubygems-aws-sdk-lambda \
+    rubygems-aws-sdk-mq \
+    rubygems-aws-sdk-networkfirewall \
+    rubygems-aws-sdk-networkmanager \
     rubygems-aws-sdk-organizations \
     rubygems-aws-sdk-ram \
     rubygems-aws-sdk-rds \
