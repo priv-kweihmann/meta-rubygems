@@ -30,6 +30,11 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
+do_generate_spec:append() {
+    # temporary fix for hard mongo gem version binding
+    sed -i 's#=[[:space:]]2.13.2#!=0#g' ${GEM_SPEC_FILE}
+}
+
 RDEPENDS:${PN}:class-target += "\
     rubygems-faraday-middleware \
     rubygems-inspec-core \
