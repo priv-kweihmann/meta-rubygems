@@ -6,8 +6,13 @@ HOMEPAGE = "http://www.liquidmarkup.org"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=f2a65a7b0b338ce2e5c688284735d982"
 
-SRC_URI[md5sum] = "c6e491e43afa7962ee8421d4a3e25f4e"
-SRC_URI[sha256sum] = "745771f725b8f6541c4ed942755cb43b7b8d7bb4d4ab9437ba074cebd95772d8"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "c93e5c22fa62469737bddf5417880553"
+SRC_URI[sha256sum] = "989868936ea8546c27fb1066c1da2f676f7fdf13db49eab174e79c1bc4fbb434"
 
 GEM_NAME = "liquid"
 
