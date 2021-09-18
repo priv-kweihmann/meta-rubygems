@@ -6,12 +6,15 @@ HOMEPAGE = "https://github.com/grosser/parallel"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://MIT-LICENSE.txt;md5=01d743313af3f7a981bcce70a74e06c2"
 
-SRC_URI[md5sum] = "2047cd5b7f6915ed3d7a106f3fb28ecd"
-SRC_URI[sha256sum] = "ed4faec4498bf921e10ac8683ed5840d91e2f307c26f8e24f8d8ae58415ea500"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "e9cfd183f583b037fc3cc4e2bca1b041"
+SRC_URI[sha256sum] = "e4a92d75cf9d0e3d50f396f5180f827dcb985f98436d4b170e7a0b864ebd6ec2"
 
 GEM_NAME = "parallel"
-
-
 
 inherit rubygems
 inherit rubygentest
