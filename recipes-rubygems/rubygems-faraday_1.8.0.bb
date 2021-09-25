@@ -24,8 +24,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "e565766e125d61aaeba668d5b6984d2a"
-SRC_URI[sha256sum] = "afafb551525f384fbb568c9960b0425e22bf7bc84dfac6203f878a63beaa4dd8"
+SRC_URI[md5sum] = "072b23305b38ed1d3eeb7e355d6e6b14"
+SRC_URI[sha256sum] = "d1fb776cf25973b7f52a82b625bb0a009fe30ad6021ef838fb9109bf1ea6d029"
 
 GEM_NAME = "faraday"
 
