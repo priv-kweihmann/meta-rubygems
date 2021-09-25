@@ -286,6 +286,7 @@ RDEPENDS:${PN} += "\
     rubygems-unicode-display-width \
     rubygems-unicode-utils \
     rubygems-uuidtools \
+    rubygems-vault \
     rubygems-virtus \
     rubygems-webrick \
     rubygems-winrm \

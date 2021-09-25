@@ -11,6 +11,7 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-addressable-native \
+    rubygems-aws-sdk-s3-native \
     rubygems-aws-sdk-secretsmanager-native \
     rubygems-chef-config-native \
     rubygems-chef-utils-native \
@@ -37,12 +38,13 @@ DEPENDS:class-native += "\
     rubygems-train-core-native \
     rubygems-train-winrm-native \
     rubygems-uuidtools-native \
+    rubygems-vault-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "6f6d9c22f5ae9ac9e893521d785f2f03"
-SRC_URI[sha256sum] = "7b66353cc3df7b9c2f3e1879d1ec3816fa30f180f2ecddaae2fadb5f72c6338b"
+SRC_URI[md5sum] = "53cdb0a1c0e16d9b2ce73ebe1bef5f3e"
+SRC_URI[sha256sum] = "b8cea04ff83f37aa3b5b3d5eb0ebf51766f6fb836ac85c2aa954fac14ebe73fb"
 
 GEM_NAME = "chef"
 
@@ -61,6 +63,7 @@ do_install:append() {
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-addressable \
+    rubygems-aws-sdk-s3 \
     rubygems-aws-sdk-secretsmanager \
     rubygems-chef-config \
     rubygems-chef-utils \
@@ -87,6 +90,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-train-core \
     rubygems-train-winrm \
     rubygems-uuidtools \
+    rubygems-vault \
 "
 
 BBCLASSEXTEND = "native"
