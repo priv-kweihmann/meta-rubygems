@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-elasticloadbalancingv2"
-DESCRIPTION = "Official AWS Ruby gem for Elastic Load Balancing (Elastic Load Balancing v2)"
+SUMMARY = "RubyGem: aws-sdk-ssm"
+DESCRIPTION = "Official AWS Ruby gem for Amazon Simple Systems Manager (SSM) (Amazon SSM)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "5ebaf7439738a3b20a01c86dbadb65e8"
-SRC_URI[sha256sum] = "503964087979e5e004d9508d735d5aa67ee6e8d7163ef9d17bc9b3697078c2b6"
+SRC_URI[md5sum] = "ee48226fd0087004566bfaf4649e399b"
+SRC_URI[sha256sum] = "58673be5206210390285c6d2c8acc259bc7d04c37e44fae655d1b9dcefe9b1e8"
 
-GEM_NAME = "aws-sdk-elasticloadbalancingv2"
+GEM_NAME = "aws-sdk-ssm"
 
 inherit rubygems
 inherit rubygentest
