@@ -72,12 +72,15 @@ RDEPENDS:${PN} += "\
     rubygems-aws-sdk-servicecatalog \
     rubygems-aws-sdk-ses \
     rubygems-aws-sdk-shield \
+    rubygems-aws-sdk-signer \
+    rubygems-aws-sdk-simpledb \
     rubygems-aws-sdk-sms \
     rubygems-aws-sdk-sns \
     rubygems-aws-sdk-sqs \
     rubygems-aws-sdk-ssm \
     rubygems-aws-sdk-states \
     rubygems-aws-sdk-transfer \
+    rubygems-aws-sigv2 \
     rubygems-aws-sigv4 \
     rubygems-axiom-types \
     rubygems-azure-graph-rbac \

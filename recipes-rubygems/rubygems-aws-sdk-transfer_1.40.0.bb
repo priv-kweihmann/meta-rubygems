@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-ssm"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Simple Systems Manager (SSM) (Amazon SSM)"
+SUMMARY = "RubyGem: aws-sdk-transfer"
+DESCRIPTION = "Official AWS Ruby gem for AWS Transfer Family (AWS Transfer)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "56c77c0e0b5e45d135209a27a915c6a8"
-SRC_URI[sha256sum] = "47dd6fe791d3fdd96727d736f237dd100678c8380f804eabefa68ef81508c944"
+SRC_URI[md5sum] = "6d991b5ec18457a7283408d8dce5eea2"
+SRC_URI[sha256sum] = "96c09cde9ecdb201fcc14b9fcc79c1662bc222705fb9b09943dcedc5c6b24d51"
 
-GEM_NAME = "aws-sdk-ssm"
+GEM_NAME = "aws-sdk-transfer"
 
 inherit rubygems
 inherit rubygentest
