@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-transfer"
-DESCRIPTION = "Official AWS Ruby gem for AWS Transfer Family (AWS Transfer)"
+SUMMARY = "RubyGem: aws-sdk-simpledb"
+DESCRIPTION = "Official AWS Ruby gem for Amazon SimpleDB"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -11,15 +11,15 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-aws-sdk-core-native \
-    rubygems-aws-sigv4-native \
+    rubygems-aws-sigv2-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "cb5b5b09e1351ebc47a54fe06af3881c"
-SRC_URI[sha256sum] = "a797c96f0bc285e1e28ad51ff54d7a9116ca71e5d9031edebda91f3a350e61ff"
+SRC_URI[md5sum] = "8aa26ac47f62273dfc5f0e2e0755d192"
+SRC_URI[sha256sum] = "1a3fb7c72376383921e866469db92c933c6996d6283ee1767af7fcbeea547997"
 
-GEM_NAME = "aws-sdk-transfer"
+GEM_NAME = "aws-sdk-simpledb"
 
 inherit rubygems
 inherit rubygentest
@@ -27,7 +27,7 @@ inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-aws-sdk-core \
-    rubygems-aws-sigv4 \
+    rubygems-aws-sigv2 \
 "
 
 BBCLASSEXTEND = "native"

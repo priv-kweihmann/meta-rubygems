@@ -73,6 +73,8 @@ DEPENDS:class-native += "\
     rubygems-aws-sdk-servicecatalog-native \
     rubygems-aws-sdk-ses-native \
     rubygems-aws-sdk-shield-native \
+    rubygems-aws-sdk-signer-native \
+    rubygems-aws-sdk-simpledb-native \
     rubygems-aws-sdk-sms-native \
     rubygems-aws-sdk-sns-native \
     rubygems-aws-sdk-sqs-native \
@@ -83,8 +85,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "dde347056bb3d93e1a560d87f3c38971"
-SRC_URI[sha256sum] = "e3ee45a2ad6ac2a68dfddcacd4f832fd53361f28aee452f156fbc2c378faf72c"
+SRC_URI[md5sum] = "8d7fb365aad27c917abfc1c21c7cb8f1"
+SRC_URI[sha256sum] = "ad527ec14e604adc1cbaa51e16df41405588b30b32b969a14ebe33321ef32c75"
 
 GEM_NAME = "train-aws"
 
@@ -156,6 +158,8 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-aws-sdk-servicecatalog \
     rubygems-aws-sdk-ses \
     rubygems-aws-sdk-shield \
+    rubygems-aws-sdk-signer \
+    rubygems-aws-sdk-simpledb \
     rubygems-aws-sdk-sms \
     rubygems-aws-sdk-sns \
     rubygems-aws-sdk-sqs \
