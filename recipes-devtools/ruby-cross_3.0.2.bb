@@ -82,6 +82,9 @@ EXTRA_OECONF:append:libc-musl = " \
 do_configure:prepend() {
     sed -i "s#%%TARGET_CFLAGS%%#$TARGET_CFLAGS#; s#%%TARGET_LDFLAGS%%#$TARGET_LDFLAGS#" ${S}/common.mk
     rm -rf ${S}/ruby/
+
+    # Disable openssl extension until it becomes compatible with openssl 3
+    rm -rf ${S}/ext/openssl/extconf.rb
 }
 
 do_install() {
