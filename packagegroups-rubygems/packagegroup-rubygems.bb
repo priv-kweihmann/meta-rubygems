@@ -47,6 +47,7 @@ RDEPENDS:${PN} += "\
     rubygems-aws-sdk-elasticloadbalancing \
     rubygems-aws-sdk-elasticloadbalancingv2 \
     rubygems-aws-sdk-elasticsearchservice \
+    rubygems-aws-sdk-emr \
     rubygems-aws-sdk-eventbridge \
     rubygems-aws-sdk-firehose \
     rubygems-aws-sdk-glue \
@@ -79,6 +80,7 @@ RDEPENDS:${PN} += "\
     rubygems-aws-sdk-sqs \
     rubygems-aws-sdk-ssm \
     rubygems-aws-sdk-states \
+    rubygems-aws-sdk-synthetics \
     rubygems-aws-sdk-transfer \
     rubygems-aws-sigv2 \
     rubygems-aws-sigv4 \
