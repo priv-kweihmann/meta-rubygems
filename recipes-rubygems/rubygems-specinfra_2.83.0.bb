@@ -6,6 +6,9 @@ HOMEPAGE = "https://github.com/mizzy/specinfra"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=9f1e84c559b0d54e801ddbe1457c114a"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-net-scp-native \
     rubygems-net-ssh-native \
@@ -13,8 +16,10 @@ DEPENDS:class-native += "\
     rubygems-sfl-native \
 "
 
-SRC_URI[md5sum] = "67be1709d9af6159b9090f9784ce1f5f"
-SRC_URI[sha256sum] = "bfeb5bf4cd4f75b5d2d075c4e62e8e25b1b2519fc7e7eac428a45cc9f490667d"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "437b0dfd7063d3e2b5848b50e09714b7"
+SRC_URI[sha256sum] = "7d7ddc3eb9a784b8d53468856073fac45d591a1dbac0a6943c3553e3670811dc"
 
 GEM_NAME = "specinfra"
 
