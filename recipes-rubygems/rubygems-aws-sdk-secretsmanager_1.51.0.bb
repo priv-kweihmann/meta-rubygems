@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "913d0e4d74ee99012ee414fed8d6e426"
-SRC_URI[sha256sum] = "202dd816e920d58282622d551aa01e6a287417a95a71546ea6673c04a998fb05"
+SRC_URI[md5sum] = "e7b0e0467bc94f8cb5675343e6b42a08"
+SRC_URI[sha256sum] = "defc5a63fc94cd7d22cc8b1ef024ba3fe548ef323cbc018b8600b4cf61d61c11"
 
 GEM_NAME = "aws-sdk-secretsmanager"
 
