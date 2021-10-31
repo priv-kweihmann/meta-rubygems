@@ -33,6 +33,7 @@ please check the following table to pick the correct branch matching your poky v
 | poky release | suggested meta-rubygems branch | ruby version |
 | ------------ | ------------------------------ | ------------ |
 | master       | master                         | 3.x          |
+| honister     | master                         | 3.x          |
 | hardknott    | master                         | 3.x          |
 | gatesgarth   | dunfell                        | 2.7.x        |
 | dunfell      | dunfell                        | 2.7.x        |
