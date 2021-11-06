@@ -10,6 +10,7 @@ EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
+    rubygems-cookstyle-native \
     rubygems-faraday-middleware-native \
     rubygems-inspec-core-native \
     rubygems-mongo-native \
@@ -21,8 +22,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "3aeb4e50f41958b49b5fd55c187ecbe0"
-SRC_URI[sha256sum] = "1fdc194a8a8313224d0181027037d90460846174d9909eb92560312c185c9080"
+SRC_URI[md5sum] = "b49421b827a27b8ca1dce9c69d50d078"
+SRC_URI[sha256sum] = "1f8c92facdbf155d55f3a8483682e86b0e71bf1adb5c4e161c21c3fbf642c31b"
 
 GEM_NAME = "inspec"
 
@@ -36,6 +37,7 @@ do_generate_spec:append() {
 }
 
 RDEPENDS:${PN}:class-target += "\
+    rubygems-cookstyle \
     rubygems-faraday-middleware \
     rubygems-inspec-core \
     rubygems-mongo \
