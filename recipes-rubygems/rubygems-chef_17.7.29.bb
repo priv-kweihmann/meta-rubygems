@@ -17,6 +17,7 @@ DEPENDS:class-native += "\
     rubygems-chef-utils-native \
     rubygems-chef-vault-native \
     rubygems-chef-zero-native \
+    rubygems-corefoundation-native \
     rubygems-diff-lcs-native \
     rubygems-erubis-native \
     rubygems-ffi-libarchive-native \
@@ -43,8 +44,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "6ef2c5a33b8a616a75a5e9bc081b415a"
-SRC_URI[sha256sum] = "840a53f96d7e8561eeff2814a2ee48793e415b9340d601fc6014a4cfdf223e77"
+SRC_URI[md5sum] = "7749f78550a81797b91a9e199f2c583d"
+SRC_URI[sha256sum] = "48854a9e0990f121818e51566e2009b93602cd0da6e2ef0a1e54cb6931255e42"
 
 GEM_NAME = "chef"
 
@@ -69,6 +70,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-chef-utils \
     rubygems-chef-vault \
     rubygems-chef-zero \
+    rubygems-corefoundation \
     rubygems-diff-lcs \
     rubygems-erubis \
     rubygems-ffi \
