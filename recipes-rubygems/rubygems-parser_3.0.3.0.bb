@@ -9,13 +9,16 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=c66fb0a7723eeead586d670198ad6a34"
 EXTRA_DEPENDS:append = " \
     rubygems-gauntlet \
 "
+EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-ast-native \
 "
 
-SRC_URI[md5sum] = "a63cf411d1bea736d1959d2ede7fbc4e"
-SRC_URI[sha256sum] = "05766daec0e44fe986067d948e2ed8d23656ad072442f213b314c17b1037aa1a"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "896779b4a3ea15e51d6b3c3777c24785"
+SRC_URI[sha256sum] = "8e5127dbc032282b7b7202034994d0d4cfbc3048465def84b115ebacfdf43c7a"
 
 GEM_NAME = "parser"
 
