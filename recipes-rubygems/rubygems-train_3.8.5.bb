@@ -6,6 +6,9 @@ HOMEPAGE = "https://github.com/inspec/train"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-activesupport-native \
     rubygems-azure-graph-rbac-native \
@@ -21,8 +24,10 @@ DEPENDS:class-native += "\
     rubygems-train-winrm-native \
 "
 
-SRC_URI[md5sum] = "9253ee5d9ca4e2b3aa21f47b0370fcae"
-SRC_URI[sha256sum] = "978917382554891081c5bf1ac5e34304d0b8d5596256c69a29659aa8f14a5244"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "3959fabc34df59c9f33e3f6b5c6af9ed"
+SRC_URI[sha256sum] = "d56e1ef4241450d4e45c193b90cd2c1e47caff025015fc727874b4a4c7d15816"
 
 GEM_NAME = "train"
 
