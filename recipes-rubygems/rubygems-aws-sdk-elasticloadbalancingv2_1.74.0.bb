@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "66ac8a9a679eac48c5e7498d3459024e"
-SRC_URI[sha256sum] = "57d6c470c963aa47e20aa3b20799919eebe45804957ddc6a2fd7459373c597cc"
+SRC_URI[md5sum] = "61eec1e80eaaf30ccc892ad151be662d"
+SRC_URI[sha256sum] = "fafc9b9a79cb390147caa9f73c4a6fe4b8d016ec9d6bd93b41616e0462625924"
 
 GEM_NAME = "aws-sdk-elasticloadbalancingv2"
 
