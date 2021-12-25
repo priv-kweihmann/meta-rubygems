@@ -4,7 +4,7 @@ DESCRIPTION = "A toolkit for building modeling frameworks like Active Record"
 HOMEPAGE = "https://rubyonrails.org"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://MIT-LICENSE;md5=beb6db6f575459e4eb88269312cddd4e"
+LIC_FILES_CHKSUM = "file://MIT-LICENSE;md5=67387aabc500404bbdc54a921d9ac665"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "b2b60e09808d50278e47c501e0f3f14c"
-SRC_URI[sha256sum] = "032f5bbe1fc88aa2fb4db97807026c01fe1a41571672d01f2d0b454b49553d9a"
+SRC_URI[md5sum] = "377ee7e398f92cbd0992aa9ec5152ab9"
+SRC_URI[sha256sum] = "dce2fcbdbbe791b4b3168a9e46d0fdb1f25d36915b437e5296aa1aa2834120d5"
 
 GEM_NAME = "activemodel"
 
