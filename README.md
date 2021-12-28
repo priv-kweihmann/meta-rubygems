@@ -2,6 +2,15 @@
 
 A layer providing gems for Ruby.
 
+** IMPORTANT NOTE** 
+
+> the integration with poky master is broken at the moment, due to missing support of openssl 3.x by ruby.
+> See [this issue](https://github.com/priv-kweihmann/meta-rubygems/issues/255) for further details.
+> In case you're working still with openssl 1.x the layer continues to work fine.
+> In the meantime unfortunately there won't be any package updates.
+> 
+> Keeping the fingers crossed that this will be resolved soon
+
 ## Tested variants
 
 The following variants are tested regularly:
