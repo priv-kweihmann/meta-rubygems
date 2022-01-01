@@ -6,6 +6,9 @@ HOMEPAGE = "https://github.com/inspec/train"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-addressable-native \
     rubygems-ffi-native \
@@ -15,8 +18,10 @@ DEPENDS:class-native += "\
     rubygems-net-ssh-native \
 "
 
-SRC_URI[md5sum] = "62d83edf7d31319de0b3acd8cb707600"
-SRC_URI[sha256sum] = "d710aae3fb1d799be344a7e59c287afd57621f64b4a4987585999abeb79ebc1b"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "f161247ac232cf5aeef5bdacb39c2797"
+SRC_URI[sha256sum] = "43a617c3d82fffd7edca08534e51dc86c9484c47677a19362191c93faa30e6b1"
 
 GEM_NAME = "train-core"
 
