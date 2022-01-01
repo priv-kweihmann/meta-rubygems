@@ -68,6 +68,7 @@ RDEPENDS:${PN} += "\
     rubygems-aws-sdk-route53domains \
     rubygems-aws-sdk-route53resolver \
     rubygems-aws-sdk-s3 \
+    rubygems-aws-sdk-s3control \
     rubygems-aws-sdk-secretsmanager \
     rubygems-aws-sdk-securityhub \
     rubygems-aws-sdk-servicecatalog \
@@ -82,6 +83,7 @@ RDEPENDS:${PN} += "\
     rubygems-aws-sdk-states \
     rubygems-aws-sdk-synthetics \
     rubygems-aws-sdk-transfer \
+    rubygems-aws-sdk-waf \
     rubygems-aws-sigv2 \
     rubygems-aws-sigv4 \
     rubygems-axiom-types \
@@ -105,6 +107,7 @@ RDEPENDS:${PN} += "\
     rubygems-colorator \
     rubygems-concurrent-ruby \
     rubygems-connection-pool \
+    rubygems-cookstyle \
     rubygems-declarative \
     rubygems-declarative-option \
     rubygems-deep-merge \
@@ -230,6 +233,7 @@ RDEPENDS:${PN} += "\
     rubygems-rb-fsevent \
     rubygems-rb-inotify \
     rubygems-reek \
+    rubygems-regexp-parser \
     rubygems-representable \
     rubygems-retriable \
     rubygems-rouge \
@@ -240,7 +244,10 @@ RDEPENDS:${PN} += "\
     rubygems-rspec-junit-formatter \
     rubygems-rspec-mocks \
     rubygems-rspec-support \
+    rubygems-rubocop \
+    rubygems-rubocop-ast \
     rubygems-ruby-parser \
+    rubygems-ruby-progressbar \
     rubygems-ruby2-keywords \
     rubygems-rubycritic \
     rubygems-rubyntlm \
