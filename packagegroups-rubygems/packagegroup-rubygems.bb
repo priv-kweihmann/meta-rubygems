@@ -241,7 +241,6 @@ RDEPENDS:${PN} += "\
     rubygems-rspec-mocks \
     rubygems-rspec-support \
     rubygems-ruby-parser \
-    rubygems-ruby2-keywords \
     rubygems-rubycritic \
     rubygems-rubyntlm \
     rubygems-rubyzip \
