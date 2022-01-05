@@ -30,7 +30,7 @@ class RubyGemsTestUtils(OERuntimeTestCase):
         _, _ = self.target.run(
             "echo \"require '%s'\" > /tmp/_rubygems.test" % require)
         status, output = self.target.run("ruby /tmp/_rubygems.test")
-        self.assertEquals(
+        self.assertEqual(
             status, 0, msg="%s should be loadable. ruby output: %s" % (require, output))
 
     def gem_exec_wrapper(self, _exec):
@@ -40,5 +40,5 @@ class RubyGemsTestUtils(OERuntimeTestCase):
         _expret = RubyGemsTestExceptions.exec_wrapper_return_codes.get(
             _exec, 0)
         status, output = self.target.run("%s --help" % _exec)
-        self.assertEquals(
+        self.assertEqual(
             status, _expret, msg="%s exec is runnable. output: %s" % (_exec, output))
