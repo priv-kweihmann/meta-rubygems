@@ -41,9 +41,9 @@ please check the following table to pick the correct branch matching your poky v
 
 | poky release | suggested meta-rubygems branch | ruby version |
 | ------------ | ------------------------------ | ------------ |
-| master       | master                         | 3.x          |
-| honister     | master                         | 3.x          |
-| hardknott    | master                         | 3.x          |
+| master       | master                         | 3.1.x        |
+| honister     | hardknott                      | 3.0.x        |
+| hardknott    | hardknott                      | 3.0.x        |
 | gatesgarth   | dunfell                        | 2.7.x        |
 | dunfell      | dunfell                        | 2.7.x        |
 | zeus         | zeus                           | 2.5.x        |
