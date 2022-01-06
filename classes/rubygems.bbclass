@@ -52,11 +52,11 @@ def get_gem_name_from_bpn(d):
     return gemName
 
 def get_cross_platform_folder(d):
-    target_arch = d.getVar("TARGET_ARCH")
-    target_os = d.getVar("TARGET_OS")
+    target_arch = d.getVar("HOST_ARCH")
+    target_os = d.getVar("HOST_OS")
     if target_os.endswith("linux"):
         target_os = target_os.replace('linux', 'linux-gnu')
-    return target_arch + "-" + target_os + "-cross"
+    return target_arch + "-" + target_os
 
 
 do_gem_unpack() {
@@ -69,15 +69,11 @@ do_gem_unpack() {
     gem unpack -V ${GEM_FILE}
 }
 
-DEPENDS:append = " ${EXTRA_DEPENDS}"
-DEPENDS:append:class-target = " ruby ruby-cross-${TARGET_ARCH} ${EXTRA_DEPENDS}"
+DEPENDS:append = " ruby-native ${EXTRA_DEPENDS}"
+DEPENDS:append:class-target = " ruby ruby-native ${EXTRA_DEPENDS}"
 
 python () {
-    # unpack_gem need ruby to be installed in sysroot to succeed
-    if bb.data.inherits_class('native', d):
-        d.appendVarFlag('do_gem_unpack', 'depends', ' ruby-native:do_populate_sysroot')
-    else:
-        d.appendVarFlag('do_gem_unpack', 'depends', ' ruby-cross-%s:do_populate_sysroot' % d.getVar("TARGET_ARCH", True))
+    d.appendVarFlag('do_gem_unpack', 'depends', ' ruby-native:do_populate_sysroot')
 }
 
 do_gem_unpack[vardepsexclude] += "prefix_native"
