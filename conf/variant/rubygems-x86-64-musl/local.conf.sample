@@ -1,8 +1,0 @@
-MACHINE = "qemux86-64"
-
-include conf/variant/rubygems/common.inc
-include conf/variant/rubygems/ci.inc
-include conf/variant/rubygems/glibc.inc
-
-CONF_VERSION = "1"
-
