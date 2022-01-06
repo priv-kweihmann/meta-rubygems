@@ -19,6 +19,19 @@ This layer is a rolling release.
 Integration is continuously checked against the HEAD of the corresponding poky layer.
 Don't expect tags or any kind of versioning.
 
+### poky release mapping
+
+please check the following table to pick the correct branch matching your poky version
+
+| poky release | suggested meta-rubygems branch | ruby version |
+| ------------ | ------------------------------ | ------------ |
+| master       | master                         | 3.1.x        |
+| honister     | hardknott                      | 3.0.x        |
+| hardknott    | hardknott                      | 3.0.x        |
+| gatesgarth   | dunfell                        | 2.7.x        |
+| dunfell      | dunfell                        | 2.7.x        |
+| zeus         | zeus                           | 2.5.x        |
+
 ## License
 
 This layer is licensed under `MIT & BSD-2-Clause`.
