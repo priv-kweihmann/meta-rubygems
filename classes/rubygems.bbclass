@@ -52,11 +52,11 @@ def get_gem_name_from_bpn(d):
     return gemName
 
 def get_cross_platform_folder(d):
-    target_arch = d.getVar("TARGET_ARCH",True)
-    target_os = d.getVar("TARGET_OS",True)
+    target_arch = d.getVar("HOST_ARCH")
+    target_os = d.getVar("HOST_OS")
     if target_os.endswith("linux"):
         target_os = target_os.replace('linux', 'linux-gnu')
-    return target_arch + "-" + target_os + "-cross"
+    return target_arch + "-" + target_os
 
 
 do_gem_unpack() {
@@ -69,16 +69,11 @@ do_gem_unpack() {
     gem unpack -V ${GEM_FILE}
 }
 
-DEPENDS:append:class-target = " ruby ruby-cross-${TARGET_ARCH}"
-RDEPENDS:${PN}:append:class-target = " ${EXTRA_RDEPENDS}"
-DEPENDS:append = " ${EXTRA_DEPENDS}"
+DEPENDS:append = " ruby-native ${EXTRA_DEPENDS}"
+DEPENDS:append:class-target = " ruby ruby-native ${EXTRA_DEPENDS}"
 
 python () {
-    # unpack_gem need ruby to be installed in sysroot to succeed
-    if bb.data.inherits_class('native', d):
-        d.appendVarFlag('do_gem_unpack', 'depends', ' ruby-native:do_populate_sysroot')
-    else:
-        d.appendVarFlag('do_gem_unpack', 'depends', ' ruby-cross-%s:do_populate_sysroot' % d.getVar("TARGET_ARCH", True))
+    d.appendVarFlag('do_gem_unpack', 'depends', ' ruby-native:do_populate_sysroot')
 }
 
 do_gem_unpack[vardepsexclude] += "prefix_native"
@@ -103,7 +98,7 @@ do_generate_spec() {
 }
 
 do_generate_spec[vardepsexclude] += "prefix_native"
-addtask generate_spec after do_gem_unpack before do_patch
+addtask do_generate_spec after do_gem_unpack before do_patch
 
 python do_arch_patch_config() {
     import re
@@ -143,7 +138,7 @@ python do_arch_patch_config() {
 }
 
 do_arch_patch_config[doc] = "patches the correct compiler settings into the cross template"
-addtask do_arch_patch_config after generate_spec do_gem_unpack before do_compile
+addtask do_arch_patch_config after do_generate_spec do_gem_unpack before do_compile
 
 rubygems_do_compile() {
     export GEM_PATH=${GEM_PATH}
@@ -229,9 +224,10 @@ FILES:${PN} += "\
     ${GEM_DIR}/gems \
     ${GEM_DIR}/specifications \
     ${RUBY_SITEDIR} \
+    ${libdir}/ruby/gems/${GEMLIB_VERSION}/plugins \
 "
 
-RDEPENDS:${PN}:append:class-target = " ruby"
+RDEPENDS:${PN}:append:class-target = " ruby ${EXTRA_RDEPENDS}"
 RDEPENDS:${PN}-tests:append:class-target = " ruby"
 
 UPSTREAM_CHECK_URI ?= "https://rubygems.org/gems/${GEM_NAME}/versions"
