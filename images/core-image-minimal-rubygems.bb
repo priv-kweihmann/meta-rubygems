@@ -19,3 +19,4 @@ DEFAULT_TEST_SUITES = "${RUBYGEMS_TEST_SUITE}"
 
 # Save a call by manually placing the dependency on the image
 do_testimage[depends] += "${PN}:do_image_complete"
+do_image_complete[depends] += "virtual/kernel:do_deploy"
