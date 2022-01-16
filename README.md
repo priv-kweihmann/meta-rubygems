@@ -23,7 +23,7 @@ Up to the following revisions automated checks being performed
 ## Support
 
 This layer is a rolling release.
-Integration is continuously checked against the HEAD of the corresponding poky layer.
+Integration is continuously checked against the respective [revisions](#tested-revisions) of the corresponding layers.
 Don't expect tags or any kind of versioning.
 
 ### poky release mapping
