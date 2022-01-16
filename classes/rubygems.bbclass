@@ -111,16 +111,20 @@ python do_arch_patch_config() {
         "CFLAGS": d.expand("${CFLAGS}"),
         "CPP": d.expand("${CPP}"),
         "CPPFLAGS": d.expand("${CPPFLAGS}"),
+        "cppflags": d.expand("${CPPFLAGS}"),
         "CXX": d.expand("${CXX}"),
         "CXXFLAGS": d.expand("${CFLAGS}"),
+        "DLDFLAGS": d.expand("${LDFLAGS}"),
+        "DLEXT": d.expand("so.${PV}"),
+        "includedir": d.expand("${STAGING_INCDIR}"),
         "LDFLAGS": d.expand("${LDFLAGS}"),
+        "libdir": d.expand("${STAGING_LIBDIR}"),
+        "libexecdir": "$(exec_prefix)/libexec",
         "NM": d.expand("${NM}"),
         "OBJDUMP": d.expand("${OBJDUMP}"),
         "RANLIB": d.expand("${RANLIB}"),
-        "STRIP": d.expand("${STRIP}"),
-        "cppflags": d.expand("${CPPFLAGS}"),
         "SOEXT": d.expand("so.${PV}"),
-        "DLEXT": d.expand("so.${PV}"),
+        "STRIP": d.expand("${STRIP}"),
     }
 
     cnt = ""
