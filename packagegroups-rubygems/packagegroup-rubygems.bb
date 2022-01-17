@@ -68,6 +68,7 @@ RDEPENDS:${PN} += "\
     rubygems-aws-sdk-route53domains \
     rubygems-aws-sdk-route53resolver \
     rubygems-aws-sdk-s3 \
+    rubygems-aws-sdk-s3control \
     rubygems-aws-sdk-secretsmanager \
     rubygems-aws-sdk-securityhub \
     rubygems-aws-sdk-servicecatalog \
@@ -82,6 +83,7 @@ RDEPENDS:${PN} += "\
     rubygems-aws-sdk-states \
     rubygems-aws-sdk-synthetics \
     rubygems-aws-sdk-transfer \
+    rubygems-aws-sdk-waf \
     rubygems-aws-sigv2 \
     rubygems-aws-sigv4 \
     rubygems-axiom-types \
