@@ -12,11 +12,21 @@ class RubyGemsTestExceptions():
     }
 
     loadable_skips = {
+        "aws-defaults": "uninitialized constant Aws::DefaultsModeConfigResolver::EC2Metadata (NameError)",
+        "azure_graph_rbac": "uninitialized constant Faraday::Response::Middleware (NameError)",
+        "azure_mgmt_key_vault": "uninitialized constant Faraday::Response::Middleware (NameError)",
+        "azure_mgmt_resources": "uninitialized constant Faraday::Response::Middleware (NameError)",
+        "azure_mgmt_security": "uninitialized constant Faraday::Response::Middleware (NameError)",
+        "azure_mgmt_storage": "uninitialized constant Faraday::Response::Middleware (NameError)",
+        "corefoundation": "ffi_lib loading error",
         "gauntlet_flay": "causes a SIGKILL",
         "gauntlet_flog": "causes a SIGKILL",
         "gauntlet_grep": "causes a SIGKILL",
         "gauntlet_parser": "causes a SIGKILL",
         "jekyll-sass-converter": "module:Jekyll: uninitialized constant Jekyll::Page (NameError)",
+        "jeventmachine": "`require': cannot load such file -- java (LoadError)",
+        "ms_rest_azure": "uninitialized constant Faraday::Response::Middleware (NameError)",
+        "ms_rest": "uninitialized constant Faraday::Response::Middleware (NameError)",
         "proxifier": "uninitialized class variable @@schemes",
         "ruby20_parser": "not the parser you are looking for",
         "ruby21_parser": "not the parser you are looking for",
