@@ -6,8 +6,13 @@ HOMEPAGE = "https://trailblazer.to/"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=246c61a72af89fae27a4339662b56ee8"
 
-SRC_URI[md5sum] = "c649c7ef2238155de5eb58ed5041e534"
-SRC_URI[sha256sum] = "59c59c76d20e091f898509ad4f9c7c0017b5bea256b91cd73fa6818372caba79"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "610402f739531c4fb435912818bb5fec"
+SRC_URI[sha256sum] = "20e4f12ea4e1f718c8007e7944ca21a329eee4eed9e0fa5dde6e8ad8ac4344a3"
 
 GEM_NAME = "trailblazer-option"
 
