@@ -6,13 +6,18 @@ HOMEPAGE = "http://github.com/igrigorik/em-websocket"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENCE;md5=4380eb54de8fb059e00993d1f4a8537f"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-eventmachine-native \
     rubygems-http-parser.rb-native \
 "
 
-SRC_URI[md5sum] = "a730813935b12faf8d6780d4f7e5e19e"
-SRC_URI[sha256sum] = "6bae6d8dd9c05c0d1619aef91903c82542de7a15fa92e0110d13a8324eafe1d5"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "d9bacf756e7e3100aa3790aad5b289d0"
+SRC_URI[sha256sum] = "f56a92bde4e6cb879256d58ee31f124181f68f8887bd14d53d5d9a292758c6a8"
 
 GEM_NAME = "em-websocket"
 
