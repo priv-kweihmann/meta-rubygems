@@ -9,6 +9,7 @@ LIC_FILES_CHKSUM = "file://License.txt;md5=59252b93b9ae85dab91487d72990f77c"
 EXTRA_DEPENDS:append = " \
     rubygems-codeclimate-engine-rb \
 "
+EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-kwalify-native \
@@ -16,8 +17,10 @@ DEPENDS:class-native += "\
     rubygems-rainbow-native \
 "
 
-SRC_URI[md5sum] = "7cf7847d9e221fa47d0b08a137867ca0"
-SRC_URI[sha256sum] = "baf919d91746450b12780522705a8c06f16cd22a3b2a057ed6c9c93491e1c1f0"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "677f62be3b823df0ee2f930af7837755"
+SRC_URI[sha256sum] = "29cddb522e99df84d1ca600a1e2dab4eaf0be80fe40e90e498585570f6de9025"
 
 GEM_NAME = "reek"
 
