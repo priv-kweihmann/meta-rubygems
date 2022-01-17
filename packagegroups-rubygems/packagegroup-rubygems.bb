@@ -107,6 +107,7 @@ RDEPENDS:${PN} += "\
     rubygems-colorator \
     rubygems-concurrent-ruby \
     rubygems-connection-pool \
+    rubygems-cookstyle \
     rubygems-declarative \
     rubygems-declarative-option \
     rubygems-deep-merge \
@@ -232,6 +233,7 @@ RDEPENDS:${PN} += "\
     rubygems-rb-fsevent \
     rubygems-rb-inotify \
     rubygems-reek \
+    rubygems-regexp-parser \
     rubygems-representable \
     rubygems-retriable \
     rubygems-rouge \
@@ -242,7 +244,10 @@ RDEPENDS:${PN} += "\
     rubygems-rspec-junit-formatter \
     rubygems-rspec-mocks \
     rubygems-rspec-support \
+    rubygems-rubocop \
+    rubygems-rubocop-ast \
     rubygems-ruby-parser \
+    rubygems-ruby-progressbar \
     rubygems-ruby2-keywords \
     rubygems-rubycritic \
     rubygems-rubyntlm \
