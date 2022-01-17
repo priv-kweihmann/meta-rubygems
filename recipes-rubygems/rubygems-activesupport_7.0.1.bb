@@ -4,7 +4,7 @@ DESCRIPTION = "A toolkit of support libraries and Ruby core extensions extracted
 HOMEPAGE = "https://rubyonrails.org"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://MIT-LICENSE;md5=a2e0e281b9b6c47f722da2255eca5d68"
+LIC_FILES_CHKSUM = "file://MIT-LICENSE;md5=c4df0cf970eec55a9d2006485982d245"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -14,13 +14,12 @@ DEPENDS:class-native += "\
     rubygems-i18n-native \
     rubygems-minitest-native \
     rubygems-tzinfo-native \
-    rubygems-zeitwerk-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "0a841f7aaffd3f337c22523b00c74512"
-SRC_URI[sha256sum] = "44b781877c2189aa15ca5451e2d310dcedfd16c01df1106f68a91b82990cfda5"
+SRC_URI[md5sum] = "46edb3cd0d5c8589fbdb99282f33a663"
+SRC_URI[sha256sum] = "46ddc45b4ed13175d4ea1d89c3ce44110160e5c73194a23fd330a5656fd29e0a"
 
 GEM_NAME = "activesupport"
 
@@ -33,7 +32,6 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-i18n \
     rubygems-minitest \
     rubygems-tzinfo \
-    rubygems-zeitwerk \
 "
 
 BBCLASSEXTEND = "native"
