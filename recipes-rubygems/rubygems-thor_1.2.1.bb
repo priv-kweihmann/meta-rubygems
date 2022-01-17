@@ -6,8 +6,13 @@ HOMEPAGE = "http://whatisthor.com/"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=690cce21f4e069148a52834e1ecf352e"
 
-SRC_URI[md5sum] = "0d39b5be66778612f3233253e5b78ae6"
-SRC_URI[sha256sum] = "cacae12a3761be4ccbe63be19261352b108f86c721c37d87664328efeaa6d0a3"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "e80a4c4a50ac0af2625e238e683fe595"
+SRC_URI[sha256sum] = "b1752153dc9c6b8d3fcaa665e9e1a00a3e73f28da5e238b81c404502e539d446"
 
 GEM_NAME = "thor"
 
