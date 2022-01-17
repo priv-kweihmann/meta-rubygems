@@ -6,23 +6,28 @@ HOMEPAGE = "https://github.com/rspec/rspec-expectations"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=3d96800bd9b5ffa0ed091438eaea6f01"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-diff-lcs-native \
     rubygems-rspec-support-native \
 "
 
-RDEPENDS:${PN}:class-target += "\
-    rubygems-diff-lcs \
-    rubygems-rspec-support \
-"
+GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "65cca592c5fd3044456099f45d159b5d"
-SRC_URI[sha256sum] = "27acf5d5df13f8cc8f7158001ebf572513bcec3d45404ba76e0a8998895ce9eb"
+SRC_URI[md5sum] = "94989657aec375012f00e8614571c623"
+SRC_URI[sha256sum] = "fa9fdf7e7bf2e5e5b3143b2b18fea05e209406d96b92a9a722753426931432e3"
 
 GEM_NAME = "rspec-expectations"
 
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS:${PN}:class-target += "\
+    rubygems-diff-lcs \
+    rubygems-rspec-support \
+"
 
 BBCLASSEXTEND = "native"
