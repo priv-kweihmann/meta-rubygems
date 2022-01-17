@@ -108,6 +108,7 @@ RDEPENDS:${PN} += "\
     rubygems-concurrent-ruby \
     rubygems-connection-pool \
     rubygems-cookstyle \
+    rubygems-corefoundation \
     rubygems-declarative \
     rubygems-declarative-option \
     rubygems-deep-merge \
