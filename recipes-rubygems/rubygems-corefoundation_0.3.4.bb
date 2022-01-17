@@ -7,7 +7,7 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=1814884814f0a48dea9ee270f29af6f6"
 
 EXTRA_DEPENDS:append = " "
-EXTRA_RDEPENDS:append = " "
+EXTRA_RDEPENDS:append = " libffi"
 
 DEPENDS:class-native += "\
     rubygems-ffi-native \
