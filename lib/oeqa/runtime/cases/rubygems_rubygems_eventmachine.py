@@ -8,3 +8,6 @@ class RubyGemsTestrubygems_eventmachine(RubyGemsTestUtils):
     def test_load_eventmachine(self):
         self.gem_is_loadable("eventmachine")
 
+    def test_load_jeventmachine(self):
+        self.gem_is_loadable("jeventmachine")
+
