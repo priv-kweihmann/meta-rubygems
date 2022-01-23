@@ -6,6 +6,9 @@ HOMEPAGE = "https://github.com/google/google-api-ruby-client"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=7e6820981d59cdfac1e6538d3aacfd11"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-addressable-native \
     rubygems-googleauth-native \
@@ -17,8 +20,10 @@ DEPENDS:class-native += "\
     rubygems-webrick-native \
 "
 
-SRC_URI[md5sum] = "db03b189498cd9f1febb787b4a2b613f"
-SRC_URI[sha256sum] = "1e334ff47ce35680f0bb701abeaa94cbb48af77d7f62b96aa3293fca8c91ffdb"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "16fe4046d7507e8521a2edb91cc0f046"
+SRC_URI[sha256sum] = "eb84fc47d74f8e71fdac93a132d09eee40b2943bdabd50683ad3a0f7e62e61a7"
 
 GEM_NAME = "google-apis-core"
 
