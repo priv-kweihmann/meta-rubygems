@@ -7,7 +7,9 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=1814884814f0a48dea9ee270f29af6f6"
 
 EXTRA_DEPENDS:append = " "
-EXTRA_RDEPENDS:append = " libffi"
+EXTRA_RDEPENDS:append = " \
+    libffi \
+"
 
 DEPENDS:class-native += "\
     rubygems-ffi-native \
@@ -15,8 +17,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "b67d0b8580e22ecc9fba8fe65fff1b14"
-SRC_URI[sha256sum] = "26e1a17c0bcf8db959dad25c85a4bbed280043981bf9ab29f0c5e2e8121dc755"
+SRC_URI[md5sum] = "137641076885053f464213c95d8320e1"
+SRC_URI[sha256sum] = "72370206c6e6eaba8ee323148870b7a4d09e466054dc84474e58462120323aa7"
 
 GEM_NAME = "corefoundation"
 
