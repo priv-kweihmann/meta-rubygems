@@ -92,3 +92,4 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: core-image-minimal-rubygems
+          ignore-exit-codes: "124"
