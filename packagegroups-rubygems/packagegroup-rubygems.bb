@@ -224,6 +224,7 @@ RDEPENDS:${PN} += "\
     rubygems-pastel \
     rubygems-path-expander \
     rubygems-pathutil \
+    rubygems-patron \
     rubygems-plist \
     rubygems-proxifier \
     rubygems-pry \
