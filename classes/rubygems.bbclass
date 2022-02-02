@@ -52,8 +52,8 @@ def get_gem_name_from_bpn(d):
     return gemName
 
 def get_cross_platform_folder(d):
-    target_arch = d.getVar("HOST_ARCH")
-    target_os = d.getVar("HOST_OS")
+    target_arch = d.getVar("BUILD_ARCH")
+    target_os = d.getVar("BUILD_OS")
     if target_os.endswith("linux"):
         target_os = target_os.replace('linux', 'linux-gnu')
     return target_arch + "-" + target_os
