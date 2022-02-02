@@ -39,7 +39,7 @@ GEM_INSTALL_FLAGS ?= ""
 EXTRA_RDEPENDS ?= ""
 EXTRA_DEPENDS ?= ""
 
-RUBYLIB:class-target = "${STAGING_LIBDIR_NATIVE}/ruby/${GEMLIB_VERSION}/${@get_cross_platform_folder(d)}"
+RUBYLIB:class-target = "${STAGING_LIBDIR_NATIVE}/ruby/${GEMLIB_VERSION}/${@get_build_platform_folder(d)}"
 CFLAGS:append = " -DHAVE_GCC_CAS"
 
 def get_gem_name_from_bpn(d):
@@ -51,12 +51,12 @@ def get_gem_name_from_bpn(d):
         gemName = bpn
     return gemName
 
-def get_cross_platform_folder(d):
-    target_arch = d.getVar("HOST_ARCH")
-    target_os = d.getVar("HOST_OS")
-    if target_os.endswith("linux"):
-        target_os = target_os.replace('linux', 'linux-gnu')
-    return target_arch + "-" + target_os
+def get_build_platform_folder(d):
+    build_arch = d.getVar("BUILD_ARCH")
+    build_os = d.getVar("BUILD_OS")
+    if build_os.endswith("linux"):
+        build_os = build_os.replace('linux', 'linux-gnu')
+    return build_arch + "-" + build_os
 
 
 do_gem_unpack() {
