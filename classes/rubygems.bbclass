@@ -40,6 +40,7 @@ EXTRA_RDEPENDS ?= ""
 EXTRA_DEPENDS ?= ""
 
 RUBYLIB:class-target = "${STAGING_LIBDIR_NATIVE}/ruby/${GEMLIB_VERSION}/${@get_build_platform_folder(d)}"
+RUBYPLATFORM:class-target = "${@get_target_platform_folder(d)}"
 CFLAGS:append = " -DHAVE_GCC_CAS"
 
 def get_gem_name_from_bpn(d):
@@ -58,6 +59,12 @@ def get_build_platform_folder(d):
         build_os = build_os.replace('linux', 'linux-gnu')
     return build_arch + "-" + build_os
 
+def get_target_platform_folder(d):
+    target_arch = d.getVar("HOST_ARCH")
+    target_os = d.getVar("HOST_OS")
+    if target_os.endswith("linux"):
+        target_os = target_os.replace('linux', 'linux-gnu')
+    return target_arch + "-" + target_os
 
 do_gem_unpack() {
     export RUBYLIB=${RUBYLIB}
@@ -105,6 +112,7 @@ python do_arch_patch_config() {
     if bb.data.inherits_class('native', d):
         return
     _map = {
+        "arch": d.expand("${RUBYPLATFORM}"),
         "AR": d.expand("${AR}"),
         "AS": d.expand("${AS}"),
         "CC": d.expand("${CC}"),
