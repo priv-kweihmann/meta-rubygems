@@ -4,7 +4,7 @@ on:
   repository_dispatch:
     types: do-hardknott-cherry-pick
   schedule:
-    - cron: "0 4 * * 1"
+    - cron: "0 2 * * 2"
 
 jobs:
   buildrun:
