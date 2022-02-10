@@ -8,7 +8,7 @@ The following variants are tested regularly:
 
 | variant    | glibc                                                                                                                                           |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| qemux86-64 | ![[master]-[glibc]-[qemux86-64]](https://github.com/priv-kweihmann/meta-rubygems/workflows/%5Bmaster%5D-%5Bglibc%5D-%5Bqemux86-64%5D/badge.svg) |
+| qemuarm64 | ![[master]-[glibc]-[qemuarm64]](https://github.com/priv-kweihmann/meta-rubygems/workflows/%5Bmaster%5D-%5Bglibc%5D-%5Bqemuarm64%5D/badge.svg) |
 
 Other variants most likely will work.
 Feel free to contribute any needed patches.

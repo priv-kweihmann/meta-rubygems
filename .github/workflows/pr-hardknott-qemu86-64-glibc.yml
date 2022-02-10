@@ -1,4 +1,4 @@
-name: "[pr]-[glibc]-[qemux86-64]"
+name: "[pr]-[glibc]-[qemuarm64]"
 
 on: 
   pull_request:
@@ -27,7 +27,7 @@ jobs:
       env:
         WORKSPACE: /opt/build
         TOPDIR: /opt/build
-        TEMPLATECONF: /opt/build/sources/meta-rubygems/conf/variant/rubygems-x86-64-glibc
+        TEMPLATECONF: /opt/build/sources/meta-rubygems/conf/variant/rubygems-arm64-glibc
       volumes:
         - ${{ github.workspace }}:/opt/build
       options: --privileged
@@ -58,9 +58,9 @@ jobs:
         uses: actions/cache@v2
         with:
           path: /opt/build/sstate-cache
-          key: rubygems-x86-64-glibc-${{ github.base_ref }}
+          key: rubygems-arm64-glibc-${{ github.base_ref }}
           restore-keys: |
-            rubygems-x86-64-glibc-
+            rubygems-arm64-glibc-
       - name: activate (caches)
         uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
         with:
