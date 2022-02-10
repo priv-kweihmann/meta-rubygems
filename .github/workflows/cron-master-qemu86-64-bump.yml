@@ -1,4 +1,4 @@
-name: "[cron]-[glibc]-[qemux86-64]-[bump]"
+name: "[cron]-[glibc]-[qemuarm64]-[bump]"
 
 on:
   repository_dispatch:
@@ -28,7 +28,7 @@ jobs:
       env:
         WORKSPACE: /opt/build
         TOPDIR: /opt/build
-        TEMPLATECONF: /opt/build/sources/meta-rubygems/conf/variant/rubygems-x86-64-glibc
+        TEMPLATECONF: /opt/build/sources/meta-rubygems/conf/variant/rubygems-arm64-glibc
       volumes:
         - ${{ github.workspace }}:/opt/build
       options: --privileged
