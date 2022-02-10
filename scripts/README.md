@@ -43,9 +43,9 @@ from within the docker run
 
 ```shell
 # for glibc
-export TEMPLATECONF=/opt/build/layer/meta-rubygems/conf/variant/rubygems-x86-64-glibc
+export TEMPLATECONF=/opt/build/layer/meta-rubygems/conf/variant/rubygems-arm64-glibc
 # for musl
-# export TEMPLATECONF=/opt/build/layer/meta-rubygems/conf/variant/rubygems-x86-64-musl
+# export TEMPLATECONF=/opt/build/layer/meta-rubygems/conf/variant/rubygems-arm64-musl
 cd /opt/build
 source layer/poky/oe-init-build-env build-ruby/
 bitbake core-image-minimal-rubygems -c testimage

@@ -1,4 +1,4 @@
-MACHINE = "qemux86-64"
+MACHINE = "qemuarm64"
 
 include conf/variant/rubygems/common.inc
 include conf/variant/rubygems/ci.inc
