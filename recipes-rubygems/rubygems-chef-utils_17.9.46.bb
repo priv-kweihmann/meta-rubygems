@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "7fcd5904bb64e795b694a92986aa8414"
-SRC_URI[sha256sum] = "578afa7891ce1c6d03020003a14b0e2d23964a96a37e656941b0a836b90e90db"
+SRC_URI[md5sum] = "e06a7e272d2d778d0f3f63011feff6a0"
+SRC_URI[sha256sum] = "9c202c1fd19077e92c91e68eb217bf56b1fe7ef19f83111964e02280766095bb"
 
 GEM_NAME = "chef-utils"
 
