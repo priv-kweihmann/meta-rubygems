@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "94989657aec375012f00e8614571c623"
-SRC_URI[sha256sum] = "fa9fdf7e7bf2e5e5b3143b2b18fea05e209406d96b92a9a722753426931432e3"
+SRC_URI[md5sum] = "3ab0778dee499831dbdf1a1d052c586b"
+SRC_URI[sha256sum] = "a3c0859805bdfd88bef90bf050cbb4a04f01fe9e0ad24e5b77571e1abd823100"
 
 GEM_NAME = "rspec-expectations"
 
