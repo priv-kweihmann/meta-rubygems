@@ -39,8 +39,17 @@ GEM_INSTALL_FLAGS ?= ""
 EXTRA_RDEPENDS ?= ""
 EXTRA_DEPENDS ?= ""
 
-RUBYLIB:class-target = "${STAGING_LIBDIR_NATIVE}/ruby/${GEMLIB_VERSION}/${@get_build_platform_folder(d)}"
-RUBYPLATFORM:class-target = "${@get_target_platform_folder(d)}"
+RUBYLIB_EXTRA_PATHS ?= ""
+
+def extra_paths(d):
+    res = (d.getVar('RUBYLIB_EXTRA_PATHS') or '').split(' ')
+    if res:
+        return ':' + ':'.join(res)
+    return ''
+
+RUBYLIB:class-target = "${STAGING_LIBDIR_NATIVE}/ruby/${GEMLIB_VERSION}/${@get_build_platform_folder(d)}${@extra_paths(d)}"
+RUBYPLATFORM ?= "ruby"
+RUBYPLATFORM:class-target ?= "${@get_target_platform_folder(d)}"
 CFLAGS:append = " -DHAVE_GCC_CAS"
 
 def get_gem_name_from_bpn(d):
@@ -111,20 +120,29 @@ python do_arch_patch_config() {
     import re
     if bb.data.inherits_class('native', d):
         return
+    target_cpu, target_vendor, target_os = get_target_platform_folder(d).split('-')
+    
     _map = {
-        "arch": d.expand("${RUBYPLATFORM}"),
         "AR": d.expand("${AR}"),
+        "arch": d.expand("${RUBYPLATFORM}"),
+        "archincludedir": "$(includedir)",
+        "archlibdir": "$(libdir)",
         "AS": d.expand("${AS}"),
         "CC": d.expand("${CC}"),
         "CFLAGS": d.expand("${CFLAGS}"),
         "CPP": d.expand("${CPP}"),
         "CPPFLAGS": d.expand("${CPPFLAGS}"),
         "cppflags": d.expand("${CPPFLAGS}"),
+        "CROSS_COMPILING": "yes",
         "CXX": d.expand("${CXX}"),
         "CXXFLAGS": d.expand("${CFLAGS}"),
-        "DLDFLAGS": d.expand("${LDFLAGS}"),
         "DLEXT": d.expand("so.${PV}"),
+        "host_alias": "-".join([target_cpu, target_vendor]),
+        "host_cpu": target_cpu,
+        "host_os": target_os,
+        "host": get_target_platform_folder(d),
         "includedir": d.expand("${STAGING_INCDIR}"),
+        "LD": d.expand("${LD}"),
         "LDFLAGS": d.expand("${LDFLAGS}"),
         "libdir": d.expand("${STAGING_LIBDIR}"),
         "libexecdir": "$(exec_prefix)/libexec",
@@ -133,20 +151,30 @@ python do_arch_patch_config() {
         "RANLIB": d.expand("${RANLIB}"),
         "SOEXT": d.expand("so.${PV}"),
         "STRIP": d.expand("${STRIP}"),
+        "target_alias": "-".join([target_cpu, target_vendor]),
+        "target_cpu": target_cpu,
+        "target_os": target_os,
+        "target": get_target_platform_folder(d),
+        "TEST_RUNNABLE": "no",
+        #"DLDFLAGS": d.expand("${LDFLAGS}"),
     }
 
     cnt = ""
-    with open(d.expand("${RUBYLIB}/rbconfig.rb")) as i:
-        cnt = i.read()
+    for item in d.expand("${RUBYLIB}").split(':'):
+        item = os.path.join(item, 'rbconfig.rb')
+        if not os.path.isfile(item) or not os.path.exists(item):
+            continue
+        with open(item) as i:
+            cnt = i.read()
 
-    for m in re.finditer(r'^(\s+|\t+)CONFIG\[\"(?P<var>.*)\"\]\s+=\s+\"(?P<value>.*)\"$', cnt, re.MULTILINE):
-        if m.group("var") in _map:
-            _rpl = '  CONFIG["{}"] = "{}"'.format(m.group("var"), _map[m.group("var")])
-            bb.note("Replace {} by {}".format(m.group(0), _rpl))
-            cnt = cnt.replace(m.group(0), _rpl)
+        for m in re.finditer(r'^(\s+|\t+)CONFIG\[\"(?P<var>.*)\"\]\s+=\s+\"(?P<value>.*)\"$', cnt, re.MULTILINE):
+            if m.group("var") in _map:
+                _rpl = '  CONFIG["{}"] = "{}"'.format(m.group("var"), _map[m.group("var")])
+                bb.note("Replace {} by {}".format(m.group(0), _rpl))
+                cnt = cnt.replace(m.group(0), _rpl)
 
-    with open(d.expand("${RUBYLIB}/rbconfig.rb"), "w") as o:
-        o.write(cnt)
+        with open(item, "w") as o:
+            o.write(cnt)
 }
 
 do_arch_patch_config[doc] = "patches the correct compiler settings into the cross template"
@@ -183,6 +211,8 @@ python do_rubygems_fix_libs() {
                     _filename, _ = os.path.splitext(_filename)
 }
 
+RUBY_INSTALL_EXTRA_FLAGS ?= ""
+
 rubygems_do_install() {
     export GEM_PATH=${GEM_PATH}
     export GEM_SPEC=${GEM_SPEC_CACHE}
@@ -190,7 +220,7 @@ rubygems_do_install() {
 
     gem uninstall ${GEM_NAME} --version ${GEM_VERSION} -x -q -V || true
 
-    gem install --local --bindir ${D}${bindir} ${GEM_BUILT_FILE} --install-dir=${GEM_HOME} -E --no-user-install --ignore-dependencies --force --conservative -V -- ${GEM_INSTALL_FLAGS}
+    gem install --local --bindir ${D}${bindir} ${GEM_BUILT_FILE} --install-dir=${GEM_HOME} -E --backtrace --norc --no-user-install --ignore-dependencies --force --conservative -V ${RUBY_INSTALL_EXTRA_FLAGS} -- ${GEM_INSTALL_FLAGS}
 
     # remove all object files
     find ${GEM_HOME} -name "*.o" -type f -exec rm -f {} \;
