@@ -49,6 +49,7 @@ SRC_URI:append = "{__srcuri}"
 DEPENDS:class-native += "{__deps}"
 DEPENDS:class-target += "{__tdeps}"
 
+RUBYLIB_EXTRA_PATHS = "{__extra_paths}"
 GEM_INSTALL_FLAGS:append = " {__install_flags}"
 
 SRC_URI[md5sum] = "{__md5sum}"
@@ -285,6 +286,7 @@ def create_tpl(args, pkgname, version):
             "__deps": _depends,
             "__disttarball": _description["gem_uri"],
             "__exports": "\n".join(save_export(_oldrecipes)),
+            "__extra_paths": prettify_list(save_variables("RUBYLIB_EXTRA_PATHS", None, _oldrecipes)),
             "__functions": "\n".join(save_functions(_oldrecipes)),
             "__homepage_uri": __homepage_uri,
             "__info": re.sub(r'\n|"', "", _description["info"].split(". ")[0]).strip(),
