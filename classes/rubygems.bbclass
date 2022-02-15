@@ -121,7 +121,7 @@ python do_arch_patch_config() {
     if bb.data.inherits_class('native', d):
         return
     target_cpu, target_vendor, target_os = get_target_platform_folder(d).split('-')
-    
+
     _map = {
         "AR": d.expand("${AR}"),
         "arch": d.expand("${RUBYPLATFORM}"),
@@ -144,7 +144,7 @@ python do_arch_patch_config() {
         "includedir": d.expand("${STAGING_INCDIR}"),
         "LD": d.expand("${LD}"),
         "LDFLAGS": d.expand("${LDFLAGS}"),
-        "libdir": d.expand("${STAGING_LIBDIR}"),
+        "libdir": d.getVar("STAGING_LIBDIR"),
         "libexecdir": "$(exec_prefix)/libexec",
         "NM": d.expand("${NM}"),
         "OBJDUMP": d.expand("${OBJDUMP}"),
