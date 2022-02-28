@@ -38,7 +38,7 @@ def __get_raw_stash(_filepath, classifier):
     _stash.AddFile(_filepath)
 
     for item in _stash.GetItemsFor(filename=_filepath, classifier=classifier, nolink=True):
-        _result.add(item.Raw)
+        _result.add(item)
 
     return _result
 
@@ -66,12 +66,18 @@ def save_variables(name, modifiers, oldrecipes):
 def save_functions(oldrecipes):
     old_values = set()
     for x in oldrecipes:
-        old_values.update(__get_raw_stash(x, Function.CLASSIFIER))
+        old_values.update([x.RealRaw for x in __get_raw_stash(x, Function.CLASSIFIER)])
     return sorted(old_values)
 
 
 def save_export(oldrecipes):
     old_values = set()
     for x in oldrecipes:
-        old_values.update(__get_raw_stash(x, Export.CLASSIFIER))
+        old_values.update([x.RealRaw for x in __get_raw_stash(x, Export.CLASSIFIER)])
+    return sorted(old_values)
+
+def save_unexpanded_var(name, oldrecipes):
+    old_values = set()
+    for x in oldrecipes:
+        old_values.update([x.RealRaw for x in __get_raw_stash(x, Variable.CLASSIFIER) if x.VarName == name])
     return sorted(old_values)
