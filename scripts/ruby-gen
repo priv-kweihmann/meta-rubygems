@@ -18,6 +18,7 @@ from semantic_version import Version
 from license_util import get_license_info
 from recipe_util import save_export
 from recipe_util import save_functions
+from recipe_util import save_unexpanded_var
 from recipe_util import save_variables
 
 _tempfolder = tempfile.TemporaryDirectory(prefix="rubygen_")
@@ -65,7 +66,7 @@ GEM_NAME = "{name}"
 
 RDEPENDS:${PN}:class-target += "{__rdeps}"
 
-INSANE_SKIP:${PN} += "{__insaneskip}"
+{__insaneskip}
 BBCLASSEXTEND = "native"
 """
 
@@ -290,7 +291,7 @@ def create_tpl(args, pkgname, version):
             "__functions": "\n".join(save_functions(_oldrecipes)),
             "__homepage_uri": __homepage_uri,
             "__info": re.sub(r'\n|"', "", _description["info"].split(". ")[0]).strip(),
-            "__insaneskip": prettify_list(save_variables("INSANE_SKIP:${PN}", None, _oldrecipes)),
+            "__insaneskip": "\n".join(save_unexpanded_var("INSANE_SKIP", _oldrecipes)),
             "__install_flags": _installflags,
             "__license": get_license(_description, _oldrecipes),
             "__rdeps": _rdepends,
