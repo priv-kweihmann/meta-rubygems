@@ -20,8 +20,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "cb1cfb231c305146f42c3e8fcc8daabf"
-SRC_URI[sha256sum] = "27cb56748983cefdcfad977eb53bfad3d5c23a766cedf8e7b0cd1ba0f66ef82f"
+SRC_URI[md5sum] = "be5afb770305e05e5b1520b3dd1865ba"
+SRC_URI[sha256sum] = "c1c1f155405820f3d37b743bb45700b29fed7b17a38414443eca7f172ec2d29f"
 
 GEM_NAME = "googleauth"
 
