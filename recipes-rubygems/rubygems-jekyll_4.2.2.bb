@@ -4,7 +4,7 @@ DESCRIPTION = "Jekyll is a simple, blog aware, static site generator."
 HOMEPAGE = "https://jekyllrb.com"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=92baaac04ede32a58b267256e1307b2b"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=bf9972594da0ef277f46d8d9e5902582"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -28,8 +28,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "7d84fea64e7f7ba8b127b3f6cf52319d"
-SRC_URI[sha256sum] = "4fb1439ce770dc7d73af083bf14cff352b076ab763ba20e4bac8e9b94b0243fb"
+SRC_URI[md5sum] = "c49631f7a3eb403d79d4404c29aea436"
+SRC_URI[sha256sum] = "f7c2ec8fdc41e5565c1e0e20df3bd6896162a5c26d75a684bef3eb144f9bfb36"
 
 GEM_NAME = "jekyll"
 
