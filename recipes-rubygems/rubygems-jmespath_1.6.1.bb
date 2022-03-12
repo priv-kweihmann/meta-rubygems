@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "c6fcdea0ef024f459536f4c7a6ec0933"
-SRC_URI[sha256sum] = "d96a8517a669a531562a9f353af6b5b3424ff497a0a50ba71e7450d66ec959be"
+SRC_URI[md5sum] = "3c84a5f234039163185a7ec31c628d0f"
+SRC_URI[sha256sum] = "40ca83f4141bdd1e503db5485de68b84237183d84cf7a159fbeebcc6005adbd6"
 
 GEM_NAME = "jmespath"
 
