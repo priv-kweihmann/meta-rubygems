@@ -6,13 +6,26 @@ HOMEPAGE = "https://github.com/lostisland/faraday-rack"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=20830660ee48a0c845a62aad77c18f4a"
 
-SRC_URI[md5sum] = "e1f15e1a8e72e3d38c7973550e11925e"
-SRC_URI[sha256sum] = "ef60ec969a2bb95b8dbf24400155aee64a00fc8ba6c6a4d3968562bcc92328c0"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
+DEPENDS:class-native += "\
+    rubygems-faraday-native \
+"
+
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "3633c44746f1f4a11febca8fd82ec61b"
+SRC_URI[sha256sum] = "41759651c9e8baba520c21f807a8787dbb8480c2dbe64569264346ffad6b0461"
 
 GEM_NAME = "faraday-rack"
 
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS:${PN}:class-target += "\
+    rubygems-faraday \
+"
 
 BBCLASSEXTEND = "native"
