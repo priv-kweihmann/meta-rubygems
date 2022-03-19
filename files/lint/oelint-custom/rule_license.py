@@ -230,6 +230,7 @@ class RubygemsLicense(Rule):
         "tcl",
         "unfs3",
         "vim",
+        "WTFPL",
     ]
 
     LAYER_LICENSE_DIR = "files/licenses"
