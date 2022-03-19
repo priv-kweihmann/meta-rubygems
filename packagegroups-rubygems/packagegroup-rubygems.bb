@@ -215,6 +215,7 @@ RDEPENDS:${PN} += "\
     rubygems-nokogiri \
     rubygems-nori \
     rubygems-ohai \
+    rubygems-options \
     rubygems-os \
     rubygems-parallel \
     rubygems-parser \
@@ -223,6 +224,7 @@ RDEPENDS:${PN} += "\
     rubygems-path-expander \
     rubygems-pathutil \
     rubygems-plist \
+    rubygems-progress-bar \
     rubygems-proxifier \
     rubygems-pry \
     rubygems-public-suffix \
