@@ -6,12 +6,17 @@ HOMEPAGE = "http://kramdown.gettalong.org"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://COPYING;md5=efa42ef946dcb15e4ee38ea3aeedf2b0"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-rexml-native \
 "
 
-SRC_URI[md5sum] = "1324f4af5b0b15d96066d2654fbe7d15"
-SRC_URI[sha256sum] = "59e938cfa42a3d6169b295727fe09c4c91d742336c8fbd1042529f4db664ab49"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "99ee9255319afa646e8f81def9234db4"
+SRC_URI[sha256sum] = "cb4530c2e9d16481591df2c9336723683c354e5416a5dd3e447fa48215a6a71c"
 
 GEM_NAME = "kramdown"
 
