@@ -54,6 +54,18 @@ jobs:
           repo: git://git.openembedded.org/meta-openembedded
           branch: ${{ env.SCM_BRANCH }}
           add-layer: "0"
+      - name: configure (caches)
+        uses: actions/cache@v2
+        with:
+          path: /opt/build/sstate-cache
+          key: rubygems-arm64-glibc-${{ github.base_ref }}
+          restore-keys: |
+            rubygems-arm64-glibc-
+      - name: activate (caches)
+        uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
+        with:
+          variable: SSTATE_MIRRORS
+          value: "file://.* file:///${WORKSPACE}/sstate-cache/PATH"
       - if: env.BUILD_GLIBC == '1'
         name: build (glibc)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
