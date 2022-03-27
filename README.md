@@ -6,8 +6,8 @@ A layer providing gems for Ruby.
 
 The following variants are tested regularly:
 
-| variant    | glibc                                                                                                                                           |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| variant   | glibc                                                                                                                                         |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | qemuarm64 | ![[master]-[glibc]-[qemuarm64]](https://github.com/priv-kweihmann/meta-rubygems/workflows/%5Bmaster%5D-%5Bglibc%5D-%5Bqemuarm64%5D/badge.svg) |
 
 Other variants most likely will work.
@@ -30,14 +30,14 @@ Don't expect tags or any kind of versioning.
 
 please check the following table to pick the correct branch matching your poky version
 
-| poky release | suggested meta-rubygems branch | ruby version |
-| ------------ | ------------------------------ | ------------ |
-| master       | master                         | 3.1.x        |
-| honister     | hardknott                      | 3.0.x        |
-| hardknott    | hardknott                      | 3.0.x        |
-| gatesgarth   | dunfell                        | 2.7.x        |
-| dunfell      | dunfell                        | 2.7.x        |
-| zeus         | zeus                           | 2.5.x        |
+| poky release | suggested meta-rubygems branch | ruby version | maintainer     |
+| ------------ | ------------------------------ | ------------ | -------------- |
+| master       | master                         | 3.1.x        | priv-kweihmann |
+| honister     | hardknott                      | 3.0.x        | n.a.           |
+| hardknott    | hardknott                      | 3.0.x        | n.a.           |
+| gatesgarth   | dunfell                        | 2.7.x        | n.a.           |
+| dunfell      | dunfell                        | 2.7.x        | n.a.           |
+| zeus         | zeus                           | 2.5.x        | n.a.           |
 
 ## License
 
