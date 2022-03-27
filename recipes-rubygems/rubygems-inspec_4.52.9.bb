@@ -14,7 +14,6 @@ DEPENDS:class-native += "\
     rubygems-faraday-middleware-native \
     rubygems-inspec-core-native \
     rubygems-mongo-native \
-    rubygems-progress-bar-native \
     rubygems-rake-native \
     rubygems-train-aws-native \
     rubygems-train-habitat-native \
@@ -24,8 +23,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "05a415cd9cbdb21577b4e45a9190660c"
-SRC_URI[sha256sum] = "8da4bfd9fc7acb5ca4f9e9d7bb8ee684afabaa52b7e617b8692e43699657da22"
+SRC_URI[md5sum] = "1901047d61519da8e930d9d1e4cf5a7d"
+SRC_URI[sha256sum] = "518a70d709031fcc674b9a941afb7798124f134c3018145207bda32ce7e80301"
 
 GEM_NAME = "inspec"
 
@@ -43,7 +42,6 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-faraday-middleware \
     rubygems-inspec-core \
     rubygems-mongo \
-    rubygems-progress-bar \
     rubygems-rake \
     rubygems-train \
     rubygems-train-aws \
