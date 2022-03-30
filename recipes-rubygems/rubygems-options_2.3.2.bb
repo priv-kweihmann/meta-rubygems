@@ -4,7 +4,7 @@ DESCRIPTION = "parse options from *args cleanly"
 HOMEPAGE = "https://github.com/ahoward/options"
 
 LICENSE = "Ruby"
-LIC_FILES_CHKSUM = "file://TODO;md5=abcdef"
+LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/Ruby;md5=105fc57d3f4d3122db32912f3e6107d0"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
