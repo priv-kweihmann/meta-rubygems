@@ -6,12 +6,17 @@ HOMEPAGE = "https://github.com/chef/mixlib-shellout"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-chef-utils-native \
 "
 
-SRC_URI[md5sum] = "fc8718167959d7bfa6a8185eb56afc1c"
-SRC_URI[sha256sum] = "121a54005e52b6596a945f7bfc95bbcbd7d8ee7685cb3736dd3cef5ff46029bd"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "2a0d602767227cad1acd0e8ece0ab6a6"
+SRC_URI[sha256sum] = "46f6d1f9c77e689a443081c5cac336203343f0f2224db06b80d39ae4cd797c7e"
 
 GEM_NAME = "mixlib-shellout"
 
