@@ -6,12 +6,15 @@ HOMEPAGE = "https://github.com/chef/wmi-lite"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 
-SRC_URI[md5sum] = "5c7be12e7d81c6f442ca4dfabeb61788"
-SRC_URI[sha256sum] = "14efa710be3226e281a66ab93f7ebc92f5e0807029e02b9cf1d3f39d15d90d84"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "92f028d883c786a63fbee8404619fa6b"
+SRC_URI[sha256sum] = "116ef5bb470dbe60f58c2db9047af3064c16245d6562c646bc0d90877e27ddda"
 
 GEM_NAME = "wmi-lite"
-
-
 
 inherit rubygems
 inherit rubygentest
