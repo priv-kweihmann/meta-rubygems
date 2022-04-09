@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "e9cfd183f583b037fc3cc4e2bca1b041"
-SRC_URI[sha256sum] = "e4a92d75cf9d0e3d50f396f5180f827dcb985f98436d4b170e7a0b864ebd6ec2"
+SRC_URI[md5sum] = "7c66f4d3a65a3e4fa25c174177502282"
+SRC_URI[sha256sum] = "ebdf1f0c51f182df38522f70ba770214940bef998cdb6e00f36492b29699761f"
 
 GEM_NAME = "parallel"
 
