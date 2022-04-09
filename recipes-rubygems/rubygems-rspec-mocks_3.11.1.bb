@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "11bc8a74175d3aa9bf9bc5625885d5bb"
-SRC_URI[sha256sum] = "43fbe2a3cdb8cb894d52440392baca61aa0e043b640e3f8963ce426f0c6b6878"
+SRC_URI[md5sum] = "fe2e6894e496c48537587a70b184dafe"
+SRC_URI[sha256sum] = "5537dc069afabcea5cbc199a1432a2772ba3a465f3233f40d04695daba7c6a1f"
 
 GEM_NAME = "rspec-mocks"
 
