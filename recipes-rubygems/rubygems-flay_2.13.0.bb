@@ -6,17 +6,22 @@ HOMEPAGE = "http://ruby.sadi.st/"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://README.rdoc;beginline=100;endline=123;md5=9729e7cc2f0b6cd88813876ac0335063"
 
-EXTRA_DEPENDS:append = " rubygems-gauntlet"
+EXTRA_DEPENDS:append = " \
+    rubygems-gauntlet \
+"
+EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
-    rubygems-erubis-native \
+    rubygems-erubi-native \
     rubygems-path-expander-native \
     rubygems-ruby-parser-native \
     rubygems-sexp-processor-native \
 "
 
-SRC_URI[md5sum] = "b2c4d45c0654ac18a13288697c512a37"
-SRC_URI[sha256sum] = "677ff6fc3727ee297a25357e908dc9cf1243eb7e61b8852d595873a4907ac4d7"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "5a5449d043b26dc25c2ee9e25d906677"
+SRC_URI[sha256sum] = "6baa1a93c5a8cb20ec99376f55c0f1aa00b7e97a3e673cb80d029be52d755486"
 
 GEM_NAME = "flay"
 
@@ -25,7 +30,7 @@ inherit rubygentest
 inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
-    rubygems-erubis \
+    rubygems-erubi \
     rubygems-path-expander \
     rubygems-ruby-parser \
     rubygems-sexp-processor \
