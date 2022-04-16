@@ -4,10 +4,15 @@ DESCRIPTION = "PublicSuffix can parse and decompose a domain name into top level
 HOMEPAGE = "https://simonecarletti.com/code/publicsuffix-ruby"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=4c89161c761aa8e9188cee9f19125f9c"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=2a74ef4eea0924a177f516b68666a34f"
 
-SRC_URI[md5sum] = "a8709e7242bf05183a56e10fca4d0e9d"
-SRC_URI[sha256sum] = "a99967c7b2d1d2eb00e1142e60de06a1a6471e82af574b330e9af375e87c0cf7"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "060e68307f51276ee6750c05c14d7c2d"
+SRC_URI[sha256sum] = "8be161e2421f8d45b0098c042c06486789731ea93dc3a896d30554ee38b573b8"
 
 GEM_NAME = "public_suffix"
 
