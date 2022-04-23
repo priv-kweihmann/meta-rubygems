@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "1261bcc75366b29cabf1970d55f23e20"
-SRC_URI[sha256sum] = "d1617ea03aa77a0664745384db503e694320a0dd19cc0351fc265b7470336299"
+SRC_URI[md5sum] = "fb464d5dbea23bcff0eeba6e44b79ebd"
+SRC_URI[sha256sum] = "4cbb9a49f9f8937a44b12a9513472d8dbf8fc69a6c427e562fbce2f323c35cee"
 
 GEM_NAME = "chef-vault"
 
