@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "99ee9255319afa646e8f81def9234db4"
-SRC_URI[sha256sum] = "cb4530c2e9d16481591df2c9336723683c354e5416a5dd3e447fa48215a6a71c"
+SRC_URI[md5sum] = "7421608eb9a387500910c92f445afc4c"
+SRC_URI[sha256sum] = "b62e5bcbd6ea20c7a6730ebbb2a107237856e14f29cebf5b10c876cc1a2481c5"
 
 GEM_NAME = "kramdown"
 
