@@ -6,6 +6,9 @@ HOMEPAGE = "https://github.com/whitesmith/rubycritic"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=ebcb01890999ed287441ae4afce9a346"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-flay-native \
     rubygems-flog-native \
@@ -19,8 +22,10 @@ DEPENDS:class-native += "\
     rubygems-virtus-native \
 "
 
-SRC_URI[md5sum] = "2b98ea1abcc1ae9dc8507e144bc0d29a"
-SRC_URI[sha256sum] = "1530cbd82a48e75909bc74efc89e0d0901359aa86d2806ce385d68d703b19095"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "15cf351929a5947255b653b143a0ed74"
+SRC_URI[sha256sum] = "4aadff039c86b2defad010682f45d8e687454fb98a7ac8766ef7f2307c73120c"
 
 GEM_NAME = "rubycritic"
 
