@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "5f2c0ce8bdf12442215b679f3c79169e"
-SRC_URI[sha256sum] = "23dd5948a0eb3306346959422fbe3336e8d8f2fe370f2590ed16564b51fa71cd"
+SRC_URI[md5sum] = "83082a1dad44c9f170594e2da2e85484"
+SRC_URI[sha256sum] = "4c8d149f88b277848ea70e455b7b00582985ad86d9f70bc7ac55628c2305073d"
 
 GEM_NAME = "aws-sdk-transfer"
 
