@@ -6,8 +6,13 @@ HOMEPAGE = "https://github.com/rack/rack"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://MIT-LICENSE;md5=7a785c27e4c8649ea0fab2dfe7219d55"
 
-SRC_URI[md5sum] = "e154f141c4463a817a088fd9bfa158e5"
-SRC_URI[sha256sum] = "2638e7eb6689a5725c7e16f30cc4aa4e31694dc3ca30d790952526781bd0bb44"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "239514a8bcb454ce64d355a998ac2ef1"
+SRC_URI[sha256sum] = "8c728da28f6d800c3839d226fdbce702c94eeb68e25e752b6c2f2be7c1d338ac"
 
 GEM_NAME = "rack"
 
