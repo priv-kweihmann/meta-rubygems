@@ -6,12 +6,17 @@ HOMEPAGE = "https://github.com/sparklemotion/http-cookie"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=f217a5829e26ed04a05e5ba14eaf2128"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-domain-name-native \
 "
 
-SRC_URI[md5sum] = "72925abeaa57cf214e93fee5ec101bbd"
-SRC_URI[sha256sum] = "89a64e1b9e3ed823b559b2030e0b62ad850d0d11325a0589145ebf93d80267a4"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "59b15c13687a44deadcfa1586355bb75"
+SRC_URI[sha256sum] = "73756d46c7dbdc7023deecdb8a171348ea95a1b99810b31cfe8b4fb4e9a6318f"
 
 GEM_NAME = "http-cookie"
 
