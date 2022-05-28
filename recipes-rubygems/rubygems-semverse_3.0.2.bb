@@ -1,17 +1,20 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: semverse"
 DESCRIPTION = "An elegant library for representing and comparing SemVer versions and constraints"
-HOMEPAGE = "https://github.com/berkshelf/semverse/"
+HOMEPAGE = "https://github.com/chef/semverse/"
 
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=0ea6ed752656ac5be37c1a1a18c684f1"
 
-SRC_URI[md5sum] = "886e22f94921973281882c6da159795e"
-SRC_URI[sha256sum] = "28dc827d3376097b478c0a06111bb1259eb8341f0f2498dd23feae39c59449e3"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "4aa3ea66cc468bcdb2e217e3c959210c"
+SRC_URI[sha256sum] = "c9726aee7858d37c84948a4101daffdcf03a0963a12a33ad7cc39a72c03530ef"
 
 GEM_NAME = "semverse"
-
-
 
 inherit rubygems
 inherit rubygentest
