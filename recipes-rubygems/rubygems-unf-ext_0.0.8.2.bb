@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "21e2d17d515bd0de6f6e0900fda908ca"
-SRC_URI[sha256sum] = "bfe72d0e07c1420e5e6c36a39c352a2f9c664e0910c58f9c977f08bc3a10c12d"
+SRC_URI[md5sum] = "c786b898d2f126f87e6c7125f3f7f488"
+SRC_URI[sha256sum] = "90b9623ee359cc4878461c5d2eab7d3d3ce5801a680a9e7ac83b8040c5b742fa"
 
 GEM_NAME = "unf_ext"
 
