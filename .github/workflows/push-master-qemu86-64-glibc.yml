@@ -47,7 +47,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
           repo: git://git.yoctoproject.org/poky.git
-          ref: 7b7dbdd48b6a5020fec31843ad65965e22edb30f
+          ref: add49bc7e0910ba36230937389836f7de1acd757
           branch: none
           add-layer: "0"
       - name: checkout (meta-rubygems)
