@@ -4,7 +4,7 @@ DESCRIPTION = "YARD is a documentation generation tool for the Ruby programming 
 HOMEPAGE = "http://yardoc.org"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=310fd4084d596f545cebfed7b54e3d7d"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=3b6f9769ae84eb7b621febf5cc8c5c62"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "ed897c4c7e09714d376a359e5e52d70b"
-SRC_URI[sha256sum] = "56a786485da23fa878dd9f56279c2a92c38426d5ab21e8efddb4c6a0e37c0834"
+SRC_URI[md5sum] = "d5ac32134ef09cb6194a0371b863c7c1"
+SRC_URI[sha256sum] = "d31b7e3172405165212e0c8db5b3b57865f0831f1bc33bdda5d0709e1e72315c"
 
 GEM_NAME = "yard"
 
