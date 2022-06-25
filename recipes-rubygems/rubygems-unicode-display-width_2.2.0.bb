@@ -4,15 +4,15 @@ DESCRIPTION = "[Unicode 14.0.0] Determines the monospace display width of a stri
 HOMEPAGE = "https://github.com/janlelis/unicode-display_width"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://MIT-LICENSE.txt;md5=24ca5026faa0b40fc4b01e7c052ffa49"
+LIC_FILES_CHKSUM = "file://MIT-LICENSE.txt;md5=38f885a87e32eed13bc10f42b4ab39cf"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "00bcceaca0212ba5b84426d4d8a0308e"
-SRC_URI[sha256sum] = "b6ff8c329fdbfcf67e4e6de642ba3df0f5e1e05935be9a2203333a0875aa5233"
+SRC_URI[md5sum] = "970f312f0401b84b9ad16437892b3feb"
+SRC_URI[sha256sum] = "967fa4071b42b2c4afab8375c4f464392c5fb956959c0ceeb3cea0f4cd648eda"
 
 GEM_NAME = "unicode-display_width"
 
