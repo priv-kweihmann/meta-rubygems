@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "dd2de898dabd530797521debe56b6b91"
-SRC_URI[sha256sum] = "0f4217161b9caa0da0ac814277862947e4d7cb2378567fc2a3d67b32edf6582c"
+SRC_URI[md5sum] = "216eb15069686b55cdd295b5151d68a0"
+SRC_URI[sha256sum] = "91e3cc1b97616d308707eedee413d82ee021d751c918661fb82152793e64aced"
 
 GEM_NAME = "i18n"
 
