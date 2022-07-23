@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: mongo"
 DESCRIPTION = "A Ruby driver for MongoDB"
-HOMEPAGE = "https://docs.mongodb.com/ruby-driver/"
+HOMEPAGE = "https://mongodb.com/docs/ruby-driver/"
 
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=5c794e202c4ddf604ec533d391ee6775"
@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "68d820772124ff31f0ecff3a89384c37"
-SRC_URI[sha256sum] = "011e0d2b073f4911001925bde73beadfcafa37266ef5375eab704418918751a7"
+SRC_URI[md5sum] = "1fe93902971a1617dcc7db7479753725"
+SRC_URI[sha256sum] = "142048c6dce4dad472e77c63adb2ec7c0ef954a2a5d644adca71fd76f8bab38d"
 
 GEM_NAME = "mongo"
 
