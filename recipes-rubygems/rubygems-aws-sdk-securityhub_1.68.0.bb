@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "cda4398b3d36dabf4175c79c72f05ba5"
-SRC_URI[sha256sum] = "0a532287c089aaf6a6eeef7e92f5f09d492d3a8d1dbb72bdfb497c94e62bef13"
+SRC_URI[md5sum] = "4315e8bb3a14b7fae05035197cfbfe4f"
+SRC_URI[sha256sum] = "2d6c045ee6f67983c46fbf34fcb27a9964904408a4bcec6553ed7af8760b0970"
 
 GEM_NAME = "aws-sdk-securityhub"
 
