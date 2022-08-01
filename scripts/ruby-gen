@@ -249,7 +249,7 @@ def double_check_license(args, __licfile, __lichash, old_recipes):
     return "file://{__licfile};md5={__lichash}".format(__licfile=__licfile, __lichash=__lichash)
 
 
-def create_tpl(args, pkgname, version):
+def create_tpl(args, pkgname, version, errata):
     global __seen_pkgs
     _naming_pattern = "rubygems-{}_{}.bb"
     if pkgname in __seen_pkgs:
@@ -265,7 +265,7 @@ def create_tpl(args, pkgname, version):
         print("Provided as stdgem by ruby")
         return
     _oldrecipes = check_existing(args, pkgname, _bestversion, _naming_pattern)
-    if not _oldrecipes:
+    if not _oldrecipes and not args.force:
         print("Same or higher version recipe already exists")
         return
     _description = _all_description
@@ -279,8 +279,8 @@ def create_tpl(args, pkgname, version):
             "GEM_INSTALL_FLAGS", None, _oldrecipes))
         _src_uri = prettify_list([x for x in save_variables(
             "SRC_URI", None, _oldrecipes) if "://" in x])
-        __homepage_uri = _description["homepage_uri"] or " ".join(
-            save_variables("HOMEPAGE", None, _oldrecipes))
+        __homepage_uri = errata.get(pkgname, {}).get("HOMEPAGE", _description["homepage_uri"] or " ".join(
+            save_variables("HOMEPAGE", None, _oldrecipes)))
         __calculated = {
             "__class": ["rubygems", "rubygentest", "pkgconfig"],
             "__cleanname": sanitize_pkgname(pkgname),
@@ -293,7 +293,7 @@ def create_tpl(args, pkgname, version):
             "__info": re.sub(r'\n|"', "", _description["info"].split(". ")[0]).strip(),
             "__insaneskip": "\n".join(save_unexpanded_var("INSANE_SKIP", _oldrecipes)),
             "__install_flags": _installflags,
-            "__license": get_license(_description, _oldrecipes),
+            "__license": errata.get(pkgname, {}).get("LICENSE", get_license(_description, _oldrecipes)),
             "__rdeps": _rdepends,
             "__srcuri": " " + _src_uri if _src_uri else "",
             "__tdeps": prettify_list(save_variables("DEPENDS", ["class-target"], _oldrecipes)),
@@ -321,7 +321,7 @@ def create_tpl(args, pkgname, version):
         for k, v in __calculated.items():
             __tpl = __tpl.replace("{{{}}}".format(k), str(v))
 
-        if not os.path.exists(_respath):
+        if not os.path.exists(_respath) or args.force:
             os.makedirs(os.path.dirname(_respath), exist_ok=True)
             # strip empty assignment lines
             _lines = __tpl.split("\n")
@@ -343,6 +343,8 @@ def create_tpl(args, pkgname, version):
 def create_parser():
     parser = argparse.ArgumentParser(
         description='Ruby recipe generator')
+    parser.add_argument("--errata", default=os.path.join(os.path.dirname(
+        __file__), "metadata-errata.json"), help="metadata errata file")
     parser.add_argument("--force", default=False,
                         action="store_true", help="enforce recipe generation")
     parser.add_argument("--rubyversion", default="9.9.9",
@@ -358,7 +360,9 @@ def create_parser():
 
 def main():
     args = create_parser()
-    create_tpl(args, args.gemname, args.gemversion)
+    with open(args.errata) as i:
+        errata = json.load(i)
+    create_tpl(args, args.gemname, args.gemversion, errata)
 
 
 if __name__ == '__main__':
