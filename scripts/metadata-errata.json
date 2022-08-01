@@ -1,0 +1,11 @@
+{
+    "diff-lcs": {
+        "LICENSE": "MIT & Artistic-2.0 & GPL-2.0-or-later"
+    },
+    "eventmachine": {
+        "LICENSE": "Ruby & GPL-2.0-only"
+    },
+    "locale": {
+        "LICENSE": "Ruby & LGPL-3.0-or-later"
+    }
+}
