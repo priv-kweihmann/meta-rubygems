@@ -3,7 +3,7 @@ SUMMARY = "RubyGem: eventmachine"
 DESCRIPTION = "EventMachine implements a fast, single-threaded engine for arbitrary networkcommunications"
 HOMEPAGE = "http://rubyeventmachine.com"
 
-LICENSE = "Ruby & GPL-2.0"
+LICENSE = "Ruby & GPL-2.0-only"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=270149a18e664d261350cfe727055898"
 
 SRC_URI[md5sum] = "c9c775bac51d47404fa1cb27a704117b"
