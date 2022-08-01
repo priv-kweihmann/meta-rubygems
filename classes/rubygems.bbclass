@@ -278,5 +278,14 @@ UPSTREAM_CHECK_REGEX ?= "/gems/${GEM_NAME}/versions/(?P<pver>(\d+\.*)*\d+)$"
 # the ruby dynamic linker just uses plain .so files
 # so we have to supply symlinks as part of the base package
 INSANE_SKIP:${PN} += "dev-so"
+# sadly the shared objects also contain some hard coded
+# host paths, which are not easy to be removed
+INSANE_SKIP:${PN} += "buildpaths"
 # we don't care what is actually needed for the dev-package
 INSANE_SKIP:${PN}-dev += "file-rdeps"
+# same issue for the dev package with buildpaths
+INSANE_SKIP:${PN}-dev += "buildpaths"
+# some of the doc utils contain host specific full paths
+# as they are mostly in binary format we are just going to
+# ignore it here
+INSANE_SKIP:${PN}-doc += "buildpaths"
