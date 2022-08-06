@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "dfc575fd7478817974d2bcf2f05cf4b0"
-SRC_URI[sha256sum] = "9d5c33e67430e3e879670558cd2dc4dd5deed3e96a2bd199f0ada79b05427006"
+SRC_URI[md5sum] = "96d4268e1bf8d0716af902f1a01f742a"
+SRC_URI[sha256sum] = "00f49eb56da623ebd99f7b388ae33590d4e093e479703d5fe139fb3f64decb72"
 
 GEM_NAME = "hiera"
 
