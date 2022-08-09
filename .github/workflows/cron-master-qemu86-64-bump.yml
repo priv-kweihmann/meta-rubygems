@@ -44,7 +44,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
           repo: git://git.yoctoproject.org/poky.git
-          ref: 2ef7affa31b4496eb295d20c63a24ebaf992a0e3
+          ref: c58fca98e4959684c5d3f3ac93570ff06898df58
           branch: none
           remove-git: "0"
           add-layer: "0"
