@@ -6,12 +6,17 @@ HOMEPAGE = "https://github.com/sporkmonger/addressable"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=f124bfaefacd4e1a4080065d403bc1d4"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-public-suffix-native \
 "
 
-SRC_URI[md5sum] = "9cd03fc88dd69b3c3491ce73de27f2f7"
-SRC_URI[sha256sum] = "f76d29d2d1f54b6c6a49aec58f9583b08d97e088c227a3fcba92f6c6531d5908"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "64cb545a6ddcfc93c68fe53ac594c5f7"
+SRC_URI[sha256sum] = "bc724a176ef02118c8a3ed6b5c04c39cf59209607ffcce77b91d0261dbadedfa"
 
 GEM_NAME = "addressable"
 
