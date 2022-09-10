@@ -4,15 +4,15 @@ DESCRIPTION = "Rack provides a minimal, modular and adaptable interface for deve
 HOMEPAGE = "https://github.com/rack/rack"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://MIT-LICENSE;md5=7a785c27e4c8649ea0fab2dfe7219d55"
+LIC_FILES_CHKSUM = "file://MIT-LICENSE;md5=559f57f8685653f279d80fa9bc84df1b"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "8adda585ad9eed36e7c90a3116832328"
-SRC_URI[sha256sum] = "ea2232b638cbd919129c8c8ad8012ecaccc09f848152a7e705d2139d0137ac2b"
+SRC_URI[md5sum] = "3bdc90f60f315f7f60c689ce6c3255c7"
+SRC_URI[sha256sum] = "197adbbe5d585dca1909fe6c544f369919d795d54fc76f86b6ce458008f6e29c"
 
 GEM_NAME = "rack"
 
