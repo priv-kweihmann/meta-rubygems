@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "6a743ced3c055e2664412574efa2b02e"
-SRC_URI[sha256sum] = "03284a86b74afbbdeff6c3dc19ac2e0fe650453a96b89f860d459ca3e825d375"
+SRC_URI[md5sum] = "fa7e9b2a6502b2dc786c49eb444fc38a"
+SRC_URI[sha256sum] = "f85f276a37e096b7bf6f308a96c59ba0a5398907f04942cede66cabc598c01b0"
 
 GEM_NAME = "rspec-support"
 
