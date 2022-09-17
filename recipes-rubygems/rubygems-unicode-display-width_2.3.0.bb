@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: unicode-display_width"
-DESCRIPTION = "[Unicode 14.0.0] Determines the monospace display width of a string using EastAsianWidth.txt, Unicode general category, and other data."
+DESCRIPTION = "[Unicode 15.0.0] Determines the monospace display width of a string using EastAsianWidth.txt, Unicode general category, and other data."
 HOMEPAGE = "https://github.com/janlelis/unicode-display_width"
 
 LICENSE = "MIT"
@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "970f312f0401b84b9ad16437892b3feb"
-SRC_URI[sha256sum] = "967fa4071b42b2c4afab8375c4f464392c5fb956959c0ceeb3cea0f4cd648eda"
+SRC_URI[md5sum] = "4c7fc5d4187d468afd3940098101489f"
+SRC_URI[sha256sum] = "4796ca01137fe8cf59cada263b74ebe6bb9583c555ec2239be4cb97c91064765"
 
 GEM_NAME = "unicode-display_width"
 
