@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "4ae4d38177006b9d1c5946f88b03c056"
-SRC_URI[sha256sum] = "b3af503512e8c9363c0bc23f960d024be1a8267c10fce4be63564739c32e10cb"
+SRC_URI[md5sum] = "a69a3fd2c367df1f67c996a5f487ac80"
+SRC_URI[sha256sum] = "40dde674e6ae4e6cc0ff560da25497677e34fefd2338cc467a8972f602b62b15"
 
 GEM_NAME = "rspec_junit_formatter"
 
