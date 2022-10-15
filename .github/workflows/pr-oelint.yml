@@ -21,7 +21,7 @@ jobs:
           sudo chmod -R 0777 "/__w/"
         shell: bash
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.0.2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           path: prcode

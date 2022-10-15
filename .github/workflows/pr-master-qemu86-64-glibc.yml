@@ -54,7 +54,7 @@ jobs:
           branch: none
           add-layer: "0"
       - name: configure (caches)
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.10
         with:
           path: /opt/build/sstate-cache
           key: rubygems-arm64-glibc-${{ github.base_ref }}
