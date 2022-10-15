@@ -41,7 +41,7 @@ jobs:
           mkdir -p ${WORKSPACE}/sstate-cache
         shell: bash
       - name: additional setup (caches)
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.10
         with:
           path: /opt/build/sstate-cache
           key: rubygems-arm64-glibc-${{ github.sha }}
