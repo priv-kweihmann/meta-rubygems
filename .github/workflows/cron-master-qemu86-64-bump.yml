@@ -24,14 +24,14 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: privkweihmann/yocto-sca-minimal:latest
+      image: privkweihmann/yocto-sca-minimal:2004
       env:
         WORKSPACE: /opt/build
         TOPDIR: /opt/build
         TEMPLATECONF: /opt/build/sources/meta-rubygems/conf/templates/rubygems-arm64-glibc
       volumes:
         - ${{ github.workspace }}:/opt/build
-      options: --privileged
+      options: --privileged --user=yoctouser
 
     steps:
       - name: setup (container)

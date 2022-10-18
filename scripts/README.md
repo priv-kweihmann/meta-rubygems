@@ -35,7 +35,7 @@ In case you want to generate gem recipes for a specific gem version use
 It is advised to test your changes locally using a minimal docker container
 
 ```shell
-docker pull privkweihmann/yocto-sca-minimal:latest
+docker pull privkweihmann/yocto-sca-minimal:2004
 docker run -it -v <your tmp dir>/:/opt/build/build-ruby -v <your layer dir>:/opt/build/layer privkweihmann/yocto-sca-minimal
 ```
 
