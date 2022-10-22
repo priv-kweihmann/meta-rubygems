@@ -24,12 +24,13 @@ DEPENDS:class-native += "\
     rubygems-rouge-native \
     rubygems-safe-yaml-native \
     rubygems-terminal-table-native \
+    rubygems-webrick-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "c49631f7a3eb403d79d4404c29aea436"
-SRC_URI[sha256sum] = "f7c2ec8fdc41e5565c1e0e20df3bd6896162a5c26d75a684bef3eb144f9bfb36"
+SRC_URI[md5sum] = "4bf950eb1f8901a1069869843d463b3d"
+SRC_URI[sha256sum] = "d79338de958877bc9bb2c7970f81497dfc500ce72641ef4682b311a61fef053d"
 
 GEM_NAME = "jekyll"
 
@@ -52,6 +53,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-rouge \
     rubygems-safe-yaml \
     rubygems-terminal-table \
+    rubygems-webrick \
 "
 
 BBCLASSEXTEND = "native"
