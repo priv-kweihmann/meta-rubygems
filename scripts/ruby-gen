@@ -337,7 +337,7 @@ def create_tpl(args, pkgname, version, errata):
                     version = None  # equals latest applicable
                     if item["requirements"].startswith("= "):
                         version = item["requirements"].strip("= ")
-                    create_tpl(args, item["name"], version)
+                    create_tpl(args, item["name"], version, errata)
 
 
 def create_parser():
