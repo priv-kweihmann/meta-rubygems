@@ -29,8 +29,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "4bf950eb1f8901a1069869843d463b3d"
-SRC_URI[sha256sum] = "d79338de958877bc9bb2c7970f81497dfc500ce72641ef4682b311a61fef053d"
+SRC_URI[md5sum] = "f4e6b1e481229b4b2d904be952ea0635"
+SRC_URI[sha256sum] = "9e2bdf46acbadda209e9abf7f4718e655f5f05fa1bb843f78dc51f1948340655"
 
 GEM_NAME = "jekyll"
 
