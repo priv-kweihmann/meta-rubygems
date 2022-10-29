@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "76b06a11ef286decdd9423e8b1687a20"
-SRC_URI[sha256sum] = "48bd9381b5ad2e9fbc43d0c0a5e6ae322dae707ddb461ccd7a16de8d9bb19b1a"
+SRC_URI[md5sum] = "39ff0730eff6db451d0f1e4309948a13"
+SRC_URI[sha256sum] = "240322c9e141ae7b6cc1c33c7a1a9bec19c334857ed883efde6d7c5057ccd71a"
 
 GEM_NAME = "aws-sdk-alexaforbusiness"
 
