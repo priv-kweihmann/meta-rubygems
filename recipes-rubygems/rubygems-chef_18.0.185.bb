@@ -31,21 +31,24 @@ DEPENDS:class-native += "\
     rubygems-mixlib-cli-native \
     rubygems-mixlib-log-native \
     rubygems-mixlib-shellout-native \
+    rubygems-net-ftp-native \
     rubygems-net-sftp-native \
     rubygems-ohai-native \
     rubygems-plist-native \
     rubygems-proxifier-native \
     rubygems-syslog-logger-native \
     rubygems-train-core-native \
+    rubygems-train-rest-native \
     rubygems-train-winrm-native \
+    rubygems-unf-ext-native \
     rubygems-uuidtools-native \
     rubygems-vault-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "d7f64cd5865e711a34db66cb55dfa727"
-SRC_URI[sha256sum] = "93218e17f46b9f7d40ce508cef5a61f679885313646f5ca2db04d35733347003"
+SRC_URI[md5sum] = "d46257ffea0f07253e8eabd2b1d0fac9"
+SRC_URI[sha256sum] = "46ea79f043091d1dd40c44343b6ea5b5851c6eb5c70b57c68556f0e21b8751d3"
 
 GEM_NAME = "chef"
 
@@ -84,13 +87,16 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-mixlib-cli \
     rubygems-mixlib-log \
     rubygems-mixlib-shellout \
+    rubygems-net-ftp \
     rubygems-net-sftp \
     rubygems-ohai \
     rubygems-plist \
     rubygems-proxifier \
     rubygems-syslog-logger \
     rubygems-train-core \
+    rubygems-train-rest \
     rubygems-train-winrm \
+    rubygems-unf-ext \
     rubygems-uuidtools \
     rubygems-vault \
 "
