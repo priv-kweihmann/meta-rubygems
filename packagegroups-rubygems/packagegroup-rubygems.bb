@@ -157,6 +157,7 @@ RDEPENDS:${PN} += "\
     rubygems-hiera \
     rubygems-highline \
     rubygems-hocon \
+    rubygems-http-accept \
     rubygems-http-cookie \
     rubygems-http-parser.rb \
     rubygems-httpclient \
@@ -212,6 +213,7 @@ RDEPENDS:${PN} += "\
     rubygems-net-ssh-gateway \
     rubygems-net-ssh-multi \
     rubygems-net-telnet \
+    rubygems-netrc \
     rubygems-nokogiri \
     rubygems-nori \
     rubygems-ohai \
@@ -238,6 +240,7 @@ RDEPENDS:${PN} += "\
     rubygems-reek \
     rubygems-regexp-parser \
     rubygems-representable \
+    rubygems-rest-client \
     rubygems-retriable \
     rubygems-rouge \
     rubygems-rspec \
@@ -285,6 +288,7 @@ RDEPENDS:${PN} += "\
     rubygems-train-aws \
     rubygems-train-core \
     rubygems-train-habitat \
+    rubygems-train-rest \
     rubygems-train-winrm \
     rubygems-tty-box \
     rubygems-tty-color \
