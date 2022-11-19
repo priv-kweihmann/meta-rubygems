@@ -8,7 +8,8 @@ class RubyGemsTestExceptions():
 
     exec_wrapper_skips = {
         "gauntlet": "some internal weirdness",
-        "setup": "unknown issue with ruby load function"
+        "restclient": "need an URL parameter",
+        "setup": "unknown issue with ruby load function",
     }
 
     loadable_skips = {
