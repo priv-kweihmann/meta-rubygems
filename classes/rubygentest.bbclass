@@ -15,7 +15,7 @@ python do_rubygems_gen_test() {
     import json
 
     def sanitize_name(pn):
-        return pn.replace("-", "_")
+        return pn.replace("-", "_").replace(".", "_")
 
     _tpl_class = rubygem_load_template(d, "rubygems_testclass.template")
     _tpl_require = rubygem_load_template(d, "rubygems_testrequire.template")
