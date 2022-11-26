@@ -2,7 +2,7 @@ from rubygems_utils import RubyGemsTestUtils
 
 class RubyGemsTestrubygems_jmespath(RubyGemsTestUtils):
 
-    def test_exec_jmespath.rb(self):
+    def test_exec_jmespath_rb(self):
         self.gem_exec_wrapper("jmespath.rb")
 
     def test_gem_list_rubygems_jmespath(self):
