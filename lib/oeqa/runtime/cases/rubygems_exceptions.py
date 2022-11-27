@@ -10,6 +10,7 @@ class RubyGemsTestExceptions():
         "gauntlet": "some internal weirdness",
         "restclient": "need an URL parameter",
         "setup": "unknown issue with ruby load function",
+        "jmespath.rb": "seems to require some kind of input",
     }
 
     loadable_skips = {
