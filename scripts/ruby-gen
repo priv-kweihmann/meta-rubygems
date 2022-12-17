@@ -13,13 +13,13 @@ import subprocess
 import tarfile
 import tempfile
 
-from semantic_version import Version
-
 from license_util import get_license_info
 from recipe_util import save_export
 from recipe_util import save_functions
 from recipe_util import save_unexpanded_var
 from recipe_util import save_variables
+from semantic_version import SimpleSpec
+from semantic_version import Version
 
 _tempfolder = tempfile.TemporaryDirectory(prefix="rubygen_")
 
@@ -139,6 +139,14 @@ def create_rdepends(desc, old):
 
 
 def get_best_version(args, _versions, pkgname, version):
+    update_skips = {}
+    with open(args.pkgupdateskip) as i:
+        for line in i.readlines():
+            try:
+                name, _version = line.split(';')
+                update_skips[name] = SimpleSpec(_version.strip())
+            except ValueError:
+                continue
     for ver in _versions:
         if ver.get("prerelease", False):
             continue
@@ -160,6 +168,10 @@ def get_best_version(args, _versions, pkgname, version):
             print("Pick {} for {}".format(ver["number"], pkgname))
         except Exception as e:
             print("{} -> {}".format(e, ver))
+        if update_skips.get(pkgname, SimpleSpec("==0.0.0")).match(Version(ver["number"])):
+            print("{} in prohibited by package update skip for {}".format(
+                ver["number"], pkgname))
+            continue
         return ver["number"]
     raise ValueError()
 
@@ -353,6 +365,10 @@ def create_parser():
                         help="version of the gem package. If unspecified latest is picked")
     parser.add_argument("--norec", default=False, action="store_true",
                         help="Do not recurse over dependencies")
+    parser.add_argument("--pkgupdateskip",
+                        default=os.path.join(os.path.dirname(
+                            __file__), "../.pkgupdateskip"),
+                        help="Package update skip file")
     parser.add_argument("basepath", help="base path to the recipes")
     parser.add_argument("gemname", help="name of the gem package")
     return parser.parse_args()
