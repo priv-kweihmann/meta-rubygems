@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "42f1f27ca9b70754f1eee09b761d5672"
-SRC_URI[sha256sum] = "fda72d577feaf3bdcd646d33fa630be5f92f48e179a9278e4175a9cec20e7f85"
+SRC_URI[md5sum] = "92fa9ac9f48cce608153108e327d020d"
+SRC_URI[sha256sum] = "27bedb74dfb1e04ff60674975e182d8ca787f2224f2e8143268c7696f42e4723"
 
 GEM_NAME = "erubi"
 
