@@ -6,14 +6,19 @@ HOMEPAGE = "https://github.com/simplecov-ruby/simplecov"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=0372eac36f921e2a3d78dcb0bb6c4f76"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-docile-native \
     rubygems-simplecov-html-native \
     rubygems-simplecov-json-formatter-native \
 "
 
-SRC_URI[md5sum] = "575c6c7861cb467292671ee37e5b795c"
-SRC_URI[sha256sum] = "990db6aedb55086d6bf8874993ff1f796e4830abfa11937468ca502a0d013bc3"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "78469a20f4cacca73db3e6b8e6dd496d"
+SRC_URI[sha256sum] = "fe2622c7834ff23b98066bb0a854284b2729a569ac659f82621fc22ef36213a5"
 
 GEM_NAME = "simplecov"
 
