@@ -24,6 +24,10 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
+do_compile:prepend() {
+    sed -i 's#"spec/support/ocsp".freeze,##g' ${GEM_SPEC_FILE}
+}
+
 RDEPENDS:${PN}:class-target += "\
     rubygems-bson \
 "
