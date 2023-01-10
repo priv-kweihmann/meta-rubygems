@@ -3,7 +3,7 @@
 ## Copyright (c) 2015, Michaël Burtin
 ## Copyright (c) 2020, Konrad Weihmann
 
-GEMLIB_VERSION = "3.1.0"
+GEMLIB_VERSION = "3.2.0"
 
 GEM_SRC ?= "http://rubygems.org/gems"
 
