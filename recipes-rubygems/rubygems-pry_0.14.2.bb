@@ -6,13 +6,18 @@ HOMEPAGE = "http://pry.github.io"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=36c4b1806b2aadea5cbee4bbbdeb341c"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-coderay-native \
     rubygems-method-source-native \
 "
 
-SRC_URI[md5sum] = "c329302a76b316033e16d27ba872d208"
-SRC_URI[sha256sum] = "99b6df0665875dd5a39d85e0150aa5a12e2bb4fef401b6c4f64d32ee502f8454"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "6be2817bed1e9ea1e6c23906319e1d1c"
+SRC_URI[sha256sum] = "c4fe54efedaca1d351280b45b8849af363184696fcac1c72e0415f9bdac4334d"
 
 GEM_NAME = "pry"
 
