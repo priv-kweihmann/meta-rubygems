@@ -1,26 +1,30 @@
-From 2cdd7a43c736e365b8018d39b6b7096102b0ebcd Mon Sep 17 00:00:00 2001
+From 6482316934e66ab3e793d2ecb5d58aa7539056c6 Mon Sep 17 00:00:00 2001
 From: Konrad Weihmann <kweihmann@outlook.com>
-Date: Tue, 10 Jan 2023 12:22:48 +0000
+Date: Thu, 19 May 2022 11:11:16 +0200
 Subject: [PATCH] Lift rubocup version pinning
 
 Upstream-Status: Inappropriate [oe-specific]
 Signed-off-by: Konrad Weihmann <kweihmann@outlook.com>
 ---
- cookstyle-7.32.1.gemspec | 2 +-
+ cookstyle-7.32.1.gemspec | 4 ++--
  cookstyle.gemspec        | 2 +-
  lib/cookstyle.rb         | 2 +-
- 3 files changed, 3 insertions(+), 3 deletions(-)
+ 3 files changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/cookstyle-7.32.1.gemspec b/cookstyle-7.32.1.gemspec
-index 797524d..5748920 100644
+index ae02774..0a0bda7 100644
 --- a/cookstyle-7.32.1.gemspec
 +++ b/cookstyle-7.32.1.gemspec
-@@ -21,6 +21,6 @@ Gem::Specification.new do |s|
+@@ -24,9 +24,9 @@ Gem::Specification.new do |s|
+   end
  
-   s.specification_version = 4
- 
--  s.add_runtime_dependency(%q<rubocop>.freeze, ["= 1.25.1"])
-+  s.add_runtime_dependency(%q<rubocop>.freeze, [">= 1.25.1"])
+   if s.respond_to? :add_runtime_dependency then
+-    s.add_runtime_dependency(%q<rubocop>.freeze, ["= 1.25.1"])
++    s.add_runtime_dependency(%q<rubocop>.freeze, [">= 1.25.1"])
+   else
+-    s.add_dependency(%q<rubocop>.freeze, ["= 1.25.1"])
++    s.add_dependency(%q<rubocop>.freeze, [">= 1.25.1"])
+   end
  end
  
 diff --git a/cookstyle.gemspec b/cookstyle.gemspec
@@ -50,5 +54,5 @@ index 9ab4cc0..565cad7 100644
  require_relative 'rubocop/monkey_patches/directive_comment'
  
 -- 
-2.34.1
+2.25.1
 
