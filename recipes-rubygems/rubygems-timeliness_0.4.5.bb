@@ -4,10 +4,15 @@ DESCRIPTION = "Fast date/time parser with customisable formats, timezone and I18
 HOMEPAGE = "http://github.com/adzap/timeliness"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=ce16f13890f3a9c71978b98149ef2e1c"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=bd0d5f39027b1293d8d7f034905de138"
 
-SRC_URI[md5sum] = "fa1edcfde69ce145897bfa8168890bea"
-SRC_URI[sha256sum] = "d5d96805f3aed57fb756dba0ee75f3fee8db57e1e55dc565690ef0fbd2cb6bbf"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "6b7371eb193eb5c75fc439a916a582e3"
+SRC_URI[sha256sum] = "8018a4a632ae3ab1b4f8da54711e8934e92d7a4d68ee13ce8311e752afcf6149"
 
 GEM_NAME = "timeliness"
 
