@@ -4,15 +4,15 @@ DESCRIPTION = "A multipart form post accessory for Net::HTTP."
 HOMEPAGE = "https://github.com/socketry/multipart-post"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://lib/net/http/post/multipart.rb;beginline=5;endline=21;md5=7f7c2007e48f6b5170afcdeeda85abc0"
+LIC_FILES_CHKSUM = "file://license.md;md5=3dc66ef212fde3c72a46c033bcd535ab"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "ebcd6ee70446d58c85ceb926f664a883"
-SRC_URI[sha256sum] = "462979de2971b8df33c2ee797fd497731617241f9dcd93960cc3caccb2dd13d8"
+SRC_URI[md5sum] = "067cd7270a1f476ce71454d499213671"
+SRC_URI[sha256sum] = "3dcdd74a767302559fcf91a63b568ee00770494ce24195167b1c147ab3f6fe51"
 
 GEM_NAME = "multipart-post"
 
