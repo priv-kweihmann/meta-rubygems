@@ -4,4 +4,4 @@ rspec-expectations;~=3.12
 rspec-mocks;~=3.12
 rspec-support;~=3.12
 rspec;~=3.12
-rubycop;>=1.43.0
+rubocop;>=1.43.0
