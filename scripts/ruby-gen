@@ -160,7 +160,8 @@ def get_best_version(args, _versions, pkgname, version):
                     _ruby_version_required = __sanitizies_version(_raw)
                     _ruby_version_available = __sanitizies_version(
                         args.rubyversion)
-                except Exception:
+                except Exception as e:
+                    print(f'exception: failed to parse ruby-version: {e} - {ver}')
                     # invalid version, such as "dev"
                     continue
                 if _ruby_version_required > _ruby_version_available:
@@ -222,7 +223,7 @@ def get_license(desc, old_recipes):
 
 def __sanitizies_version(_input):
     _dotcnt = sum(1 for x in _input if x == ".")
-    _ver = _input.replace(".", "")
+    _ver = _input.replace(".", "").split(",")[0].strip()
     _ver += "0" * (3 - _dotcnt)
     return int(_ver)
 
