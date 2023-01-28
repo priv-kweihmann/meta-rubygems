@@ -6,8 +6,13 @@ HOMEPAGE = "https://github.com/ruby/webrick"
 LICENSE = "Ruby & BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=19aaf65c88a40b508d17ae4be539c4b5"
 
-SRC_URI[md5sum] = "00739c2de1b9986f8db84355ac0da787"
-SRC_URI[sha256sum] = "87e9b8e39947b7925338a5eb55427b11ce1f2b25a3645770ec9f39d8ebdb8cb4"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "e02304c5eafc47d2fb393bba891c538f"
+SRC_URI[sha256sum] = "19411ec6912911fd3df13559110127ea2badd0c035f7762873f58afc803e158f"
 
 GEM_NAME = "webrick"
 
