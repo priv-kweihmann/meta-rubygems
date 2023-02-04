@@ -24,8 +24,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "71cd1b540b144b7acbec2d19ee569511"
-SRC_URI[sha256sum] = "0b5097726113087506493dbde23e0c4d1d80ceff4d8aadb961bd3a996a3d93e9"
+SRC_URI[md5sum] = "b7e4dd07b2f3f52622ac5e853baf91a3"
+SRC_URI[sha256sum] = "f0ad881a9dd0d56d90805b12dc07326c73206b21f82da50d7f8898856a0b57f8"
 
 GEM_NAME = "inspec"
 
