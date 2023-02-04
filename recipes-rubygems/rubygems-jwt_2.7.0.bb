@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "de114aacddca31d037a928a38bde370b"
-SRC_URI[sha256sum] = "68a3c88cfc248f74ab8bd384eb3e9fb81893819d4087610eeccfda2b54b81ff5"
+SRC_URI[md5sum] = "cf1ad4830061435fd070e58183b947fe"
+SRC_URI[sha256sum] = "b7e0b8669170abfe90cae8b6534d3d05d60fa3f785f0f005e44a41abcb1fd227"
 
 GEM_NAME = "jwt"
 
