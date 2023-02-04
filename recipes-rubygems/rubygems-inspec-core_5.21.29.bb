@@ -12,7 +12,7 @@ EXTRA_RDEPENDS:append = " "
 DEPENDS:class-native += "\
     rubygems-addressable-native \
     rubygems-chef-telemetry-native \
-    rubygems-faraday-middleware-native \
+    rubygems-faraday-follow-redirects-native \
     rubygems-faraday-native \
     rubygems-hashie-native \
     rubygems-license-acceptance-native \
@@ -36,8 +36,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "9022388f399c0cd6cc2d1a201d3ea2c1"
-SRC_URI[sha256sum] = "089325e8fbcf21ab68c651458827068ad80443b6996017817d8dc41c4bf7fc8f"
+SRC_URI[md5sum] = "597102cedca0930f6fcfc41a0d039a92"
+SRC_URI[sha256sum] = "a76dbbe47859f5e8c3e02389f9e78afa41ff68455de34969d9d7115d2d693fc7"
 
 GEM_NAME = "inspec-core"
 
@@ -49,7 +49,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-addressable \
     rubygems-chef-telemetry \
     rubygems-faraday \
-    rubygems-faraday-middleware \
+    rubygems-faraday-follow-redirects \
     rubygems-hashie \
     rubygems-license-acceptance \
     rubygems-method-source \
