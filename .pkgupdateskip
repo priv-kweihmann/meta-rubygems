@@ -7,4 +7,4 @@ rspec;~=3.12
 rubocop;>=1.43.0
 concurrent-ruby;~=1.1
 jekyll;>=4.3.1
-jekyll-sass-converter;~=2.2
+jekyll-sass-converter;>2.3.0
