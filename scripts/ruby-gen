@@ -166,13 +166,13 @@ def get_best_version(args, _versions, pkgname, version):
                     continue
                 if _ruby_version_required > _ruby_version_available:
                     continue
-            print("Pick {} for {}".format(ver["number"], pkgname))
         except Exception as e:
             print("{} -> {}".format(e, ver))
         if update_skips.get(pkgname, SimpleSpec("==0.0.0")).match(Version(ver["number"])):
             print("{} in prohibited by package update skip for {}".format(
                 ver["number"], pkgname))
             continue
+        print("Pick {} for {}".format(ver["number"], pkgname))
         return ver["number"]
     raise ValueError()
 
