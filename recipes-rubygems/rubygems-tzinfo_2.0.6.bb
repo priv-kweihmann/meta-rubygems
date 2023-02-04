@@ -4,7 +4,7 @@ DESCRIPTION = "TZInfo provides access to time zone data and allows times to be c
 HOMEPAGE = "https://tzinfo.github.io"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=a2bf1b5f566efe2cea2e616ce1c35fb4"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=fffa95b51a9d05bf1f9443e62529dfe1"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "78ef42d61957291b66c4831d2673503d"
-SRC_URI[sha256sum] = "c5352fd901544d396745d013f46a04ae2ed081ce806d942099825b7c2b09a167"
+SRC_URI[md5sum] = "d625a56fe1f8cf5fb9ccfa3ecb0f50ee"
+SRC_URI[sha256sum] = "8daf828cc77bcf7d63b0e3bdb6caa47e2272dcfaf4fbfe46f8c3a9df087a829b"
 
 GEM_NAME = "tzinfo"
 
