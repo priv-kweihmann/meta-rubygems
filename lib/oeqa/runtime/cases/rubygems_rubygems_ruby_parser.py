@@ -41,11 +41,20 @@ class RubyGemsTestrubygems_ruby_parser(RubyGemsTestUtils):
     def test_load_ruby27_parser(self):
         self.gem_is_loadable("ruby27_parser")
 
+    def test_load_ruby30_parser(self):
+        self.gem_is_loadable("ruby30_parser")
+
+    def test_load_ruby31_parser(self):
+        self.gem_is_loadable("ruby31_parser")
+
     def test_load_ruby_lexer(self):
         self.gem_is_loadable("ruby_lexer")
 
     def test_load_ruby_lexer_rex(self):
         self.gem_is_loadable("ruby_lexer.rex")
+
+    def test_load_ruby_lexer_strings(self):
+        self.gem_is_loadable("ruby_lexer_strings")
 
     def test_load_ruby_parser(self):
         self.gem_is_loadable("ruby_parser")
