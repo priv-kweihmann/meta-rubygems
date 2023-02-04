@@ -130,6 +130,7 @@ RDEPENDS:${PN} += "\
     rubygems-faraday-em-http \
     rubygems-faraday-em-synchrony \
     rubygems-faraday-excon \
+    rubygems-faraday-follow-redirects \
     rubygems-faraday-httpclient \
     rubygems-faraday-middleware \
     rubygems-faraday-net-http \
