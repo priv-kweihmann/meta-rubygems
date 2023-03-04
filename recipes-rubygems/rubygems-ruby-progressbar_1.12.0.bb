@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "ab2638003880a34034136b7dcc9080ef"
-SRC_URI[sha256sum] = "cc127db3866dc414ffccbf92928a241e585b3aa2b758a5563e74a6ee0f57d50a"
+SRC_URI[md5sum] = "3dd3c94ee81398e25f204e0368c4abee"
+SRC_URI[sha256sum] = "433242aef7e13ab37d1e9cbd0d8d76f7d125f1a4e0222a7df7f19f8f13b5afe4"
 
 GEM_NAME = "ruby-progressbar"
 
