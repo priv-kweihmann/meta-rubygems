@@ -1,11 +1,7 @@
-reek;>=6.1.4
 rspec-core;~=3.12
 rspec-expectations;~=3.12
 rspec-mocks;~=3.12
 rspec-support;~=3.12
-rspec;~=3.12
-rubocop;>=1.43.0
-rubocop-ast;>=1.25.0
 concurrent-ruby;~=1.1
 jekyll;>=4.3.1
 jekyll-sass-converter;>2.3.0
