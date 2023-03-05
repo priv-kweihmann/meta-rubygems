@@ -1,0 +1,30 @@
+From 451124a5538ace4d9c0d45d04a38b25cec1e9e6f Mon Sep 17 00:00:00 2001
+From: Konrad Weihmann <kweihmann@outlook.com>
+Date: Sun, 5 Mar 2023 09:36:04 +0000
+Subject: [PATCH] erubi: fall back on cgi/escape
+
+also on NameError, which is caused by the either missing or
+not fully available erb/escape native extension
+
+Upstream-Status: Inappropriate [oe-specific]
+Signed-off-by: Konrad Weihmann <kweihmann@outlook.com>
+---
+ lib/erubi.rb | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/lib/erubi.rb b/lib/erubi.rb
+index e419d36..a0b17e1 100644
+--- a/lib/erubi.rb
++++ b/lib/erubi.rb
+@@ -22,7 +22,7 @@ module Erubi
+     # :nocov:
+     define_singleton_method(:h, ERB::Escape.instance_method(:html_escape))
+     # :nocov:
+-  rescue LoadError
++  rescue LoadError, NameError
+     begin
+       require 'cgi/escape'
+       # :nocov:
+-- 
+2.34.1
+

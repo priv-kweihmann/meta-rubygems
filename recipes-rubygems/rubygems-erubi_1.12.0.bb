@@ -11,6 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
+SRC_URI:append = " file://0001-erubi-fall-back-on-cgi-escape.patch"
+
 SRC_URI[md5sum] = "92fa9ac9f48cce608153108e327d020d"
 SRC_URI[sha256sum] = "27bedb74dfb1e04ff60674975e182d8ca787f2224f2e8143268c7696f42e4723"
 
