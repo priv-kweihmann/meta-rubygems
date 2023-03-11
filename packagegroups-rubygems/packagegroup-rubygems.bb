@@ -228,7 +228,7 @@ RDEPENDS:${PN} += "\
     rubygems-pathutil \
     rubygems-plist \
     rubygems-progress-bar \
-    rubygems-proxifier \
+    rubygems-proxifier2 \
     rubygems-pry \
     rubygems-public-suffix \
     rubygems-puppet \
