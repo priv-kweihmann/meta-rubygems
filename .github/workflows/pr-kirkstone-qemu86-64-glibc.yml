@@ -1,13 +1,16 @@
 name: "[pr]-[glibc]-[qemuarm64]"
 
-on: pull_request
+on: 
+  pull_request:
+    branches:
+      - kirkstone
 
 jobs:
   buildrun:
     name: "build"
     env:
       BUILD_EXPORT: 1
-      SCM_BRANCH: master
+      SCM_BRANCH: kirkstone
       BUILD_GLIBC: 1
       BUILD_KERNEL: 1
       BUILD_MAXRUNTIME: 21000
@@ -24,10 +27,10 @@ jobs:
       env:
         WORKSPACE: /opt/build
         TOPDIR: /opt/build
-        TEMPLATECONF: /opt/build/sources/meta-rubygems/conf/templates/rubygems-arm64-glibc
+        TEMPLATECONF: /opt/build/sources/meta-rubygems/conf/variant/rubygems-arm64-glibc
       volumes:
         - ${{ github.workspace }}:/opt/build
-      options: --privileged --user=yoctouser
+      options: --privileged
 
     steps:
       - name: setup (container)
@@ -36,8 +39,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
           repo: git://git.yoctoproject.org/poky.git
-          ref: f329142a31f8207240ad93e5c00e9b6bf8dc9745
-          branch: none
+          ref: 2b49a8fbf0c7965982e50e6e2643b17523c119c9
           add-layer: "0"
       - name: checkout (meta-rubygems)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
@@ -50,21 +52,8 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
           repo: git://git.openembedded.org/meta-openembedded
-          ref: f3d14d41ad60d2d52a0ea795ae10fe0882146ed1
-          branch: none
+          ref: 9cf4ebeb3de524009a73f49722489dc4aa183adb
           add-layer: "0"
-      - name: configure (caches)
-        uses: actions/cache@v3
-        with:
-          path: /opt/build/sstate-cache
-          key: rubygems-arm64-glibc-${{ github.base_ref }}
-          restore-keys: |
-            rubygems-arm64-glibc-
-      - name: activate (caches)
-        uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
-        with:
-          variable: SSTATE_DIR
-          value: "${WORKSPACE}/sstate-cache"
       - if: env.BUILD_GLIBC == '1'
         name: build (glibc)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
