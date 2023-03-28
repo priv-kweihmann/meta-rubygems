@@ -17,8 +17,8 @@ GEM_INSTALL_FLAGS:append = " "
 
 SRC_URI:append = " file://0001-Lift-rubocup-version-pinning.patch"
 
-SRC_URI[md5sum] = "3348a9a4fc0cbbcd4e59f71a7c09269a"
-SRC_URI[sha256sum] = "3a35777d99cc0bca940097b510a117aa96ed40ccdeb6437feaa30fea3653bb61"
+SRC_URI[md5sum] = "63b7e1fcafc283e73edd8b9df63de405"
+SRC_URI[sha256sum] = "3ad4e5e9b0993b4273f937c3784a57c9d6a87d6190b4c9d708f6e5d049f2e05a"
 
 GEM_NAME = "cookstyle"
 

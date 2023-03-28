@@ -13,8 +13,8 @@ Signed-off-by: Konrad Weihmann <kweihmann@outlook.com>
 
 diff --git a/cookstyle-7.32.1.gemspec b/cookstyle-7.32.1.gemspec
 index 797524d..5748920 100644
---- a/cookstyle-7.32.1.gemspec
-+++ b/cookstyle-7.32.1.gemspec
+--- a/cookstyle-7.32.2.gemspec
++++ b/cookstyle-7.32.2.gemspec
 @@ -21,6 +21,6 @@ Gem::Specification.new do |s|
  
    s.specification_version = 4
@@ -24,7 +24,7 @@ index 797524d..5748920 100644
  end
  
 diff --git a/cookstyle.gemspec b/cookstyle.gemspec
-index 50b7821..b3dc4f7 100644
+index c53a1f9..7c174c7 100644
 --- a/cookstyle.gemspec
 +++ b/cookstyle.gemspec
 @@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
