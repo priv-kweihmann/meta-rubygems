@@ -7,7 +7,7 @@ on:
 
 jobs:
   buildrun:
-    if: github.repository_owner != "priv-kweihmann"
+    if: github.repository_owner != 'priv-kweihmann'
     name: "build"
     env:
       BUILD_EXPORT: 1
