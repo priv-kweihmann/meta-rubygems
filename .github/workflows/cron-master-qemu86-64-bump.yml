@@ -72,7 +72,7 @@ jobs:
           GITHUB_REPO_USER=${{ github.repository_owner }} \
           GITHUB_REPO=meta-rubygems \
           ${WORKSPACE}/sources/meta-rubygems/scripts/bump-bot \
-          master \
+          ${{ env.SCM_BRANCH }} \
           ${WORKSPACE}/sources/poky \
           ${WORKSPACE}/sources/meta-openembedded \
         shell: bash
