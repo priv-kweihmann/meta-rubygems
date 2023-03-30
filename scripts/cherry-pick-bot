@@ -16,6 +16,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 AUTO_IGNORE_BEFORE = 1209600
 
+
 def create_argpaser():
     parser = argparse.ArgumentParser(description='Cherry-pick bot')
     parser.add_argument(
@@ -113,12 +114,14 @@ def main():
             _main_git.checkout(_args.source_branch)
             # publish cherry-pick branch
             _main_git.publish(_new_branch_name)
+            _target_branch = _args.target_branch.replace(
+                "origin/", "", 1).replace("upstream/", "", 1).replace("downstream/", "", 1)
             # create pull request
             _github.create_pullrequest(
                 _new_branch_name,
                 "Cherry pick from {}".format(_args.source_branch),
                 change_log(_cherry_picks),
-                target=_args.target_branch.replace("origin/", "", 1))
+                target=_target_branch)
 
 
 if __name__ == '__main__':
