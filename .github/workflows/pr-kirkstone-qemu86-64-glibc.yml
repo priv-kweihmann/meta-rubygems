@@ -35,6 +35,13 @@ jobs:
     steps:
       - name: setup (container)
         uses: priv-kweihmann/meta-sca-ci-utils/preparecontainer@latest
+      - name: additional setup (caches)
+        uses: actions/cache@v3
+        with:
+          path: /opt/build/sstate-cache
+          key: rubygems-arm64-glibc-${{ env.SCM_BRANCH }}-${{ github.sha }}
+          restore-keys: |
+            rubygems-arm64-glibc-${{ env.SCM_BRANCH }}-
       - name: checkout (poky)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
@@ -54,6 +61,11 @@ jobs:
           repo: git://git.openembedded.org/meta-openembedded
           ref: 9cf4ebeb3de524009a73f49722489dc4aa183adb
           add-layer: "0"
+      - name: activate (caches)
+        uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
+        with:
+          variable: SSTATE_DIR
+          value: "${WORKSPACE}/sstate-cache"
       - if: env.BUILD_GLIBC == '1'
         name: build (glibc)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
