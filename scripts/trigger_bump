@@ -6,5 +6,5 @@
 curl -H "Accept: application/vnd.github.everest-preview+json" \
     -H "Authorization: token ${TOKEN}" \
     --request POST \
-    --data '{"event_type": "do-master-bump"}' \
+    --data '{"event_type": "do-kirkstone-bump"}' \
     https://api.github.com/repos/priv-kweihmann/meta-rubygems/dispatches
