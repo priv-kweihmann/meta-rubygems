@@ -69,7 +69,7 @@ jobs:
           GIT_MAIL="${{ secrets.BOTMAIL }}" \
           GIT_USERNAME="${{ secrets.BOTGITUSER }}" \
           GIT_PASSWORD="${{ secrets.BOTTOKEN }}" \
-          GITHUB_REPO_USER=priv-kweihmann \
+          GITHUB_REPO_USER=${{ github.repository_owner }} \
           GITHUB_REPO=meta-rubygems \
           ${WORKSPACE}/sources/meta-rubygems/scripts/bump-bot \
           master \
