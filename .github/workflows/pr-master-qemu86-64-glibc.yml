@@ -57,9 +57,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: /opt/build/sstate-cache
-          key: rubygems-arm64-glibc-${{ github.base_ref }}
+          key: rubygems-arm64-glibc-${{ env.SCM_BRANCH }}-${{ github.base_ref }}
           restore-keys: |
-            rubygems-arm64-glibc-
+            rubygems-arm64-glibc-${{ env.SCM_BRANCH }}-
       - name: activate (caches)
         uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
         with:
