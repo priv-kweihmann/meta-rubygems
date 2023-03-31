@@ -67,6 +67,7 @@ jobs:
         run: |
           echo "upstream=upstream" >> $GITHUB_OUTPUT
           echo "downstream=${{ github.repository_owner }}" >> $GITHUB_OUTPUT
+          cd ${WORKSPACE}/sources/meta-rubygems
           git remote add upstream https://github.com/priv-kweihmann/meta-rubygems.git
           git remote add downstream ${{ github.repositoryUrl }}
           git fetch upstream
