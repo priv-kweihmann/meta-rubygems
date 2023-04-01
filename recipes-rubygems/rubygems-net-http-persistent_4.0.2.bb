@@ -6,12 +6,17 @@ HOMEPAGE = "https://github.com/drbrain/net-http-persistent"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://README.rdoc;beginline=59;endline=82;md5=e3fe655d8a232a8b4e8bde0439a4518f"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-connection-pool-native \
 "
 
-SRC_URI[md5sum] = "42857574ef30faa06e646a7f45292f4b"
-SRC_URI[sha256sum] = "2752f4cce05fd1c45e0537c6f3a98fa5a4899efd5f88e63c104ed5f05cbddef9"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "fe6e3e668a45be1f78886ef48ca4137b"
+SRC_URI[sha256sum] = "03f827a33857b1d56b4e796957ad19bf5b58367d853fd0a224eb70fba8d02a44"
 
 GEM_NAME = "net-http-persistent"
 
