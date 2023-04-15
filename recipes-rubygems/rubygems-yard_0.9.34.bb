@@ -9,23 +9,15 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=3b6f9769ae84eb7b621febf5cc8c5c62"
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
-DEPENDS:class-native += "\
-    rubygems-webrick-native \
-"
-
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "d5ac32134ef09cb6194a0371b863c7c1"
-SRC_URI[sha256sum] = "d31b7e3172405165212e0c8db5b3b57865f0831f1bc33bdda5d0709e1e72315c"
+SRC_URI[md5sum] = "9c8530eaaf9acf6fd32ee4b51119e46a"
+SRC_URI[sha256sum] = "5a8e04114d7f15f77814973ea56b7c38282126fb2930eb82851ffed0b9cd7e04"
 
 GEM_NAME = "yard"
 
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
-
-RDEPENDS:${PN}:class-target += "\
-    rubygems-webrick \
-"
 
 BBCLASSEXTEND = "native"
