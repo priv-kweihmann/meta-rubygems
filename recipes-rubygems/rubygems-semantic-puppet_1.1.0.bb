@@ -6,8 +6,13 @@ HOMEPAGE = "https://github.com/puppetlabs/semantic_puppet"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8737b067d16e724769a2968ed8d6373f"
 
-SRC_URI[md5sum] = "bf36de9dffe6bc035a862bf0c3dc034b"
-SRC_URI[sha256sum] = "5d8380bf733c1552ef77e06a7c44a6d5b48def7d390ecf3bd71cad477f5ce13d"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "0042f4e83fbf7435f4425070d81efd9e"
+SRC_URI[sha256sum] = "52d108d08e1a5d95c00343cb3a4936fb1deecff2be612ec39c9cb66be5a8b859"
 
 GEM_NAME = "semantic_puppet"
 
