@@ -46,13 +46,13 @@ class Git():
     @property
     def upstream_head(self):
         _branch = self.branch
-        if not _branch.startswith("origin/"):
+        if '/' not in _branch:
             _branch = "origin/" + self.branch
         return self.__repo.rev_parse(_branch)
 
     def upstream_head_branch(self, branch):
         _branch = branch
-        if not _branch.startswith("origin/"):
+        if '/' not in branch:
             _branch = "origin/" + branch
         return self.__repo.rev_parse(_branch)
 
@@ -117,5 +117,5 @@ class Git():
     def checkout(self, name):
         self.__repo.git.checkout(name)
 
-    def publish(self, branch=None):
-        self.__repo.git.push('origin', branch or self.branch)
+    def publish(self, branch=None, target='origin'):
+        self.__repo.git.push(target, branch or self.branch)

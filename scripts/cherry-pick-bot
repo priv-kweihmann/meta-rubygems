@@ -97,6 +97,8 @@ def main():
         _main_git, _args.source_branch, _args.target_branch, _args.ignore_file, _args.cpmode,
         _args.ignorebefore)
 
+    _target_remote = _args.target_branch.split('/')[0]
+
     if any(_commits):
         _new_branch_name = "cherry_pick_{}".format(
             datetime.datetime.now().strftime("%Y%m%d"))
@@ -113,7 +115,7 @@ def main():
             # a few script accessible
             _main_git.checkout(_args.source_branch)
             # publish cherry-pick branch
-            _main_git.publish(_new_branch_name)
+            _main_git.publish(_new_branch_name, target=_target_remote)
             _target_branch = _args.target_branch.replace(
                 "origin/", "", 1).replace("upstream/", "", 1).replace("downstream/", "", 1)
             # create pull request
