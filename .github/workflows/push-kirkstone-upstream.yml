@@ -63,14 +63,12 @@ jobs:
           remove-git: "0"
           add-layer: "0"
       - name: set upstream info
-        id: branch-info
         run: |
-          echo "upstream=upstream" >> $GITHUB_OUTPUT
-          echo "downstream=${{ github.repository_owner }}" >> $GITHUB_OUTPUT
           cd ${WORKSPACE}/sources/meta-rubygems
           git remote add upstream https://github.com/priv-kweihmann/meta-rubygems.git
-          git remote add downstream ${{ github.repositoryUrl }}
+          git remote add downstream https://github.com/${{ github.repository }}.git
           git fetch upstream
+          git fetch downstream
       - name: build (revision update)
         run: |
           GIT_USER="${{ secrets.BOTNAME }}" \
@@ -81,7 +79,7 @@ jobs:
           GITHUB_REPO=meta-rubygems \
           ${WORKSPACE}/sources/meta-rubygems/scripts/cherry-pick-bot \
           --cpmode=firstcommon \
-          ${{ steps.branch-info.downstream }}/${{ env.SCM_BRANCH }} \
-          ${{ steps.branch-info.upstream }}/${{ env.SCM_BRANCH }} \
+          downstream/${{ env.SCM_BRANCH }} \
+          upstream/${{ env.SCM_BRANCH }} \
           ${WORKSPACE}/sources/meta-rubygems/.nocherry
         shell: bash
