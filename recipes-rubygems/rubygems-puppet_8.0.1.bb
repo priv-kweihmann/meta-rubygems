@@ -14,7 +14,6 @@ DEPENDS:class-native += "\
     rubygems-deep-merge-native \
     rubygems-facter-native \
     rubygems-fast-gettext-native \
-    rubygems-hiera-native \
     rubygems-locale-native \
     rubygems-multi-json-native \
     rubygems-puppet-resource-api-native \
@@ -24,8 +23,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "3e996d5ceb0af826c95484494ad8a9a4"
-SRC_URI[sha256sum] = "cc106f34fe1f351c593fc9ba8e3c6dc13dd594c5f0a0bf52f1820be206285722"
+SRC_URI[md5sum] = "7e87d988e485c0f0c3d6ef76bd39409d"
+SRC_URI[sha256sum] = "e32b8c860f217d8b62a7650a972cf0f558e26f838ab070551e7b145e60945af4"
 
 GEM_NAME = "puppet"
 
@@ -47,7 +46,6 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-deep-merge \
     rubygems-facter \
     rubygems-fast-gettext \
-    rubygems-hiera \
     rubygems-locale \
     rubygems-multi-json \
     rubygems-puppet-resource-api \
