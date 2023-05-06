@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-core"
-DESCRIPTION = "Provides API clients for AWS"
+SUMMARY = "RubyGem: aws-sdk-ecs"
+DESCRIPTION = "Official AWS Ruby gem for Amazon EC2 Container Service (Amazon ECS)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -10,28 +10,24 @@ EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
-    rubygems-aws-eventstream-native \
-    rubygems-aws-partitions-native \
+    rubygems-aws-sdk-core-native \
     rubygems-aws-sigv4-native \
-    rubygems-jmespath-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "c1d0a7e84bd7ad0d51bb5b6103778067"
-SRC_URI[sha256sum] = "69c82d00b872dacf7fdf2a7c68f8b82aec0d3ade4d07ad5d11ff98f8d1de621c"
+SRC_URI[md5sum] = "d1028bb08f53855512ee5e4e6ba62d3a"
+SRC_URI[sha256sum] = "19af9945844becb1dcc1356ad6c7525edb57814dac2fe89ab8c66975f2c970de"
 
-GEM_NAME = "aws-sdk-core"
+GEM_NAME = "aws-sdk-ecs"
 
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
-    rubygems-aws-eventstream \
-    rubygems-aws-partitions \
+    rubygems-aws-sdk-core \
     rubygems-aws-sigv4 \
-    rubygems-jmespath \
 "
 
 BBCLASSEXTEND = "native"
