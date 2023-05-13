@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "6db5472e9acc11833f13571f73033a41"
-SRC_URI[sha256sum] = "5caadbf4bbe5ab539cb892a5bcf74ca33a2f2a897cecafdee4a63be79b4819dc"
+SRC_URI[md5sum] = "bf4a1b14ee60209ba59fdcfbfd843e0d"
+SRC_URI[sha256sum] = "4daa4874ce1838cd801c65e66ed5d4f140024404a3de7482c36d4ef2604dff6f"
 
 GEM_NAME = "sexp_processor"
 
