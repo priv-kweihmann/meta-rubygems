@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "b3c4af47e3613d49b8db760f60435d8c"
-SRC_URI[sha256sum] = "b70e325e37a378aea68b6d78c9cdd060c66cbd2bef558d8f13a6af05b3f2c4a9"
+SRC_URI[md5sum] = "a65078f35282e002d2ac45f0f6b65d41"
+SRC_URI[sha256sum] = "46b2d244cc6ff01a89bf61274690c09fdbdca47a84ae9eac39039e81231aee7c"
 
 GEM_NAME = "mini_portile2"
 
