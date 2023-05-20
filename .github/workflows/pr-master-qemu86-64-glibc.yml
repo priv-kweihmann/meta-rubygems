@@ -54,12 +54,17 @@ jobs:
           branch: none
           add-layer: "0"
       - name: configure (caches)
+        id: caches
         uses: actions/cache@v3
         with:
           path: /opt/build/sstate-cache
           key: rubygems-arm64-glibc-${{ env.SCM_BRANCH }}-${{ github.base_ref }}
           restore-keys: |
             rubygems-arm64-glibc-${{ env.SCM_BRANCH }}-
+      - name: configure (caches fallback)
+        if: ! ${{ steps.caches.outputs.cache-hit }}
+        run: |
+          mkdir -p /opt/build/sstate-cache
       - name: activate (caches)
         uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
         with:
