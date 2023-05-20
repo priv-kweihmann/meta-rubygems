@@ -24,8 +24,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "33d5da906b862c88b14d0d46d8704a95"
-SRC_URI[sha256sum] = "adf24eeba17519a6ea9b12e1c31e5d4e60dcea396843d61961de4d5a4ab1c3fa"
+SRC_URI[md5sum] = "b515378c0ade4e55e86b7ef6bc78a167"
+SRC_URI[sha256sum] = "9ce6231ccd819d579587cac95941d60776a7e0ec6b913cc319826733426fb56b"
 
 GEM_NAME = "rubycritic"
 
