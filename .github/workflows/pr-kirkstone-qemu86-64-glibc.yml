@@ -36,12 +36,17 @@ jobs:
       - name: setup (container)
         uses: priv-kweihmann/meta-sca-ci-utils/preparecontainer@latest
       - name: additional setup (caches)
+        id: caches
         uses: actions/cache@v3
         with:
           path: /opt/build/sstate-cache
           key: rubygems-arm64-glibc-${{ env.SCM_BRANCH }}-${{ github.sha }}
           restore-keys: |
             rubygems-arm64-glibc-${{ env.SCM_BRANCH }}-
+      - name: configure (caches fallback)
+        if: ! ${{ steps.caches.outputs.cache-hit }}
+        run: |
+          mkdir -p /opt/build/sstate-cache
       - name: checkout (poky)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
