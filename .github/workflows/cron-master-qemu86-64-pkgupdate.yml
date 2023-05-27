@@ -5,6 +5,7 @@ on:
     types: do-package-update
   schedule:
     - cron: "0 2 * * 6"
+  workflow_dispatch:
 
 jobs:
   buildrun:
@@ -49,7 +50,7 @@ jobs:
           restore-keys: |
             rubygems-arm64-glibc-${{ env.SCM_BRANCH }}-
       - name: configure (caches fallback)
-        if: ! ${{ steps.caches.outputs.cache-hit }}
+        if: ${{ ! steps.caches.outputs.cache-hit }}
         run: |
           mkdir -p /opt/build/sstate-cache
       - name: checkout (poky)
