@@ -5,6 +5,7 @@ on:
     types: do-kirkstone-cherry-pick
   schedule:
     - cron: "0 2 * * 3"
+  workflow_dispatch:
 
 jobs:
   buildrun:
