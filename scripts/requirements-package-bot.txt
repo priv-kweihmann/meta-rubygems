@@ -1,5 +1,5 @@
 github3.py
 python-git
 oelint-parser>=1.2.0
-scancode-toolkit>=3.2.0
+scancode-toolkit~=31.0
 semantic-version>=2.8.0
