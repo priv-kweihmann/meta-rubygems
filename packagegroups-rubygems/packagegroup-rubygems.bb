@@ -117,6 +117,12 @@ RDEPENDS:${PN} += "\
     rubygems-docile \
     rubygems-docker-api \
     rubygems-domain-name \
+    rubygems-dry-configurable \
+    rubygems-dry-core \
+    rubygems-dry-inflector \
+    rubygems-dry-logic \
+    rubygems-dry-struct \
+    rubygems-dry-types \
     rubygems-ed25519 \
     rubygems-em-websocket \
     rubygems-equalizer \
@@ -154,6 +160,7 @@ RDEPENDS:${PN} += "\
     rubygems-googleauth \
     rubygems-gssapi \
     rubygems-gyoku \
+    rubygems-hashdiff \
     rubygems-hashie \
     rubygems-hiera \
     rubygems-highline \
@@ -175,7 +182,9 @@ RDEPENDS:${PN} += "\
     rubygems-jekyll-watch \
     rubygems-jmespath \
     rubygems-json \
+    rubygems-jsonpath \
     rubygems-jwt \
+    rubygems-k8s-ruby \
     rubygems-kramdown \
     rubygems-kramdown-parser-gfm \
     rubygems-kwalify \
@@ -238,6 +247,7 @@ RDEPENDS:${PN} += "\
     rubygems-rainbow \
     rubygems-rb-fsevent \
     rubygems-rb-inotify \
+    rubygems-recursive-open-struct \
     rubygems-reek \
     rubygems-regexp-parser \
     rubygems-representable \
@@ -289,6 +299,7 @@ RDEPENDS:${PN} += "\
     rubygems-train-aws \
     rubygems-train-core \
     rubygems-train-habitat \
+    rubygems-train-kubernetes \
     rubygems-train-rest \
     rubygems-train-winrm \
     rubygems-tty-box \
@@ -315,6 +326,7 @@ RDEPENDS:${PN} += "\
     rubygems-wisper \
     rubygems-wmi-lite \
     rubygems-yajl-ruby \
+    rubygems-yaml-safe-load-stream3 \
     rubygems-yard \
     rubygems-zeitwerk \
 "

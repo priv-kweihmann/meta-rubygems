@@ -8,9 +8,10 @@ class RubyGemsTestExceptions():
 
     exec_wrapper_skips = {
         "gauntlet": "some internal weirdness",
+        "jmespath.rb": "seems to require some kind of input",
+        "jsonpath": "seems to require some kind of input",
         "restclient": "need an URL parameter",
         "setup": "unknown issue with ruby load function",
-        "jmespath.rb": "seems to require some kind of input",
     }
 
     loadable_skips = {
