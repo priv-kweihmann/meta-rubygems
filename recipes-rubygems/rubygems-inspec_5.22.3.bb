@@ -18,14 +18,15 @@ DEPENDS:class-native += "\
     rubygems-rake-native \
     rubygems-train-aws-native \
     rubygems-train-habitat-native \
+    rubygems-train-kubernetes-native \
     rubygems-train-native \
     rubygems-train-winrm-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "b7e4dd07b2f3f52622ac5e853baf91a3"
-SRC_URI[sha256sum] = "f0ad881a9dd0d56d90805b12dc07326c73206b21f82da50d7f8898856a0b57f8"
+SRC_URI[md5sum] = "9995093f971982c65ab6d9ed435a9a14"
+SRC_URI[sha256sum] = "1b798fe5445d625eb08abbd371e79a0a891335331721ed219369fdc923000874"
 
 GEM_NAME = "inspec"
 
@@ -48,6 +49,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-train \
     rubygems-train-aws \
     rubygems-train-habitat \
+    rubygems-train-kubernetes \
     rubygems-train-winrm \
 "
 
