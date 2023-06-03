@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "6ed919e18b420bf036113d3b436aaf53"
-SRC_URI[sha256sum] = "dbf3b44147e5b99403ab7f2ab94bfc6913faafdbc241524ecf80ac1019b914bd"
+SRC_URI[md5sum] = "3414baa0cb659c223d04472c63efbb63"
+SRC_URI[sha256sum] = "01c763e5b4ac0f2a558f5d1cc6969dbfb7c32c2dd1ddbf880eec936f05df7238"
 
 GEM_NAME = "aws-sdk-codedeploy"
 
