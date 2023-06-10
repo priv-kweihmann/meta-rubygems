@@ -13,12 +13,13 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-ast-native \
+    rubygems-racc-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "67cb5067f79ad631b43e16528dbf394b"
-SRC_URI[sha256sum] = "1d6542b6d3c5e15bedb500fa68eb937aa0eaae644eb0eda43e9a1fa9b54dc821"
+SRC_URI[md5sum] = "d922abd44da59ea5a8102714d207da89"
+SRC_URI[sha256sum] = "10685f358ab36ffea2252dc4952e5b8fad3a297a8152a85f59adc982747b91eb"
 
 GEM_NAME = "parser"
 
@@ -28,6 +29,7 @@ inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-ast \
+    rubygems-racc \
 "
 
 BBCLASSEXTEND = "native"
