@@ -108,6 +108,7 @@ RDEPENDS:${PN} += "\
     rubygems-concurrent-ruby \
     rubygems-connection-pool \
     rubygems-cookstyle \
+    rubygems-coolline \
     rubygems-corefoundation \
     rubygems-declarative \
     rubygems-declarative-option \
@@ -239,6 +240,7 @@ RDEPENDS:${PN} += "\
     rubygems-progress-bar \
     rubygems-proxifier \
     rubygems-pry \
+    rubygems-pry-coolline \
     rubygems-public-suffix \
     rubygems-puppet \
     rubygems-puppet-resource-api \
