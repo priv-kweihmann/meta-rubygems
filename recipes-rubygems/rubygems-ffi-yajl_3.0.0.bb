@@ -22,8 +22,8 @@ GEM_INSTALL_FLAGS:append = " \
     --with-opt=${RECIPE_SYSROOT} \
 "
 
-SRC_URI[md5sum] = "60eec3de8305490fb0e72609a4c2e90a"
-SRC_URI[sha256sum] = "ff47586b93280aa6dd4d9a9097337219f641f829b6d56b709339eda1697a5e78"
+SRC_URI[md5sum] = "dabca4e00bd6e39c47df9c8653baa273"
+SRC_URI[sha256sum] = "90c60945353d67414a2ed239b9b6d03035745f471a7a5acb80828fb2e098b700"
 
 GEM_NAME = "ffi-yajl"
 
