@@ -11,6 +11,7 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-json-native \
+    rubygems-language-server-protocol-native \
     rubygems-parallel-native \
     rubygems-parser-native \
     rubygems-rainbow-native \
@@ -23,8 +24,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "19baa238663a90ae05264ad8c8517fa4"
-SRC_URI[sha256sum] = "908718035c4771f414280412be0d9168a7abd310da1ab859a50d41bece0dac2f"
+SRC_URI[md5sum] = "c11fdea9e1bc285b921af2a4c05a7dac"
+SRC_URI[sha256sum] = "01e56decdd30c12163c3ec5784ee6f579e61c939c04edb64d2f74c131272f72c"
 
 GEM_NAME = "rubocop"
 
@@ -34,6 +35,7 @@ inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-json \
+    rubygems-language-server-protocol \
     rubygems-parallel \
     rubygems-parser \
     rubygems-rainbow \

@@ -189,6 +189,7 @@ RDEPENDS:${PN} += "\
     rubygems-kramdown \
     rubygems-kramdown-parser-gfm \
     rubygems-kwalify \
+    rubygems-language-server-protocol \
     rubygems-launchy \
     rubygems-libyajl2 \
     rubygems-license-acceptance \
