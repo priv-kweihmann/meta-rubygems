@@ -19,8 +19,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "fa1c44e88c5d7d62a4655abf0cba0172"
-SRC_URI[sha256sum] = "edf919b06d7aa5a7de3790e2b24e4a983f843a43e3463a980334685bcf24a99f"
+SRC_URI[md5sum] = "aef19441d585309eb18b5c3d97ebdccd"
+SRC_URI[sha256sum] = "b2a31e568958e4c0ad39f0cbdf29e1f8aa4908b0d5f592701ae1eece1926d546"
 
 GEM_NAME = "flog"
 
