@@ -94,12 +94,12 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: qemu-system-native
-      - name: setup (rm_work_and_downloads)
+      - name: setup (rm_work)
         uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
         with:
           variable: INHERIT
           operation: " += "
-          value: "rm_work_and_downloads rubygemsdebug"
+          value: "rm_work rubygemsdebug"
       - name: setup (generate test files)
         uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
         with:
