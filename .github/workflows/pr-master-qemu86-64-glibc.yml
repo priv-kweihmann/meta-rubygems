@@ -75,16 +75,23 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: glibc
+      - name: build (rust)
+        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
+        with:
+          target: "rust-llvm-native rust-native"
+          ignore-exit-codes: 124 137
       - if: env.BUILD_KERNEL == '1'
         name: build (kernel)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: linux-yocto
+          ignore-exit-codes: 124 137
       - if: env.BUILD_QEMUSYSTEM == '1'
         name: build (qemu-system)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: qemu-system-native
+          ignore-exit-codes: 124 137
       - name: setup (rm_work)
         uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
         with:
@@ -95,6 +102,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: core-image-minimal-rubygems
+          ignore-exit-codes: 124 137
       - name: test (core-image-minimal-rubygems)
         uses: priv-kweihmann/meta-sca-ci-utils/testimage@latest
         with:

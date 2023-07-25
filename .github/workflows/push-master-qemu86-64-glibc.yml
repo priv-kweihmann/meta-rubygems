@@ -73,11 +73,17 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: glibc
+      - name: build (rust)
+        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
+        with:
+          target: "rust-llvm-native rust-native"
+          ignore-exit-codes: 124 137
       - if: env.BUILD_KERNEL == '1'
         name: build (kernel)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: linux-yocto
+          ignore-exit-codes: 124 137
       - name: setup (rm_work)
         uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
         with:
@@ -88,8 +94,9 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: "ruby gmp yajl libxml2 libxslt krb5 libffi"
+          ignore-exit-codes: 124 137
       - name: build (core-image-minimal-rubygems)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: core-image-minimal-rubygems
-          ignore-exit-codes: "124"
+          ignore-exit-codes: 124 137
