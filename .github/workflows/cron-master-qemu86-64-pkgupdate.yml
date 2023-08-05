@@ -110,6 +110,16 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends curl
         shell: bash
+      - name: build (tools)
+        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
+        with:
+          target: "ruby gmp yajl libxml2 libxslt krb5 libffi"
+          ignore-exit-codes: 124 137
+      - name: build (core-image-minimal-rubygems)
+        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
+        with:
+          target: core-image-minimal-rubygems
+          ignore-exit-codes: 124 137
       - name: build (package update)
         run: |
           source /github/actions/scripts/utils
