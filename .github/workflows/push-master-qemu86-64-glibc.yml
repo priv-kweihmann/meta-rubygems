@@ -9,24 +9,20 @@ jobs:
   buildrun:
     name: "build"
     env:
-      BUILD_EXPORT: 1
       SCM_BRANCH: master
-      BUILD_GLIBC: 1
-      BUILD_KERNEL: 1
       BUILD_MAXRUNTIME: 21000
       PYTHONIOENCODING: utf8
       LC_ALL: en_US.UTF-8
       LANG: en_US.UTF-8
       LANGUAGE: en_US.UTF-8
+      WORKSPACE: /opt/build
+      TOPDIR: /opt/build
+      TEMPLATECONF: /opt/build/sources/meta-rubygems/conf/templates/rubygems-arm64-glibc
 
     runs-on: ubuntu-latest
 
     container:
       image: privkweihmann/yocto-sca-minimal:2004
-      env:
-        WORKSPACE: /opt/build
-        TOPDIR: /opt/build
-        TEMPLATECONF: /opt/build/sources/meta-rubygems/conf/templates/rubygems-arm64-glibc
       volumes:
         - ${{ github.workspace }}:/opt/build
       options: --privileged --user=yoctouser
@@ -68,28 +64,21 @@ jobs:
         with:
           variable: SSTATE_DIR
           value: /opt/build/sstate-cache
-      - if: env.BUILD_GLIBC == '1'
-        name: build (glibc)
+      - name: build (glibc)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: glibc
-      - name: build (rust)
-        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
-        with:
-          target: "rust-llvm-native rust-native"
           ignore-exit-codes: 124 137
-      - if: env.BUILD_KERNEL == '1'
-        name: build (kernel)
+      - name: build (kernel)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: linux-yocto
           ignore-exit-codes: 124 137
-      - name: setup (rm_work)
-        uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
+      - name: build (qemu-system)
+        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
-          variable: INHERIT
-          operation: " += "
-          value: "rm_work rubygemsdebug"
+          target: qemu-system-native
+          ignore-exit-codes: 124 137
       - name: build (tools)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
@@ -100,3 +89,6 @@ jobs:
         with:
           target: core-image-minimal-rubygems
           ignore-exit-codes: 124 137
+      - name: print disk usage
+        if: always()
+        uses: priv-kweihmann/meta-sca-ci-utils/diskusage@latest
