@@ -11,25 +11,20 @@ jobs:
   buildrun:
     name: "build"
     env:
-      BUILD_EXPORT: 1
       SCM_BRANCH: master
-      BUILD_GLIBC: 1
-      BUILD_KERNEL: 1
       BUILD_MAXRUNTIME: 21000
-      BUILD_QEMUSYSTEM: 0
       PYTHONIOENCODING: utf8
       LC_ALL: en_US.UTF-8
       LANG: en_US.UTF-8
       LANGUAGE: en_US.UTF-8
+      WORKSPACE: /opt/build
+      TOPDIR: /opt/build
+      TEMPLATECONF: /opt/build/sources/meta-rubygems/conf/templates/rubygems-arm64-glibc
 
     runs-on: ubuntu-latest
 
     container:
       image: privkweihmann/yocto-sca-minimal:2004
-      env:
-        WORKSPACE: /opt/build
-        TOPDIR: /opt/build
-        TEMPLATECONF: /opt/build/sources/meta-rubygems/conf/templates/rubygems-arm64-glibc
       volumes:
         - ${{ github.workspace }}:/opt/build
       options: --privileged --user=yoctouser
@@ -79,27 +74,27 @@ jobs:
         with:
           variable: SSTATE_DIR
           value: "${WORKSPACE}/sstate-cache"
-      - if: env.BUILD_GLIBC == '1'
-        name: build (glibc)
+      - name: build (glibc)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: glibc
-      - if: env.BUILD_KERNEL == '1'
-        name: build (kernel)
+          ignore-exit-codes: 124 137
+      - name: build (kernel)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: linux-yocto
-      - if: env.BUILD_QEMUSYSTEM == '1'
-        name: build (qemu-system)
+          ignore-exit-codes: 124 137
+      - name: build (qemu-system)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: qemu-system-native
-      - name: setup (rm_work)
+          ignore-exit-codes: 124 137
+      - name: setup (rubygemsdebug)
         uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
         with:
           variable: INHERIT
           operation: " += "
-          value: "rm_work rubygemsdebug"
+          value: "rubygemsdebug"
       - name: setup (generate test files)
         uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
         with:
@@ -132,4 +127,6 @@ jobs:
           GITHUB_REPO=meta-rubygems \
           ${WORKSPACE}/sources/meta-rubygems/scripts/package-bot
         shell: bash
-
+      - name: print disk usage
+        if: always()
+        uses: priv-kweihmann/meta-sca-ci-utils/diskusage@latest
