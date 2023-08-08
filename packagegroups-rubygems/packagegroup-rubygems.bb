@@ -9,6 +9,7 @@ RDEPENDS:${PN} += "\
     rubygems-ast \
     rubygems-aws-eventstream \
     rubygems-aws-partitions \
+    rubygems-aws-sdk-account \
     rubygems-aws-sdk-alexaforbusiness \
     rubygems-aws-sdk-amplify \
     rubygems-aws-sdk-apigateway \

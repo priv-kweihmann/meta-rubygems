@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-cloudformation"
-DESCRIPTION = "Official AWS Ruby gem for AWS CloudFormation"
+SUMMARY = "RubyGem: aws-sdk-kafka"
+DESCRIPTION = "Official AWS Ruby gem for Managed Streaming for Kafka (Kafka)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "032de3a2414f1158fd8a9da43cb06b0a"
-SRC_URI[sha256sum] = "19ec984b2d931417f4faa6a2e8fac4fc9fbdd762c8ae0bdef212a8ce631fb673"
+SRC_URI[md5sum] = "7805c353fdd315e9594ce64d493343b5"
+SRC_URI[sha256sum] = "047720b9e98ebb8ecb5aea1144c72bcc607cef6bdb51231da49decbab8beaf80"
 
-GEM_NAME = "aws-sdk-cloudformation"
+GEM_NAME = "aws-sdk-kafka"
 
 inherit rubygems
 inherit rubygentest

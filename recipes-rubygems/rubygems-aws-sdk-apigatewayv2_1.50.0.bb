@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-batch"
-DESCRIPTION = "Official AWS Ruby gem for AWS Batch"
+SUMMARY = "RubyGem: aws-sdk-apigatewayv2"
+DESCRIPTION = "Official AWS Ruby gem for AmazonApiGatewayV2"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "9609ebbcaf779b930fd669d3a137b9db"
-SRC_URI[sha256sum] = "b020f5d9da977a5e5c836b860051b266f6e75cd8e74e321912b53e56290723e5"
+SRC_URI[md5sum] = "cef9f83173ce80c5ca3be585dd2497fa"
+SRC_URI[sha256sum] = "78b0143d65fb839fba6a48da6a76f4c4525543f99fa48aaa17fe58a103924707"
 
-GEM_NAME = "aws-sdk-batch"
+GEM_NAME = "aws-sdk-apigatewayv2"
 
 inherit rubygems
 inherit rubygentest
