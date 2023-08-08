@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-route53"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Route 53 (Route 53)"
+SUMMARY = "RubyGem: aws-sdk-glue"
+DESCRIPTION = "Official AWS Ruby gem for AWS Glue"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "fa581729dfdeee6331d1269a8e913049"
-SRC_URI[sha256sum] = "88ecc21660b553bba9b41409be269337d33742b931c11a8bdb98f33e460f0731"
+SRC_URI[md5sum] = "a6c2ac7c1013be982abba7057582dc50"
+SRC_URI[sha256sum] = "762cfe5c551f09f6c049420740ddf05ccee77909198175b125ba4b2cf441324d"
 
-GEM_NAME = "aws-sdk-route53"
+GEM_NAME = "aws-sdk-glue"
 
 inherit rubygems
 inherit rubygentest

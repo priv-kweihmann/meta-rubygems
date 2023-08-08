@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-rds"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Relational Database Service (Amazon RDS)"
+SUMMARY = "RubyGem: aws-sdk-securityhub"
+DESCRIPTION = "Official AWS Ruby gem for AWS SecurityHub"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "e1a283929a7ec501a5268cf19c42db05"
-SRC_URI[sha256sum] = "dc705439924a46e93adbf118187ef545c83111e72bbb274d873da46af123e6f9"
+SRC_URI[md5sum] = "21593cfebcad469d57ed128b4939a5d2"
+SRC_URI[sha256sum] = "7e05d2266d04e7fd41116895af0d8cc1aab8cbba80c284c90a5c69633157284f"
 
-GEM_NAME = "aws-sdk-rds"
+GEM_NAME = "aws-sdk-securityhub"
 
 inherit rubygems
 inherit rubygentest

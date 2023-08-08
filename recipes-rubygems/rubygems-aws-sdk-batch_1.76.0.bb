@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-kafka"
-DESCRIPTION = "Official AWS Ruby gem for Managed Streaming for Kafka (Kafka)"
+SUMMARY = "RubyGem: aws-sdk-batch"
+DESCRIPTION = "Official AWS Ruby gem for AWS Batch"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "4b5813c50632a97927244a5c02602632"
-SRC_URI[sha256sum] = "5d20ae08e3e2f2f371d9a84d1d66d989948f75a640bcdb00fcce826966b75a08"
+SRC_URI[md5sum] = "e96a6ce88f9ca71c57685b1fe4e29cdd"
+SRC_URI[sha256sum] = "9611a61047d944e0a0887d25d65bbf0c6902693264495837c15b3e0b92f5e904"
 
-GEM_NAME = "aws-sdk-kafka"
+GEM_NAME = "aws-sdk-batch"
 
 inherit rubygems
 inherit rubygentest

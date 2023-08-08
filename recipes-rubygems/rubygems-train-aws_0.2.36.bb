@@ -10,6 +10,7 @@ EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
+    rubygems-aws-sdk-account-native \
     rubygems-aws-sdk-alexaforbusiness-native \
     rubygems-aws-sdk-amplify-native \
     rubygems-aws-sdk-apigateway-native \
@@ -89,8 +90,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "3c132ab7594f3bf84b43f056c188f572"
-SRC_URI[sha256sum] = "0be508bd5f13f3f691e0e3aa7885cc657b28615bfda9272b2db89ac6bef387ee"
+SRC_URI[md5sum] = "a29c9c495ce0780d06b8611aebe3506e"
+SRC_URI[sha256sum] = "b6dc2812dae8e81dfe418f87d6bfe7942ecd8fec9f36ee58f0a2b9465e34172c"
 
 GEM_NAME = "train-aws"
 
@@ -99,6 +100,7 @@ inherit rubygentest
 inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
+    rubygems-aws-sdk-account \
     rubygems-aws-sdk-alexaforbusiness \
     rubygems-aws-sdk-amplify \
     rubygems-aws-sdk-apigateway \
