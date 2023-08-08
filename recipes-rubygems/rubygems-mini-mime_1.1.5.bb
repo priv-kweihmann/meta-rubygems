@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: mini_mime"
-DESCRIPTION = "A lightweight mime type lookup toy"
+DESCRIPTION = "A minimal mime type library"
 HOMEPAGE = "https://github.com/discourse/mini_mime"
 
 LICENSE = "MIT"
@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "cb193cf2badd9a85d884cd83556523b6"
-SRC_URI[sha256sum] = "a54aec0cc7438a03a850adb00daca2bdb60747f839e28186994df057cea87151"
+SRC_URI[md5sum] = "efdc9d225e0edc178ad8bc244933bea3"
+SRC_URI[sha256sum] = "8681b7e2e4215f2a159f9400b5816d85e9d8c6c6b491e96a12797e798f8bccef"
 
 GEM_NAME = "mini_mime"
 
