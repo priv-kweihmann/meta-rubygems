@@ -1,7 +1,7 @@
 MACHINE = "qemuarm64"
 
-include conf/templates/rubygems/common.inc
-include conf/templates/rubygems/ci.inc
-include conf/templates/rubygems/glibc.inc
+require conf/templates/rubygems/common.inc
+require conf/templates/rubygems/ci.inc
+require conf/templates/rubygems/glibc.inc
 
 CONF_VERSION = "2"
