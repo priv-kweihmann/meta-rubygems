@@ -79,16 +79,22 @@ jobs:
         with:
           target: qemu-system-native
           ignore-exit-codes: 124 137
+      # From here on we also accept exit code 1, as there's
+      # a high chance that we will run out of disk space
+      # and current bitbake does not support
+      # specific exit codes for BBDISKMON related settings
+      # In the end we only care about the caches falling
+      # out of this build, so that should be all fine
       - name: build (tools)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: "ruby gmp yajl libxml2 libxslt krb5 libffi"
-          ignore-exit-codes: 124 137
+          ignore-exit-codes: 124 137 1
       - name: build (core-image-minimal-rubygems)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: core-image-minimal-rubygems
-          ignore-exit-codes: 124 137
+          ignore-exit-codes: 124 137 1
       - name: print disk usage
         if: always()
         uses: priv-kweihmann/meta-sca-ci-utils/diskusage@latest
