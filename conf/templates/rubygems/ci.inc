@@ -19,3 +19,6 @@ TEST_RUNQEMUPARAMS = "nographic slirp"
 # Disable heavy llvm build, we really don't need for a headless qemu
 PACKAGECONFIG:remove:pn-mesa-native = "gallium-llvm"
 PACKAGECONFIG:remove:pn-mesa-gl-native = "gallium-llvm"
+
+# We don't care about ptests, all testing is done with oeqa
+DISTRO_FEATURES:remove = "ptest"
