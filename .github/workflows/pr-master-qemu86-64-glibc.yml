@@ -84,7 +84,12 @@ jobs:
         with:
           target: qemu-system-native
           ignore-exit-codes: 124 137
-      - name: build (tools)
+      - name: build (tools 1st part)
+        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
+        with:
+          target: "openssl perl"
+          ignore-exit-codes: 124 137
+      - name: build (tools 2nd part)
         uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
         with:
           target: "ruby gmp yajl libxml2 libxslt krb5 libffi"
