@@ -291,6 +291,7 @@ RDEPENDS:${PN} += "\
     rubygems-sslshake \
     rubygems-strings \
     rubygems-strings-ansi \
+    rubygems-sys-filesystem \
     rubygems-syslog-logger \
     rubygems-systemu \
     rubygems-terminal-table \
