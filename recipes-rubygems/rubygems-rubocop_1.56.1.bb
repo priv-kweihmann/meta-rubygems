@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: rubocop"
-DESCRIPTION = "RuboCop is a Ruby code style checking and code formatting tool.    It aims to enforce the community-driven Ruby Style Guide."
+DESCRIPTION = "RuboCop is a Ruby code style checking and code formatting tool.It aims to enforce the community-driven Ruby Style Guide."
 HOMEPAGE = "https://rubocop.org/"
 
 LICENSE = "MIT"
@@ -25,8 +25,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "d5671f61dbb48c37b47bbf6c667d5428"
-SRC_URI[sha256sum] = "96152bc00f2bd09df20a48133cb2b5c34267414d665f424d7cc127470c1fe2c5"
+SRC_URI[md5sum] = "47eb00c778be5ed2875317772038ccd8"
+SRC_URI[sha256sum] = "50552e8f455f162bde074f26f607320357b587860778bc7a68097ee68b05add8"
 
 GEM_NAME = "rubocop"
 
