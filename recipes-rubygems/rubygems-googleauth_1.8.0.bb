@@ -12,7 +12,6 @@ EXTRA_RDEPENDS:append = " "
 DEPENDS:class-native += "\
     rubygems-faraday-native \
     rubygems-jwt-native \
-    rubygems-memoist-native \
     rubygems-multi-json-native \
     rubygems-os-native \
     rubygems-signet-native \
@@ -20,8 +19,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "46ae6761fa8a7ed3dd9b2eacb7be3da5"
-SRC_URI[sha256sum] = "4f7528361a3c11185acd074cb875606005098a1b2f119c38a0676025f7213340"
+SRC_URI[md5sum] = "99503a8cbb52f2384ae6d61a633bb1bf"
+SRC_URI[sha256sum] = "c11ba17ad2f0cda20ac0e5717f22a56b48121648579dbfc6efaa01d81611cf1b"
 
 GEM_NAME = "googleauth"
 
@@ -37,7 +36,6 @@ do_install:append() {
 RDEPENDS:${PN}:class-target += "\
     rubygems-faraday \
     rubygems-jwt \
-    rubygems-memoist \
     rubygems-multi-json \
     rubygems-os \
     rubygems-signet \
