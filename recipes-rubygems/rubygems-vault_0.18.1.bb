@@ -4,7 +4,7 @@ DESCRIPTION = "Vault is a Ruby API client for interacting with a Vault server."
 HOMEPAGE = "https://github.com/hashicorp/vault-ruby"
 
 LICENSE = "MPL-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=f27a50d2e878867827842f2c60e30bfc"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=a5f602096588f722bbcddc67e81d4415"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "8698eb3ab3e3a3bffa26e4d4ba4f89c0"
-SRC_URI[sha256sum] = "af4b8300fb39f6185ef2418ae45277b398fa6300fde2783e6a1cef7bdbc656a9"
+SRC_URI[md5sum] = "74ee4ff580cc9758353ea98b4ac732dd"
+SRC_URI[sha256sum] = "87ffc7e0e2893df6452b4441adf4d2d45b5a6b79a0370a70b4c887bdb41070b1"
 
 GEM_NAME = "vault"
 
