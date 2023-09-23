@@ -19,8 +19,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "81b8896dfdbbfdc5d9b4d3de902b9cf3"
-SRC_URI[sha256sum] = "41be182035a09e04fac5928f65794f9adf60eb8e0a36002fb6575457bcb6dd3f"
+SRC_URI[md5sum] = "eec2820d595efaa43c23966c08c2ae86"
+SRC_URI[sha256sum] = "ce7c5a927b0ad5de38d5b06b639f724466ec865c26e8f9a9ab4fb80295dfbb6f"
 
 GEM_NAME = "ffi-libarchive"
 
