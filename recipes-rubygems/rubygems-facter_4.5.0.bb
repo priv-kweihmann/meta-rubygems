@@ -11,14 +11,13 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-hocon-native \
-    rubygems-sys-filesystem-native \
     rubygems-thor-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "36d246c260ea6d48c0d49ae6c223b547"
-SRC_URI[sha256sum] = "32d2dcada49322cbfa2850393fd86d52bf35828edb7306fc5e4f7f2b410811e0"
+SRC_URI[md5sum] = "b10500668a69db77ddb65907be2bd908"
+SRC_URI[sha256sum] = "c4263ae04a517f3759b4885c22c1b99093fdc416e9e639c763445e158cf92643"
 
 GEM_NAME = "facter"
 
@@ -28,7 +27,6 @@ inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-hocon \
-    rubygems-sys-filesystem \
     rubygems-thor \
 "
 
