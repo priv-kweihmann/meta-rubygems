@@ -4,22 +4,27 @@ DESCRIPTION = "A toolkit of support libraries and Ruby core extensions extracted
 HOMEPAGE = "https://rubyonrails.org"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://MIT-LICENSE;md5=c4df0cf970eec55a9d2006485982d245"
+LIC_FILES_CHKSUM = "file://MIT-LICENSE;md5=bd242b91e0fedcb6ec51782cf8914ee5"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
+    rubygems-base64-native \
+    rubygems-bigdecimal-native \
     rubygems-concurrent-ruby-native \
+    rubygems-connection-pool-native \
+    rubygems-drb-native \
     rubygems-i18n-native \
     rubygems-minitest-native \
+    rubygems-mutex-m-native \
     rubygems-tzinfo-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "0d5d03af069355d23d0f37c58576603a"
-SRC_URI[sha256sum] = "458316bb5098211ba9436d3c64d883177f09c49d1e29aa00f970d160275f13a1"
+SRC_URI[md5sum] = "845a7310305a5d07fb4e107ef0b54b9a"
+SRC_URI[sha256sum] = "01a20b75b86ffb3b3bf014c6611fecf12a27cb9f0bbdc1c794f5d5c3e1e9fcf6"
 
 GEM_NAME = "activesupport"
 
@@ -28,9 +33,14 @@ inherit rubygentest
 inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
+    rubygems-base64 \
+    rubygems-bigdecimal \
     rubygems-concurrent-ruby \
+    rubygems-connection-pool \
+    rubygems-drb \
     rubygems-i18n \
     rubygems-minitest \
+    rubygems-mutex-m \
     rubygems-tzinfo \
 "
 
