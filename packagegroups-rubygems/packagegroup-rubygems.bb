@@ -218,6 +218,7 @@ RDEPENDS:${PN} += "\
     rubygems-ms-rest-azure \
     rubygems-multi-json \
     rubygems-multipart-post \
+    rubygems-mutex-m \
     rubygems-net-http-persistent \
     rubygems-net-netconf \
     rubygems-net-scp \
