@@ -16,6 +16,7 @@ DEPENDS:class-native += "\
     rubygems-parser-native \
     rubygems-rainbow-native \
     rubygems-reek-native \
+    rubygems-rexml-native \
     rubygems-ruby-parser-native \
     rubygems-simplecov-native \
     rubygems-tty-which-native \
@@ -24,8 +25,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "b515378c0ade4e55e86b7ef6bc78a167"
-SRC_URI[sha256sum] = "9ce6231ccd819d579587cac95941d60776a7e0ec6b913cc319826733426fb56b"
+SRC_URI[md5sum] = "e68342f43c99017f00192d81bd86b67d"
+SRC_URI[sha256sum] = "29dc6e43720ea042d1a15a2d6119982204d9aa735ae524fc0ef2746bbb0af700"
 
 GEM_NAME = "rubycritic"
 
@@ -40,6 +41,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-parser \
     rubygems-rainbow \
     rubygems-reek \
+    rubygems-rexml \
     rubygems-ruby-parser \
     rubygems-simplecov \
     rubygems-tty-which \
