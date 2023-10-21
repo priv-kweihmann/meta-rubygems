@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "29bf1c4825a48a6330139f783e49826c"
-SRC_URI[sha256sum] = "47640e63b0cf1ba17cce1551cca5e19f3522f63473ebb306563718173a7f1f6a"
+SRC_URI[md5sum] = "5ebdbf6fe4fa2c82f48cf363e1612a0a"
+SRC_URI[sha256sum] = "95ba8c1740891c74c0a8a1dcc1423afcb5a1bef6a63f59e7bc1035c1aca3e1eb"
 
 GEM_NAME = "aws-sdk-glue"
 
