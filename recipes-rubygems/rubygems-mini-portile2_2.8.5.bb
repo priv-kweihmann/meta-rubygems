@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: mini_portile2"
-DESCRIPTION = "Simplistic port-like solution for developers"
+DESCRIPTION = "Simple autoconf and cmake builder for developers"
 HOMEPAGE = "https://github.com/flavorjones/mini_portile"
 
 LICENSE = "MIT"
@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "519d07cf615aeaf352fb5c30dd26c370"
-SRC_URI[sha256sum] = "180bc4193701bbeb9b6c02df5a6b8185bff7f32abd466dd97d6532d36e45b20a"
+SRC_URI[md5sum] = "0d8a4ba2e286b8f36b869997af6f3ecf"
+SRC_URI[sha256sum] = "7a37db8ae758086c3c3ac3a59c036704d331e965d5e106635e4a42d6e66089ce"
 
 GEM_NAME = "mini_portile2"
 
