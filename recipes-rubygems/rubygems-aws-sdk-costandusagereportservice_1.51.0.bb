@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "cb2aea7c5ada6b2a0ec597f4f3260caf"
-SRC_URI[sha256sum] = "8d1649c0f3fb82dfc9d203e9cb3003ce455703afc4700579ad5e7600441e6fa2"
+SRC_URI[md5sum] = "7f5ea978b77757663c8fb39980cb0b20"
+SRC_URI[sha256sum] = "9448f354b5377984ba67c64c7f565d75f73f7fc9ee8f1130cb7b77e72f14ffec"
 
 GEM_NAME = "aws-sdk-costandusagereportservice"
 
