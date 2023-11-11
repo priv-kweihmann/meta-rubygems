@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "3a7bbf860e3757bf3d61f5dbb370856b"
-SRC_URI[sha256sum] = "0a9bc5ebe3495e3fc39b1c56292792c1f793b3926fad050cd17b1272cfb57dde"
+SRC_URI[md5sum] = "b263006d86b0d057392d1d6d9b60fbcd"
+SRC_URI[sha256sum] = "b6ef0c6c842ede846f2ec0ade9e266b1a9dac0bc151682b04835e8ebd54840d5"
 
 GEM_NAME = "mutex_m"
 
