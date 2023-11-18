@@ -9,3 +9,6 @@ rspec-expectations;~=3.12
 rspec-mocks;~=3.12
 rspec-support;~=3.12
 rspec;~=3.12.0
+inspec;>6.0.0
+inspec-core;>6.0.0
+inspec-bin;>6.0.0
