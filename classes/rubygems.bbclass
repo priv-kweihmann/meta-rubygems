@@ -5,7 +5,11 @@
 
 GEMLIB_VERSION = "3.2.0"
 
-GEM_SRC ?= "http://rubygems.org/gems"
+GEM_SRC ?= "https://rubygems.org/gems"
+
+# Enforce IPv4 connection - IPv6 seems to be broken
+# nooelint: oelint.vars.specific oelint.vars.pathhardcode.bindir
+FETCHCMD_wget ?= "/usr/bin/env wget -t 2 -T 30 --passive-ftp -4"
 
 GEM_NAME ?= ""
 GEM_VERSION ?= "${PV}"
