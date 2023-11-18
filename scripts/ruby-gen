@@ -76,7 +76,7 @@ __seen_pkgs = []
 def get_versions(args, pkgname):
     try:
         _output = subprocess.check_output(
-            ["curl", "-k",
+            ["curl", "-k", "--ipv4",
                 "https://rubygems.org/api/v1/versions/{}.json".format(pkgname)],
             universal_newlines=True, stderr=subprocess.DEVNULL)
     except subprocess.CalledProcessError:
@@ -185,7 +185,7 @@ def get_best_version(args, _versions, pkgname, version):
 def get_hashes(args, description, url):
     __tempfile = os.path.join(_tempfolder.name, "rubygen.tmp")
     try:
-        subprocess.check_call(["curl", "-k", url, "--output", __tempfile],
+        subprocess.check_call(["curl", "-k", "--ipv4", url, "--output", __tempfile],
                               stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
     except subprocess.CalledProcessError:
         print("Can't generate hashes for URL:{}".format(url))
