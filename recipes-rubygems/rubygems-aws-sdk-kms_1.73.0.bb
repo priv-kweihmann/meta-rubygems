@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-s3"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Simple Storage Service (Amazon S3)"
+SUMMARY = "RubyGem: aws-sdk-kms"
+DESCRIPTION = "Official AWS Ruby gem for AWS Key Management Service (KMS)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -11,16 +11,15 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-aws-sdk-core-native \
-    rubygems-aws-sdk-kms-native \
     rubygems-aws-sigv4-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "44b05566f4a9be2ac9df497ebfb875ce"
-SRC_URI[sha256sum] = "580011295202bf134d62473916933ef00ad9b9076264d8de8bd00e3c4e5bebab"
+SRC_URI[md5sum] = "98b9e0ae10af425a05ac73c4a23d7533"
+SRC_URI[sha256sum] = "bcf92a04befedbc6cffd5c6652c8a69be80f61f11e472a8e1c0503553140463b"
 
-GEM_NAME = "aws-sdk-s3"
+GEM_NAME = "aws-sdk-kms"
 
 inherit rubygems
 inherit rubygentest
@@ -28,7 +27,6 @@ inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-aws-sdk-core \
-    rubygems-aws-sdk-kms \
     rubygems-aws-sigv4 \
 "
 
