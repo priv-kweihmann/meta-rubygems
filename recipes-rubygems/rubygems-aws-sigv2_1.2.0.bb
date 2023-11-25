@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "9f8dd3f5db32de6845f750034b39b618"
-SRC_URI[sha256sum] = "33c3d5eab3af3ef5a16cb02e00e67dbe49c6487a12769cbd7ae383b68de0daae"
+SRC_URI[md5sum] = "bf8563d7b604b0cda59e8d0960f99c19"
+SRC_URI[sha256sum] = "32a06385ac19ce6e595152774dd93540ac92d0c55a2de488e6c5768c92d155fd"
 
 GEM_NAME = "aws-sigv2"
 
