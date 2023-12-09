@@ -159,6 +159,7 @@ RDEPENDS:${PN} += "\
     rubygems-google-apis-core \
     rubygems-google-apis-discovery-v1 \
     rubygems-google-apis-generator \
+    rubygems-google-cloud-env \
     rubygems-googleauth \
     rubygems-gssapi \
     rubygems-gyoku \
