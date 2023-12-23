@@ -9,6 +9,7 @@ RDEPENDS:${PN} += "\
     rubygems-ast \
     rubygems-aws-eventstream \
     rubygems-aws-partitions \
+    rubygems-aws-sdk-accessanalyzer \
     rubygems-aws-sdk-account \
     rubygems-aws-sdk-alexaforbusiness \
     rubygems-aws-sdk-amplify \
@@ -58,6 +59,7 @@ RDEPENDS:${PN} += "\
     rubygems-aws-sdk-kinesis \
     rubygems-aws-sdk-kms \
     rubygems-aws-sdk-lambda \
+    rubygems-aws-sdk-macie2 \
     rubygems-aws-sdk-mq \
     rubygems-aws-sdk-networkfirewall \
     rubygems-aws-sdk-networkmanager \
@@ -85,6 +87,7 @@ RDEPENDS:${PN} += "\
     rubygems-aws-sdk-synthetics \
     rubygems-aws-sdk-transfer \
     rubygems-aws-sdk-waf \
+    rubygems-aws-sdk-wafv2 \
     rubygems-aws-sigv2 \
     rubygems-aws-sigv4 \
     rubygems-axiom-types \

@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-codecommit"
-DESCRIPTION = "Official AWS Ruby gem for AWS CodeCommit (CodeCommit)"
+SUMMARY = "RubyGem: aws-sdk-accessanalyzer"
+DESCRIPTION = "Official AWS Ruby gem for Access Analyzer"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "a49b0b371f6a721db5ba899f93ace8d5"
-SRC_URI[sha256sum] = "bd378059cbc8fa6d900ace96c66d6be160c25eceeb800f6b3c9a9cb79f41932e"
+SRC_URI[md5sum] = "5f6335c19a54128a97b79d32b2cf76fc"
+SRC_URI[sha256sum] = "f6331571c0d0bf8eafc4a5b9c48d6b20f5395628d89710398809c0d9864c1a87"
 
-GEM_NAME = "aws-sdk-codecommit"
+GEM_NAME = "aws-sdk-accessanalyzer"
 
 inherit rubygems
 inherit rubygentest
