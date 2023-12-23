@@ -13,13 +13,12 @@ DEPENDS:class-native += "\
     rubygems-net-scp-native \
     rubygems-net-ssh-native \
     rubygems-net-telnet-native \
-    rubygems-sfl-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "94da5982916c04b8c729ae89709b60cc"
-SRC_URI[sha256sum] = "d151ee4161817caba24409e54d11ec0e6fa15505074739c6545187aace06bd45"
+SRC_URI[md5sum] = "63c46d29e3491ae8acfb8b5d8986360c"
+SRC_URI[sha256sum] = "07b1b9c1e81a3eed23300008100974a95ba20afeb5f1a64d943b4331a7801b86"
 
 GEM_NAME = "specinfra"
 
@@ -36,7 +35,6 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-net-scp \
     rubygems-net-ssh \
     rubygems-net-telnet \
-    rubygems-sfl \
 "
 
 BBCLASSEXTEND = "native"
