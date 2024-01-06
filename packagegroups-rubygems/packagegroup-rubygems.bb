@@ -125,7 +125,9 @@ RDEPENDS:${PN} += "\
     rubygems-dry-configurable \
     rubygems-dry-core \
     rubygems-dry-inflector \
+    rubygems-dry-initializer \
     rubygems-dry-logic \
+    rubygems-dry-schema \
     rubygems-dry-struct \
     rubygems-dry-types \
     rubygems-ed25519 \

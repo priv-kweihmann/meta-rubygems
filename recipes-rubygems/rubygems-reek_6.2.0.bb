@@ -12,15 +12,16 @@ EXTRA_DEPENDS:append = " \
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
-    rubygems-kwalify-native \
+    rubygems-dry-schema-native \
     rubygems-parser-native \
     rubygems-rainbow-native \
+    rubygems-rexml-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "25c973c215f46b71712bd3aca16b7dd1"
-SRC_URI[sha256sum] = "9966969b8480ed343d89397a4399c20b26588fb053753982215fdad7f652d08a"
+SRC_URI[md5sum] = "fc8898790e8803f918f34f2ba0787a6f"
+SRC_URI[sha256sum] = "b08c1f5790b19e000a3eec7e1f41ab1676ae0ac6db5ae891288e17ca2e036f2c"
 
 GEM_NAME = "reek"
 
@@ -29,9 +30,10 @@ inherit rubygentest
 inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
-    rubygems-kwalify \
+    rubygems-dry-schema \
     rubygems-parser \
     rubygems-rainbow \
+    rubygems-rexml \
 "
 
 BBCLASSEXTEND = "native"
