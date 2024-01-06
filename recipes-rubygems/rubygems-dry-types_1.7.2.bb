@@ -10,6 +10,7 @@ EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
+    rubygems-bigdecimal-native \
     rubygems-concurrent-ruby-native \
     rubygems-dry-core-native \
     rubygems-dry-inflector-native \
@@ -19,8 +20,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "81d28155931a33af98e06201ea5086fd"
-SRC_URI[sha256sum] = "12165841145a18dd22151f143707b90c8093f71e5ae06ee0f2301f5321f8cdb8"
+SRC_URI[md5sum] = "fedff520a133465a7431b779abdee675"
+SRC_URI[sha256sum] = "ff180fc285331e572a563408b834a78d1506ee3f5a6c7f803da2232947b0c46a"
 
 GEM_NAME = "dry-types"
 
@@ -29,6 +30,7 @@ inherit rubygentest
 inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
+    rubygems-bigdecimal \
     rubygems-concurrent-ruby \
     rubygems-dry-core \
     rubygems-dry-inflector \
