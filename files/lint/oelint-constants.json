@@ -20,6 +20,11 @@
         "GEM_SPEC_FILENAME",
         "GEM_SRC",
         "GEM_VERSION",
+        "RUBYGEMS_AUTOGEN_TESTS",
+        "RUBYLIB",
+        "RUBYLIB_EXTRA_PATHS",
+        "RUBYPLATFORM",
+        "RUBY_INSTALL_EXTRA_FLAGS",
         "RUBY_SITEDIR"
     ]
 }
