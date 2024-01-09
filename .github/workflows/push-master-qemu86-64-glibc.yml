@@ -43,7 +43,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
           repo: git://git.yoctoproject.org/poky.git
-          ref: 280917c2e70b103872c4495836dc7d1bcc30022a
+          ref: 070aa227057e4913cf77c2465393a5a8398d5641
           branch: none
           add-layer: "0"
       - name: checkout (meta-rubygems)
@@ -56,7 +56,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
           repo: git://git.openembedded.org/meta-openembedded
-          ref: 7d8115d5507bac6c018fbff8a7aa9bc513c2bc46
+          ref: 9c91e6018dc32ee337b6d2f47538ffda3742cc58
           branch: none
           add-layer: "0"
       - name: configure (caches)
