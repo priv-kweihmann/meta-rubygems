@@ -2,7 +2,7 @@ chef-config;>18.1.0
 chef-utils;>18.1.0
 chef;>18.1.0
 concurrent-ruby;~=1.1
-highline;>3.0.0
+highline;>=3.0.0
 inspec-bin;>6.0.0
 inspec-core;>6.0.0
 inspec;>6.0.0
