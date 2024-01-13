@@ -10,15 +10,13 @@ EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
-    rubygems-base64-native \
     rubygems-faraday-net-http-native \
-    rubygems-ruby2-keywords-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "7bf67c739b3b7f02ecf3b163ffff64cb"
-SRC_URI[sha256sum] = "a823dc6e1f5deaf6f91c8c1c02f37393f2339b39d811d9de33cef59d7d2ee4a6"
+SRC_URI[md5sum] = "bcce8e7ec967f7f257196016a1b81235"
+SRC_URI[sha256sum] = "1aa114507006eed6779a726b932d5cc12f5f6053984a19a3403539306b0e0be3"
 
 GEM_NAME = "faraday"
 
@@ -27,9 +25,7 @@ inherit rubygentest
 inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
-    rubygems-base64 \
     rubygems-faraday-net-http \
-    rubygems-ruby2-keywords \
 "
 
 BBCLASSEXTEND = "native"
