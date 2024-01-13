@@ -4,15 +4,15 @@ DESCRIPTION = "A library for tokenizing, lexing, and parsing Ruby regular expres
 HOMEPAGE = "https://github.com/ammar/regexp_parser"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=ab6e6852046ddac1a232486a7deee31b"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=70dd94107d72a26732c98b5ce86c90f2"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "f739f1af4903c92e882ef79e86e373b7"
-SRC_URI[sha256sum] = "953277d2268bfb2f03275f36222ba9b36342f744a886cb7c8eefa8b985842ff7"
+SRC_URI[md5sum] = "a22ca8a4f8e1dd11be0a66e65f59ca78"
+SRC_URI[sha256sum] = "81a00ba141cec0d4b4bf58cb80cd9193e5180836d3fa6ef623f7886d3ba8bdd9"
 
 GEM_NAME = "regexp_parser"
 
