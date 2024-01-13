@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "a0b10da64c64c04bbe5b5383c40f3758"
-SRC_URI[sha256sum] = "9552ed7bbd3700ed1eeb0121c160ceaf64fa5dbaff5a1ff5fe6fd8481ecd9cfd"
+SRC_URI[md5sum] = "22fbae5152ba2d40aaa900dbd06d8851"
+SRC_URI[sha256sum] = "81387f2dfab3a950e067fa058535ddceccfc717b1a9416c6867d94cb63320ea5"
 
 GEM_NAME = "aws-partitions"
 
