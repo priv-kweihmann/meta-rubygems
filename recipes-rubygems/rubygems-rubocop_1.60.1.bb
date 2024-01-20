@@ -4,7 +4,7 @@ DESCRIPTION = "RuboCop is a Ruby code style checking and code formatting tool.It
 HOMEPAGE = "https://rubocop.org/"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=0360c125872746a42da0c505b04a7546"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=a927c710df5b5a6f697ee4c42b004fe0"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -24,8 +24,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "65f1950a7ba80a4d9d8dba9ab32f1f49"
-SRC_URI[sha256sum] = "09cf4b874ce87f777e8dc711b0f5e2ef4b123eb20d7e38ae2b85c43015a0fc43"
+SRC_URI[md5sum] = "f6045bf2bb45ac808b7aaede95297796"
+SRC_URI[sha256sum] = "a992a4b3d8c3123397c70e5fe675e0a30c6576acd1bc15a02b6fe6d5acd7fe64"
 
 GEM_NAME = "rubocop"
 
