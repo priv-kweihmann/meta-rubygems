@@ -9,16 +9,18 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
+SRC_URI:append = " \
+    file://0001-Lift-rubocup-version-pinning.patch \
+"
+
 DEPENDS:class-native += "\
     rubygems-rubocop-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI:append = " file://0001-Lift-rubocup-version-pinning.patch"
-
-SRC_URI[md5sum] = "63b7e1fcafc283e73edd8b9df63de405"
-SRC_URI[sha256sum] = "3ad4e5e9b0993b4273f937c3784a57c9d6a87d6190b4c9d708f6e5d049f2e05a"
+SRC_URI[md5sum] = "9e9fd9c71a1d6f96385b0aaa26d1d6d0"
+SRC_URI[sha256sum] = "6ec0840db32ca066dd47ab8cfc2fd454070d003ab85d9a1990e4b61f1fe0ee70"
 
 GEM_NAME = "cookstyle"
 
