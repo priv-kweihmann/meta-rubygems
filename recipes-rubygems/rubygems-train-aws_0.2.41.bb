@@ -103,6 +103,10 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
+do_configure:prepend() {
+    sed -i 's#"= 1.102.0"#">= 1.102.0"#g' ${GEM_SPEC_FILE}
+}
+
 RDEPENDS:${PN}:class-target += "\
     rubygems-aws-partitions \
     rubygems-aws-sdk-accessanalyzer \
