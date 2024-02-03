@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "4878937ff3320082e6d64e3d4732be65"
-SRC_URI[sha256sum] = "ae767b5779ea9d01afb8a4a27f2be403c8571887bf0ecf44b75c4bb8d10dd914"
+SRC_URI[md5sum] = "0175a2ce93b53f42141e8b24acef763f"
+SRC_URI[sha256sum] = "cf4bb8c7d517ee1ea692baedf06e0b56ce68007549d8d5a66481aa9f97f46999"
 
 GEM_NAME = "google-cloud-env"
 
