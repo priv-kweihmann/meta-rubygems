@@ -7,7 +7,9 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=d288374151252b25b3f07c9b149d7f83"
 
 EXTRA_DEPENDS:append = " "
-EXTRA_RDEPENDS:append = " bash"
+EXTRA_RDEPENDS:append = " \
+    bash \
+"
 
 DEPENDS:class-native += "\
     rubygems-dry-configurable-native \
@@ -23,8 +25,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "8ac5ac0d450a6b3535bcf7c1320b84e6"
-SRC_URI[sha256sum] = "9b147560e9df81556c6b837eaa859a53ab3a50ad37bec9bd9a29e3b6a2f132a5"
+SRC_URI[md5sum] = "54d0994f156f4ab19c7dcff95f957ee4"
+SRC_URI[sha256sum] = "4d25029e8543e1e571f72f0f2e5d37f4ab20a5fb21c63033e404a47f6a2f49d0"
 
 GEM_NAME = "k8s-ruby"
 
