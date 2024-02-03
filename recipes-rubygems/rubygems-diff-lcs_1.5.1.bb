@@ -4,15 +4,15 @@ DESCRIPTION = "Diff::LCS computes the difference between two Enumerable sequence
 HOMEPAGE = "https://github.com/halostatue/diff-lcs"
 
 LICENSE = "MIT & Artistic-2.0 & GPL-2.0-or-later"
-LIC_FILES_CHKSUM = "file://License.md;md5=debd9dff6792a920e1ca0ee909e1926a"
+LIC_FILES_CHKSUM = "file://License.md;md5=ea4648088e1ee6748049f22fe24901ea"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "7e80da0d376d61914f08f9ea9aedc46d"
-SRC_URI[sha256sum] = "49b934001c8c6aedb37ba19daec5c634da27b318a7a3c654ae979d6ba1929b67"
+SRC_URI[md5sum] = "f4f1d50eed7496f7f32b09c9e81a5845"
+SRC_URI[sha256sum] = "273223dfb40685548436d32b4733aa67351769c7dea621da7d9dd4813e63ddfe"
 
 GEM_NAME = "diff-lcs"
 
