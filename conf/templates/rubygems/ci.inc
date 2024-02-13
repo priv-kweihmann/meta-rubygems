@@ -22,3 +22,5 @@ PACKAGECONFIG:remove:pn-mesa-gl-native = "gallium-llvm"
 
 # We don't care about ptests, all testing is done with oeqa
 DISTRO_FEATURES:remove = "ptest"
+
+INHERIT += "no-spdx"
