@@ -24,3 +24,5 @@ PACKAGECONFIG:remove:pn-mesa-gl-native = "gallium-llvm"
 DISTRO_FEATURES:remove = "ptest"
 
 INHERIT += "no-spdx"
+
+QEMU_TARGETS = "aarch64"
