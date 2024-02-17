@@ -111,6 +111,7 @@ RDEPENDS:${PN} += "\
     rubygems-colorator \
     rubygems-concurrent-ruby \
     rubygems-connection-pool \
+    rubygems-cookiejar \
     rubygems-cookstyle \
     rubygems-coolline \
     rubygems-corefoundation \
@@ -131,6 +132,8 @@ RDEPENDS:${PN} += "\
     rubygems-dry-struct \
     rubygems-dry-types \
     rubygems-ed25519 \
+    rubygems-em-http-request \
+    rubygems-em-socksify \
     rubygems-em-websocket \
     rubygems-equalizer \
     rubygems-erubi \
