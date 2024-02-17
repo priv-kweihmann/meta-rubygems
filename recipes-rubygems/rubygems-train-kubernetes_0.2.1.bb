@@ -4,7 +4,9 @@ DESCRIPTION = "A Train transport plugin for Chef Inspec that allows testing of a
 HOMEPAGE = "https://github.com/bgeesaman/train-kubernetes"
 
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10"
+LIC_FILES_CHKSUM = "\
+    file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10 \
+"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -16,8 +18,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "1bd237684104ed1ffb6beedcd64cb65e"
-SRC_URI[sha256sum] = "82177dbca4c8346d547f548eecbe5c5cde64c4a47406afd482a3b4e52f29fe09"
+SRC_URI[md5sum] = "828c2218614fc99431ec97aef34c8b54"
+SRC_URI[sha256sum] = "eb918eec7332da49976c6b32d81f6c4702b814b9a9f25e8ed8ece64b9ce4b747"
 
 GEM_NAME = "train-kubernetes"
 
