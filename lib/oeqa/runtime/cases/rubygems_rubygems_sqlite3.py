@@ -7,3 +7,4 @@ class RubyGemsTestrubygems_sqlite3(RubyGemsTestUtils):
 
     def test_load_sqlite3(self):
         self.gem_is_loadable("sqlite3")
+
