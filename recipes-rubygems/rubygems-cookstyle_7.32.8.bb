@@ -19,8 +19,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "9e9fd9c71a1d6f96385b0aaa26d1d6d0"
-SRC_URI[sha256sum] = "6ec0840db32ca066dd47ab8cfc2fd454070d003ab85d9a1990e4b61f1fe0ee70"
+SRC_URI[md5sum] = "de1a5c017871532987420095a1b2e048"
+SRC_URI[sha256sum] = "f2b512b3ac843535a94737fb74e5431e56cce12d5357deb079c5512e32311e91"
 
 GEM_NAME = "cookstyle"
 
