@@ -12,13 +12,12 @@ EXTRA_RDEPENDS:append = " "
 DEPENDS:class-native += "\
     rubygems-aws-sdk-core-native \
     rubygems-aws-sigv4-native \
-    rubygems-bigdecimal-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "fdc1e3bbd683c5c4efbc61026cf1fb47"
-SRC_URI[sha256sum] = "78c10e309dcc2037be59f7ac87aefa4aaf2f3addbee5398a686c31811a85e9ae"
+SRC_URI[md5sum] = "cd2c47eeada96e1dede44b9bebf150f0"
+SRC_URI[sha256sum] = "9de089ef2b0e39895f0c638dcb4cf10595fb391faa8f15086eaec992e2a7a11d"
 
 GEM_NAME = "aws-sdk-dynamodb"
 
@@ -29,7 +28,6 @@ inherit pkgconfig
 RDEPENDS:${PN}:class-target += "\
     rubygems-aws-sdk-core \
     rubygems-aws-sigv4 \
-    rubygems-bigdecimal \
 "
 
 BBCLASSEXTEND = "native"
