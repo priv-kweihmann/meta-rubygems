@@ -13,14 +13,13 @@ DEPENDS:class-native += "\
     rubygems-aws-eventstream-native \
     rubygems-aws-partitions-native \
     rubygems-aws-sigv4-native \
-    rubygems-base64-native \
     rubygems-jmespath-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "8e67f16ae3b81c2ac17e32b1609fe86e"
-SRC_URI[sha256sum] = "acc195bd9222ef03f456fd15347135779d42e4d438ef1ac86906f473f1a9e4b6"
+SRC_URI[md5sum] = "417259777f514e39e1af0af82ff7ac10"
+SRC_URI[sha256sum] = "da3632f76c61b9e52da176ff7921e3f2c849fbb2e97209ed3d97d8f43dc21621"
 
 GEM_NAME = "aws-sdk-core"
 
@@ -32,7 +31,6 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-aws-eventstream \
     rubygems-aws-partitions \
     rubygems-aws-sigv4 \
-    rubygems-base64 \
     rubygems-jmespath \
 "
 
