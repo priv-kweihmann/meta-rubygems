@@ -23,8 +23,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "171d7721259354080a0f180129fa7008"
-SRC_URI[sha256sum] = "a69d9ea6172175a570c35bf6f31518d605dbe2a367d1d6fd3c34e52604c28a79"
+SRC_URI[md5sum] = "c523c0c7b82d0f38dcc0706fb2a6b4d7"
+SRC_URI[sha256sum] = "03ee6ee4d527f21f3197c645b48b0d4d6e92c842f4dfd7b7179e7f4ee077af88"
 
 GEM_NAME = "puppet"
 
