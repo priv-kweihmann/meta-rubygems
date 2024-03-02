@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "95618e017ddeaae9a6cfacd92fcc79a4"
-SRC_URI[sha256sum] = "7d4214274c1dfbb83f6f51ba3ac5226a9c9b4433b3b1858a1710761bc30dfd30"
+SRC_URI[md5sum] = "13854cd07fcc4c072d6a12716149bcea"
+SRC_URI[sha256sum] = "2ab6531eef33af58d143534c23654a0e4893c9e0cfc4635e479762a88713619f"
 
 GEM_NAME = "google-apis-discovery_v1"
 
