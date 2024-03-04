@@ -27,6 +27,11 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
+do_install:append() {
+    # remove sqlite3 source code
+    rm -rf ${D}${libdir}/ruby/gems/${GEMLIB_VERSION}/gems/${GEM_NAME}-${PV}/ports
+}
+
 RDEPENDS:${PN}:class-target += "\
     rubygems-mini-portile2 \
 "
