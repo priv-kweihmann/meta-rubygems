@@ -11,12 +11,13 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-addressable-native \
+    rubygems-childprocess-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "e3dd8c265f69898c905575dd10e0730b"
-SRC_URI[sha256sum] = "8aa0441655aec5514008e1d04892c2de3ba57bd337afb984568da091121a241b"
+SRC_URI[md5sum] = "6d7b711e8eb76d01d204d25e0001eb2c"
+SRC_URI[sha256sum] = "4abcdab659689550ceca6ec0630cd9efd9940b51dc14cb4ebceee8f7aedc791b"
 
 GEM_NAME = "launchy"
 
@@ -26,6 +27,7 @@ inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-addressable \
+    rubygems-childprocess \
 "
 
 BBCLASSEXTEND = "native"
