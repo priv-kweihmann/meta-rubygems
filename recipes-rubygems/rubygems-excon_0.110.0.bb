@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "01c1cf93d75a120fcefa79080ebcb2be"
-SRC_URI[sha256sum] = "bda092e866d77089a41f4791b221e0cb96c48ef981db96ad1dcc66fae5e3b5ce"
+SRC_URI[md5sum] = "475c9817724178568c220d44d578fd41"
+SRC_URI[sha256sum] = "5f5372e1ccb6089ef45949100f2fc9fe12df200ee69c45a00771621eeefe6fd4"
 
 GEM_NAME = "excon"
 
