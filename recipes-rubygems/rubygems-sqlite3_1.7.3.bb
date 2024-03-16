@@ -6,20 +6,25 @@ HOMEPAGE = "https://github.com/sparklemotion/sqlite3-ruby"
 LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=f24ce0d57c8f8576a36e2803d35bcfec"
 
-EXTRA_DEPENDS:append = " sqlite3"
-EXTRA_RDEPENDS:append = " sqlite3"
+EXTRA_DEPENDS:append = " \
+    sqlite3 \
+"
+EXTRA_RDEPENDS:append = " \
+    sqlite3 \
+"
 
 DEPENDS:class-native += "\
     rubygems-mini-portile2-native \
 "
 
 GEM_INSTALL_FLAGS:append = " \
-    --platform=ruby -- \
+    -- \
     --enable-system-libraries \
+    --platform=ruby \
 "
 
-SRC_URI[md5sum] = "792ea16701e163ba4f49f18d296d3509"
-SRC_URI[sha256sum] = "16050775fea3095035c8d4cb33968523e8ef411ac2d6bfa5f27d4c2b119cfd8c"
+SRC_URI[md5sum] = "8fc21e729d3710efec385f567a21de56"
+SRC_URI[sha256sum] = "fa77f63c709548f46d4e9b6bb45cda52aa3881aa12cc85991132758e8968701c"
 
 GEM_NAME = "sqlite3"
 
