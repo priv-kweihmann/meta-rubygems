@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "44d33798df0e767bd331717552e8d133"
-SRC_URI[sha256sum] = "e362448c71cb88683d9c2df2819d7e47da3cdb37f757d0c99e3400d7e0030d40"
+SRC_URI[md5sum] = "3fb32f72f0f802f0647eecc0676ac8be"
+SRC_URI[sha256sum] = "b3f8591f7a4c29f7d13e654ddddcf94386e8cdbb0ea8cbf8523b22b584b18e38"
 
 GEM_NAME = "liquid"
 
