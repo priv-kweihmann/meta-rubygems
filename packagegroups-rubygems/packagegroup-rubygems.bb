@@ -165,9 +165,16 @@ RDEPENDS:${PN} += "\
     rubygems-gauntlet \
     rubygems-gems \
     rubygems-google-api-client \
+    rubygems-google-apis-admin-directory-v1 \
+    rubygems-google-apis-cloudkms-v1 \
+    rubygems-google-apis-cloudresourcemanager-v1 \
+    rubygems-google-apis-compute-v1 \
     rubygems-google-apis-core \
     rubygems-google-apis-discovery-v1 \
     rubygems-google-apis-generator \
+    rubygems-google-apis-iam-v1 \
+    rubygems-google-apis-monitoring-v3 \
+    rubygems-google-apis-storage-v1 \
     rubygems-google-cloud-env \
     rubygems-googleauth \
     rubygems-gssapi \

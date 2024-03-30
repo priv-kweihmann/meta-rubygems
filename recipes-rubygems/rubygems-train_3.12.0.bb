@@ -17,7 +17,13 @@ DEPENDS:class-native += "\
     rubygems-azure-mgmt-security-native \
     rubygems-azure-mgmt-storage-native \
     rubygems-docker-api-native \
-    rubygems-google-api-client-native \
+    rubygems-google-apis-admin-directory-v1-native \
+    rubygems-google-apis-cloudkms-v1-native \
+    rubygems-google-apis-cloudresourcemanager-v1-native \
+    rubygems-google-apis-compute-v1-native \
+    rubygems-google-apis-iam-v1-native \
+    rubygems-google-apis-monitoring-v3-native \
+    rubygems-google-apis-storage-v1-native \
     rubygems-googleauth-native \
     rubygems-inifile-native \
     rubygems-train-core-native \
@@ -26,8 +32,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "686daa8b48eabe90b02a7573331ebc0b"
-SRC_URI[sha256sum] = "da22b8746247f9950bc8193f87a60df96da18a8ca18d12dd979d540ba7d2f0a1"
+SRC_URI[md5sum] = "a196a8c303013f41fb8fa48d3aaff0fa"
+SRC_URI[sha256sum] = "cd3dd36807b4eb7e7ec1317a77f30b5392d75a57977b31430744425e654c121a"
 
 GEM_NAME = "train"
 
@@ -43,7 +49,13 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-azure-mgmt-security \
     rubygems-azure-mgmt-storage \
     rubygems-docker-api \
-    rubygems-google-api-client \
+    rubygems-google-apis-admin-directory-v1 \
+    rubygems-google-apis-cloudkms-v1 \
+    rubygems-google-apis-cloudresourcemanager-v1 \
+    rubygems-google-apis-compute-v1 \
+    rubygems-google-apis-iam-v1 \
+    rubygems-google-apis-monitoring-v3 \
+    rubygems-google-apis-storage-v1 \
     rubygems-googleauth \
     rubygems-inifile \
     rubygems-train-core \
