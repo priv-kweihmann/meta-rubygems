@@ -20,8 +20,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "8049fdd1eed549d1d71d3d62468ef8bb"
-SRC_URI[sha256sum] = "eb1564f61e84cf57bfbd52fa37f0e01c9e528224b0e185d3c5ece29c9b7677c8"
+SRC_URI[md5sum] = "2f44620b7c8ae197d362350614a33dae"
+SRC_URI[sha256sum] = "bdf9d100a93ea654ac2ea33dab8979c621f7073c8391d250340f25b8dc473205"
 
 GEM_NAME = "train-core"
 
