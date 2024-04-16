@@ -19,7 +19,7 @@ index 797524d..5748920 100644
  
    s.specification_version = 4
  
--  s.add_runtime_dependency(%q<rubocop>.freeze, ["= 1.25.1"])
+-  s.add_runtime_dependency(%q<rubocop>.freeze, ["= 1.25.1".freeze])
 +  s.add_runtime_dependency(%q<rubocop>.freeze, [">= 1.25.1"])
  end
  

@@ -1,0 +1,29 @@
+From e4919e9f4797a66577053b1af0dd7a6dcc53da98 Mon Sep 17 00:00:00 2001
+From: Konrad Weihmann <kweihmann@outlook.com>
+Date: Tue, 16 Apr 2024 19:10:14 +0000
+Subject: [PATCH] httpclient: adapt to IRB changes
+
+IRB.irb_at_exit is now called IRB.conf[:AT_EXIT].
+
+Upstream-Status: Pending
+Signed-off-by: Konrad Weihmann <kweihmann@outlook.com>
+---
+ bin/httpclient | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/bin/httpclient b/bin/httpclient
+index 57d3f3e..e7cd21a 100755
+--- a/bin/httpclient
++++ b/bin/httpclient
+@@ -65,7 +65,7 @@ class Runner
+         irb.eval_input
+       end
+     ensure
+-      IRB.irb_at_exit
++      IRB.conf[:AT_EXIT]
+     end
+   end
+ 
+-- 
+2.34.1
+
