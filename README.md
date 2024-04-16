@@ -17,7 +17,7 @@ Feel free to contribute any needed patches.
 
 Up to the following revisions automated checks being performed
 
-* poky: 6bd8367aa98e3108e9f1de9bdf809ded5dfc7413
+* poky: a88251b3e7077d0baf3af5f4f52928dce94aa41d
 * meta-openembedded: a7c8ce7f674008db4d7013557ec375a35226f43f
 
 ## Support
@@ -32,7 +32,7 @@ please check the following table to pick the correct branch matching your poky v
 
 | poky release | suggested meta-rubygems branch | ruby version | maintainer     |
 | ------------ | ------------------------------ | ------------ | -------------- |
-| master       | master                         | 3.2.x        | priv-kweihmann |
+| master       | master                         | 3.3.x        | priv-kweihmann |
 | kirkstone    | kirkstone                      | 3.1.x        | n.a.           |
 | honister     | hardknott                      | 3.0.x        | n.a.           |
 | hardknott    | hardknott                      | 3.0.x        | n.a.           |
