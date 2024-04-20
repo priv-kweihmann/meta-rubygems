@@ -10,13 +10,14 @@ EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
+    rubygems-racc-native \
     rubygems-sexp-processor-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "92db0050c074289e458ee50e7f449886"
-SRC_URI[sha256sum] = "8d2289a695dc81ffddcdd5a56e80c9a109806bc0d0b1239a1c852b0c71251c49"
+SRC_URI[md5sum] = "29928f853c5dd5714a67210c00ab93f9"
+SRC_URI[sha256sum] = "3842893d2f4602dcd93c0a79d77f9ce8e1ce197d41ac533d8e25c684f8f1c56b"
 
 GEM_NAME = "ruby_parser"
 
@@ -25,6 +26,7 @@ inherit rubygentest
 inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
+    rubygems-racc \
     rubygems-sexp-processor \
 "
 
