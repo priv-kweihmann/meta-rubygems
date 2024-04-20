@@ -4,7 +4,7 @@ DESCRIPTION = "Ruby library to interface with the SQLite3 database engine (http:
 HOMEPAGE = "https://github.com/sparklemotion/sqlite3-ruby"
 
 LICENSE = "BSD-3-Clause"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=f24ce0d57c8f8576a36e2803d35bcfec"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=048bdd172fbcbf66b755f0171400090f"
 
 EXTRA_DEPENDS:append = " \
     sqlite3 \
@@ -23,8 +23,8 @@ GEM_INSTALL_FLAGS:append = " \
     --platform=ruby \
 "
 
-SRC_URI[md5sum] = "8fc21e729d3710efec385f567a21de56"
-SRC_URI[sha256sum] = "fa77f63c709548f46d4e9b6bb45cda52aa3881aa12cc85991132758e8968701c"
+SRC_URI[md5sum] = "909acfa90cae276bbfdeb29bfa09a3f0"
+SRC_URI[sha256sum] = "f688e4aae13f60abb8f3a49d3fa23a814d3c6643b89fec96baef33602c8f4e07"
 
 GEM_NAME = "sqlite3"
 
