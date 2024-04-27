@@ -1,0 +1,32 @@
+From 3c137a49c096ba8ab6d670c3335a18cc91ced1d3 Mon Sep 17 00:00:00 2001
+From: Konrad Weihmann <kweihmann@outlook.com>
+Date: Sat, 27 Apr 2024 08:24:24 +0000
+Subject: [PATCH] profile: fix parser API change
+
+as Parser doesn't subclass AST::Processor::Mixin
+anymore, it can't be included here.
+Subclass from Parser::AST::Processor to fix this
+
+Upstream-Status: Backport [partial backport]
+Signed-off-by: Konrad Weihmann <kweihmann@outlook.com>
+---
+ lib/inspec/utils/profile_ast_helpers.rb | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/lib/inspec/utils/profile_ast_helpers.rb b/lib/inspec/utils/profile_ast_helpers.rb
+index 8e00206f8..299e85bd5 100644
+--- a/lib/inspec/utils/profile_ast_helpers.rb
++++ b/lib/inspec/utils/profile_ast_helpers.rb
+@@ -3,8 +3,7 @@ require "rubocop-ast"
+ module Inspec
+   class Profile
+     class AstHelper
+-      class CollectorBase
+-        include Parser::AST::Processor::Mixin
++      class CollectorBase < Parser::AST::Processor
+         include RuboCop::AST::Traversal
+ 
+         attr_reader :memo
+-- 
+2.34.1
+
