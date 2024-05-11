@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "626fd8b3f8cd080c1eccfa0e25d7bfed"
-SRC_URI[sha256sum] = "c7c48ce6cd32cd7a3bf5fa58fed39cf58e90f75a526de24fbaa91913cab86380"
+SRC_URI[md5sum] = "190a88b4cae633a46b64c30764e5d624"
+SRC_URI[sha256sum] = "9872d03a8e552020ca096adadbf5e3cb1cd1cdd6acd3c161136b8a5737cdb4a8"
 
 GEM_NAME = "multipart-post"
 
