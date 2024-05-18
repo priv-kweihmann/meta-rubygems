@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: aws-sdk-alexaforbusiness"
-DESCRIPTION = "Official AWS Ruby gem for Alexa For Business"
+DESCRIPTION = "[DEPRECATED] Official AWS Ruby gem for Alexa For Business"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "b41dd41fb2794b95dd5a9ccb5138c648"
-SRC_URI[sha256sum] = "26389b43436c1e99c9bed16dcfc95fe383613a275c4ccd0716252de9a2bd477c"
+SRC_URI[md5sum] = "c435011ab64bf043006f74ea1f10a7ee"
+SRC_URI[sha256sum] = "7aa1c57b308ae3f1737b400aca2f2fc5a382476644a6e446db2b3847c781f988"
 
 GEM_NAME = "aws-sdk-alexaforbusiness"
 
