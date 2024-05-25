@@ -12,6 +12,7 @@ EXTRA_RDEPENDS:append = " "
 DEPENDS:class-native += "\
     rubygems-addressable-native \
     rubygems-chef-telemetry-native \
+    rubygems-cookstyle-native \
     rubygems-faraday-follow-redirects-native \
     rubygems-faraday-native \
     rubygems-hashie-native \
@@ -36,10 +37,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "808465683fa327bce7874c572e0df136"
-SRC_URI[sha256sum] = "e79c2badb4df9b3c8326116436229219c96ef2873c6cf171efbf9f9e6fa012f3"
-
-SRC_URI:append = " file://0001-profile-fix-parser-API-change.patch"
+SRC_URI[md5sum] = "cc60f375c8198e983a5b1c8bada182d7"
+SRC_URI[sha256sum] = "d1d465ca926c83f25bdaab3776e91ff3b005ae5d8f80225bd2672dbfec43e103"
 
 GEM_NAME = "inspec-core"
 
@@ -50,6 +49,7 @@ inherit pkgconfig
 RDEPENDS:${PN}:class-target += "\
     rubygems-addressable \
     rubygems-chef-telemetry \
+    rubygems-cookstyle \
     rubygems-faraday \
     rubygems-faraday-follow-redirects \
     rubygems-hashie \
