@@ -6,12 +6,17 @@ HOMEPAGE = "https://github.com/guard/rb-inotify"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=98201cb3e99717097b99fa767e46ffbb"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-ffi-native \
 "
 
-SRC_URI[md5sum] = "ade741fff16c0fd7b8c3117219170543"
-SRC_URI[sha256sum] = "050062d4f31d307cca52c3f6a7f4b946df8de25fc4bd373e1a5142e41034a7ca"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "366aded73b8d521b65ffe40489cea47f"
+SRC_URI[sha256sum] = "a0a700441239b0ff18eb65e3866236cd78613d6b9f78fea1f9ac47a85e47be6e"
 
 GEM_NAME = "rb-inotify"
 
