@@ -4,14 +4,17 @@ DESCRIPTION = "A micro library providing objects with Publish-Subscribe capabili
 HOMEPAGE = "https://github.com/krisleech/wisper"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://README.md;beginline=348;endline=370;md5=a89e7f76c3931794071d3def079169b7"
+LIC_FILES_CHKSUM = "file://README.md;beginline=358;endline=380;md5=a89e7f76c3931794071d3def079169b7"
 
-SRC_URI[md5sum] = "d37a95462b8c7261c4de6158dcca653d"
-SRC_URI[sha256sum] = "ce17bc5c3a166f241a2e6613848b025c8146fce2defba505920c1d1f3f88fae6"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "49b0f216a67a8602bbf7194b221ef5dd"
+SRC_URI[sha256sum] = "02d0d4ad8c5c874d8d6410f3a163bda1ef517bc1b7302380b3e6ea4e143602db"
 
 GEM_NAME = "wisper"
-
-
 
 inherit rubygems
 inherit rubygentest
