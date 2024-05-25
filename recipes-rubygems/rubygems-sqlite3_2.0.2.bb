@@ -23,8 +23,8 @@ GEM_INSTALL_FLAGS:append = " \
     --platform=ruby \
 "
 
-SRC_URI[md5sum] = "5b09592c852208b2cfd03b9dd12b747a"
-SRC_URI[sha256sum] = "6c5ff93b951ce521d8b3c6d05df46a15d97ec241c6cff5950c1a628ff7957922"
+SRC_URI[md5sum] = "f0d1a2c143ee4a62d98924a96b609f22"
+SRC_URI[sha256sum] = "326e53ffb89d050eb00274945078ff7af9026594a7031874af4e9f172cf6154d"
 
 GEM_NAME = "sqlite3"
 
