@@ -10,7 +10,6 @@ EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
-    rubygems-cookstyle-native \
     rubygems-faraday-middleware-native \
     rubygems-inspec-core-native \
     rubygems-mongo-native \
@@ -25,8 +24,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "99da3ba26ef729d69396a427de535fff"
-SRC_URI[sha256sum] = "39c7d1d4ffa34247534c280c12543d5551a378792359cfd8bdc99127ea38927b"
+SRC_URI[md5sum] = "de39c182a879c99bc64a563025885b13"
+SRC_URI[sha256sum] = "03795714e7e28461fda1bce6e72b6e34143388bdbb346a001456bf13b5372bec"
 
 GEM_NAME = "inspec"
 
@@ -34,13 +33,7 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-do_generate_spec:append() {
-    # temporary fix for hard mongo gem version binding
-    sed -i 's#=[[:space:]]2.13.2#!=0#g' ${GEM_SPEC_FILE}
-}
-
 RDEPENDS:${PN}:class-target += "\
-    rubygems-cookstyle \
     rubygems-faraday-middleware \
     rubygems-inspec-core \
     rubygems-mongo \
