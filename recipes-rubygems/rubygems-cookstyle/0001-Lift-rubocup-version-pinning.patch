@@ -6,36 +6,9 @@ Subject: [PATCH] Lift rubocup version pinning
 Upstream-Status: Inappropriate [oe-specific]
 Signed-off-by: Konrad Weihmann <kweihmann@outlook.com>
 ---
- cookstyle-7.32.1.gemspec | 2 +-
- cookstyle.gemspec        | 2 +-
  lib/cookstyle.rb         | 2 +-
- 3 files changed, 3 insertions(+), 3 deletions(-)
+ 1 files changed, 1 insertions(+), 1 deletions(-)
 
-diff --git a/cookstyle-7.32.1.gemspec b/cookstyle-7.32.1.gemspec
-index 797524d..5748920 100644
---- a/cookstyle-7.32.8.gemspec
-+++ b/cookstyle-7.32.8.gemspec
-@@ -21,6 +21,6 @@ Gem::Specification.new do |s|
- 
-   s.specification_version = 4
- 
--  s.add_runtime_dependency(%q<rubocop>.freeze, ["= 1.25.1".freeze])
-+  s.add_runtime_dependency(%q<rubocop>.freeze, [">= 1.25.1"])
- end
- 
-diff --git a/cookstyle.gemspec b/cookstyle.gemspec
-index c53a1f9..7c174c7 100644
---- a/cookstyle.gemspec
-+++ b/cookstyle.gemspec
-@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
-   spec.executables = %w(cookstyle)
-   spec.require_paths = ['lib']
- 
--  spec.add_dependency('rubocop', Cookstyle::RUBOCOP_VERSION)
-+  spec.add_dependency('rubocop', '!=0')
- 
-   spec.metadata = {
-     'homepage_uri' => 'https://github.com/chef/cookstyle',
 diff --git a/lib/cookstyle.rb b/lib/cookstyle.rb
 index 9ab4cc0..565cad7 100644
 --- a/lib/cookstyle.rb
