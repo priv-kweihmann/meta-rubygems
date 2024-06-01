@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "c779cd919a7133d68a3f0703fd156e85"
-SRC_URI[sha256sum] = "873018c6c94a2c33c9d10109719c14d6004d3bbd4d385691fba9c9560b347b12"
+SRC_URI[md5sum] = "433494ba41dcba869dacc01ec4dca34e"
+SRC_URI[sha256sum] = "adb10e040275e08eadfbe405749584e4b01fd15e8e692fdcb4b1969e9c071c8c"
 
 GEM_NAME = "progress_bar"
 
