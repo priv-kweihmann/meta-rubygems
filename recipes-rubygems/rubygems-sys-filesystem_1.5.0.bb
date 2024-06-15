@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "dd62a9e7a78d1cdedc418c40ccd99381"
-SRC_URI[sha256sum] = "1b61da4ace0f71fc4304126acf005fb8cd03677081bb352343199fddc9eaa56d"
+SRC_URI[md5sum] = "450267f54855cf99141291106d374dd3"
+SRC_URI[sha256sum] = "fb4dac05ec59f79c3f5f09f0465749f02059c8f67fa8e6d0aad4e12a064b2ba9"
 
 GEM_NAME = "sys-filesystem"
 
