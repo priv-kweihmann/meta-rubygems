@@ -1,6 +1,6 @@
-From 451124a5538ace4d9c0d45d04a38b25cec1e9e6f Mon Sep 17 00:00:00 2001
+From ea4c839b76a9c513fbe28b805b35b2a9681f70fd Mon Sep 17 00:00:00 2001
 From: Konrad Weihmann <kweihmann@outlook.com>
-Date: Sun, 5 Mar 2023 09:36:04 +0000
+Date: Sat, 15 Jun 2024 10:44:55 +0000
 Subject: [PATCH] erubi: fall back on cgi/escape
 
 also on NameError, which is caused by the either missing or
@@ -13,18 +13,18 @@ Signed-off-by: Konrad Weihmann <kweihmann@outlook.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/lib/erubi.rb b/lib/erubi.rb
-index e419d36..a0b17e1 100644
+index dd7db06..babad69 100644
 --- a/lib/erubi.rb
 +++ b/lib/erubi.rb
-@@ -22,7 +22,7 @@ module Erubi
-     # :nocov:
-     define_singleton_method(:h, ERB::Escape.instance_method(:html_escape))
-     # :nocov:
+@@ -21,7 +21,7 @@ module Erubi
+     require 'erb/escape'
+     define_method(:h, ERB::Escape.instance_method(:html_escape))
+   # :nocov:
 -  rescue LoadError
 +  rescue LoadError, NameError
      begin
        require 'cgi/escape'
-       # :nocov:
+       unless CGI.respond_to?(:escapeHTML) # work around for JRuby 9.1
 -- 
 2.34.1
 

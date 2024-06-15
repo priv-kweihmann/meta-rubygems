@@ -13,8 +13,8 @@ GEM_INSTALL_FLAGS:append = " "
 
 SRC_URI:append = " file://0001-erubi-fall-back-on-cgi-escape.patch"
 
-SRC_URI[md5sum] = "92fa9ac9f48cce608153108e327d020d"
-SRC_URI[sha256sum] = "27bedb74dfb1e04ff60674975e182d8ca787f2224f2e8143268c7696f42e4723"
+SRC_URI[md5sum] = "ebcea152a605001af22d9899a57087f7"
+SRC_URI[sha256sum] = "fca61b47daefd865d0fb50d168634f27ad40181867445badf6427c459c33cd62"
 
 GEM_NAME = "erubi"
 
