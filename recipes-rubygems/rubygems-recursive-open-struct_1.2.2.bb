@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "18ad1601147618d1e8ca74355709cd35"
-SRC_URI[sha256sum] = "961be6a327cd569ff6a71dcea2607d909f1f3c8b275172319f3e267412b7c4e2"
+SRC_URI[md5sum] = "3d21d5e68008c595a5351f572c89ef6a"
+SRC_URI[sha256sum] = "8309487cfc945dfdcd417c52940a8e27cac67b311e573a6b1abbd84f00425ae6"
 
 GEM_NAME = "recursive-open-struct"
 
