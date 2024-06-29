@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "418be6897a68d8a20d1a083846ae03ed"
-SRC_URI[sha256sum] = "d1d8583b1a19d9a9df057be3a60a50bcb640e4c5626292c939f09abd9f2e178c"
+SRC_URI[md5sum] = "f295c426a285454d3df6534cfa1c54a8"
+SRC_URI[sha256sum] = "da53523ef504e23984d76986993822a2bdb862adc125e313a76e235a81ffdade"
 
 GEM_NAME = "aws-sdk-eventbridge"
 
