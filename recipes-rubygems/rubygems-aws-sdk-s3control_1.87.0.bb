@@ -11,12 +11,13 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-aws-sdk-core-native \
+    rubygems-aws-sigv4-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "860fa7d2be627782cbda594b535c8366"
-SRC_URI[sha256sum] = "eecdef5e3c06f8b411a1bded91a93b2ea789dd39525d4419a70757252010f779"
+SRC_URI[md5sum] = "2b6e10c7912855848479b3b6db5065dd"
+SRC_URI[sha256sum] = "98f5b8b9bb12e0611bae38612528ef526d3ca522c141b26a06d7fc1b07df04ce"
 
 GEM_NAME = "aws-sdk-s3control"
 
@@ -26,6 +27,7 @@ inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-aws-sdk-core \
+    rubygems-aws-sigv4 \
 "
 
 BBCLASSEXTEND = "native"
