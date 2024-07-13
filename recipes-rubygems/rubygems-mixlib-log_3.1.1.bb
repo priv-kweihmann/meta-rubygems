@@ -6,15 +6,26 @@ HOMEPAGE = "https://github.com/chef/mixlib-log"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 
-SRC_URI[md5sum] = "601ca7c39e4ef36c42478fe239aacbb5"
-SRC_URI[sha256sum] = "fd6ca2c8075f8085065dffcee0805c5b3f88d643d5c954acdc3282f463a9ad58"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
+DEPENDS:class-native += "\
+    rubygems-ffi-native \
+"
+
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "39f5ed859733ad03af5d2328397a4ad4"
+SRC_URI[sha256sum] = "c7e796a2e99db6552a31cd2eb008c7742ac38786cf64ce2ff5cc6d97578e043a"
 
 GEM_NAME = "mixlib-log"
-
-
 
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS:${PN}:class-target += "\
+    rubygems-ffi \
+"
 
 BBCLASSEXTEND = "native"
