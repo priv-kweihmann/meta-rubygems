@@ -11,12 +11,13 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-faraday-net-http-native \
+    rubygems-logger-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "d855fc0185776e66190e8909bfffb9ee"
-SRC_URI[sha256sum] = "6595edbe3b4663223e52a315f6bf2bca97ea1527bab7e02a926bf8afcf7423a4"
+SRC_URI[md5sum] = "95c364a5d249cd14d3563c18bd43033b"
+SRC_URI[sha256sum] = "1a3e6c02acc511fc334d799521f1013e449bde38aa2dceb3af71e8030519bda9"
 
 GEM_NAME = "faraday"
 
@@ -26,6 +27,7 @@ inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-faraday-net-http \
+    rubygems-logger \
 "
 
 BBCLASSEXTEND = "native"
