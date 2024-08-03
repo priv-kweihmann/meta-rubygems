@@ -19,8 +19,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "a42e9f81841eb8e8f6fb5cf9b62f6cdc"
-SRC_URI[sha256sum] = "3de3b774db2f8be658ba1ceb53eb30889e2b657148cac93358c90eb543bfc62b"
+SRC_URI[md5sum] = "74240a192b8567f78e30d06a58a66d91"
+SRC_URI[sha256sum] = "555f04934cb5b9dcec8d96e52e2f768b27c4b842b2292a3ed519f180473e5569"
 
 GEM_NAME = "google-apis-generator"
 
