@@ -14,15 +14,15 @@ DEPENDS:class-native += "\
     rubygems-googleauth-native \
     rubygems-httpclient-native \
     rubygems-mini-mime-native \
+    rubygems-mutex-m-native \
     rubygems-representable-native \
     rubygems-retriable-native \
-    rubygems-rexml-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "e1312f5bcf2e6311cd2f16d7fe5bd775"
-SRC_URI[sha256sum] = "9c95ee9068c6b1fb3f8698b2856f53a031c3a68e886d074cc2e9a482e070a6e4"
+SRC_URI[md5sum] = "ddfe2b9c4d5a8d5dadcad0678b50cb4a"
+SRC_URI[sha256sum] = "91484122791af5b2f3d3f4297912748febe2b5d704d04ad54cbf5df87339a71a"
 
 GEM_NAME = "google-apis-core"
 
@@ -35,9 +35,9 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-googleauth \
     rubygems-httpclient \
     rubygems-mini-mime \
+    rubygems-mutex-m \
     rubygems-representable \
     rubygems-retriable \
-    rubygems-rexml \
 "
 
 BBCLASSEXTEND = "native"
