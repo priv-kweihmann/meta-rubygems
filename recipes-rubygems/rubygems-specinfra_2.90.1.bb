@@ -10,6 +10,7 @@ EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
+    rubygems-base64-native \
     rubygems-net-scp-native \
     rubygems-net-ssh-native \
     rubygems-net-telnet-native \
@@ -18,8 +19,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "751f39f467a9aaedf65ca5d08a8f3c68"
-SRC_URI[sha256sum] = "b96ae1fe9f309012796ec4777e5542d8ba939727c886932b015379d1e8671724"
+SRC_URI[md5sum] = "276f16fc0f95c57edbe5b45f75781aea"
+SRC_URI[sha256sum] = "a9107e98dbe0ba7f1314e53572be2c8ab343fd12979f734a13efe6f67939ced6"
 
 GEM_NAME = "specinfra"
 
@@ -33,6 +34,7 @@ do_generate_spec:append() {
 }
 
 RDEPENDS:${PN}:class-target += "\
+    rubygems-base64 \
     rubygems-net-scp \
     rubygems-net-ssh \
     rubygems-net-telnet \
