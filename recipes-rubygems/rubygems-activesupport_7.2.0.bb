@@ -16,15 +16,16 @@ DEPENDS:class-native += "\
     rubygems-connection-pool-native \
     rubygems-drb-native \
     rubygems-i18n-native \
+    rubygems-logger-native \
     rubygems-minitest-native \
-    rubygems-mutex-m-native \
+    rubygems-securerandom-native \
     rubygems-tzinfo-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "a0854433c64f9f1ec573d96e2e3dd053"
-SRC_URI[sha256sum] = "455bbc43d82e5ba20daa25f0888b80c9f7e2d80ca0cc96cea3e6acfec3e40309"
+SRC_URI[md5sum] = "9a448fc93ce493047ab0142625e6d8d6"
+SRC_URI[sha256sum] = "91a94d3309923c1f44f613068244d3beccf659bb78a9846a211315e539de70a5"
 
 GEM_NAME = "activesupport"
 
@@ -39,8 +40,9 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-connection-pool \
     rubygems-drb \
     rubygems-i18n \
+    rubygems-logger \
     rubygems-minitest \
-    rubygems-mutex-m \
+    rubygems-securerandom \
     rubygems-tzinfo \
 "
 
