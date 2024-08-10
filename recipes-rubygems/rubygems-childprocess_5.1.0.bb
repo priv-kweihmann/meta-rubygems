@@ -9,15 +9,23 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=d3ab41b7c43688b785f7e436543ec593"
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
+DEPENDS:class-native += "\
+    rubygems-logger-native \
+"
+
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "b32c079b3d16cf0651d0b3dea6e17c2d"
-SRC_URI[sha256sum] = "0746b7ab1d6c68156e64a3767631d7124121516192c0492929a7f0af7310d835"
+SRC_URI[md5sum] = "8ca074e79409523c3c699648d7432303"
+SRC_URI[sha256sum] = "9a8d484be2fd4096a0e90a0cd3e449a05bc3aa33f8ac9e4d6dcef6ac1455b6ec"
 
 GEM_NAME = "childprocess"
 
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS:${PN}:class-target += "\
+    rubygems-logger \
+"
 
 BBCLASSEXTEND = "native"
