@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "9f7c37bcfe0dced6084d64e68dc0eea5"
-SRC_URI[sha256sum] = "7713d3196f21ff5ab0944011d7d4e619b62ec082374a52de2193ccfe78924044"
+SRC_URI[md5sum] = "7a5bfcf99eb243ca9d852386ad2b285f"
+SRC_URI[sha256sum] = "cb7a399f3344f720b8a0f3b0765f29b62608ebb9c3ce4abf4d6eeff2caf42253"
 
 GEM_NAME = "http-cookie"
 
