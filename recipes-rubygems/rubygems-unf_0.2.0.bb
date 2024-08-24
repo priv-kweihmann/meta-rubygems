@@ -6,21 +6,18 @@ HOMEPAGE = "https://github.com/knu/ruby-unf"
 LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=f82c6dbc2ac1850fd92347bda995df43"
 
-DEPENDS:class-native += "\
-    rubygems-unf-ext-native \
-"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
 
-SRC_URI[md5sum] = "64009f92a131c50bc1a932dc50d562c6"
-SRC_URI[sha256sum] = "4999517a531f2a955750f8831941891f6158498ec9b6cb1c81ce89388e63022e"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "21979c875cced01a64b996b61290146c"
+SRC_URI[sha256sum] = "e6bcc2e101d80e3f9459753db747d5926aada1aaaf61e629e93359da9a5b04ab"
 
 GEM_NAME = "unf"
 
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
-
-RDEPENDS:${PN}:class-target += "\
-    rubygems-unf-ext \
-"
 
 BBCLASSEXTEND = "native"
