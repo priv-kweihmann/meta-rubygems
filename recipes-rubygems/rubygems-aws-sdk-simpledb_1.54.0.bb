@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "2875c5b99ffbd6bf729a9bb07ab805bb"
-SRC_URI[sha256sum] = "2b03425c5f2b87ba3d8dd7cac651e5da4049202264708239f8a40b1bf5901612"
+SRC_URI[md5sum] = "7eda87808f8590001e1f9434f9bed25a"
+SRC_URI[sha256sum] = "0ee3494b05dd6add90012c38f10443f474721abfa0a1257bbbc5ecdc03912ea6"
 
 GEM_NAME = "aws-sdk-simpledb"
 
