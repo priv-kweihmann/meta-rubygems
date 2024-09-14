@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "c0cb1cff36108ded129f8c140f76d72d"
-SRC_URI[sha256sum] = "b57029410a7d5dfd048939d02e543f27fe7265a851acc568e12cfa2977590f84"
+SRC_URI[md5sum] = "c5b790e1c0f305661b755750f2da557c"
+SRC_URI[sha256sum] = "bc163536bdc46b6f44d4252ef592178683bbff05025cf18982622c19afbc3c1f"
 
 GEM_NAME = "aws-sdk-macie2"
 
