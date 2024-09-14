@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: aws-sdk-ecr"
-DESCRIPTION = "Official AWS Ruby gem for Amazon EC2 Container Registry (Amazon ECR)"
+DESCRIPTION = "Official AWS Ruby gem for Amazon Elastic Container Registry (Amazon ECR)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "f28bcd370261bfe1acb277d15ead2c9a"
-SRC_URI[sha256sum] = "599e372238e93d6dfea8cab22cbc096486a49e4d6ea860bc2e3cd746011378a0"
+SRC_URI[md5sum] = "1bab4ee93036f2193223c5ae7ded701a"
+SRC_URI[sha256sum] = "32383de9e65740ed50e45dc45824a05f28da2f9fa7856436c27f7852b185b344"
 
 GEM_NAME = "aws-sdk-ecr"
 
