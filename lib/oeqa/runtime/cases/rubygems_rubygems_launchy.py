@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_launchy(RubyGemsTestUtils):
     def test_exec_launchy(self):
         self.gem_exec_wrapper("launchy")
 
+    def test_exec_launchy_lock(self):
+        self.gem_exec_wrapper("launchy.lock")
+
     def test_gem_list_rubygems_launchy(self):
         self.gem_is_installed("launchy")
 

@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_ohai(RubyGemsTestUtils):
     def test_exec_ohai(self):
         self.gem_exec_wrapper("ohai")
 
+    def test_exec_ohai_lock(self):
+        self.gem_exec_wrapper("ohai.lock")
+
     def test_gem_list_rubygems_ohai(self):
         self.gem_is_installed("ohai")
 

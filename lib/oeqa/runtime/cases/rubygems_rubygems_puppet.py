@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_puppet(RubyGemsTestUtils):
     def test_exec_puppet(self):
         self.gem_exec_wrapper("puppet")
 
+    def test_exec_puppet_lock(self):
+        self.gem_exec_wrapper("puppet.lock")
+
     def test_gem_list_rubygems_puppet(self):
         self.gem_is_installed("puppet")
 

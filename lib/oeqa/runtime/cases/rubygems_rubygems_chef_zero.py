@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_chef_zero(RubyGemsTestUtils):
     def test_exec_chef_zero(self):
         self.gem_exec_wrapper("chef-zero")
 
+    def test_exec_chef_zero_lock(self):
+        self.gem_exec_wrapper("chef-zero.lock")
+
     def test_gem_list_rubygems_chef_zero(self):
         self.gem_is_installed("chef-zero")
 

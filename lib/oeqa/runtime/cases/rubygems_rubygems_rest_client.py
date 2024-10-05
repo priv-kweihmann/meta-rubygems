@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_rest_client(RubyGemsTestUtils):
     def test_exec_restclient(self):
         self.gem_exec_wrapper("restclient")
 
+    def test_exec_restclient_lock(self):
+        self.gem_exec_wrapper("restclient.lock")
+
     def test_gem_list_rubygems_rest_client(self):
         self.gem_is_installed("rest-client")
 

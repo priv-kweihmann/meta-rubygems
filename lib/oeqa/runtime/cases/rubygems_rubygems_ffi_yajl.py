@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_ffi_yajl(RubyGemsTestUtils):
     def test_exec_ffi_yajl_bench(self):
         self.gem_exec_wrapper("ffi-yajl-bench")
 
+    def test_exec_ffi_yajl_bench_lock(self):
+        self.gem_exec_wrapper("ffi-yajl-bench.lock")
+
     def test_gem_list_rubygems_ffi_yajl(self):
         self.gem_is_installed("ffi-yajl")
 

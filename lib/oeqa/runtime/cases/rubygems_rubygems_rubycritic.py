@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_rubycritic(RubyGemsTestUtils):
     def test_exec_rubycritic(self):
         self.gem_exec_wrapper("rubycritic")
 
+    def test_exec_rubycritic_lock(self):
+        self.gem_exec_wrapper("rubycritic.lock")
+
     def test_gem_list_rubygems_rubycritic(self):
         self.gem_is_installed("rubycritic")
 

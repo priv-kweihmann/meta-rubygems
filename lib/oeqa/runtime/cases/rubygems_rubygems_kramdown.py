@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_kramdown(RubyGemsTestUtils):
     def test_exec_kramdown(self):
         self.gem_exec_wrapper("kramdown")
 
+    def test_exec_kramdown_lock(self):
+        self.gem_exec_wrapper("kramdown.lock")
+
     def test_gem_list_rubygems_kramdown(self):
         self.gem_is_installed("kramdown")
 

@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_mongo(RubyGemsTestUtils):
     def test_exec_mongo_console(self):
         self.gem_exec_wrapper("mongo_console")
 
+    def test_exec_mongo_console_lock(self):
+        self.gem_exec_wrapper("mongo_console.lock")
+
     def test_gem_list_rubygems_mongo(self):
         self.gem_is_installed("mongo")
 

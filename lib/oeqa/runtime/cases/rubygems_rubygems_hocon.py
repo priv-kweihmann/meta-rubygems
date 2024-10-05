@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_hocon(RubyGemsTestUtils):
     def test_exec_hocon(self):
         self.gem_exec_wrapper("hocon")
 
+    def test_exec_hocon_lock(self):
+        self.gem_exec_wrapper("hocon.lock")
+
     def test_gem_list_rubygems_hocon(self):
         self.gem_is_installed("hocon")
 

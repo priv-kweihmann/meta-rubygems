@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_httpclient(RubyGemsTestUtils):
     def test_exec_httpclient(self):
         self.gem_exec_wrapper("httpclient")
 
+    def test_exec_httpclient_lock(self):
+        self.gem_exec_wrapper("httpclient.lock")
+
     def test_gem_list_rubygems_httpclient(self):
         self.gem_is_installed("httpclient")
 
