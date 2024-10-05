@@ -10,13 +10,14 @@ EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
+    rubygems-logger-native \
     rubygems-mime-types-data-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "4bcb4f128f16bf701752e3dabc9f1c44"
-SRC_URI[sha256sum] = "c1299f10fa34c75a6f168e99e9dadbd11bc507d9d62dc5cf98c4e65f2af8c4e4"
+SRC_URI[md5sum] = "9db48f6450e8a58fa852f0c7b1e09852"
+SRC_URI[sha256sum] = "6f71db957840ceae44211531eff3e2f7e0dd4645fefb5f535dbaeb6307ab6464"
 
 GEM_NAME = "mime-types"
 
@@ -25,6 +26,7 @@ inherit rubygentest
 inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
+    rubygems-logger \
     rubygems-mime-types-data \
 "
 
