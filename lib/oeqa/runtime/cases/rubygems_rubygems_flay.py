@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_flay(RubyGemsTestUtils):
     def test_exec_flay(self):
         self.gem_exec_wrapper("flay")
 
+    def test_exec_flay_lock(self):
+        self.gem_exec_wrapper("flay.lock")
+
     def test_gem_list_rubygems_flay(self):
         self.gem_is_installed("flay")
 

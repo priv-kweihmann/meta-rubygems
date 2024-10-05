@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_listen(RubyGemsTestUtils):
     def test_exec_listen(self):
         self.gem_exec_wrapper("listen")
 
+    def test_exec_listen_lock(self):
+        self.gem_exec_wrapper("listen.lock")
+
     def test_gem_list_rubygems_listen(self):
         self.gem_is_installed("listen")
 

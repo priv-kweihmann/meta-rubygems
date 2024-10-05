@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_coderay(RubyGemsTestUtils):
     def test_exec_coderay(self):
         self.gem_exec_wrapper("coderay")
 
+    def test_exec_coderay_lock(self):
+        self.gem_exec_wrapper("coderay.lock")
+
     def test_gem_list_rubygems_coderay(self):
         self.gem_is_installed("coderay")
 

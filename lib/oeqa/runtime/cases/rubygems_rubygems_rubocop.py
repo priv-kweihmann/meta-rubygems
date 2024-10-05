@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_rubocop(RubyGemsTestUtils):
     def test_exec_rubocop(self):
         self.gem_exec_wrapper("rubocop")
 
+    def test_exec_rubocop_lock(self):
+        self.gem_exec_wrapper("rubocop.lock")
+
     def test_gem_list_rubygems_rubocop(self):
         self.gem_is_installed("rubocop")
 

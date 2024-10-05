@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_serverspec(RubyGemsTestUtils):
     def test_exec_serverspec_init(self):
         self.gem_exec_wrapper("serverspec-init")
 
+    def test_exec_serverspec_init_lock(self):
+        self.gem_exec_wrapper("serverspec-init.lock")
+
     def test_gem_list_rubygems_serverspec(self):
         self.gem_is_installed("serverspec")
 

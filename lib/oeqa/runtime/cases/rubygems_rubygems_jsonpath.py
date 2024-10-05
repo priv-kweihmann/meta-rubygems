@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_jsonpath(RubyGemsTestUtils):
     def test_exec_jsonpath(self):
         self.gem_exec_wrapper("jsonpath")
 
+    def test_exec_jsonpath_lock(self):
+        self.gem_exec_wrapper("jsonpath.lock")
+
     def test_gem_list_rubygems_jsonpath(self):
         self.gem_is_installed("jsonpath")
 

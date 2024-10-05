@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_hiera(RubyGemsTestUtils):
     def test_exec_hiera(self):
         self.gem_exec_wrapper("hiera")
 
+    def test_exec_hiera_lock(self):
+        self.gem_exec_wrapper("hiera.lock")
+
     def test_gem_list_rubygems_hiera(self):
         self.gem_is_installed("hiera")
 

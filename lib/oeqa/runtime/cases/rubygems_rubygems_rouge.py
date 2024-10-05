@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_rouge(RubyGemsTestUtils):
     def test_exec_rougify(self):
         self.gem_exec_wrapper("rougify")
 
+    def test_exec_rougify_lock(self):
+        self.gem_exec_wrapper("rougify.lock")
+
     def test_gem_list_rubygems_rouge(self):
         self.gem_is_installed("rouge")
 

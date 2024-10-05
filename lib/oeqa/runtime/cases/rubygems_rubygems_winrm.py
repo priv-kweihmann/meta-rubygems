@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_winrm(RubyGemsTestUtils):
     def test_exec_rwinrm(self):
         self.gem_exec_wrapper("rwinrm")
 
+    def test_exec_rwinrm_lock(self):
+        self.gem_exec_wrapper("rwinrm.lock")
+
     def test_gem_list_rubygems_winrm(self):
         self.gem_is_installed("winrm")
 

@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_flog(RubyGemsTestUtils):
     def test_exec_flog(self):
         self.gem_exec_wrapper("flog")
 
+    def test_exec_flog_lock(self):
+        self.gem_exec_wrapper("flog.lock")
+
     def test_gem_list_rubygems_flog(self):
         self.gem_is_installed("flog")
 

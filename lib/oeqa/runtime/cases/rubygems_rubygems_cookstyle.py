@@ -5,6 +5,9 @@ class RubyGemsTestrubygems_cookstyle(RubyGemsTestUtils):
     def test_exec_cookstyle(self):
         self.gem_exec_wrapper("cookstyle")
 
+    def test_exec_cookstyle_lock(self):
+        self.gem_exec_wrapper("cookstyle.lock")
+
     def test_gem_list_rubygems_cookstyle(self):
         self.gem_is_installed("cookstyle")
 

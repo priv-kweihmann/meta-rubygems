@@ -5,8 +5,14 @@ class RubyGemsTestrubygems_diff_lcs(RubyGemsTestUtils):
     def test_exec_htmldiff(self):
         self.gem_exec_wrapper("htmldiff")
 
+    def test_exec_htmldiff_lock(self):
+        self.gem_exec_wrapper("htmldiff.lock")
+
     def test_exec_ldiff(self):
         self.gem_exec_wrapper("ldiff")
+
+    def test_exec_ldiff_lock(self):
+        self.gem_exec_wrapper("ldiff.lock")
 
     def test_gem_list_rubygems_diff_lcs(self):
         self.gem_is_installed("diff-lcs")

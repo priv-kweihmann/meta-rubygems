@@ -8,6 +8,12 @@ class RubyGemsTestrubygems_ruby_parser(RubyGemsTestUtils):
     def test_exec_ruby_parse_extract_error(self):
         self.gem_exec_wrapper("ruby_parse_extract_error")
 
+    def test_exec_ruby_parse_extract_error_lock(self):
+        self.gem_exec_wrapper("ruby_parse_extract_error.lock")
+
+    def test_exec_ruby_parse_lock(self):
+        self.gem_exec_wrapper("ruby_parse.lock")
+
     def test_gem_list_rubygems_ruby_parser(self):
         self.gem_is_installed("ruby_parser")
 
