@@ -34,6 +34,9 @@ python do_rubygems_gen_test() {
 
     for _file in glob.glob(d.expand("${PKGDEST}/${PN}/${bindir}/*")):
         _filename = os.path.basename(_file)
+        # work around for https://github.com/rubygems/rubygems/pull/7939
+        if _filename.endswith('*.lock'):
+            continue
         __tests.add(_tpl_exec.format(
             sanitize_app=sanitize_name(_filename),
             exec=_filename))
