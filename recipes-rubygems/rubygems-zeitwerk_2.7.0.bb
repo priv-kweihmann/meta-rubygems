@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "08612fba3ce1c11b01253bc14907b764"
-SRC_URI[sha256sum] = "bd2d213996ff7b3b364cd342a585fbee9797dbc1c0c6d868dc4150cc75739781"
+SRC_URI[md5sum] = "1b2a64398f428bc5811b2957a2d72d37"
+SRC_URI[sha256sum] = "a44c846861f2dfb571b834110a38f610dae5f15bac7ebf642a0d46b723da43a4"
 
 GEM_NAME = "zeitwerk"
 
