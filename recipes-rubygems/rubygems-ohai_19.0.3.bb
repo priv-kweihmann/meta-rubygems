@@ -4,7 +4,7 @@ DESCRIPTION = "Ohai profiles your system and emits JSON"
 HOMEPAGE = "https://github.com/chef/ohai/"
 
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=e3edf03f3aa19ea46e101aa4b956c206"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -26,8 +26,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "bf7b84d0ed46b8b1771f172ccfcfed86"
-SRC_URI[sha256sum] = "42ee8196945cb935fdeec93ba7aaee757d1d552f7b933912a1f25863c3cc1ff0"
+SRC_URI[md5sum] = "0ac1105c047427afee44130bf469f9c4"
+SRC_URI[sha256sum] = "b52c06d1b87e0d0f8876312a05ba4d372edb0197df3d0c61a2eec21c14587db9"
 
 GEM_NAME = "ohai"
 
