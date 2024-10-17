@@ -22,4 +22,7 @@ do_install:append() {
     rm -f ${D}/${libdir}/ruby/gems/3.0.0/gems/eventmachine-${PV}/lib/jeventmachine.rb
 }
 
+# The vendored library is causing some rpath issues
+INSANE_SKIP:${PN} += "rpaths"
+
 BBCLASSEXTEND = "native"
