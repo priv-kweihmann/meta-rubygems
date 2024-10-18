@@ -19,4 +19,8 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
+# The vendored library is causing some rpath issues
+INSANE_SKIP:${PN} += "rpaths"
+INSANE_SKIP:${PN}-dev += "rpaths"
+
 BBCLASSEXTEND = "native"
