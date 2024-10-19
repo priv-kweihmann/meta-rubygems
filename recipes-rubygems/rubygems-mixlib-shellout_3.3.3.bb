@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "ece3411537de8b2e222c3627f333cc2d"
-SRC_URI[sha256sum] = "399439a68f1ca19856366918586a031ce8d1fd44b2bea3ee65af4f5c0e47521a"
+SRC_URI[md5sum] = "d7191b78092b6cfd727a2db938419a65"
+SRC_URI[sha256sum] = "ff5c2bcd7dd3fcf54e8022e0bc4347d550b7cebf24cc0cd06425c5d84011323d"
 
 GEM_NAME = "mixlib-shellout"
 
