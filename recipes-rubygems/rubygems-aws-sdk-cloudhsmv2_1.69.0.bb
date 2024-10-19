@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "976b841ed8eb0d45ba6e1a44ed47eb99"
-SRC_URI[sha256sum] = "fd55fb7f079923bd8e1c840fa14d99ec1119a7666b54e2adac8f3ecfa58a2d95"
+SRC_URI[md5sum] = "3af4b7f5dd0a53e87d9d8229e7654328"
+SRC_URI[sha256sum] = "2853001f0aaca8e2bcd2218b08caba77c15bb6ec26831c36091598e3cb1f56e6"
 
 GEM_NAME = "aws-sdk-cloudhsmv2"
 
