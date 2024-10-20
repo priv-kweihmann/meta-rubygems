@@ -41,4 +41,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-mini-portile2 \
 "
 
+# The vendored library is causing some rpath issues
+INSANE_SKIP:${PN} += "rpaths"
+
 BBCLASSEXTEND = "native"
