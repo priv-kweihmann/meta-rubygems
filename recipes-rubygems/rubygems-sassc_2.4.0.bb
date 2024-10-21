@@ -29,4 +29,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-ffi \
 "
 
+# The vendored library is causing some rpath issues
+INSANE_SKIP:${PN} += "rpaths"
+
 BBCLASSEXTEND = "native"
