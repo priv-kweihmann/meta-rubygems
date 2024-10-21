@@ -38,6 +38,9 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-racc \
 "
 
+# The vendored library is causing some rpath issues
+INSANE_SKIP:${PN} += "rpaths"
+
 INSANE_SKIP:${PN}-dev += "staticdev"
 
 BBCLASSEXTEND = "native"
