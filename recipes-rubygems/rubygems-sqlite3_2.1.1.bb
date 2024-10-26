@@ -23,8 +23,8 @@ GEM_INSTALL_FLAGS:append = " \
     --platform=ruby \
 "
 
-SRC_URI[md5sum] = "de36d53f358d900f8dab86e7e555e3d7"
-SRC_URI[sha256sum] = "aea47c58078c274ca83195ce1686ee22c4641eb60ccab12918500e78c4babb4f"
+SRC_URI[md5sum] = "01fa23b5b7bc0fecc964b0da99031b71"
+SRC_URI[sha256sum] = "08ef9a277f25665bf237f16f7c68ec22b79100d1abe256e566a5e23337a62cf6"
 
 GEM_NAME = "sqlite3"
 
@@ -41,7 +41,6 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-mini-portile2 \
 "
 
-# The vendored library is causing some rpath issues
 INSANE_SKIP:${PN} += "rpaths"
 
 BBCLASSEXTEND = "native"
