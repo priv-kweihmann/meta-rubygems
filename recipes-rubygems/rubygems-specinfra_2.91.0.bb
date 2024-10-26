@@ -19,8 +19,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "276f16fc0f95c57edbe5b45f75781aea"
-SRC_URI[sha256sum] = "a9107e98dbe0ba7f1314e53572be2c8ab343fd12979f734a13efe6f67939ced6"
+SRC_URI[md5sum] = "2547bddea42ee8844d55ad8c95beacaf"
+SRC_URI[sha256sum] = "288b2acc20896c5d6d9538b24c30515af2ea432da5b22800956cd77e3d310f11"
 
 GEM_NAME = "specinfra"
 
