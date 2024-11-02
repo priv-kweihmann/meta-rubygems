@@ -11,13 +11,14 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-concurrent-ruby-native \
+    rubygems-logger-native \
     rubygems-zeitwerk-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "42b3d7f9ecec8659e9bfa2d190433c3e"
-SRC_URI[sha256sum] = "f32f4245e0f54e787f3708584ed8f7545aaf8dd99072e36f169312468ec5450d"
+SRC_URI[md5sum] = "f5eebc8943d3fda924189a85bf76157d"
+SRC_URI[sha256sum] = "58d55da6308160d042ab78e9e3926b31e7deaa130893ca0b731010caa8dd27bb"
 
 GEM_NAME = "dry-core"
 
@@ -27,6 +28,7 @@ inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-concurrent-ruby \
+    rubygems-logger \
     rubygems-zeitwerk \
 "
 
