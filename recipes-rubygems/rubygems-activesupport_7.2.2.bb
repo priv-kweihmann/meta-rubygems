@@ -11,6 +11,7 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-base64-native \
+    rubygems-benchmark-native \
     rubygems-bigdecimal-native \
     rubygems-concurrent-ruby-native \
     rubygems-connection-pool-native \
@@ -24,8 +25,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "8c79ef0c66336efca7cd5e414a75ce41"
-SRC_URI[sha256sum] = "6c3f6ad50c4e52ce39d67aeda38f99e1372eca8b295987d072c19460ebce4cb1"
+SRC_URI[md5sum] = "a8efd3d0a7f51e75bf25111bb6b6f3c4"
+SRC_URI[sha256sum] = "436360924cf758dfa9d60ab22a8afe6da8babf6f1286d4087f0a9c576bf8328a"
 
 GEM_NAME = "activesupport"
 
@@ -35,6 +36,7 @@ inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-base64 \
+    rubygems-benchmark \
     rubygems-bigdecimal \
     rubygems-concurrent-ruby \
     rubygems-connection-pool \
