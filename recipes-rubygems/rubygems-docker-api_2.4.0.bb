@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "b904d0a5fb0d75fb6e0362d164336825"
-SRC_URI[sha256sum] = "228b53b88e4811fe182c158100730409b468a27ec220ebd0d61e18b218a07e75"
+SRC_URI[md5sum] = "0664c1aed27df093b2a76b6277b30777"
+SRC_URI[sha256sum] = "824be734f4cc8718189be9c8e795b6414acbbf7e8b082a06f959a27dd8dd63e6"
 
 GEM_NAME = "docker-api"
 
