@@ -21,12 +21,13 @@ DEPENDS:class-native += "\
     rubygems-minitest-native \
     rubygems-securerandom-native \
     rubygems-tzinfo-native \
+    rubygems-uri-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "a8efd3d0a7f51e75bf25111bb6b6f3c4"
-SRC_URI[sha256sum] = "436360924cf758dfa9d60ab22a8afe6da8babf6f1286d4087f0a9c576bf8328a"
+SRC_URI[md5sum] = "d2d9f57b5a9f50d576b4623d6a9ad49c"
+SRC_URI[sha256sum] = "2c596c4b923f155b25657169c52e78a35d89bb53ab51074ef1b05d43797bac5e"
 
 GEM_NAME = "activesupport"
 
@@ -46,6 +47,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-minitest \
     rubygems-securerandom \
     rubygems-tzinfo \
+    rubygems-uri \
 "
 
 BBCLASSEXTEND = "native"
