@@ -4,7 +4,7 @@ DESCRIPTION = "RSpec extension gem for attribute matching"
 HOMEPAGE = "https://github.com/rspec/rspec-its"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=0bfc9ee7f57ee14d322e7a142ee4d55e"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=7cfefc3a37436b88dfc9476482d436d9"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "1f99f164e2000f401f301dd82ccbae36"
-SRC_URI[sha256sum] = "c404314f933ffd5ef6e2cfa87167e272477a7007467db5ec59c96ad1679c51f6"
+SRC_URI[md5sum] = "050592d0b6a3d1692d944051ae46498c"
+SRC_URI[sha256sum] = "a88e8bc38149f2835e93533591ec4f5c829aacbfd41269a2e6f9f5b82f5260df"
 
 GEM_NAME = "rspec-its"
 
