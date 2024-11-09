@@ -1,5 +1,10 @@
 DISTRO = "poky"
-EXTRA_IMAGE_FEATURES = "debug-tweaks"
+EXTRA_IMAGE_FEATURES = "\
+    allow-empty-password \
+    allow-root-login \
+    empty-root-password \
+    post-install-logging \
+"
 PACKAGECONFIG:append:pn-qemu-system-native = " sdl"
 PACKAGE_CLASSES = "package_rpm"
 PATCHRESOLVE = "noop"
