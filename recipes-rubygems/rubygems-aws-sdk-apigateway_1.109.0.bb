@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "98eb1e7d3c3589ca078b0487c7f6ff66"
-SRC_URI[sha256sum] = "186ad8bc375403f5779871bb7948f4b7b42fc67bfb1a6e303f597b3a45c836e7"
+SRC_URI[md5sum] = "e251d7f1c4c2c7317020a7072c67698b"
+SRC_URI[sha256sum] = "db668181ccb9e08b8ffcf5f34be578ef0dcbd90818cb52ccb0fcaea2ddc381a3"
 
 GEM_NAME = "aws-sdk-apigateway"
 
