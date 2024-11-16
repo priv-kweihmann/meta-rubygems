@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "0cc088c7528f914b6558cb1c8bc2cc30"
-SRC_URI[sha256sum] = "c7966316726e0ceefe9f5c6aef107ebc3ccfef8b6db55fe3934f046b2cf0936a"
+SRC_URI[md5sum] = "78fefe4abadc05823ba172cc48ce827b"
+SRC_URI[sha256sum] = "2c30eeded6ed3dce8401d2b5b99e6963fe5f14ed85e60dd9e33c545a44b71a77"
 
 GEM_NAME = "hashdiff"
 
