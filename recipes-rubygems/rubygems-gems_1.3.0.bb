@@ -6,8 +6,13 @@ HOMEPAGE = "https://github.com/rubygems/gems"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=842ca4a33be30d4a5d5ea377568b309b"
 
-SRC_URI[md5sum] = "6cef91acf7385cacee0adcff8849b0ca"
-SRC_URI[sha256sum] = "343d74bd54d906f38193f3ccd983f9d08c4b54cd01ee7e5fe8467ab41a9946f0"
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "06c4fa6dc82bc513b413382d9e78223b"
+SRC_URI[sha256sum] = "37e7fb834365f39d3c2c649f0a7017288b0fe9ca69d3056b6760b53468b585ae"
 
 GEM_NAME = "gems"
 
