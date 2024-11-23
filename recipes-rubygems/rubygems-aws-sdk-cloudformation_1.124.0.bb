@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "1b39b0162eb6f9c32d6ca91cc81703b7"
-SRC_URI[sha256sum] = "41b54cd14c861ec459223c78a9bc188161006441fa0b19b07da2f16dc328600d"
+SRC_URI[md5sum] = "9bea1730160c46ca93ff62fc87ba2b58"
+SRC_URI[sha256sum] = "005b1e2f5bfd2f8bc76b712c22924614627a9ecc6f9d3abd53442c6076e4e626"
 
 GEM_NAME = "aws-sdk-cloudformation"
 
