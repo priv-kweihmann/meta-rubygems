@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "c55039e3e0467616cae9f04f836c6954"
-SRC_URI[sha256sum] = "5781d19ae352fe0d3078eed9ae3305504b87aafe0cc4ee57343b2f986fa9ffa5"
+SRC_URI[md5sum] = "de3ccf16cbf716f890198d751fef846f"
+SRC_URI[sha256sum] = "eeac55a357c3103bdf3f903954ded8eb2dab15ae29f10d8bc62afb359971d523"
 
 GEM_NAME = "bson"
 
@@ -20,7 +20,6 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-# The vendored library is causing some rpath issues
 INSANE_SKIP:${PN} += "rpaths"
 
 BBCLASSEXTEND = "native"
