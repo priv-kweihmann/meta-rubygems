@@ -24,8 +24,8 @@ GEM_INSTALL_FLAGS:append = " \
     --use-system-libraries \
 "
 
-SRC_URI[md5sum] = "9076e145de76fb634b1095f38f1d8498"
-SRC_URI[sha256sum] = "f819cbfdfb0a7b19c9c52c6f2ca63df0e58a6125f4f139707b586b9511d7fe95"
+SRC_URI[md5sum] = "ff844b13757f3f87470bb1730aca25f0"
+SRC_URI[sha256sum] = "dece4bf9a663b2d6b6e874716297ad414c95be694656972d54049bd088f752a1"
 
 GEM_NAME = "nokogiri"
 
@@ -38,7 +38,6 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-racc \
 "
 
-# The vendored library is causing some rpath issues
 INSANE_SKIP:${PN} += "rpaths"
 
 INSANE_SKIP:${PN}-dev += "staticdev"
