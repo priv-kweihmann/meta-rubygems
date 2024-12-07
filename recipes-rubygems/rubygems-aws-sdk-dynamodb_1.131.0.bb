@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "19adabce2a2b62becab9d98cfc05b171"
-SRC_URI[sha256sum] = "cf43c0f6fe0b76d440215a6ca6bac054c057475a8d652ad4f1ddf3173811af41"
+SRC_URI[md5sum] = "a7e8b3d30710c8588e0fbb2b6cd8032b"
+SRC_URI[sha256sum] = "b925b9230595ab716bfdafef6bfa358efe59fdb60475ca8290c4483cfafb2e90"
 
 GEM_NAME = "aws-sdk-dynamodb"
 
