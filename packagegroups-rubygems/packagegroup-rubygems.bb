@@ -176,6 +176,7 @@ RDEPENDS:${PN} += "\
     rubygems-google-apis-monitoring-v3 \
     rubygems-google-apis-storage-v1 \
     rubygems-google-cloud-env \
+    rubygems-google-logging-utils \
     rubygems-googleauth \
     rubygems-gssapi \
     rubygems-gyoku \
