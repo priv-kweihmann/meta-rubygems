@@ -9,12 +9,14 @@ LIC_FILES_CHKSUM = "file://MIT-LICENSE;md5=b96512a50183635e393096671fc79deb"
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
+SRC_URI:append = " \
+    file://0001-erubi-fall-back-on-cgi-escape.patch \
+"
+
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI:append = " file://0001-erubi-fall-back-on-cgi-escape.patch"
-
-SRC_URI[md5sum] = "ebcea152a605001af22d9899a57087f7"
-SRC_URI[sha256sum] = "fca61b47daefd865d0fb50d168634f27ad40181867445badf6427c459c33cd62"
+SRC_URI[md5sum] = "2ca752e90652b2fa07b803af833abae6"
+SRC_URI[sha256sum] = "a082103b0885dbc5ecf1172fede897f9ebdb745a4b97a5e8dc63953db1ee4ad9"
 
 GEM_NAME = "erubi"
 
