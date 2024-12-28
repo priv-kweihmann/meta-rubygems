@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "fdfdaddce1bbb56c3f9837c29f99e765"
-SRC_URI[sha256sum] = "55fd07ccdd64c622d36859748f2290fb9c119ce30b482867504e9f12654d6a65"
+SRC_URI[md5sum] = "b09d35ec59bfd5a9cd902325733c6ba6"
+SRC_URI[sha256sum] = "e6424ae1d813f63e761a04d6284e10e7ec531d6f701917fadcd0d9b2deaf1cc5"
 
 GEM_NAME = "jwt"
 
