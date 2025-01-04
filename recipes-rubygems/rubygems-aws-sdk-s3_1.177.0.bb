@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-ecr"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Elastic Container Registry (Amazon ECR)"
+SUMMARY = "RubyGem: aws-sdk-s3"
+DESCRIPTION = "Official AWS Ruby gem for Amazon Simple Storage Service (Amazon S3)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -11,15 +11,16 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-aws-sdk-core-native \
+    rubygems-aws-sdk-kms-native \
     rubygems-aws-sigv4-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "d8faf4b7936d6709684c799f68caa5b3"
-SRC_URI[sha256sum] = "8eacf01a0db749a9ffc2b0f336ca93e3c7631097af9a302ef8c72898901348ca"
+SRC_URI[md5sum] = "2fef76361ed8875fbbde7e0ca4f5e418"
+SRC_URI[sha256sum] = "bf2fd9210c3e534f2bd4d90cf855429859bdbfc1911f4d61045a3aaa3ff2f183"
 
-GEM_NAME = "aws-sdk-ecr"
+GEM_NAME = "aws-sdk-s3"
 
 inherit rubygems
 inherit rubygentest
@@ -27,6 +28,7 @@ inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-aws-sdk-core \
+    rubygems-aws-sdk-kms \
     rubygems-aws-sigv4 \
 "
 

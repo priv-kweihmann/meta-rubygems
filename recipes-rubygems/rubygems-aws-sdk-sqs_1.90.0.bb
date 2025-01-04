@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-ecrpublic"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Elastic Container Registry Public (Amazon ECR Public)"
+SUMMARY = "RubyGem: aws-sdk-sqs"
+DESCRIPTION = "Official AWS Ruby gem for Amazon Simple Queue Service (Amazon SQS)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "502fccc84517c32842d3802dda710f17"
-SRC_URI[sha256sum] = "f5d755ccfe955a11a184fa64ebd1c3c7b545f3117035c21cf3bdd1f90f3e72b8"
+SRC_URI[md5sum] = "ceae6ce51bfa23b47f56a4f56e14e260"
+SRC_URI[sha256sum] = "122ad5d5bd71fa004f29ab86d77bd8f3e1746581bfcfca14b74367f7c2af5352"
 
-GEM_NAME = "aws-sdk-ecrpublic"
+GEM_NAME = "aws-sdk-sqs"
 
 inherit rubygems
 inherit rubygentest

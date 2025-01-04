@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-route53domains"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Route 53 Domains"
+SUMMARY = "RubyGem: aws-sdk-ecrpublic"
+DESCRIPTION = "Official AWS Ruby gem for Amazon Elastic Container Registry Public (Amazon ECR Public)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "442ce65b7aefb6f5a87d94120c0cfd68"
-SRC_URI[sha256sum] = "ec63ccde873dc09f1a51a85b9066fdbed4e319d900bb41610d045da220fb5321"
+SRC_URI[md5sum] = "52307362b6e0e4a78d3f75fb5c03da91"
+SRC_URI[sha256sum] = "6964b7f4e2aab8069fd876c7ddf6689404452693086474adb0200fd0c8cdc3bb"
 
-GEM_NAME = "aws-sdk-route53domains"
+GEM_NAME = "aws-sdk-ecrpublic"
 
 inherit rubygems
 inherit rubygentest
