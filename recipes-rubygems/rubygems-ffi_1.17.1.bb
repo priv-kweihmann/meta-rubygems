@@ -16,8 +16,8 @@ GEM_INSTALL_FLAGS:append = " \
     --with-opt-dir=${RECIPE_SYSROOT} \
 "
 
-SRC_URI[md5sum] = "65b53e994d5a3a15acc9a092cb58e80e"
-SRC_URI[sha256sum] = "51630e43425078311c056ca75f961bb3bda1641ab36e44ad4c455e0b0e4a231c"
+SRC_URI[md5sum] = "5da312734a1ea46fff566eb80711fa11"
+SRC_URI[sha256sum] = "26f6b0dbd1101e6ffc09d3ca640b2a21840cc52731ad8a7ded9fb89e5fb0fc39"
 
 GEM_NAME = "ffi"
 
@@ -25,7 +25,6 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-# The vendored library is causing some rpath issues
 INSANE_SKIP:${PN} += "rpaths"
 
 BBCLASSEXTEND = "native"
