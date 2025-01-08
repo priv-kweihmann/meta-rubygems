@@ -19,7 +19,7 @@ jobs:
       TOPDIR: /opt/build
       TEMPLATECONF: /opt/build/sources/meta-rubygems/conf/templates/rubygems-arm64-glibc
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     container:
       image: privkweihmann/yocto-sca-minimal:2004
