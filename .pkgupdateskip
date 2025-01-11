@@ -14,3 +14,4 @@ rspec-expectations;>=3.12.0
 rspec-mocks;>=3.12.0
 rspec-support;>=3.12.0
 rspec;>=3.12.0
+unicode-display_width;>=3.0.0
