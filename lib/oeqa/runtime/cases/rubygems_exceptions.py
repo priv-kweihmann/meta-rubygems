@@ -29,6 +29,7 @@ class RubyGemsTestExceptions():
         "hiera_puppet": "uninitialized constant Puppet (NameError)",
         "jekyll-sass-converter": "module:Jekyll: uninitialized constant Jekyll::Page (NameError)",
         "jeventmachine": "`require': cannot load such file -- java (LoadError)",
+        "nori": "uninitialized constant Nori::StringIO (NameError)",
         "ms_rest": "uninitialized constant Faraday::Response::Middleware (NameError)",
         "ms_rest_azure": "uninitialized constant Faraday::Response::Middleware (NameError)",
         "proxifier": "uninitialized class variable @@schemes",
