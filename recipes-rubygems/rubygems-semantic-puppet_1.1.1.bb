@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "0042f4e83fbf7435f4425070d81efd9e"
-SRC_URI[sha256sum] = "52d108d08e1a5d95c00343cb3a4936fb1deecff2be612ec39c9cb66be5a8b859"
+SRC_URI[md5sum] = "13e815fb348b7f34796caca591eb9a54"
+SRC_URI[sha256sum] = "15ff5b48d7f856549eb66b927a8894d3668b211970c9d7dc07dd4db57f5c7a96"
 
 GEM_NAME = "semantic_puppet"
 
