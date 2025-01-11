@@ -32,7 +32,7 @@ please check the following table to pick the correct branch matching your poky v
 
 | poky release | suggested meta-rubygems branch | ruby version | maintainer     |
 | ------------ | ------------------------------ | ------------ | -------------- |
-| master       | master                         | 3.3.x        | priv-kweihmann |
+| master       | master                         | 3.4.x        | priv-kweihmann |
 | kirkstone    | kirkstone                      | 3.1.x        | n.a.           |
 | honister     | hardknott                      | 3.0.x        | n.a.           |
 | hardknott    | hardknott                      | 3.0.x        | n.a.           |
