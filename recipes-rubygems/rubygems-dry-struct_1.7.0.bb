@@ -4,7 +4,7 @@ DESCRIPTION = "Typed structs and value objects"
 HOMEPAGE = "https://dry-rb.org/gems/dry-struct"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=94642341bb0f18ae40ee66ef498a2777"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=b14b1929847ba471f3f59da600744315"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -18,8 +18,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "2a8e8e271c9455d600421427d9b764e7"
-SRC_URI[sha256sum] = "3737025b3a6cd50fd4e6f42883cbb8d5e0d07680bc8310f7dc0db8c8897dd4e6"
+SRC_URI[md5sum] = "42d6d4ece0367c28c7e6500195f35e5c"
+SRC_URI[sha256sum] = "8c8b6eb8da570e8b7fde9fb080591f3ca79b4d97f03d2ffd87a0336138152ba5"
 
 GEM_NAME = "dry-struct"
 
