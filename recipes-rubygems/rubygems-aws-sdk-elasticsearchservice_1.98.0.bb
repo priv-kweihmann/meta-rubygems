@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "416da2be9176653a09811284a4721f57"
-SRC_URI[sha256sum] = "4bcfdb8fa3460f5b16ee649bf07efcfbbd9b3e5977cc1c20cbc71f8133bb6a3b"
+SRC_URI[md5sum] = "3f574fddfca413553479ce3188139e9e"
+SRC_URI[sha256sum] = "3eb26c006b2d1105244e4d6baf7648f22f2e85612fe2ec419217dfae735bac32"
 
 GEM_NAME = "aws-sdk-elasticsearchservice"
 
