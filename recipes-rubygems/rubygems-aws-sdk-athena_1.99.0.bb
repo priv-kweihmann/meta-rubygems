@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "063e3647a21a730b21902afc9e57fa68"
-SRC_URI[sha256sum] = "8ed0970b69d09ac9739545c458cf9acda198f280b5436e4d3145dafb019a84c0"
+SRC_URI[md5sum] = "21bcf42d4bf9299f4a4e8407d81071ca"
+SRC_URI[sha256sum] = "9c9719d170370f08c48b8c68901443d5c7532482ef123e879e11799e56ea0adc"
 
 GEM_NAME = "aws-sdk-athena"
 
