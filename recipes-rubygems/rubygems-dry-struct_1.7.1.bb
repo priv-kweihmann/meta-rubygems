@@ -18,8 +18,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "42d6d4ece0367c28c7e6500195f35e5c"
-SRC_URI[sha256sum] = "8c8b6eb8da570e8b7fde9fb080591f3ca79b4d97f03d2ffd87a0336138152ba5"
+SRC_URI[md5sum] = "4ca98e2f9cfc801db707c0b358edf6e1"
+SRC_URI[sha256sum] = "4200913a24a36932d531d726a00067f727b4bd03d511d267f58ba3a86bee53ae"
 
 GEM_NAME = "dry-struct"
 
