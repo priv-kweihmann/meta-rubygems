@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "3916a3147871d6421688e575d5939e12"
-SRC_URI[sha256sum] = "f951b6af5f3e00203fb290a669e0a85c5dd5b051b3b023392ccfd67ba5abae91"
+SRC_URI[md5sum] = "2efdc895367357d1961655f667fb2100"
+SRC_URI[sha256sum] = "f504793203f8251b2ea7c7068333053f0beeea26093ec9962e62ea79f94301d2"
 
 GEM_NAME = "terminal-table"
 
