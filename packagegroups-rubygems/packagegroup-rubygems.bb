@@ -340,6 +340,7 @@ RDEPENDS:${PN} += "\
     rubygems-unf \
     rubygems-unf-ext \
     rubygems-unicode-display-width \
+    rubygems-unicode-emoji \
     rubygems-unicode-utils \
     rubygems-uuidtools \
     rubygems-vault \
