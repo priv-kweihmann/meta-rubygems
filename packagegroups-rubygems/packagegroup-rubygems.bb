@@ -351,6 +351,7 @@ RDEPENDS:${PN} += "\
     rubygems-winrm-fs \
     rubygems-wisper \
     rubygems-wmi-lite \
+    rubygems-xmldsig \
     rubygems-yajl-ruby \
     rubygems-yaml-safe-load-stream3 \
     rubygems-yard \
