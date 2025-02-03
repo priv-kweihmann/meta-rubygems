@@ -295,6 +295,7 @@ RDEPENDS:${PN} += "\
     rubygems-safe-yaml \
     rubygems-sassc \
     rubygems-scanf \
+    rubygems-sd-notify \
     rubygems-semantic-puppet \
     rubygems-semverse \
     rubygems-serverspec \
