@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "7969e6c2a2303ae60ff87d665568bd7f"
-SRC_URI[sha256sum] = "93c84c7b52c0a7981941b1a536041402b9b7c33aac8373c7c9dfe5615dae2d4d"
+SRC_URI[md5sum] = "65bfeab40dc9df3849a483fe1717cf5c"
+SRC_URI[sha256sum] = "ab7ba6a238c9125222d0dfcbbfa946ec0c6e714a740c4b7886b8d2b40d993cc0"
 
 GEM_NAME = "aws-sdk-ecr"
 
