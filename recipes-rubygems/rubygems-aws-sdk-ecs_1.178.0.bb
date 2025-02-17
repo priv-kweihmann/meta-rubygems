@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-databasemigrationservice"
-DESCRIPTION = "Official AWS Ruby gem for AWS Database Migration Service"
+SUMMARY = "RubyGem: aws-sdk-ecs"
+DESCRIPTION = "Official AWS Ruby gem for Amazon EC2 Container Service (Amazon ECS)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "5fb410edb6da1e0c52368f46a4de785e"
-SRC_URI[sha256sum] = "552025beed6381a9de92db94b5180817d0767aa3e2d4e2ab4e3a5b9b93f978ec"
+SRC_URI[md5sum] = "21001e4e592585dc2007233a093dac50"
+SRC_URI[sha256sum] = "fea2f8481882f0030cf534e737977a922a8b5a3e678ae74682a657214016ebcd"
 
-GEM_NAME = "aws-sdk-databasemigrationservice"
+GEM_NAME = "aws-sdk-ecs"
 
 inherit rubygems
 inherit rubygentest

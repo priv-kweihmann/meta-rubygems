@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-s3"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Simple Storage Service (Amazon S3)"
+SUMMARY = "RubyGem: aws-sdk-databasemigrationservice"
+DESCRIPTION = "Official AWS Ruby gem for AWS Database Migration Service"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -11,16 +11,15 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-aws-sdk-core-native \
-    rubygems-aws-sdk-kms-native \
     rubygems-aws-sigv4-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "4c8dd052fed33c1bc1c4038ecd23ba65"
-SRC_URI[sha256sum] = "335a45a694b36bfe38a5797db5b680cda7e58d24045207f18d92b59d74d0c66c"
+SRC_URI[md5sum] = "32b21adb7ee527754d8ac531de00f2f4"
+SRC_URI[sha256sum] = "f5518e292096facd7bcb8d9614f2be757f81690897e657178efe3a5fce64e510"
 
-GEM_NAME = "aws-sdk-s3"
+GEM_NAME = "aws-sdk-databasemigrationservice"
 
 inherit rubygems
 inherit rubygentest
@@ -28,7 +27,6 @@ inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-aws-sdk-core \
-    rubygems-aws-sdk-kms \
     rubygems-aws-sigv4 \
 "
 

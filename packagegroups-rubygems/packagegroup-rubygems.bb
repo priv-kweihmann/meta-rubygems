@@ -217,6 +217,7 @@ RDEPENDS:${PN} += "\
     rubygems-launchy \
     rubygems-libyajl2 \
     rubygems-license-acceptance \
+    rubygems-lint-roller \
     rubygems-liquid \
     rubygems-listen \
     rubygems-little-plugger \

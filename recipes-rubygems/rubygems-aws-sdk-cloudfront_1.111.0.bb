@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-ecs"
-DESCRIPTION = "Official AWS Ruby gem for Amazon EC2 Container Service (Amazon ECS)"
+SUMMARY = "RubyGem: aws-sdk-cloudfront"
+DESCRIPTION = "Official AWS Ruby gem for Amazon CloudFront (CloudFront)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "93f701e4b72f936f92a959e22063e6a3"
-SRC_URI[sha256sum] = "4c0649f7228429fd0555bd1877e4f72239772279dc66505dfd29e5318c68eb21"
+SRC_URI[md5sum] = "c392c5056277062ec22db8328b79a7e8"
+SRC_URI[sha256sum] = "70465241d4b5967c75456ca3f6753bb3f8f5eddaaeca7068c81a52e918710a29"
 
-GEM_NAME = "aws-sdk-ecs"
+GEM_NAME = "aws-sdk-cloudfront"
 
 inherit rubygems
 inherit rubygentest

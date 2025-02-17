@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-cloudfront"
-DESCRIPTION = "Official AWS Ruby gem for Amazon CloudFront (CloudFront)"
+SUMMARY = "RubyGem: aws-sdk-apigatewayv2"
+DESCRIPTION = "Official AWS Ruby gem for AmazonApiGatewayV2"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "08aaa54d51db025f2823bb42e5b488d4"
-SRC_URI[sha256sum] = "8f8f0828929877b036d79dcc52997bed7fa20fb785e9a6e0480873fa3ea4ef74"
+SRC_URI[md5sum] = "7f797f11314bc8f565efa6b7d025f686"
+SRC_URI[sha256sum] = "211407fee85824e7b0f700aca6226cd0090a8c0b50f17a491f51c7dc5dea3625"
 
-GEM_NAME = "aws-sdk-cloudfront"
+GEM_NAME = "aws-sdk-apigatewayv2"
 
 inherit rubygems
 inherit rubygentest
