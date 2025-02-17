@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "5fb410edb6da1e0c52368f46a4de785e"
-SRC_URI[sha256sum] = "552025beed6381a9de92db94b5180817d0767aa3e2d4e2ab4e3a5b9b93f978ec"
+SRC_URI[md5sum] = "32b21adb7ee527754d8ac531de00f2f4"
+SRC_URI[sha256sum] = "f5518e292096facd7bcb8d9614f2be757f81690897e657178efe3a5fce64e510"
 
 GEM_NAME = "aws-sdk-databasemigrationservice"
 
