@@ -26,3 +26,5 @@ DISTRO_FEATURES:remove = "ptest"
 INHERIT += "no-spdx"
 
 QEMU_TARGETS = "aarch64"
+
+MIRRORS:append = " https://gmplib.org/download/gmp/ https://ftp.gnu.org/gnu/gmp/"
