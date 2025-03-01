@@ -9,15 +9,23 @@ LIC_FILES_CHKSUM = "file://LICENSE.md;md5=8b04a0291ec55b31563a50b191b72cb1"
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
+DEPENDS:class-native += "\
+    rubygems-logger-native \
+"
+
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "3f834a0f7d32e9662119410c38437fde"
-SRC_URI[sha256sum] = "25bd64530f152eddbef4a2bcc2133b2fd8bf3ec102345780ba427e9bac4ba6aa"
+SRC_URI[md5sum] = "c4796c9a6ff81be3d35910a737092373"
+SRC_URI[sha256sum] = "ca040bb61bc0059968f34a17115a00d2db8562e3c0c5c5c7432072b551c85a9d"
 
 GEM_NAME = "excon"
 
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS:${PN}:class-target += "\
+    rubygems-logger \
+"
 
 BBCLASSEXTEND = "native"
