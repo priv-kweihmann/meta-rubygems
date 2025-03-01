@@ -6,13 +6,17 @@ HOMEPAGE = "https://github.com/toland/patron"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=0d7a84af80205b598ee5f47cab7eabb3"
 
-EXTRA_DEPENDS:append = " curl"
-EXTRA_RDEPENDS:append = " curl"
+EXTRA_DEPENDS:append = " \
+    curl \
+"
+EXTRA_RDEPENDS:append = " \
+    curl \
+"
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "69584a878e6fa832d9d14713980a2fbc"
-SRC_URI[sha256sum] = "29ba41f9e936b54a41726cfebbfc464c09ff8099a51883aba0f823d45b7b4314"
+SRC_URI[md5sum] = "e48254c06e030b24eb274a01dc4d0f3b"
+SRC_URI[sha256sum] = "c4ae37404a028772541e2f19a71e19be970aa53fdf8a3d70c5a9c1350bab3b09"
 
 GEM_NAME = "patron"
 
@@ -20,7 +24,6 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-# The vendored library is causing some rpath issues
 INSANE_SKIP:${PN} += "rpaths"
 
 BBCLASSEXTEND = "native"
