@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-partitions"
-DESCRIPTION = "Provides interfaces to enumerate AWS partitions, regions, and services."
+SUMMARY = "RubyGem: aws-eventstream"
+DESCRIPTION = "Amazon Web Services event stream library"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -11,10 +11,10 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "e88e65eaa6b487442400aa415e45929c"
-SRC_URI[sha256sum] = "3cf0e4c4e1ad0f155946904cede5016c8e3cacc5e6e4892d40ca02eb5498fc85"
+SRC_URI[md5sum] = "425137ddfa96ae8413b4375edb810ffd"
+SRC_URI[sha256sum] = "7e2c3a55ca70d7861d5d3c98e47daa463ed539c349caba22b48305b8919572d7"
 
-GEM_NAME = "aws-partitions"
+GEM_NAME = "aws-eventstream"
 
 inherit rubygems
 inherit rubygentest
