@@ -10,13 +10,14 @@ EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
+    rubygems-base64-native \
     rubygems-faraday-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "e86cc81f15e21013e8f94740d42e3e89"
-SRC_URI[sha256sum] = "3c6062aee0b5c863b83f3ce125ea7831507aadf1af7c0d384b74a116c4f649cf"
+SRC_URI[md5sum] = "2953d34ecc9d28d8ea06988886e1c515"
+SRC_URI[sha256sum] = "94bed40e05a67e9468ce1cb38389fba9a90aa8fc62fc9e173204c1dca59e21e7"
 
 GEM_NAME = "google-cloud-env"
 
@@ -25,6 +26,7 @@ inherit rubygentest
 inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
+    rubygems-base64 \
     rubygems-faraday \
 "
 
