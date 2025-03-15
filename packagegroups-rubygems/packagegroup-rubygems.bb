@@ -273,6 +273,7 @@ RDEPENDS:${PN} += "\
     rubygems-puppet-resource-api \
     rubygems-puppetmodule-netdev-stdlib \
     rubygems-rack \
+    rubygems-rackup \
     rubygems-rainbow \
     rubygems-rb-fsevent \
     rubygems-rb-inotify \
