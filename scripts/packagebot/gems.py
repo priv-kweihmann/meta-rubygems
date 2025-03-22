@@ -7,7 +7,6 @@ import subprocess
 
 from oelint_parser.cls_item import Variable
 from oelint_parser.cls_stash import Stash
-from oelint_parser.helper_files import expand_term
 
 
 class Gem():
@@ -60,16 +59,16 @@ class Gem():
         version = None
         depends = set()
 
-        version = expand_term(_stash, path, "${PV}")
+        version = _stash.ExpandTerm(path, "${PV}")
         for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue="GEM_NAME"):
             if item.VarValueStripped:
                 name = item.VarValueStripped
         depends = set()
         for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue="RDEPENDS"):
-            depends.update([expand_term(_stash, path, y)
+            depends.update([_stash.ExpandTerm(path, y)
                             for y in item.get_items() if y not in ["\\", "\\\n", '"']])
         for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue="EXTRA_RDEPENDS"):
-            depends.update([expand_term(_stash, path, y)
+            depends.update([_stash.ExpandTerm(path, y)
                             for y in item.get_items() if y not in ["\\", "\\\n", '"']])
 
         return (name, version, depends)
