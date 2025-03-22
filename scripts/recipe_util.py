@@ -8,7 +8,6 @@ try:
     from oelint_parser.cls_item import Function
     from oelint_parser.cls_item import Variable
     from oelint_parser.cls_stash import Stash
-    from oelint_parser.helper_files import expand_term
 except ImportError:
     sys.stderr.write(
         "Can't import 'oelint-parser'. Please run 'pip install oelint-parser' to enable this script here\n")
@@ -25,7 +24,7 @@ def __get_info_from_stash(_filepath, name, modifiers):
             continue
         if item.Origin.endswith(".bbclass"):
             continue
-        _result.update([expand_term(_stash, _filepath, y)
+        _result.update([_stash.ExpandTerm(_filepath, y)
                         for y in item.get_items() if y not in ["\\", "\\\n", '"']])
 
     return _result
