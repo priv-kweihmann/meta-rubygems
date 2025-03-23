@@ -94,9 +94,14 @@ class Gem():
             item.Raw = item.RealRaw
 
         items = [x for x in _stash.GetItemsFor(filename=_path, nolink=True) if not x.Origin.endswith(".bbclass")]
+
+        cnt = "".join([x.RealRaw for x in items])
+        cnt += "\n"
+
         with open(_path, "w") as o:
-            o.write("".join([x.RealRaw for x in items]))
-            o.write("\n")
+            o.write(cnt)
+        
+        print(f'Patched pkggroup -> {cnt}')
 
     def __get_new_recipes(self):
         _new_recipes = set()

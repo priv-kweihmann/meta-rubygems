@@ -59,7 +59,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
           repo: https://github.com/priv-kweihmann/meta-rubygems.git
-          branch: ${{ env.SCM_BRANCH }}
+          branch: "fix/pkgupdate"
           remove-git: "0"
           add-layer: "0"
       - name: checkout (meta-openembedded)

@@ -108,7 +108,7 @@ class Git():
         self.__repo.git.checkout('-f')
         self.__repo.git.clean('-xfd')
 
-    def create_branch(self, name, from_branch="master", checkout=True):
+    def create_branch(self, name, from_branch="fix/pkgupdate", checkout=True):
         if name not in self.__repo.branches:
             self.__repo.git.branch(name, from_branch)
         if checkout:
