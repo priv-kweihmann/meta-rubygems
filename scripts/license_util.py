@@ -51,12 +51,13 @@ def __get_from_scancode(tarball, temp_folder, excludes):
             for f in j["files"]:
                 if any([re.match(x, f["path"]) for x in excludes]):
                     continue
-                for license in f["licenses"]:
-                    if f["path"] not in res:
-                        res[f["path"]] = {"start": 99999999999, "end": -1}
-                    res[f["path"]]["start"] = min(
-                        res[f["path"]]["start"], license["start_line"])
-                    res[f["path"]]["end"] = max(res[f["path"]]["end"], license["end_line"])
+                for license in f["license_detections"]:
+                    for match in license["matches"]:
+                        if f["path"] not in res:
+                            res[f["path"]] = {"start": 99999999999, "end": -1}
+                        res[f["path"]]["start"] = min(
+                            res[f["path"]]["start"], match["start_line"])
+                        res[f["path"]]["end"] = max(res[f["path"]]["end"], match["end_line"])
 
     _lic_path = ""
     _lic_hash = ""
