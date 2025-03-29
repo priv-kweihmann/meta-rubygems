@@ -98,6 +98,9 @@ class Gem():
             o.write("".join([x.RealRaw for x in items]))
             o.write("\n")
 
+        with open(_path) as i:
+            print(i.read())
+
     def __get_new_recipes(self):
         _new_recipes = set()
         for c in self.__gitref.newfiles:
