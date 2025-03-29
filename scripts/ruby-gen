@@ -84,7 +84,7 @@ def get_versions(args, pkgname):
     try:
         res = json.loads(_output)
     except json.JSONDecodeError:
-        print("Can't decode json -> {}".format(str(_output)))
+        print(f"get_versions: can't decode json of {pkgname} -> {_output}")
         res = {}
     return res
 
@@ -100,7 +100,7 @@ def get_description(args, pkgname, version):
     try:
         res = json.loads(_output)
     except json.JSONDecodeError:
-        print("Can't decode json -> {}".format(str(_output)))
+        print(f"get_description: can't decode json of {pkgname}@{version} -> {_output}")
         res = {}
     return res
 
@@ -272,6 +272,7 @@ def create_tpl(args, pkgname, version, errata):
     _naming_pattern = "rubygems-{}_{}.bb"
     if pkgname in __seen_pkgs:
         return
+    print(f'Attempting update of {pkgname}...')
     _versions = get_versions(args, pkgname)
     try:
         _bestversion = get_best_version(args, _versions, pkgname, version)
