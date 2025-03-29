@@ -81,7 +81,7 @@ class Gem():
 
     def __patch_packagegroup(self, newrecipes):
         print(f'Adding {newrecipes} to {self.__pkggroup}')
-        _path = self.__bitbakeref.get_recipe_path(self.__pkggroup)
+        _path = os.path.abspath(self.__bitbakeref.get_recipe_path(self.__pkggroup))
 
         print(f'DEBUG: pkggroup path {_path}')
 
