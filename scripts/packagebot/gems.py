@@ -83,11 +83,14 @@ class Gem():
         print(f'Adding {newrecipes} to {self.__pkggroup}')
         _path = self.__bitbakeref.get_recipe_path(self.__pkggroup)
 
+        print(f'DEBUG: pkggroup path {_path}')
+
         _stash = Stash(quiet=True)
         _stash.AddFile(_path)
         _stash.Finalize()
 
         _rdepends = set([self.__get_recipename(name=x) for x in newrecipes])
+        print(f'DEBUG: new rdepends {_rdepends}')
 
         for item in _stash.GetItemsFor(attribute=Variable.ATTR_VAR, attributeValue="RDEPENDS"):
             _rdepends.update(item.get_items())
@@ -95,10 +98,12 @@ class Gem():
             item.Raw = item.RealRaw
 
         items = [x for x in _stash.GetItemsFor(filename=_path, nolink=True) if not x.Origin.endswith(".bbclass")]
+        print(f'DEBUG: final items {items}')
         with open(_path, "w") as o:
             o.write("".join([x.RealRaw for x in items]))
             o.write("\n")
 
+        print('DEBUG: recipe')
         with open(_path) as i:
             print(i.read())
 
