@@ -51,7 +51,7 @@ def __get_from_scancode(tarball, temp_folder, excludes):
             for f in j["files"]:
                 if any([re.match(x, f["path"]) for x in excludes]):
                     continue
-                for license in f["license_detections"]:
+                for license in f.get("license_detections", []):
                     for match in license["matches"]:
                         if f["path"] not in res:
                             res[f["path"]] = {"start": 99999999999, "end": -1}
