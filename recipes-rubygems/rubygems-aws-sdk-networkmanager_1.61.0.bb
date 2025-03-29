@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "064bd219530ad4edb0a4efde51cc0e6c"
-SRC_URI[sha256sum] = "68d9cac84156066587a6437f11e80555d0649d07b421b59e5d4a581627757d25"
+SRC_URI[md5sum] = "cda058644205693b7eddec88f38faf02"
+SRC_URI[sha256sum] = "ce8ea6a193807b59f92b89fa48ad29cbfa296b0d40543ccc8a08e7c29da656f3"
 
 GEM_NAME = "aws-sdk-networkmanager"
 
