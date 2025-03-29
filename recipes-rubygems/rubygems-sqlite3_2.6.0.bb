@@ -41,6 +41,6 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-mini-portile2 \
 "
 
-INSANE_SKIP:${PN} += "rpaths"
+INSANE_SKIP:${PN} += "rpaths ldflags"
 
 BBCLASSEXTEND = "native"

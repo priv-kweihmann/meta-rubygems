@@ -10,5 +10,8 @@
     },
     "httpclient": {
         "LICENSE": "Ruby"
+    },
+    "ruby-termios": {
+        "LICENSE": "Ruby"
     }
 }
