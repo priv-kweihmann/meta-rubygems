@@ -57,7 +57,7 @@ do_rubygems_gen_test[vardepsexclude] += "RUBYGEMS_LAYERDIR"
 addtask do_rubygems_gen_test after do_package before do_package_qa
 
 python() {
-    if d.getVar("RUBYGEMS_AUTOGEN_TESTS") == "1":
+    if d.getVar("RUBYGEMS_AUTOGEN_TESTS") == "1" and bb.data.inherits_class('rubygems', d):
         d.setVarFlag("do_rubygems_gen_test", "nostamp", "1")
     else:
         d.setVarFlag("do_rubygems_gen_test", "noexec", "1")
