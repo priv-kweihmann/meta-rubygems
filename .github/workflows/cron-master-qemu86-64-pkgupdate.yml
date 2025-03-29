@@ -51,7 +51,7 @@ jobs:
       - name: checkout (poky)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
-          repo: git://git.yoctoproject.org/poky.git
+          repo: https://github.com/yoctoproject/poky.git
           ref: 4a093080682ec544902ea7250c6ccbb9bf6e8fce
           branch: none
           add-layer: "0"
@@ -65,7 +65,7 @@ jobs:
       - name: checkout (meta-openembedded)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
         with:
-          repo: git://git.openembedded.org/meta-openembedded
+          repo: https://github.com/openembedded/meta-openembedded.git
           ref: 4e47dbbc6e472a7a6b98522bc55a894635373aee
           branch: none
           add-layer: "0"
