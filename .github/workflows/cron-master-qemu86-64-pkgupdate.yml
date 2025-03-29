@@ -19,6 +19,7 @@ jobs:
       LANGUAGE: en_US.UTF-8
       WORKSPACE: /opt/build
       TOPDIR: /opt/build
+      PYTHONUNBUFFERED: 1
       TEMPLATECONF: /opt/build/sources/meta-rubygems/conf/templates/rubygems-arm64-glibc
 
     runs-on: ubuntu-22.04
