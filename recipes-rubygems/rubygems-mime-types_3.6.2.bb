@@ -4,7 +4,7 @@ DESCRIPTION = "The mime-types library provides a library and registry for inform
 HOMEPAGE = "https://github.com/mime-types/ruby-mime-types/"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://Licence.md;md5=7870e5ae011593e135dec1b86fd81e8e"
+LIC_FILES_CHKSUM = "file://LICENCE.md;md5=a912a41e2b40daec7c7f8529fabeed22"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "9db48f6450e8a58fa852f0c7b1e09852"
-SRC_URI[sha256sum] = "6f71db957840ceae44211531eff3e2f7e0dd4645fefb5f535dbaeb6307ab6464"
+SRC_URI[md5sum] = "8cff3d88d8787263585bc8106cf0e192"
+SRC_URI[sha256sum] = "6109148e6a6e656607510b74571deff8ecd9a97ab0dcec9b7431bdd0b74460af"
 
 GEM_NAME = "mime-types"
 
