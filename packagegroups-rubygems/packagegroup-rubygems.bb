@@ -160,6 +160,7 @@ RDEPENDS:${PN} += "\
     rubygems-faraday-patron \
     rubygems-faraday-rack \
     rubygems-fast-gettext \
+    rubygems-faye-websocket \
     rubygems-ffi \
     rubygems-ffi-libarchive \
     rubygems-ffi-yajl \
@@ -295,6 +296,7 @@ RDEPENDS:${PN} += "\
     rubygems-rubocop-ast \
     rubygems-ruby-parser \
     rubygems-ruby-progressbar \
+    rubygems-ruby-termios \
     rubygems-ruby2-keywords \
     rubygems-rubycritic \
     rubygems-rubyntlm \
@@ -354,6 +356,8 @@ RDEPENDS:${PN} += "\
     rubygems-vault \
     rubygems-virtus \
     rubygems-webrick \
+    rubygems-websocket-driver \
+    rubygems-websocket-extensions \
     rubygems-winrm \
     rubygems-winrm-elevated \
     rubygems-winrm-fs \
