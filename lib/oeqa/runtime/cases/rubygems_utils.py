@@ -7,9 +7,8 @@ gem_list = set()
 class RubyGemsTestUtils(OERuntimeTestCase):
 
     def __gem_list(self):
-        global gem_list
         if not gem_list:
-            status, output = self.target.run("gem list")
+            _, output = self.target.run("gem list")
             for line in output.split("\n"):
                 if not line.strip():
                     continue
