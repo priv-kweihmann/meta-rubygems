@@ -59,6 +59,11 @@ jobs:
           branch: none
           remove-git: "0"
           add-layer: "0"
+      - name: install (additional packages)
+        run: |
+          pip3 install -r ${WORKSPACE}/sources/meta-rubygems/scripts/dev-requirements.txt
+          pip3 install -r ${WORKSPACE}/sources/meta-rubygems/scripts/requirements-package-bot.txt
+        shell: bash
       - name: build (revision update)
         run: |
           GIT_USER="${{ secrets.BOTNAME }}" \
