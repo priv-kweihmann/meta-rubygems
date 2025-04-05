@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "2ff4dab4194d03950d8115f964ef66b4"
-SRC_URI[sha256sum] = "c2be9f5defe171f163dadc8b0de84b7e98b36e4c0019750c0bbbcee958894a18"
+SRC_URI[md5sum] = "eef67df7266352021b486ef9504c83d6"
+SRC_URI[sha256sum] = "2a1d3fa83522a320edd493827c901b773fb5d185fac7efd81d028d8e1166a768"
 
 GEM_NAME = "mixlib-log"
 
