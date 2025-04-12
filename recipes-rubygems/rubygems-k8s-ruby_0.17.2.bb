@@ -16,21 +16,18 @@ DEPENDS:class-native += "\
     rubygems-dry-configurable-native \
     rubygems-dry-struct-native \
     rubygems-dry-types-native \
-    rubygems-eventmachine-native \
     rubygems-excon-native \
-    rubygems-faye-websocket-native \
     rubygems-hashdiff-native \
     rubygems-jsonpath-native \
     rubygems-recursive-open-struct-native \
-    rubygems-ruby-termios-native \
     rubygems-yajl-ruby-native \
     rubygems-yaml-safe-load-stream3-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "b9c66189b61577939853e3a3a221c621"
-SRC_URI[sha256sum] = "0e038efa10547822a9d0c54b6aaf295f33ce7d2bce41098565cce3673c82d6be"
+SRC_URI[md5sum] = "6e91472f14dab4f9ebaa0fa4fd10a5b9"
+SRC_URI[sha256sum] = "9197c70ea7547a06fdc5534c81b00740622a0ccfb12416fc6c06af141b59071b"
 
 GEM_NAME = "k8s-ruby"
 
@@ -43,13 +40,10 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-dry-configurable \
     rubygems-dry-struct \
     rubygems-dry-types \
-    rubygems-eventmachine \
     rubygems-excon \
-    rubygems-faye-websocket \
     rubygems-hashdiff \
     rubygems-jsonpath \
     rubygems-recursive-open-struct \
-    rubygems-ruby-termios \
     rubygems-yajl-ruby \
     rubygems-yaml-safe-load-stream3 \
 "

@@ -18,8 +18,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "828c2218614fc99431ec97aef34c8b54"
-SRC_URI[sha256sum] = "eb918eec7332da49976c6b32d81f6c4702b814b9a9f25e8ed8ece64b9ce4b747"
+SRC_URI[md5sum] = "c9b94a1d2d8089cec446b2e1b99ca285"
+SRC_URI[sha256sum] = "8595d0f41bce5f37cea8791d7b2a9a0ea21202ec4052a0891b473546694ae985"
 
 GEM_NAME = "train-kubernetes"
 
