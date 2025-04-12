@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: bindata"
-DESCRIPTION = "BinData is a declarative way to read and write binary file formats."
+DESCRIPTION = "BinData is a declarative way to read and write binary file formats.This means the programmer specifies *what* the format of the binarydata is, and BinData works out *how* to read and write data in thisformat"
 HOMEPAGE = "https://github.com/dmendel/bindata"
 
 LICENSE = "BSD-2-Clause"
@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "c893016c3b689893b033e12536faeeab"
-SRC_URI[sha256sum] = "29dccb8ba1cc9de148f24bb88930840c62db56715f0f80eccadd624d9f3d2623"
+SRC_URI[md5sum] = "d5929e59e78b22f9f22c61386b584368"
+SRC_URI[sha256sum] = "53186a1ec2da943d4cb413583d680644eb810aacbf8902497aac8f191fad9e58"
 
 GEM_NAME = "bindata"
 
