@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "0b45cce9923df5774cb97df694942359"
-SRC_URI[sha256sum] = "9aab0d0f9e302a7b11a4c90ae935aad90aed1f5113c6b7353e4911014ed20123"
+SRC_URI[md5sum] = "06a4fc6f57400eafcbc7eb5a7468c25d"
+SRC_URI[sha256sum] = "3c05ca5b636cbf09128ff7318e00bc002063b5d388f2cfec4aec647b44b87a66"
 
 GEM_NAME = "aws-sdk-budgets"
 
