@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "5c2ce257a51258c3681a7f80636c0639"
-SRC_URI[sha256sum] = "1c5c337fbcc815537de0edfaa0af914bcd096c680dd5493b5906b3e3e5bf9c3c"
+SRC_URI[md5sum] = "1e58639f66a00dc4aae007b89250d6d1"
+SRC_URI[sha256sum] = "7354a3cff8243cc9bbf9ac136e63ecfbf4a7b6f07622f5a092a0f7626fcff836"
 
 GEM_NAME = "chef-gyoku"
 
