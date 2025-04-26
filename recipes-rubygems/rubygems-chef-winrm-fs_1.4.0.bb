@@ -9,7 +9,9 @@ EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
+    rubygems-benchmark-native \
     rubygems-chef-winrm-native \
+    rubygems-csv-native \
     rubygems-erubi-native \
     rubygems-logging-native \
     rubygems-rubyzip-native \
@@ -17,8 +19,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "aa71f1d82c7f2bdbae0750d86cf9f1f1"
-SRC_URI[sha256sum] = "d48e56bc8a559afaae39235b09df3817f03b662417396091d13d958030d89a14"
+SRC_URI[md5sum] = "1bb486cb5de18342aed0586879c0b048"
+SRC_URI[sha256sum] = "5b80fd1298584dbc9ec43f5cadfcd9896d43c8f4289c1aa40a5c0ad7fbc119bd"
 
 GEM_NAME = "chef-winrm-fs"
 
@@ -31,7 +33,9 @@ do_install:append() {
 }
 
 RDEPENDS:${PN}:class-target += "\
+    rubygems-benchmark \
     rubygems-chef-winrm \
+    rubygems-csv \
     rubygems-erubi \
     rubygems-logging \
     rubygems-rubyzip \
