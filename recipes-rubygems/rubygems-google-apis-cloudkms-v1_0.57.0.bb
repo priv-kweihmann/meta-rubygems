@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "5d4dfaa83517aba36c8d561ff1a84fc3"
-SRC_URI[sha256sum] = "1e873fc89cbf05c2216b322acdac94f6522f4934439d86201a1abc824b206084"
+SRC_URI[md5sum] = "2841e1f9d71deccefe5085ab0c52402f"
+SRC_URI[sha256sum] = "e1a9587fed98d690052e7f0acc252047a6941d706c230dd6769b523422f3f28a"
 
 GEM_NAME = "google-apis-cloudkms_v1"
 
