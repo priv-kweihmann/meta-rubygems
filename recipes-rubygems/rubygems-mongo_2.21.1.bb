@@ -10,13 +10,14 @@ EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
+    rubygems-base64-native \
     rubygems-bson-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "582ffd4b86e40294e9a36b89dfa3e6ad"
-SRC_URI[sha256sum] = "38c4743733dbb918d8feb197a8f8b9af8ad922dadba8e03f5117c3cabc79339b"
+SRC_URI[md5sum] = "e9b10828a4f732fefa896ac21cc16014"
+SRC_URI[sha256sum] = "a0858375c546b87c9aba6adcda8e6298720fed787be54dde0fcb4637b5e48f43"
 
 GEM_NAME = "mongo"
 
@@ -29,6 +30,7 @@ do_compile:prepend() {
 }
 
 RDEPENDS:${PN}:class-target += "\
+    rubygems-base64 \
     rubygems-bson \
 "
 
