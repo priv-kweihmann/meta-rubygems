@@ -4,15 +4,15 @@ DESCRIPTION = "Rouge aims to a be a simple, easy-to-extend drop-in replacement f
 HOMEPAGE = "http://rouge.jneen.net/"
 
 LICENSE = "MIT & BSD-2-Clause"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=548cf784d6d431718abbb22a2eb5cdbe"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=6b48c48828e3f0a22274ed1d5e0b1c58"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "16b5d34df272ecb6ae03e2048fc60210"
-SRC_URI[sha256sum] = "2ac81c6dee7019bbc6600d4c2d641d730d65c165941400ebd924259067e690dd"
+SRC_URI[md5sum] = "3edef1ece95525179738efc35395c81c"
+SRC_URI[sha256sum] = "034233fb8a69d0ad0e0476943184e04cb971b68e3c2239724e02f428878b68a3"
 
 GEM_NAME = "rouge"
 
