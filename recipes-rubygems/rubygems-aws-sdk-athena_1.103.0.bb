@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-cloudwatchlogs"
-DESCRIPTION = "Official AWS Ruby gem for Amazon CloudWatch Logs"
+SUMMARY = "RubyGem: aws-sdk-athena"
+DESCRIPTION = "Official AWS Ruby gem for Amazon Athena"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "8017ef798779cc20698b7a162e867170"
-SRC_URI[sha256sum] = "b49637d61ea644c72b8712cf9433a543774e5a3bb68bfb20cd17ad0fa44b6683"
+SRC_URI[md5sum] = "b0097b8254c646c0b20703a13a594717"
+SRC_URI[sha256sum] = "b580f099281df5873ddab0a96d5d528f08e549992a7b74d34177367af4326297"
 
-GEM_NAME = "aws-sdk-cloudwatchlogs"
+GEM_NAME = "aws-sdk-athena"
 
 inherit rubygems
 inherit rubygentest

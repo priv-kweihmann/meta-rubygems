@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-athena"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Athena"
+SUMMARY = "RubyGem: aws-sdk-ec2"
+DESCRIPTION = "Official AWS Ruby gem for Amazon Elastic Compute Cloud (Amazon EC2)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "ad2980e48654baf7977ab20012073e2d"
-SRC_URI[sha256sum] = "678d367a42c668053583c9a9f0525b4891d4f9a2f1b8ba624e79c6e3047baed8"
+SRC_URI[md5sum] = "281d6ec2f5731267e7296ff27bcc931e"
+SRC_URI[sha256sum] = "a1010e8d6e3886a7cdf6c6013e37eb378d9cc619e475af6becbbfb1bb72021d9"
 
-GEM_NAME = "aws-sdk-athena"
+GEM_NAME = "aws-sdk-ec2"
 
 inherit rubygems
 inherit rubygentest

@@ -4,15 +4,15 @@ DESCRIPTION = "A Ruby binding to the Ed25519 elliptic curve public-key signature
 HOMEPAGE = "https://github.com/RubyCrypto/ed25519"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=a1aaaad387bcb19711f5e602aabee8e8"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=61dd91b48281096c86a6afccc95767e9"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "d810e3aa82d0a0fb9b9d7ca6146121e4"
-SRC_URI[sha256sum] = "514a5584f84d39daac568a17ec93a4e7261e140c52c562ed8c382c18456e627d"
+SRC_URI[md5sum] = "b21a935b51b4657022591d122e202e0a"
+SRC_URI[sha256sum] = "16e97f5198689a154247169f3453ef4cfd3f7a47481fde0ae33206cdfdcac506"
 
 GEM_NAME = "ed25519"
 
@@ -20,7 +20,6 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-# The vendored library is causing some rpath issues
 INSANE_SKIP:${PN} += "rpaths"
 
 BBCLASSEXTEND = "native"

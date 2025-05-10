@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-guardduty"
-DESCRIPTION = "Official AWS Ruby gem for Amazon GuardDuty"
+SUMMARY = "RubyGem: aws-sdk-servicecatalog"
+DESCRIPTION = "Official AWS Ruby gem for AWS Service Catalog"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "295bb4c83089a9a7c9ada937389039fc"
-SRC_URI[sha256sum] = "93ed97469a2f37afa429df05b2d287c773eccfea2e01fc1c09798927d4837d23"
+SRC_URI[md5sum] = "002dd5e9ddab0410b737c10f71354b47"
+SRC_URI[sha256sum] = "c300d6fb4e1a7e07b20a3f62e9c4a3faa4c522331c86bd3f79512b5dc2c5d12b"
 
-GEM_NAME = "aws-sdk-guardduty"
+GEM_NAME = "aws-sdk-servicecatalog"
 
 inherit rubygems
 inherit rubygentest

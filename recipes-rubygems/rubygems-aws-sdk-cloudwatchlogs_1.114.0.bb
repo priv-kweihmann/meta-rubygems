@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-cloudfront"
-DESCRIPTION = "Official AWS Ruby gem for Amazon CloudFront (CloudFront)"
+SUMMARY = "RubyGem: aws-sdk-cloudwatchlogs"
+DESCRIPTION = "Official AWS Ruby gem for Amazon CloudWatch Logs"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "a8345e23f0de538cdf499451ff6eba4e"
-SRC_URI[sha256sum] = "4ff4b186d9ba682a8bcaae16187f3fea57a6ff77412e107290008493903eb0b2"
+SRC_URI[md5sum] = "25c799587a92c78df4b589c8da84387b"
+SRC_URI[sha256sum] = "9a0073c6b1bbc8a8bc85f76026dc67ebf92edffce209cd59ee1da5637d18ddf1"
 
-GEM_NAME = "aws-sdk-cloudfront"
+GEM_NAME = "aws-sdk-cloudwatchlogs"
 
 inherit rubygems
 inherit rubygentest

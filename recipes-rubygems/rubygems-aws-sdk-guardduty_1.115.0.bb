@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-codepipeline"
-DESCRIPTION = "Official AWS Ruby gem for AWS CodePipeline (CodePipeline)"
+SUMMARY = "RubyGem: aws-sdk-guardduty"
+DESCRIPTION = "Official AWS Ruby gem for Amazon GuardDuty"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "e5452af903f972a47e3ceec29ac14d76"
-SRC_URI[sha256sum] = "75dff2051b3c938af83ce111e7b6166b75d63e44ef1eb41222b226de408f92d6"
+SRC_URI[md5sum] = "edea44ac5c808a433588df2ed9b010ab"
+SRC_URI[sha256sum] = "98a73a958e9085c683a4ba8d3ab0af18958ed915f591161bae725f43bfc07e33"
 
-GEM_NAME = "aws-sdk-codepipeline"
+GEM_NAME = "aws-sdk-guardduty"
 
 inherit rubygems
 inherit rubygentest

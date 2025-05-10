@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-servicecatalog"
-DESCRIPTION = "Official AWS Ruby gem for AWS Service Catalog"
+SUMMARY = "RubyGem: aws-sdk-codepipeline"
+DESCRIPTION = "Official AWS Ruby gem for AWS CodePipeline (CodePipeline)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "4fca3ffa70e31f5acbb5d369a3b00a6f"
-SRC_URI[sha256sum] = "6c57767863d1ffb8979513d89bed22d3066a694b5a3a5db93a42570be2574690"
+SRC_URI[md5sum] = "0d85b3dfc9246e6972e3fe13341f97fa"
+SRC_URI[sha256sum] = "5ef1f14deeefeca19ca253d8e924eac1c0e3650e6881233a2ded52b2d07ad1d5"
 
-GEM_NAME = "aws-sdk-servicecatalog"
+GEM_NAME = "aws-sdk-codepipeline"
 
 inherit rubygems
 inherit rubygentest
