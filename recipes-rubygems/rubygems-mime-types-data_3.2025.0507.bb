@@ -4,15 +4,15 @@ DESCRIPTION = "mime-types-data provides a registry for information about MIME me
 HOMEPAGE = "https://github.com/mime-types/mime-types-data/"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://Licence.md;md5=5951aa73e6fd3c2d33c12577b216d2ec"
+LIC_FILES_CHKSUM = "file://LICENCE.md;md5=a70d2451e1eb642e8b1c3006ee136d09"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "c69c4fb0fe428eed21edadff7c7175fd"
-SRC_URI[sha256sum] = "2ffe0af6d084c6542d61e37d304d81f97628f5f7b2baaedb29bb396139c0ee28"
+SRC_URI[md5sum] = "dc714ed56a1b03f04b91b15994de617d"
+SRC_URI[sha256sum] = "0e737b8bce30d60839bd2ac4fe1569966ce54bd5709346154752cd5514a63bd9"
 
 GEM_NAME = "mime-types-data"
 
