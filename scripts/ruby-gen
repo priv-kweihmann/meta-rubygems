@@ -100,7 +100,8 @@ def get_description(args, pkgname, version):
     try:
         res = json.loads(_output)
     except json.JSONDecodeError:
-        print(f"get_description: can't decode json of {pkgname}@{version} -> {_output}")
+        print(
+            f"get_description: can't decode json of {pkgname}@{version} -> {_output}")
         res = {}
     return res
 
@@ -161,7 +162,8 @@ def get_best_version(args, _versions, pkgname, version):
                     _ruby_version_available = __sanitizies_version(
                         args.rubyversion)
                 except Exception as e:
-                    print(f'exception: failed to parse ruby-version: {e} - {ver}')
+                    print(
+                        f'exception: failed to parse ruby-version: {e} - {ver}')
                     # invalid version, such as "dev"
                     continue
                 if _ruby_version_required > _ruby_version_available:
@@ -169,7 +171,7 @@ def get_best_version(args, _versions, pkgname, version):
         except Exception as e:
             print("{} -> {}".format(e, ver))
         try:
-            t_version = Version(ver["number"])
+            t_version = Version.coerce(ver["number"])
         except ValueError:
             num = ver["number"][::-1].replace('.', '-', 1)[::-1]
             t_version = Version(num)
@@ -268,7 +270,7 @@ def double_check_license(args, __licfile, __lichash, old_recipes):
 
 
 def create_tpl(args, pkgname, version, errata):
-    global __seen_pkgs
+    global __seen_pkgs  # noqa: F824
     _naming_pattern = "rubygems-{}_{}.bb"
     if pkgname in __seen_pkgs:
         return
