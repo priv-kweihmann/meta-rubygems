@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "1018e26a959c2cbac946d8d8dd15c9c8"
-SRC_URI[sha256sum] = "f6760aa86e5ed97956559ab60d2b0e5298240cf66b8be64a2f15af2d79224cbd"
+SRC_URI[md5sum] = "dd662839fc2b2a71427a160d792a8510"
+SRC_URI[sha256sum] = "98be4f095116d14a29afec186c5d0c2a5ad84b70a918a2b07a3b604e1bd28ec4"
 
 GEM_NAME = "google-apis-monitoring_v3"
 
