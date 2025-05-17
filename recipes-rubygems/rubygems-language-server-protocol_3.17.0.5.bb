@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "5f6917e87ba7beb5928969650c9ac775"
-SRC_URI[sha256sum] = "c484626478664fd13482d8180947c50a8590484b1258b99b7aedb3b69df89669"
+SRC_URI[md5sum] = "f5a9b791995a061c5a420b4e5e54bf9c"
+SRC_URI[sha256sum] = "fd1e39a51a28bf3eec959379985a72e296e9f9acfce46f6a79d31ca8760803cc"
 
 GEM_NAME = "language_server-protocol"
 
