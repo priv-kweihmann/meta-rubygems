@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "5d13fc819150a38441bf919cbf349746"
-SRC_URI[sha256sum] = "be8956d90570027c23a0852e03bfd5e92d9e7f74d966f97c4685ec62059eba50"
+SRC_URI[md5sum] = "c3d26a12c3a1cce443ad73f8f3bfd4cc"
+SRC_URI[sha256sum] = "6175e14a0e072b50d2433d253de3c18ce10c573d909edf55c4b510271ecd5aed"
 
 GEM_NAME = "timeliness"
 
