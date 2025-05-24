@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-ec2"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Elastic Compute Cloud (Amazon EC2)"
+SUMMARY = "RubyGem: aws-sdk-glue"
+DESCRIPTION = "Official AWS Ruby gem for AWS Glue"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "b1c113110478194d1636f54a085cffbe"
-SRC_URI[sha256sum] = "d10e8b5833dd2cd2db7bf45020ccd36488a5adf17964e44fe434ba0ce4035fb0"
+SRC_URI[md5sum] = "e95127beec74e7444f4201d5ffc6118a"
+SRC_URI[sha256sum] = "77b488750949d455c72ce81b68ca88de36c78dd85a7aeaa54bb1660d75fbf81b"
 
-GEM_NAME = "aws-sdk-ec2"
+GEM_NAME = "aws-sdk-glue"
 
 inherit rubygems
 inherit rubygentest

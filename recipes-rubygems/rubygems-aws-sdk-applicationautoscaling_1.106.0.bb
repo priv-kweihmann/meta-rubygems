@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-cloudwatch"
-DESCRIPTION = "Official AWS Ruby gem for Amazon CloudWatch (CloudWatch)"
+SUMMARY = "RubyGem: aws-sdk-applicationautoscaling"
+DESCRIPTION = "Official AWS Ruby gem for Application Auto Scaling"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "86a4e6afc24077307de0a44b69d3c958"
-SRC_URI[sha256sum] = "98a23d57d81e5a9619001c9e4463ef9f61729852789c5e19d75ca2519bf2d068"
+SRC_URI[md5sum] = "a1a2c89d1159f5f089742c063663c26d"
+SRC_URI[sha256sum] = "683332cf8e267fa540037ec7805357ce12ec9ccb5ff206d32540a1dead593e6a"
 
-GEM_NAME = "aws-sdk-cloudwatch"
+GEM_NAME = "aws-sdk-applicationautoscaling"
 
 inherit rubygems
 inherit rubygentest

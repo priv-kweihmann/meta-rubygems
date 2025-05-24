@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: google-apis-iam_v1"
-DESCRIPTION = "This is the simple REST client for Identity and Access Management (IAM) API V1"
+SUMMARY = "RubyGem: google-apis-admin_directory_v1"
+DESCRIPTION = "This is the simple REST client for Admin SDK API DirectoryV1"
 HOMEPAGE = "https://github.com/google/google-api-ruby-client"
 
 LICENSE = "Apache-2.0"
@@ -15,10 +15,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "ab2c1f384da9ef9a4bb5907774aaa7f5"
-SRC_URI[sha256sum] = "160c94a2bbebcc52799925d6885f56e72c06831f1956a1cfca47e772aa8b48b2"
+SRC_URI[md5sum] = "0655407005039070e809f460e4bb3864"
+SRC_URI[sha256sum] = "37b7c9a531076b0346cd553131816f2319cc151bb9117766a8351345cc802ab7"
 
-GEM_NAME = "google-apis-iam_v1"
+GEM_NAME = "google-apis-admin_directory_v1"
 
 inherit rubygems
 inherit rubygentest

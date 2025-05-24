@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-applicationautoscaling"
-DESCRIPTION = "Official AWS Ruby gem for Application Auto Scaling"
+SUMMARY = "RubyGem: aws-sdk-rds"
+DESCRIPTION = "Official AWS Ruby gem for Amazon Relational Database Service (Amazon RDS)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "41f6ce778fcad358f1371938d018f08e"
-SRC_URI[sha256sum] = "23171aff05f6ce2c5eb99e62bd19a49666b7d49f66774262c81395cbf5f1cc65"
+SRC_URI[md5sum] = "f032bebcbb5261ad98898c297ad9d0f0"
+SRC_URI[sha256sum] = "e3f153f9ae72d6f5b90ac9ffdb00e7c284dfbaa1d74da9f6cc7401fcd76fddd8"
 
-GEM_NAME = "aws-sdk-applicationautoscaling"
+GEM_NAME = "aws-sdk-rds"
 
 inherit rubygems
 inherit rubygentest

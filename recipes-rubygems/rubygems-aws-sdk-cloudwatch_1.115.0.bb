@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-rds"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Relational Database Service (Amazon RDS)"
+SUMMARY = "RubyGem: aws-sdk-cloudwatch"
+DESCRIPTION = "Official AWS Ruby gem for Amazon CloudWatch (CloudWatch)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "ad0d0abb506d28c7eb42231ae1fbfada"
-SRC_URI[sha256sum] = "9ed4183b1abb30e50b3751486e667c85b9192b8a7a3aec73f791277799bc5756"
+SRC_URI[md5sum] = "7a267fcf5821c049f506fa735584ac7e"
+SRC_URI[sha256sum] = "2fdc1d14fb56e0cf263f8e5cceb299724aa97573c404b3cae511079773ecb671"
 
-GEM_NAME = "aws-sdk-rds"
+GEM_NAME = "aws-sdk-cloudwatch"
 
 inherit rubygems
 inherit rubygentest
