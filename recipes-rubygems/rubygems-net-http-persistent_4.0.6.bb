@@ -4,7 +4,9 @@ DESCRIPTION = "Manages persistent connections using Net::HTTP including a thread
 HOMEPAGE = "https://github.com/drbrain/net-http-persistent"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://README.rdoc;beginline=59;endline=82;md5=e3fe655d8a232a8b4e8bde0439a4518f"
+LIC_FILES_CHKSUM = "\
+    file://README.rdoc;beginline=59;endline=82;md5=e3fe655d8a232a8b4e8bde0439a4518f \
+"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -15,8 +17,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "389b8ebcb6cb0550aad4c3b5dfa5c362"
-SRC_URI[sha256sum] = "6e42880b347e650ffeaf679ae59c9d5a6ed8a22cda6e1b959d9c270050aefa8e"
+SRC_URI[md5sum] = "bc75893198f1dd03c60bc81488ac7cdc"
+SRC_URI[sha256sum] = "2abb3a04438edf6cb9e0e7e505969605f709eda3e3c5211beadd621a2c84dd5d"
 
 GEM_NAME = "net-http-persistent"
 
