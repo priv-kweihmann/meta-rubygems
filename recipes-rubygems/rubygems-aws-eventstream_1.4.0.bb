@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "425137ddfa96ae8413b4375edb810ffd"
-SRC_URI[sha256sum] = "7e2c3a55ca70d7861d5d3c98e47daa463ed539c349caba22b48305b8919572d7"
+SRC_URI[md5sum] = "94f30a4b242a59c50d6cb89982494017"
+SRC_URI[sha256sum] = "116bf85c436200d1060811e6f5d2d40c88f65448f2125bc77ffce5121e6e183b"
 
 GEM_NAME = "aws-eventstream"
 
