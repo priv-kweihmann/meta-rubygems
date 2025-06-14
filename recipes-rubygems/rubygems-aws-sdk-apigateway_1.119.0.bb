@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-kms"
-DESCRIPTION = "Official AWS Ruby gem for AWS Key Management Service (KMS)"
+SUMMARY = "RubyGem: aws-sdk-apigateway"
+DESCRIPTION = "Official AWS Ruby gem for Amazon API Gateway"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "6e9b07c8fb3c8510b719a84ff3400a38"
-SRC_URI[sha256sum] = "d65f13254452a9648fc3557018214e4c1809224c8538de576dd079772f0390f4"
+SRC_URI[md5sum] = "343763f657e9c3959c4677ab154e3bbb"
+SRC_URI[sha256sum] = "948f1bc7cdebae9097ad9427e27fdd3a73083a414bdfaf06b168544f2145bb55"
 
-GEM_NAME = "aws-sdk-kms"
+GEM_NAME = "aws-sdk-apigateway"
 
 inherit rubygems
 inherit rubygentest

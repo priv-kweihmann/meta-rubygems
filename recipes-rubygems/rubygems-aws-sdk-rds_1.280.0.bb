@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-wafv2"
-DESCRIPTION = "Official AWS Ruby gem for AWS WAFV2 (WAFV2)"
+SUMMARY = "RubyGem: aws-sdk-rds"
+DESCRIPTION = "Official AWS Ruby gem for Amazon Relational Database Service (Amazon RDS)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "a9c3ac7c95b0d6d269738d0d69c07b60"
-SRC_URI[sha256sum] = "f7e0eb8a3572ae5eb79188bdc9251c8218a33f602f8b59952a6216a4027bf3a8"
+SRC_URI[md5sum] = "90045d8491339bc28b76bdb80d808eec"
+SRC_URI[sha256sum] = "1e5dc42794ebf973233ab791a514546eed7c907b8e9fa03c1e4c8a7547ddb50b"
 
-GEM_NAME = "aws-sdk-wafv2"
+GEM_NAME = "aws-sdk-rds"
 
 inherit rubygems
 inherit rubygentest

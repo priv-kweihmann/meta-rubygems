@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-rds"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Relational Database Service (Amazon RDS)"
+SUMMARY = "RubyGem: aws-sdk-kms"
+DESCRIPTION = "Official AWS Ruby gem for AWS Key Management Service (KMS)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "f518a517a6896aefb07463bb976ad393"
-SRC_URI[sha256sum] = "49fb374ea2514bc84c196f870d3e25de7b1e8bb3c8b05ad1a5e8c5458c30d3a3"
+SRC_URI[md5sum] = "cadb78efc774c6858cee70f8d9797d55"
+SRC_URI[sha256sum] = "d7756c1c2e3a79afaceb7c590f3846d2814cf217e28971c243608c41d65bae4f"
 
-GEM_NAME = "aws-sdk-rds"
+GEM_NAME = "aws-sdk-kms"
 
 inherit rubygems
 inherit rubygentest

@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-apigatewayv2"
-DESCRIPTION = "Official AWS Ruby gem for AmazonApiGatewayV2"
+SUMMARY = "RubyGem: aws-sdk-efs"
+DESCRIPTION = "Official AWS Ruby gem for Amazon Elastic File System (EFS)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "ec5745b70d3e248df371f8ac4c6ce73e"
-SRC_URI[sha256sum] = "c564c8deb48b8de136304c0d5964860bf07d79ba38beb16d28d93c8f9cd8e07e"
+SRC_URI[md5sum] = "82435f203a47402a10d86bb4f739ad0b"
+SRC_URI[sha256sum] = "95129900bfc793811296c12603d331b3a3b20b15c359cab2760f742835b2b6b3"
 
-GEM_NAME = "aws-sdk-apigatewayv2"
+GEM_NAME = "aws-sdk-efs"
 
 inherit rubygems
 inherit rubygentest

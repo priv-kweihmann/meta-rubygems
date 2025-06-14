@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-s3"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Simple Storage Service (Amazon S3)"
+SUMMARY = "RubyGem: aws-sdk-networkmanager"
+DESCRIPTION = "Official AWS Ruby gem for AWS Network Manager (NetworkManager)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -11,16 +11,15 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-aws-sdk-core-native \
-    rubygems-aws-sdk-kms-native \
     rubygems-aws-sigv4-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "85f357e935bb8d1dcc945d14015be4f7"
-SRC_URI[sha256sum] = "2a622fa6d72ffefd3e623db00650fc9d7b177a008626a49fde2b6125b5a67e74"
+SRC_URI[md5sum] = "5624b82d2e0ff479ec2e8e968a88cff7"
+SRC_URI[sha256sum] = "6811b943b6a99906d5fd97ccae9594f579a70f47cf323d73e9d81e3cee7dd6c6"
 
-GEM_NAME = "aws-sdk-s3"
+GEM_NAME = "aws-sdk-networkmanager"
 
 inherit rubygems
 inherit rubygentest
@@ -28,7 +27,6 @@ inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-aws-sdk-core \
-    rubygems-aws-sdk-kms \
     rubygems-aws-sigv4 \
 "
 
