@@ -24,6 +24,11 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
+do_generate_spec:append() {
+    sed -i "s#Cookstyle::RUBOCOP_VERSION#' != 0'#g" ${GEM_SPEC_FILE}
+    sed -i 's|"= #{Cookstyle::RUBOCOP_VERSION}"|">= #{Cookstyle::RUBOCOP_VERSION}"|g' ${S}/lib/cookstyle.rb
+}
+
 RDEPENDS:${PN}:class-target += "\
     rubygems-rubocop \
 "
