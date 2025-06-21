@@ -26,14 +26,15 @@ DEPENDS:class-native += "\
     rubygems-google-apis-storage-v1-native \
     rubygems-googleauth-native \
     rubygems-inifile-native \
+    rubygems-ostruct-native \
     rubygems-train-core-native \
     rubygems-train-winrm-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "c3827725a25dece92b282b9a44149b26"
-SRC_URI[sha256sum] = "b0a487531f8457ce497ca1688ef3d35e728b27fc6712a6eee976fb25c228c221"
+SRC_URI[md5sum] = "4737f0b90065c45f6192c041c4e44ba9"
+SRC_URI[sha256sum] = "7f1b602c7c35e17f6f6488113343adc9bfab04842fdfa821639bfe7ae8f2651f"
 
 GEM_NAME = "train"
 
@@ -58,6 +59,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-google-apis-storage-v1 \
     rubygems-googleauth \
     rubygems-inifile \
+    rubygems-ostruct \
     rubygems-train-core \
     rubygems-train-winrm \
 "
