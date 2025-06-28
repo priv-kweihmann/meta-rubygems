@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: mime-types-data"
-DESCRIPTION = "mime-types-data provides a registry for information about MIME media typedefinitions"
+DESCRIPTION = "mime-types-data provides a registry for information about MIME media type definitions"
 HOMEPAGE = "https://github.com/mime-types/mime-types-data/"
 
 LICENSE = "MIT"
@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "cb847653b806d3f838acf0f1b5b51370"
-SRC_URI[sha256sum] = "1220c4af9a22dbdecdc490dda00e8b9303bb41239ec428a682d4cfdb64bc3ef6"
+SRC_URI[md5sum] = "311dcb085f798c98c574424df5286ed4"
+SRC_URI[sha256sum] = "32034cfa6fb6efa02930ffde4f89f2818f1d2a36ead2cd2be97ce0ff3e0f5e96"
 
 GEM_NAME = "mime-types-data"
 
