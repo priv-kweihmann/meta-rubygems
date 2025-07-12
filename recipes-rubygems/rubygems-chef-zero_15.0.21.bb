@@ -4,7 +4,7 @@ DESCRIPTION = "Self-contained, easy-setup, fast-start in-memory Chef server for 
 HOMEPAGE = "https://github.com/chef/chef-zero"
 
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=d1afc36971ed0d4287123b94ea00ec39"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=d3b00fddfc284541383b18aaccf46781"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -16,14 +16,15 @@ DEPENDS:class-native += "\
     rubygems-mixlib-log-native \
     rubygems-rack-native \
     rubygems-rackup-native \
+    rubygems-unf-ext-native \
     rubygems-uuidtools-native \
     rubygems-webrick-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "1b336a0ae34463530040b2dd81d9b9b9"
-SRC_URI[sha256sum] = "423e18499b5e07aa1b8cbcaa1c9102f5bd5edf5f692f64b1d0e9ea9181087357"
+SRC_URI[md5sum] = "95c2a59f58973f87da28cb691832b39c"
+SRC_URI[sha256sum] = "f4a6115f8d1aa1901fe12d4d7b63496cec7e6f4260d90097adbdf0cb110ae6cb"
 
 GEM_NAME = "chef-zero"
 
@@ -38,6 +39,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-mixlib-log \
     rubygems-rack \
     rubygems-rackup \
+    rubygems-unf-ext \
     rubygems-uuidtools \
     rubygems-webrick \
 "
