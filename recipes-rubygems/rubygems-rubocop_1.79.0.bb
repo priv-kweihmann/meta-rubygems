@@ -19,13 +19,14 @@ DEPENDS:class-native += "\
     rubygems-regexp-parser-native \
     rubygems-rubocop-ast-native \
     rubygems-ruby-progressbar-native \
+    rubygems-tsort-native \
     rubygems-unicode-display-width-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "570a46b25226078134e1fb266553a53f"
-SRC_URI[sha256sum] = "8b74a6f912eb4fd3e6878851f7f7f45dcad8c7185c34250d4f952b0ee80d6bc0"
+SRC_URI[md5sum] = "6b92debf5ce0154bcc1e25bc40ba0f9f"
+SRC_URI[sha256sum] = "c709e83b16f9fced295d83d190a3a5bbcc46c419d8f9b85f259b99ba6faf5bbe"
 
 GEM_NAME = "rubocop"
 
@@ -43,6 +44,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-regexp-parser \
     rubygems-rubocop-ast \
     rubygems-ruby-progressbar \
+    rubygems-tsort \
     rubygems-unicode-display-width \
 "
 
