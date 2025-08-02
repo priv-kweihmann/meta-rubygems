@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: chef-winrm"
 DESCRIPTION = "Ruby library for Windows Remote Management"
+HOMEPAGE = "https://github.com/WinRb/WinRM"
 
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=d273d63619c9aeaf15cdaf76422c4f87"
@@ -22,8 +23,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "75ae900a24ed708e5b29b80e78d0740a"
-SRC_URI[sha256sum] = "1a59dbf82b0ba91141ef460ba23739957f30b7e69ea073c0f1806058af05cbc9"
+SRC_URI[md5sum] = "2c3988a6d3793cafbc4a5daa1e58a65f"
+SRC_URI[sha256sum] = "7f6a54f2a36a6d4c1d426a7a0a350ca02e3056a8207e0e2dce9c1ad7796cade9"
 
 GEM_NAME = "chef-winrm"
 
