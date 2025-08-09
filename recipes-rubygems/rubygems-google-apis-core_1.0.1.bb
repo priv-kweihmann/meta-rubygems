@@ -11,18 +11,18 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-addressable-native \
+    rubygems-faraday-follow-redirects-native \
+    rubygems-faraday-native \
     rubygems-googleauth-native \
-    rubygems-httpclient-native \
     rubygems-mini-mime-native \
-    rubygems-mutex-m-native \
     rubygems-representable-native \
     rubygems-retriable-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "5cea184518e6304174e1d88d664e3d0f"
-SRC_URI[sha256sum] = "96b057816feeeab448139ed5b5c78eab7fc2a9d8958f0fbc8217dedffad054ee"
+SRC_URI[md5sum] = "09fdf2806dd121e748b317e7243a5b05"
+SRC_URI[sha256sum] = "5cd0fc24e33efe5e8d095374c0fef3d246eded243b751c861e95e3d16ad0d861"
 
 GEM_NAME = "google-apis-core"
 
@@ -32,10 +32,10 @@ inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-addressable \
+    rubygems-faraday \
+    rubygems-faraday-follow-redirects \
     rubygems-googleauth \
-    rubygems-httpclient \
     rubygems-mini-mime \
-    rubygems-mutex-m \
     rubygems-representable \
     rubygems-retriable \
 "
