@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "9ec4d4574e6ed5716f4df440280d1fb9"
-SRC_URI[sha256sum] = "8caf2af1c0f2f07ec89ef9e18c7d88c2790e217c482bfc78aaa65eadd5415ac1"
+SRC_URI[md5sum] = "c99951f537ebb426c96c24ea3b4cdea8"
+SRC_URI[sha256sum] = "bf566817855ee7ee3adcf7bace0d5906cb14401417db59193f8a5fcedf02dd4e"
 
 GEM_NAME = "unicode-display_width"
 
