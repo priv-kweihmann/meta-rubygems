@@ -315,6 +315,7 @@ RDEPENDS:${PN} += "\
     rubygems-simplecov-html \
     rubygems-simplecov-json-formatter \
     rubygems-slop \
+    rubygems-socksify \
     rubygems-specinfra \
     rubygems-sqlite3 \
     rubygems-sslshake \
