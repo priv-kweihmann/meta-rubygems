@@ -13,13 +13,13 @@ DEPENDS:class-native += "\
     rubygems-chef-winrm-elevated-native \
     rubygems-chef-winrm-fs-native \
     rubygems-chef-winrm-native \
-    rubygems-syslog-native \
+    rubygems-socksify-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "57ea7dcce1d2309b952485f07e684f49"
-SRC_URI[sha256sum] = "dcbb59483fb13598dc93c2e27998ec66c24374fb398e6add0da9911c86f1485a"
+SRC_URI[md5sum] = "cdc3d1a50a67cdc506e9cf632a909784"
+SRC_URI[sha256sum] = "07b1911900707f6a7f9ea758b5bba1657d154f33d061761ba4d55967a4d17fd9"
 
 GEM_NAME = "train-winrm"
 
@@ -31,7 +31,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-chef-winrm \
     rubygems-chef-winrm-elevated \
     rubygems-chef-winrm-fs \
-    rubygems-syslog \
+    rubygems-socksify \
 "
 
 BBCLASSEXTEND = "native"
