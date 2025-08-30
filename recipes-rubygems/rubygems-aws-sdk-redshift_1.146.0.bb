@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "afd4255f0f54154d0e2d7073294b70df"
-SRC_URI[sha256sum] = "7e5f3483c69b391c68e3a9cf7fd0cecbabfd89e37272842963580b86f2e3b5f1"
+SRC_URI[md5sum] = "1abb6f492c7bb367f40972e4c0bfb189"
+SRC_URI[sha256sum] = "bfada6eae8faf6c0f40ddd8ed778065b5231fadf54ea836af53b635500e5bdff"
 
 GEM_NAME = "aws-sdk-redshift"
 
