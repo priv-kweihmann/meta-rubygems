@@ -18,8 +18,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "3c62ecbf67110638a73fc818f04df153"
-SRC_URI[sha256sum] = "bc660e2a6062311348cd35ec1ffafde1c5e2231213e1ca124f57aa4f59ec47a3"
+SRC_URI[md5sum] = "4f386244311be0d6b96f3a721c18e5a3"
+SRC_URI[sha256sum] = "d617e9fbf24928280d39dcfefba9a0372d1c38187ffffd0a9283957a10a8cd5b"
 
 GEM_NAME = "signet"
 
