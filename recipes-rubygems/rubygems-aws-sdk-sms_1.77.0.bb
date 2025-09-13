@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: aws-sdk-sms"
-DESCRIPTION = "Official AWS Ruby gem for AWS Server Migration Service (SMS)"
+DESCRIPTION = "[DEPRECATED] Official AWS Ruby gem for AWS Server Migration Service (SMS)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "7be60244ff28840b9a05f3abd93fca66"
-SRC_URI[sha256sum] = "e7d894ffd7db505e0f340ebe4771d093ddeb00714c8193921a83ec57af350299"
+SRC_URI[md5sum] = "1d06f700c950ea3c38d42c2f52ab06b1"
+SRC_URI[sha256sum] = "57d56e19ba7f1c17069fec11d9661cff3eb1c004b4118d89200626b5eb97b2a4"
 
 GEM_NAME = "aws-sdk-sms"
 
