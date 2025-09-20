@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "14503c8c18e13f431426cf765ced502b"
-SRC_URI[sha256sum] = "5e5e9c1485ffd8de53ab1d2807affd81f617f72967dfc64fc75a69e2cbf0ff98"
+SRC_URI[md5sum] = "c49b8ab400392e02a2c2ee880390a09e"
+SRC_URI[sha256sum] = "ca13f381a173b7a93450e53459075c9b76a10433caadcb2f1180f2c741fc55a4"
 
 GEM_NAME = "regexp_parser"
 
