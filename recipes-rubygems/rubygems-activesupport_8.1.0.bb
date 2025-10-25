@@ -11,12 +11,12 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-base64-native \
-    rubygems-benchmark-native \
     rubygems-bigdecimal-native \
     rubygems-concurrent-ruby-native \
     rubygems-connection-pool-native \
     rubygems-drb-native \
     rubygems-i18n-native \
+    rubygems-json-native \
     rubygems-logger-native \
     rubygems-minitest-native \
     rubygems-securerandom-native \
@@ -26,8 +26,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "c4a397a044443921101291445fb8baed"
-SRC_URI[sha256sum] = "a711ce5e30660b23232f26a38699469f8d859d47aa1f722e183fda6d7cc17823"
+SRC_URI[md5sum] = "76b86167b54ef27e2566ecfe8968bac1"
+SRC_URI[sha256sum] = "d4adf40725be7bbc2a16936a6cf41b175a46ba0c5ccdb703ea4ed7c8801e070a"
 
 GEM_NAME = "activesupport"
 
@@ -37,12 +37,12 @@ inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-base64 \
-    rubygems-benchmark \
     rubygems-bigdecimal \
     rubygems-concurrent-ruby \
     rubygems-connection-pool \
     rubygems-drb \
     rubygems-i18n \
+    rubygems-json \
     rubygems-logger \
     rubygems-minitest \
     rubygems-securerandom \
