@@ -2,6 +2,7 @@ chef-config;>18.1.0
 chef-utils;>18.1.0
 chef;>18.1.0
 chef-vault;>4.2.4
+chef-winrm-fs;>=1.4.2
 concurrent-ruby;~=1.1
 fast_gettext;>=3.0.0
 highline;>=3.0.0
