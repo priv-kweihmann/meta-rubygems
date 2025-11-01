@@ -4,14 +4,19 @@ DESCRIPTION = "A simple interface to various archive formats"
 HOMEPAGE = "https://github.com/chef/mixlib-archive"
 
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=e3edf03f3aa19ea46e101aa4b956c206"
+
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-mixlib-log-native \
 "
 
-SRC_URI[md5sum] = "7c9dc02dcb6813a652b80010bf6f7138"
-SRC_URI[sha256sum] = "cad86dbde1edcfb28ec4344d4e07451e6f37d7204f80ba2102a690a710047c9f"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "74d22a6ebcf5e52bcf2b0d50e5e60bc6"
+SRC_URI[sha256sum] = "1e66ec255ee60a21a35633c5c657ba5e0712039aaa3dcf948c726af179987056"
 
 GEM_NAME = "mixlib-archive"
 
