@@ -10,7 +10,6 @@ EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
-    rubygems-activesupport-native \
     rubygems-ffi-yajl-native \
     rubygems-hashie-native \
     rubygems-mixlib-log-native \
@@ -23,8 +22,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "95c2a59f58973f87da28cb691832b39c"
-SRC_URI[sha256sum] = "f4a6115f8d1aa1901fe12d4d7b63496cec7e6f4260d90097adbdf0cb110ae6cb"
+SRC_URI[md5sum] = "b67193db7d8464e76bb3868f63747df9"
+SRC_URI[sha256sum] = "14c3f934686c09354f8444df1381ddbc3fce4d2afe3cebc6598071d5f2a0b279"
 
 GEM_NAME = "chef-zero"
 
@@ -33,7 +32,6 @@ inherit rubygentest
 inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
-    rubygems-activesupport \
     rubygems-ffi-yajl \
     rubygems-hashie \
     rubygems-mixlib-log \
