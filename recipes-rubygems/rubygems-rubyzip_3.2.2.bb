@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "99f3a2f833886fa8ba538727d8df9e15"
-SRC_URI[sha256sum] = "a8e57709e47a36ba3d71921e9c636c711fff91b16c52adba8c1d6cac94ea512d"
+SRC_URI[md5sum] = "a4c995303fbb8bd8eee65fed00dc9d03"
+SRC_URI[sha256sum] = "c0ed99385f0625415c8f05bcae33fe649ed2952894a95ff8b08f26ca57ea5b3c"
 
 GEM_NAME = "rubyzip"
 
