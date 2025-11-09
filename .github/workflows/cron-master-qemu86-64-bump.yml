@@ -31,28 +31,41 @@ jobs:
 
     steps:
       - name: setup (container)
-        uses: priv-kweihmann/meta-sca-ci-utils/preparecontainer@latest
+        uses: priv-kweihmann/meta-sca-ci-utils/preparecontainer@2.0
       - name: setup (caches)
         run: |
           mkdir -p ${WORKSPACE}/sstate-cache
         shell: bash
       - name: checkout (poky)
-        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
+        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
-          repo: https://github.com/yoctoproject/poky.git
-          ref: 416731b8756cd2689055ada2deaff48c7751d3b9
+          repo: https://github.com/openembedded/openembedded-core.git
+          ref: 380ea7d79a7c7be3eee2fe4f57935787b57ab16c
           branch: none
-          remove-git: "0"
+          add-layer: "0"
+      - name: checkout (bitbake)
+        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
+        with:
+          repo: https://github.com/openembedded/bitbake.git
+          ref: 35a421cdcafb3595b9de5489ffdc567825400d26
+          branch: none
+          add-layer: "0"
+      - name: checkout (meta-yocto)
+        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
+        with:
+          repo: https://git.yoctoproject.org/meta-yocto.git
+          ref: fe65e142d0d9ba0e51ff9175ffa82e902f982a20
+          branch: none
           add-layer: "0"
       - name: checkout (meta-rubygems)
-        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
+        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
           repo: https://github.com/priv-kweihmann/meta-rubygems.git
           branch: ${{ env.SCM_BRANCH }}
           remove-git: "0"
           add-layer: "0"
       - name: checkout (meta-openembedded)
-        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
+        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
           repo: https://github.com/openembedded/meta-openembedded.git
           ref: b28f8caccfefa7c03ec193a67fa8b11deeafa558
@@ -74,7 +87,8 @@ jobs:
           GITHUB_REPO=meta-rubygems \
           ${WORKSPACE}/sources/meta-rubygems/scripts/bump-bot \
           ${{ env.SCM_BRANCH }} \
-          ${WORKSPACE}/sources/poky \
+          ${WORKSPACE}/sources/openembedded-core \
+          ${WORKSPACE}/sources/meta-yocto \
           ${WORKSPACE}/sources/meta-openembedded \
         shell: bash
 

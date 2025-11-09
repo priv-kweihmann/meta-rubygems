@@ -29,7 +29,7 @@ jobs:
 
     steps:
       - name: setup (container)
-        uses: priv-kweihmann/meta-sca-ci-utils/preparecontainer@latest
+        uses: priv-kweihmann/meta-sca-ci-utils/preparecontainer@2.0
       - name: setup (caches)
         run: |
           mkdir -p ${WORKSPACE}/sstate-cache
@@ -40,42 +40,56 @@ jobs:
           path: /opt/build/sstate-cache
           key: rubygems-arm64-glibc-${{ env.SCM_BRANCH }}-${{ github.sha }}
       - name: checkout (poky)
-        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
+        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
-          repo: https://github.com/yoctoproject/poky.git
-          ref: 416731b8756cd2689055ada2deaff48c7751d3b9
+          repo: https://github.com/openembedded/openembedded-core.git
+          ref: 380ea7d79a7c7be3eee2fe4f57935787b57ab16c
+          branch: none
+          add-layer: "0"
+      - name: checkout (bitbake)
+        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
+        with:
+          repo: https://github.com/openembedded/bitbake.git
+          ref: 35a421cdcafb3595b9de5489ffdc567825400d26
+          branch: none
+          add-layer: "0"
+      - name: checkout (meta-yocto)
+        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
+        with:
+          repo: https://git.yoctoproject.org/meta-yocto.git
+          ref: fe65e142d0d9ba0e51ff9175ffa82e902f982a20
           branch: none
           add-layer: "0"
       - name: checkout (meta-rubygems)
-        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
+        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
           repo: https://github.com/priv-kweihmann/meta-rubygems.git
           branch: ${{ env.SCM_BRANCH }}
           add-layer: "0"
       - name: checkout (meta-openembedded)
-        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@latest
+        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
           repo: https://github.com/openembedded/meta-openembedded.git
           ref: b28f8caccfefa7c03ec193a67fa8b11deeafa558
           branch: none
           add-layer: "0"
       - name: configure (caches)
-        uses: priv-kweihmann/meta-sca-ci-utils/addvar@latest
+        uses: priv-kweihmann/meta-sca-ci-utils/addvar@2.0
         with:
           variable: SSTATE_DIR
           value: /opt/build/sstate-cache
       - name: build (glibc)
-        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
+        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@2.0
         with:
           target: glibc
           ignore-exit-codes: 124 137
       - name: build (kernel)
-        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
+        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@2.0
         with:
           target: linux-yocto
           ignore-exit-codes: 124 137
       - name: build (qemu-system)
-        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
+        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@2.0
         with:
           target: qemu-system-native
           ignore-exit-codes: 124 137
@@ -86,15 +100,12 @@ jobs:
       # In the end we only care about the caches falling
       # out of this build, so that should be all fine
       - name: build (tools)
-        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
+        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@2.0
         with:
           target: "ruby gmp yajl libxml2 libxslt krb5 libffi"
           ignore-exit-codes: 124 137 1
       - name: build (core-image-minimal-rubygems)
-        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@latest
+        uses: priv-kweihmann/meta-sca-ci-utils/buildstep@2.0
         with:
           target: core-image-minimal-rubygems
           ignore-exit-codes: 124 137 1
-      - name: print disk usage
-        if: always()
-        uses: priv-kweihmann/meta-sca-ci-utils/diskusage@latest
