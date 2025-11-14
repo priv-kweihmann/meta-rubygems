@@ -52,13 +52,6 @@ jobs:
           ref: fe65e142d0d9ba0e51ff9175ffa82e902f982a20
           branch: none
           add-layer: "0"
-      - name: checkout (meta-rubygems)
-        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
-        with:
-          repo: auto-determine
-          branch: auto-determine
-          gh-event-file: "1"
-          add-layer: "0"
       - name: checkout (meta-openembedded)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
@@ -66,6 +59,14 @@ jobs:
           ref: b28f8caccfefa7c03ec193a67fa8b11deeafa558
           branch: none
           add-layer: "0"
+      - name: checkout (meta-rubygems)
+        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
+        with:
+          repo: auto-determine
+          branch: auto-determine
+          gh-event-file: "1"
+          add-layer: "0" # layer setup will be controller by TEMPLATECONF
+
       - name: configure (caches)
         id: caches
         uses: actions/cache@v3

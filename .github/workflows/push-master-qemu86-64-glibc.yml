@@ -60,12 +60,6 @@ jobs:
           ref: fe65e142d0d9ba0e51ff9175ffa82e902f982a20
           branch: none
           add-layer: "0"
-      - name: checkout (meta-rubygems)
-        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
-        with:
-          repo: https://github.com/priv-kweihmann/meta-rubygems.git
-          branch: ${{ env.SCM_BRANCH }}
-          add-layer: "0"
       - name: checkout (meta-openembedded)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
@@ -73,6 +67,12 @@ jobs:
           ref: b28f8caccfefa7c03ec193a67fa8b11deeafa558
           branch: none
           add-layer: "0"
+      - name: checkout (meta-rubygems)
+        uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
+        with:
+          repo: https://github.com/priv-kweihmann/meta-rubygems.git
+          branch: ${{ env.SCM_BRANCH }}
+          add-layer: "0" # layer setup will be controller by TEMPLATECONF
       - name: configure (caches)
         uses: priv-kweihmann/meta-sca-ci-utils/addvar@2.0
         with:
