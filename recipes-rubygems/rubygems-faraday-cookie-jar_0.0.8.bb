@@ -6,13 +6,18 @@ HOMEPAGE = "https://github.com/miyagawa/faraday-cookie_jar"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=b90bc684ef2518794f21ae39c3f065c6"
 
+EXTRA_DEPENDS:append = " "
+EXTRA_RDEPENDS:append = " "
+
 DEPENDS:class-native += "\
     rubygems-faraday-native \
     rubygems-http-cookie-native \
 "
 
-SRC_URI[md5sum] = "e711bb68116ad57621fb2f0d31cc7f0e"
-SRC_URI[sha256sum] = "f3cbbe6f2de3d4028f00a67ae4196b99348a6dc3c065fdae6d3c7123fa8b1402"
+GEM_INSTALL_FLAGS:append = " "
+
+SRC_URI[md5sum] = "5f81ed48549c7630f14d36a75f71d4dc"
+SRC_URI[sha256sum] = "0140605823f8cc63c7028fccee486aaed8e54835c360cffc1f7c8c07c4299dbb"
 
 GEM_NAME = "faraday-cookie_jar"
 
