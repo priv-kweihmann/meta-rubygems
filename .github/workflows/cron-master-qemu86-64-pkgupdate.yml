@@ -53,7 +53,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
           repo: https://github.com/openembedded/openembedded-core.git
-          ref: e556df28f47e754b53e1f46c97dde2b19fd8fad1
+          ref: e7dc42e30c76bf0fbb4d3cc019bbec675bac55fa
           branch: none
           add-layer: "0"
       - name: checkout (bitbake)
@@ -67,14 +67,14 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
           repo: https://git.yoctoproject.org/meta-yocto.git
-          ref: 66ea31cee15309af07afeee8dec8a6fe1d92d28e
+          ref: dfb46801764a153a70fa89700a6f5d084f37cf1d
           branch: none
           add-layer: "0"
       - name: checkout (meta-openembedded)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
           repo: https://github.com/openembedded/meta-openembedded.git
-          ref: cf4755a60d71c9cd9a38e49fc7943dec76e00e5b
+          ref: 5226464803aee3070b74dd57eaf9789922e01ac7
           branch: none
           add-layer: "0"
       - name: checkout (meta-rubygems)
