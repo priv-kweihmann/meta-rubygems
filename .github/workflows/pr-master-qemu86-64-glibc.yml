@@ -114,7 +114,6 @@ jobs:
         with:
           target: core-image-minimal-rubygems
           ignore-exit-codes: 124 137
-          clean-skip: "deploy hosttools sysroots-uninative"
       - name: test (core-image-minimal-rubygems)
         uses: priv-kweihmann/meta-sca-ci-utils/testimage@2.0
         with:
