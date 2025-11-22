@@ -11,6 +11,9 @@ class RubyGemsTestrubygems_aws_sdk_core(RubyGemsTestUtils):
     def test_load_aws_sdk_core(self):
         self.gem_is_loadable("aws-sdk-core")
 
+    def test_load_aws_sdk_signin(self):
+        self.gem_is_loadable("aws-sdk-signin")
+
     def test_load_aws_sdk_sso(self):
         self.gem_is_loadable("aws-sdk-sso")
 
