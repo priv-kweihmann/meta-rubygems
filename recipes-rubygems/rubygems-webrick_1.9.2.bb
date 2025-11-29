@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "f4e793196edc6c08e67a1b6e4aab3557"
-SRC_URI[sha256sum] = "b42d3c94f166f3fb73d87e9b359def9b5836c426fc8beacf38f2184a21b2a989"
+SRC_URI[md5sum] = "906a5cf39d9f0c358b18e10e161eb286"
+SRC_URI[sha256sum] = "beb4a15fc474defed24a3bda4ffd88a490d517c9e4e6118c3edce59e45864131"
 
 GEM_NAME = "webrick"
 
