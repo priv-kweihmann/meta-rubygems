@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "3efcbfd0289e0783513b738823a2deba"
-SRC_URI[sha256sum] = "2f9077dde837d1f0dd2eb0f9e5327c6871c68ebc8eba88870fb6b7956e1e2b13"
+SRC_URI[md5sum] = "a2af78f0f7a467c5764054e7950203fb"
+SRC_URI[sha256sum] = "c2414c23ce66869b3eb9f643d6a3374d8322dfb5078125c82792304c10b94cf6"
 
 GEM_NAME = "bcrypt_pbkdf"
 
@@ -20,7 +20,6 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-# The vendored library is causing some rpath issues
 INSANE_SKIP:${PN} += "rpaths"
 
 BBCLASSEXTEND = "native"
