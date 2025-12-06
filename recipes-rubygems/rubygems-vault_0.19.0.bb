@@ -11,12 +11,15 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-aws-sigv4-native \
+    rubygems-base64-native \
+    rubygems-connection-pool-native \
+    rubygems-net-http-persistent-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "05bf04c3f3f588ed764b7c42656cd1e0"
-SRC_URI[sha256sum] = "29346c2d8364c19effb548b7a8952bf187545b99b70d1ddde76bd6c69046d27c"
+SRC_URI[md5sum] = "a58758184f977c2490da9a37574c4290"
+SRC_URI[sha256sum] = "a18f91119e1296120d6957e47583f42d1636c9a5c7607780cf604b9f9e1b28aa"
 
 GEM_NAME = "vault"
 
@@ -26,6 +29,9 @@ inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-aws-sigv4 \
+    rubygems-base64 \
+    rubygems-connection-pool \
+    rubygems-net-http-persistent \
 "
 
 BBCLASSEXTEND = "native"
