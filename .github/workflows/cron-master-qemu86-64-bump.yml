@@ -40,7 +40,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
           repo: https://github.com/openembedded/openembedded-core.git
-          ref: 6145837147dc2a6d54a221f9cd7fe90d6895ff90
+          ref: 2e10e9a50f12d5de3d22fbed59b65461afa3fa84
           branch: none
           add-layer: "0"
           remove-git: "0"
@@ -63,7 +63,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
           repo: https://github.com/openembedded/meta-openembedded.git
-          ref: 31a08525bedd960c21214f84c256f67c6090bb5a
+          ref: 7b9bfe4d6fbe0221a7a55665d7ad5104eb224fc0
           branch: none
           remove-git: "0"
           add-layer: "0"
