@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-ecr"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Elastic Container Registry (Amazon ECR)"
+SUMMARY = "RubyGem: aws-sdk-route53resolver"
+DESCRIPTION = "Official AWS Ruby gem for Amazon Route 53 Resolver (Route53Resolver)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "af7a64fdee304c1b49ccbb23d31d5f9e"
-SRC_URI[sha256sum] = "e436ce32e90dd6ac945dea0e08c9ff39bc3798dbf90ba950a290957c39e9e540"
+SRC_URI[md5sum] = "d1796381749b5d08adec7a6ddf9dfe38"
+SRC_URI[sha256sum] = "7e66c099931422bd7ef028d848110f61ee4d52d7d32d9764f3c8312d8c21f1ac"
 
-GEM_NAME = "aws-sdk-ecr"
+GEM_NAME = "aws-sdk-route53resolver"
 
 inherit rubygems
 inherit rubygentest

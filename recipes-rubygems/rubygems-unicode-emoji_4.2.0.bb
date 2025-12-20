@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "789f46e7a85eacb629505b6dabd17990"
-SRC_URI[sha256sum] = "4997d2d5df1ed4252f4830a9b6e86f932e2013fbff2182a9ce9ccabda4f325a5"
+SRC_URI[md5sum] = "8bfbc40f9e59cdf2d6b2a1c3a2c253a4"
+SRC_URI[sha256sum] = "519e69150f75652e40bf736106cfbc8f0f73aa3fb6a65afe62fefa7f80b0f80f"
 
 GEM_NAME = "unicode-emoji"
 

@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-cloudwatchlogs"
-DESCRIPTION = "Official AWS Ruby gem for Amazon CloudWatch Logs"
+SUMMARY = "RubyGem: aws-sdk-cognitoidentity"
+DESCRIPTION = "Official AWS Ruby gem for Amazon Cognito Identity"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "d87cc86284a872e53de0850969fc2132"
-SRC_URI[sha256sum] = "85a33c2686a0dd74442c4b483cbc792852277b46166758e89bf31e40e1a6cf01"
+SRC_URI[md5sum] = "665747eb0b5b33b69efc4495bd4e2169"
+SRC_URI[sha256sum] = "3020fbfbeda8a6191134567614872f87704eccab8812194826a23f6fd1a8308a"
 
-GEM_NAME = "aws-sdk-cloudwatchlogs"
+GEM_NAME = "aws-sdk-cognitoidentity"
 
 inherit rubygems
 inherit rubygentest

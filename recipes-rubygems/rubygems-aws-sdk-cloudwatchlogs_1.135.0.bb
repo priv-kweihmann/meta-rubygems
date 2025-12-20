@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-route53resolver"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Route 53 Resolver (Route53Resolver)"
+SUMMARY = "RubyGem: aws-sdk-cloudwatchlogs"
+DESCRIPTION = "Official AWS Ruby gem for Amazon CloudWatch Logs"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "649116792588fee037f4f4c7650b46f6"
-SRC_URI[sha256sum] = "e568fa4daff1f0b5fffecf41964b5cda776668e25a16270c2ce78850b7c02206"
+SRC_URI[md5sum] = "826486fbdac7ab0a3b61ab09104b4bcc"
+SRC_URI[sha256sum] = "9ac9859449c178136204fb1b2d1a463aade2160d16d80e3bbdcec4bb60724625"
 
-GEM_NAME = "aws-sdk-route53resolver"
+GEM_NAME = "aws-sdk-cloudwatchlogs"
 
 inherit rubygems
 inherit rubygentest
