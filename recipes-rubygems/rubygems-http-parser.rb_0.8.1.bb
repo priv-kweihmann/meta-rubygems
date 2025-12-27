@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "0690ec409307264ce75df0bf9fe4ae00"
-SRC_URI[sha256sum] = "5a0932f1fa82ce08a8516a2685d5a86031c000560f89946913c555a0697544be"
+SRC_URI[md5sum] = "e9076a195360ed822cc0f479ac186006"
+SRC_URI[sha256sum] = "9ae8df145b39aa5398b2f90090d651c67bd8e2ebfe4507c966579f641e11097a"
 
 GEM_NAME = "http_parser.rb"
 
@@ -20,7 +20,6 @@ inherit rubygems
 inherit rubygentest
 inherit pkgconfig
 
-# The vendored library is causing some rpath issues
 INSANE_SKIP:${PN} += "rpaths"
 
 BBCLASSEXTEND = "native"
