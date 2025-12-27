@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-ec2"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Elastic Compute Cloud (Amazon EC2)"
+SUMMARY = "RubyGem: aws-sdk-ecs"
+DESCRIPTION = "Official AWS Ruby gem for Amazon EC2 Container Service (Amazon ECS)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "7e50c194b3a3fcf88a579f9279101c56"
-SRC_URI[sha256sum] = "cf4873be8035d70b6757269f9746249a64a4e845795485f709827fe7284136b6"
+SRC_URI[md5sum] = "c272468cd163e1147793c4d78e93e6dc"
+SRC_URI[sha256sum] = "b981ff18001fdb9660fcecc851417d8c227f1fa54459d0f12b799744db5b1fdd"
 
-GEM_NAME = "aws-sdk-ec2"
+GEM_NAME = "aws-sdk-ecs"
 
 inherit rubygems
 inherit rubygentest

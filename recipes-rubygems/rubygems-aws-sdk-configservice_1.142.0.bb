@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-cognitoidentity"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Cognito Identity"
+SUMMARY = "RubyGem: aws-sdk-configservice"
+DESCRIPTION = "Official AWS Ruby gem for AWS Config (Config Service)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "2f2adc4f8560ae992dc606c7dbe709c9"
-SRC_URI[sha256sum] = "f2dc09d30afd807d304fa0ba6dddba384cab779915f37a1af8d967fc94d74b54"
+SRC_URI[md5sum] = "88d242a8ae66510ff78e255f86cbd457"
+SRC_URI[sha256sum] = "3c9eac68af6ce872d9fa3547908e083b1704753e7b6a9085099c753c983e86d9"
 
-GEM_NAME = "aws-sdk-cognitoidentity"
+GEM_NAME = "aws-sdk-configservice"
 
 inherit rubygems
 inherit rubygentest
