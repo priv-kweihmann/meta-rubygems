@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: multi_json"
-DESCRIPTION = "A common interface to multiple JSON libraries, including Oj, Yajl, the JSON gem (with C-extensions), gson, JrJackson, and OkJson."
+DESCRIPTION = "A common interface to multiple JSON libraries, including fast_jsonparser, Oj, Yajl, the JSON gem (with C-extensions), gson, JrJackson, and OkJson."
 HOMEPAGE = "https://github.com/sferik/multi_json"
 
 LICENSE = "MIT"
@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "2bfe72501a68665e2651357688337183"
-SRC_URI[sha256sum] = "23f70cf73e2895a33e6d10f0ec955b28ef5627ca4bbad0f292e7d16f4675596f"
+SRC_URI[md5sum] = "674a893152c8a833db2d44f78778ef10"
+SRC_URI[sha256sum] = "7aefeff8f2c854bf739931a238e4aea64592845e0c0395c8a7d2eea7fdd631b7"
 
 GEM_NAME = "multi_json"
 
