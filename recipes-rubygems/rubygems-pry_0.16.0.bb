@@ -4,7 +4,7 @@ DESCRIPTION = "Pry is a runtime developer console and IRB alternative with power
 HOMEPAGE = "http://pry.github.io"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=36c4b1806b2aadea5cbee4bbbdeb341c"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=7a8786285602b83b986e9d131169a298"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -12,12 +12,13 @@ EXTRA_RDEPENDS:append = " "
 DEPENDS:class-native += "\
     rubygems-coderay-native \
     rubygems-method-source-native \
+    rubygems-reline-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "27a57c8cf410ed643a693b4b340a3afc"
-SRC_URI[sha256sum] = "12d54b8640d3fa29c9211dd4ffb08f3fd8bf7a4fd9b5a73ce5b59c8709385b6b"
+SRC_URI[md5sum] = "837db6bb81159ea3209e2f8dc26eced5"
+SRC_URI[sha256sum] = "d76c69065698ed1f85e717bd33d7942c38a50868f6b0673c636192b3d1b6054e"
 
 GEM_NAME = "pry"
 
@@ -28,6 +29,7 @@ inherit pkgconfig
 RDEPENDS:${PN}:class-target += "\
     rubygems-coderay \
     rubygems-method-source \
+    rubygems-reline \
 "
 
 BBCLASSEXTEND = "native"
