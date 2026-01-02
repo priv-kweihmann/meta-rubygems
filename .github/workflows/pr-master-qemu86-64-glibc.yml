@@ -7,7 +7,7 @@ jobs:
     name: "build"
     env:
       BUILD_EXPORT: 1
-      SCM_BRANCH: master
+      SCM_BRANCH: whinlatter
       BUILD_GLIBC: 1
       BUILD_KERNEL: 1
       BUILD_MAXRUNTIME: 21000
@@ -35,21 +35,21 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
           repo: https://github.com/openembedded/openembedded-core.git
-          ref: 2e4c9b8dee3b1d545aee354ac1f8c6a5c0bad433
+          ref: ba25642a59ab8d06c250c27fa1dc03594fea0de3
           branch: none
           add-layer: "0"
       - name: checkout (bitbake)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
           repo: https://github.com/openembedded/bitbake.git
-          ref: 35a421cdcafb3595b9de5489ffdc567825400d26
+          ref: 6ee4df8ab58e0175b43106d8a6cbac1f6ab8d022
           branch: none
           add-layer: "0"
       - name: checkout (meta-yocto)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
           repo: https://git.yoctoproject.org/meta-yocto.git
-          ref: 853589ccc3445f5952efc02a7102587cb4d4f075
+          ref: d02d3faaf4d6075ea03e9eb47654ec7639f929a0
           branch: none
           add-layer: "0"
       - name: checkout (meta-openembedded)

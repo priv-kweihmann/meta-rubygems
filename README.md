@@ -17,9 +17,9 @@ Feel free to contribute any needed patches.
 
 Up to the following revisions automated checks being performed
 
-* openembedded-core: 2e4c9b8dee3b1d545aee354ac1f8c6a5c0bad433
-* meta-yocto: 853589ccc3445f5952efc02a7102587cb4d4f075
-* bitbake: 35a421cdcafb3595b9de5489ffdc567825400d26
+* openembedded-core: ba25642a59ab8d06c250c27fa1dc03594fea0de3
+* meta-yocto: d02d3faaf4d6075ea03e9eb47654ec7639f929a0
+* bitbake: 6ee4df8ab58e0175b43106d8a6cbac1f6ab8d022
 * meta-openembedded: d302ffa54770d803b5149e5ab24df01c5892aa2e
 
 ## Support
@@ -35,6 +35,7 @@ please check the following table to pick the correct branch matching your poky v
 | poky release | suggested meta-rubygems branch | ruby version | maintainer     |
 | ------------ | ------------------------------ | ------------ | -------------- |
 | master       | master                         | 3.4.x        | priv-kweihmann |
+| whinlatter   | whinlatter                     | 3.4.x        | n.a.           |
 | kirkstone    | kirkstone                      | 3.1.x        | n.a.           |
 | honister     | hardknott                      | 3.0.x        | n.a.           |
 | hardknott    | hardknott                      | 3.0.x        | n.a.           |
