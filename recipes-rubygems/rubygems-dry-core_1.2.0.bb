@@ -4,7 +4,7 @@ DESCRIPTION = "A toolset of small support modules used throughout the dry-rb eco
 HOMEPAGE = "https://dry-rb.org/gems/dry-core"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=b14b1929847ba471f3f59da600744315"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=76fc550766ac9fc8e596a33c0fa08a52"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -17,8 +17,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "9577ac8a32b5c3bb0a67c2b41c95997e"
-SRC_URI[sha256sum] = "0903821a9707649a7da545a2cd88e20f3a663ab1c5288abd7f914fa7751ab195"
+SRC_URI[md5sum] = "778ee880f88100924b91934052d50376"
+SRC_URI[sha256sum] = "0cc5a7da88df397f153947eeeae42e876e999c1e30900f3c536fb173854e96a1"
 
 GEM_NAME = "dry-core"
 
