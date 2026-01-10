@@ -4,12 +4,13 @@ DESCRIPTION = "Ohai profiles your system and emits JSON"
 HOMEPAGE = "https://github.com/chef/ohai/"
 
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=e3edf03f3aa19ea46e101aa4b956c206"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
+    rubygems-base64-native \
     rubygems-chef-config-native \
     rubygems-chef-utils-native \
     rubygems-ffi-native \
@@ -26,8 +27,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "0ac1105c047427afee44130bf469f9c4"
-SRC_URI[sha256sum] = "b52c06d1b87e0d0f8876312a05ba4d372edb0197df3d0c61a2eec21c14587db9"
+SRC_URI[md5sum] = "04484b87dd3c3477f3a51df95c0510b7"
+SRC_URI[sha256sum] = "bef45819646b4f225185de3f4674cc94b51f85a2541b8d1cd6e773f1588d1edd"
 
 GEM_NAME = "ohai"
 
@@ -36,6 +37,7 @@ inherit rubygentest
 inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
+    rubygems-base64 \
     rubygems-chef-config \
     rubygems-chef-utils \
     rubygems-ffi \
