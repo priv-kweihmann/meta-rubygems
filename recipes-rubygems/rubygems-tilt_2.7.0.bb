@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "523a7644a3723c3478f14c38e10c8c63"
-SRC_URI[sha256sum] = "35a99bba2adf7c1e362f5b48f9b581cce4edfba98117e34696dde6d308d84770"
+SRC_URI[md5sum] = "1fe2c03b093f364e80055bd4f33268c2"
+SRC_URI[sha256sum] = "0d5b9ba69f6a36490c64b0eee9f6e9aad517e20dcc848800a06eb116f08c6ab3"
 
 GEM_NAME = "tilt"
 
