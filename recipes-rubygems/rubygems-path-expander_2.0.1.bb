@@ -13,8 +13,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "dd1d362d23560f2dbda5c0649a9316bb"
-SRC_URI[sha256sum] = "8fcdb6da0a5d0214270168ab5a4e133a72375d52c7ad43d69e4e8120eeb06405"
+SRC_URI[md5sum] = "c543ce3a99ec35301dab9011e3833656"
+SRC_URI[sha256sum] = "2de201164bff4719cc4d0b3767286e9977cc832a59c4d70abab571ec86cb41e4"
 
 GEM_NAME = "path_expander"
 
