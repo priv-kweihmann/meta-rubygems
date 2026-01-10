@@ -4,7 +4,7 @@ DESCRIPTION = "dry-schema provides a DSL for defining schemas with keys and rule
 HOMEPAGE = "https://dry-rb.org/gems/dry-schema"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=b14b1929847ba471f3f59da600744315"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=fe7086983f71ec803146164cfaaa1737"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -21,8 +21,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "df32dc8ecf472ca52d858cb2982b9c5c"
-SRC_URI[sha256sum] = "2fcd7539a7099cacae6a22f6a3a2c1846fe5afeb1c841cde432c89c6cb9b9ff1"
+SRC_URI[md5sum] = "856fb128d7d9bc4a7c0282fb06cf9d57"
+SRC_URI[sha256sum] = "0f2a34adba4206bd6d46ec1b6b7691b402e198eecaff1d8349a7d48a77d82cd2"
 
 GEM_NAME = "dry-schema"
 
