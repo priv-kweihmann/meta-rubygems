@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: thor"
 DESCRIPTION = "Thor is a toolkit for building powerful command-line interfaces."
-HOMEPAGE = "http://whatisthor.com/"
+HOMEPAGE = "https://github.com/rails/thor"
 
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.md;md5=690cce21f4e069148a52834e1ecf352e"
@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "2d2c0b9ba1c4e893cf43f44a55381b5d"
-SRC_URI[sha256sum] = "8763e822ccb0f1d7bee88cde131b19a65606657b847cc7b7b4b82e772bcd8a3d"
+SRC_URI[md5sum] = "b37a5e20adf8c0864d2d41c05d1a3bf8"
+SRC_URI[sha256sum] = "e3a9e55fe857e44859ce104a84675ab6e8cd59c650a49106a05f55f136425e73"
 
 GEM_NAME = "thor"
 
