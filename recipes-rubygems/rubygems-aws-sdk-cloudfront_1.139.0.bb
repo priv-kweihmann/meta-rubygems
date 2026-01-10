@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "bb58b2c148ea9484bc5f6286d0d79048"
-SRC_URI[sha256sum] = "6f6f48aa45928c65ab7015296f33018293b90f283fdb7de9201a4dd1a2f83789"
+SRC_URI[md5sum] = "1234e52ba9dfa20ebd88dc6e19208819"
+SRC_URI[sha256sum] = "f293dce84a6c7436108c323bb4e863301e11bdabfc3c04e6824ba3ec24216a45"
 
 GEM_NAME = "aws-sdk-cloudfront"
 
