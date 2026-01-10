@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "69415ba6daf42d22fa255c65d68a8cce"
-SRC_URI[sha256sum] = "6508bc68e5db03421cc80311d39ccd82b738bab6ce6a8050c37b0b02dd1c90a6"
+SRC_URI[md5sum] = "51462c6253781304d1597901f062c98b"
+SRC_URI[sha256sum] = "2876b2696c586f2acf167eb6a344dd55b2e8fa7c385f47ddeef546282199cdf4"
 
 GEM_NAME = "aws-sdk-cloudwatch"
 
