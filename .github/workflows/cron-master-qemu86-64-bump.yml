@@ -40,7 +40,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
           repo: https://github.com/openembedded/openembedded-core.git
-          ref: 0ed4776533145c901611d7f4f942490e33481335
+          ref: 235e6d49e5888ad04416219e10b6df91a738661a
           branch: none
           add-layer: "0"
           remove-git: "0"
@@ -55,7 +55,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
           repo: https://git.yoctoproject.org/meta-yocto.git
-          ref: e1363aa3333cda3a4ae4706ce6577b987ba3a815
+          ref: c23c19e0b300812bad314f1d0a901965315271ae
           branch: none
           add-layer: "0"
           remove-git: "0"
@@ -63,7 +63,7 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
           repo: https://github.com/openembedded/meta-openembedded.git
-          ref: 48b2cea5284fcb87442f1e9c51cfd527d78d67e2
+          ref: 254f1285e8332f9c81bf1441f0098b0de4d2d745
           branch: none
           remove-git: "0"
           add-layer: "0"
