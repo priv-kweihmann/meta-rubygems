@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: google-apis-compute_v1"
-DESCRIPTION = "This is the simple REST client for Compute Engine API V1"
+SUMMARY = "RubyGem: google-apis-cloudkms_v1"
+DESCRIPTION = "This is the simple REST client for Cloud Key Management Service (KMS) API V1"
 HOMEPAGE = "https://github.com/google/google-api-ruby-client"
 
 LICENSE = "Apache-2.0"
@@ -15,10 +15,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "8437e4cfeaafb89c1616e8f3e41d6508"
-SRC_URI[sha256sum] = "209e859f9c23f6bafe2d7d54aa01cd83a9f85d2f12aaa8403a36682d604dedb6"
+SRC_URI[md5sum] = "b3438ea439dcd6850b3f48c26a582605"
+SRC_URI[sha256sum] = "2615d065cfaa8c45cc41d55c72207a8d2c60c46386b3d3ee509aee69d6d1ec75"
 
-GEM_NAME = "google-apis-compute_v1"
+GEM_NAME = "google-apis-cloudkms_v1"
 
 inherit rubygems
 inherit rubygentest
