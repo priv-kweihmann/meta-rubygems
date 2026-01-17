@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "1634aef032515aff051055c40a2760c4"
-SRC_URI[sha256sum] = "441082dde958db39df7353c71e520c05732e8da9ace28c78da2d0f1d6c669fa3"
+SRC_URI[md5sum] = "0ee4068f5fe5f7970e70f95ff8b2184e"
+SRC_URI[sha256sum] = "7fb0c2bb04f67638f25c52e7ba39ab435d922a3a5c3cd196120f63accb682dcc"
 
 GEM_NAME = "dry-inflector"
 
