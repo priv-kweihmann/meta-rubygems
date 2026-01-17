@@ -23,8 +23,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "2c3988a6d3793cafbc4a5daa1e58a65f"
-SRC_URI[sha256sum] = "7f6a54f2a36a6d4c1d426a7a0a350ca02e3056a8207e0e2dce9c1ad7796cade9"
+SRC_URI[md5sum] = "bd84dcfe35de083ad377908af3205c31"
+SRC_URI[sha256sum] = "d0214fc72e39d7830e8bdc28d0efb12e1ef55bd1cd547ae4bf2e509d298b85f3"
 
 GEM_NAME = "chef-winrm"
 
