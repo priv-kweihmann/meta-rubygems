@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "ad509578edb91991ac2cd39c0a82c849"
-SRC_URI[sha256sum] = "546727f748b46d1b486d1cc6424f67501eca8688a37e69228044b87d2b2336d2"
+SRC_URI[md5sum] = "33eb11c897fdf8779811a023904f0d4a"
+SRC_URI[sha256sum] = "ad6fcc3a4956513b8846107846392a7c015b7fd5a230d48ebc052b063a9dcfb0"
 
 GEM_NAME = "aws-sdk-route53resolver"
 
