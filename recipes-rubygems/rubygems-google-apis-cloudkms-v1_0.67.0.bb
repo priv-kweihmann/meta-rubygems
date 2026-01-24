@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: google-apis-admin_directory_v1"
-DESCRIPTION = "This is the simple REST client for Admin SDK API DirectoryV1"
+SUMMARY = "RubyGem: google-apis-cloudkms_v1"
+DESCRIPTION = "This is the simple REST client for Cloud Key Management Service (KMS) API V1"
 HOMEPAGE = "https://github.com/google/google-api-ruby-client"
 
 LICENSE = "Apache-2.0"
@@ -15,10 +15,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "42a4621dfb9403a73923a9af310fcee9"
-SRC_URI[sha256sum] = "8da1f170eedbb1c197c209007b3975b78d1f8abbab733ff43ea8ded18a85469a"
+SRC_URI[md5sum] = "065dc771703bb27a55d3f65c65a20d94"
+SRC_URI[sha256sum] = "e55f23c537ea82a8bf28a0db21c0d4bd37c69380f9a23d4b7c0e09cb579bf541"
 
-GEM_NAME = "google-apis-admin_directory_v1"
+GEM_NAME = "google-apis-cloudkms_v1"
 
 inherit rubygems
 inherit rubygentest
