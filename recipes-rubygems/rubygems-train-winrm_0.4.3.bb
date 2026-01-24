@@ -18,8 +18,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "cdc3d1a50a67cdc506e9cf632a909784"
-SRC_URI[sha256sum] = "07b1911900707f6a7f9ea758b5bba1657d154f33d061761ba4d55967a4d17fd9"
+SRC_URI[md5sum] = "fb9e70859bd8de8b86c1b456e3da0327"
+SRC_URI[sha256sum] = "4fa35666f24254984fec1d3bf677c510f180531219ba0f4feb09293df98784fa"
 
 GEM_NAME = "train-winrm"
 
