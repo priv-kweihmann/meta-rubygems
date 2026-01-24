@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: google-apis-compute_v1"
-DESCRIPTION = "This is the simple REST client for Compute Engine API V1"
+SUMMARY = "RubyGem: google-apis-admin_directory_v1"
+DESCRIPTION = "This is the simple REST client for Admin SDK API DirectoryV1"
 HOMEPAGE = "https://github.com/google/google-api-ruby-client"
 
 LICENSE = "Apache-2.0"
@@ -15,10 +15,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "e678a344aac66e6d1a8402629aafb44c"
-SRC_URI[sha256sum] = "21eb4e9c9165539afea3f54c5b04c606358757a13608722da9f6bce7b9dc840a"
+SRC_URI[md5sum] = "6774ceea09bea62ad9e75b078041c2d2"
+SRC_URI[sha256sum] = "7c85d3c135bcb03e349fdfb3292d23549a8e71a3814a85a8f1cc8e020e49ac30"
 
-GEM_NAME = "google-apis-compute_v1"
+GEM_NAME = "google-apis-admin_directory_v1"
 
 inherit rubygems
 inherit rubygentest
