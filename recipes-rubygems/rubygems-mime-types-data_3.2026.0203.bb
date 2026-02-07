@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "75523db6d6f9289f56d775081a0a47be"
-SRC_URI[sha256sum] = "4a58692436a987ad930e75bf8f24da7e627acfa0d06e1720aa514791b4c7d12b"
+SRC_URI[md5sum] = "fbaa862f32a030c828ddf4824cfd1232"
+SRC_URI[sha256sum] = "54353d693af028847391c28361c07d4b8b689cad78c3e1cc272fb1205c6d2a2f"
 
 GEM_NAME = "mime-types-data"
 
