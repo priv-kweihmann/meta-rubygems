@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "5cfc08f34bb7f12483e66b6f4f66a668"
-SRC_URI[sha256sum] = "5d74b6f75082a643f43c1e76b419c40f0e5527fcfee1e669ac1e6b73c0ccb6f6"
+SRC_URI[md5sum] = "ee7a83d79014045fef1d1ebde76e6d04"
+SRC_URI[sha256sum] = "4cbd0974c0b79f7a139b4812004a62e4c60b145cba76422e288ee670601ed6d3"
 
 GEM_NAME = "rack"
 
