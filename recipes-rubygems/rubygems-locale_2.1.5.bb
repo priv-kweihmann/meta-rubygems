@@ -9,15 +9,23 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=99f88e67b65504d289a0326c59f9c148"
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
+DEPENDS:class-native += "\
+    rubygems-fiddle-native \
+"
+
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "c324a7f34b94044f8d38eabff159de62"
-SRC_URI[sha256sum] = "522f9973ef3eee64aac9bca06d21db2fba675fa3d2cf61d21f42d1ca18a9f780"
+SRC_URI[md5sum] = "f0c4967ac00bd5975df35c57ab059d6b"
+SRC_URI[sha256sum] = "1c6803e8aa6bdb2c29e91945d095050601bf6d58474993575adf6f3b89b32ef4"
 
 GEM_NAME = "locale"
 
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS:${PN}:class-target += "\
+    rubygems-fiddle \
+"
 
 BBCLASSEXTEND = "native"
