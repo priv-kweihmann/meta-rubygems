@@ -13,7 +13,9 @@ DEPENDS:class-native += "\
     rubygems-flay-native \
     rubygems-flog-native \
     rubygems-launchy-native \
+    rubygems-ostruct-native \
     rubygems-parser-native \
+    rubygems-prism-native \
     rubygems-rainbow-native \
     rubygems-reek-native \
     rubygems-rexml-native \
@@ -25,8 +27,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "d94de0c0fc1ca5883ecc2c4fe255aea0"
-SRC_URI[sha256sum] = "82c1d797e558ad8b51dda4b827cff4e3733ddbf14016880fbb04784a8ada9f2b"
+SRC_URI[md5sum] = "4100ed1ae2f18dab8efada1682de9209"
+SRC_URI[sha256sum] = "7f3877556d7f52bf0980496b7c907a827a9592ba690b80a593403a60bd6cfb42"
 
 GEM_NAME = "rubycritic"
 
@@ -38,7 +40,9 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-flay \
     rubygems-flog \
     rubygems-launchy \
+    rubygems-ostruct \
     rubygems-parser \
+    rubygems-prism \
     rubygems-rainbow \
     rubygems-reek \
     rubygems-rexml \
