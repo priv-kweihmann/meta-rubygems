@@ -19,7 +19,7 @@ inherit pkgconfig
 
 do_install:append() {
     # avoid unwanted dependencies: we do not support java
-    rm -f ${D}/${libdir}/ruby/gems/3.0.0/gems/eventmachine-${PV}/lib/jeventmachine.rb
+    rm -f ${D}/${libdir}/ruby/gems/${GEMLIB_VERSION}/gems/eventmachine-${PV}/lib/jeventmachine.rb
 }
 
 # The vendored library is causing some rpath issues
