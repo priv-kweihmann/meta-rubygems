@@ -3,7 +3,7 @@
 ## Copyright (c) 2015, Michaël Burtin
 ## Copyright (c) 2020, Konrad Weihmann
 
-GEMLIB_VERSION = "3.4.0"
+GEMLIB_VERSION = "4.0.0"
 
 GEM_SRC ?= "https://rubygems.org/gems"
 
@@ -83,6 +83,9 @@ def get_target_platform_folder(d):
 
 do_gem_unpack() {
     export RUBYLIB=${RUBYLIB}
+
+    rm -rf ${S} || true
+    mkdir -p ${S}
 
     cd ${UNPACKDIR}
     # GEM_FILE might not exist if SRC_URI was overloaded
