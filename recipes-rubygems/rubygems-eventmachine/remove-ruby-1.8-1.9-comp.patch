@@ -1,6 +1,6 @@
-From 0d31d12ba337eeec376f94745ba2ba6b36a788e5 Mon Sep 17 00:00:00 2001
-From: Aaron Stone <aaron@serendipity.cx>
-Date: Sat, 5 May 2018 23:28:42 -0700
+From 8e89b60ac0456ee3bb733f97149085e57227b80d Mon Sep 17 00:00:00 2001
+From: Konrad Weihmann <kweihmann@outlook.com>
+Date: Sat, 28 Feb 2026 07:21:19 +0000
 Subject: [PATCH] Remove compatibility shims for Ruby 1.8.x and Ruby 1.9.x
 
 Also fixes longstanding Mac OS X crash bug by using rb_thread_fd_select
@@ -11,17 +11,17 @@ rb_fd_select and rb_thread_fd_select do exactly this.
 Upstream-Status: Backport
 Signed-off-by: Konrad Weihmann <kweihmann@outlook.com>
 ---
- ext/em.cpp | 93 ++++++++++++++++++++++--------------------------------
- ext/em.h   | 73 +++---------------------------------------
- 2 files changed, 41 insertions(+), 125 deletions(-)
+ ext/em.cpp | 92 +++++++++++++++++++++---------------------------------
+ ext/em.h   | 72 +++---------------------------------------
+ 2 files changed, 40 insertions(+), 124 deletions(-)
 
 diff --git a/ext/em.cpp b/ext/em.cpp
-index 3c1f29af..11eea305 100644
+index 2907485..709dfb5 100644
 --- a/ext/em.cpp
 +++ b/ext/em.cpp
-@@ -599,6 +599,21 @@ bool EventMachine_t::RunOnce()
+@@ -602,6 +602,20 @@ bool EventMachine_t::RunOnce()
+ 	return true;
  }
- 
  
 +#ifdef HAVE_EPOLL
 +typedef struct {
@@ -37,11 +37,10 @@ index 3c1f29af..11eea305 100644
 +	return (void *) (uintptr_t) epoll_wait (a->epfd, a->events, a->maxevents, a->timeout);
 +}
 +#endif
-+
+ 
  /*****************************
  EventMachine_t::_RunEpollOnce
- *****************************/
-@@ -614,16 +629,7 @@ void EventMachine_t::_RunEpollOnce()
+@@ -618,16 +632,7 @@ void EventMachine_t::_RunEpollOnce()
  	#ifdef BUILD_FOR_RUBY
  	int ret = 0;
  
@@ -58,7 +57,7 @@ index 3c1f29af..11eea305 100644
  		if (ret == -1) {
  			assert(errno != EINVAL);
  			assert(errno != EBADF);
-@@ -631,9 +637,8 @@ void EventMachine_t::_RunEpollOnce()
+@@ -635,9 +640,8 @@ void EventMachine_t::_RunEpollOnce()
  		return;
  	}
  
@@ -70,9 +69,9 @@ index 3c1f29af..11eea305 100644
  	#else
  	int duration = 0;
  	duration = duration + (tv.tv_sec * 1000);
-@@ -672,6 +677,23 @@ void EventMachine_t::_RunEpollOnce()
+@@ -675,6 +679,23 @@ void EventMachine_t::_RunEpollOnce()
+ 	#endif
  }
- 
  
 +#ifdef HAVE_KQUEUE
 +typedef struct {
@@ -91,10 +90,10 @@ index 3c1f29af..11eea305 100644
 +}
 +#endif
 +
+ 
  /******************************
  EventMachine_t::_RunKqueueOnce
- ******************************/
-@@ -691,16 +713,7 @@ void EventMachine_t::_RunKqueueOnce()
+@@ -695,16 +716,7 @@ void EventMachine_t::_RunKqueueOnce()
  	#ifdef BUILD_FOR_RUBY
  	int ret = 0;
  
@@ -111,7 +110,7 @@ index 3c1f29af..11eea305 100644
  		if (ret == -1) {
  			assert(errno != EINVAL);
  			assert(errno != EBADF);
-@@ -708,10 +721,9 @@ void EventMachine_t::_RunKqueueOnce()
+@@ -712,10 +724,9 @@ void EventMachine_t::_RunKqueueOnce()
  		return;
  	}
  
@@ -124,7 +123,7 @@ index 3c1f29af..11eea305 100644
  	#else
  	k = kevent (kqfd, NULL, 0, Karray, MaxEvents, &ts);
  	#endif
-@@ -750,7 +762,6 @@ void EventMachine_t::_RunKqueueOnce()
+@@ -754,7 +765,6 @@ void EventMachine_t::_RunKqueueOnce()
  		++ke;
  	}
  
@@ -132,7 +131,7 @@ index 3c1f29af..11eea305 100644
  	#ifdef BUILD_FOR_RUBY
  	if (!rb_thread_alone()) {
  		rb_thread_schedule();
-@@ -903,39 +914,14 @@ SelectData_t::~SelectData_t()
+@@ -907,39 +917,14 @@ SelectData_t::~SelectData_t()
  	rb_fd_term (&fderrors);
  }
  
@@ -173,7 +172,7 @@ index 3c1f29af..11eea305 100644
  
  void SelectData_t::_Clear()
  {
-@@ -1001,13 +987,8 @@ void EventMachine_t::_RunSelectOnce()
+@@ -1005,13 +990,8 @@ void EventMachine_t::_RunSelectOnce()
  
  
  	{ // read and write the sockets
@@ -188,10 +187,10 @@ index 3c1f29af..11eea305 100644
  			/* Changed 01Jun07. We used to handle the Loop-breaker right here.
  			 * Now we do it AFTER all the regular descriptors. There's an
 diff --git a/ext/em.h b/ext/em.h
-index 3b11ea01..ab641135 100644
+index 874a127..1dc42fa 100644
 --- a/ext/em.h
 +++ b/ext/em.h
-@@ -22,78 +22,14 @@ See the file COPYING for complete licensing information.
+@@ -22,77 +22,14 @@ See the file COPYING for complete licensing information.
  
  #ifdef BUILD_FOR_RUBY
    #include <ruby.h>
@@ -270,11 +269,10 @@ index 3b11ea01..ab641135 100644
 -  rb_thread_select(fd_check((n)-1) ? (n) : FD_SETSIZE, (rfds), (wfds), (efds), (timeout))
 -#endif
 -
--
+ 
  // This Solaris fix is adapted from eval_intern.h in Ruby 1.9.3:
  // Solaris sys/select.h switches select to select_large_fdset to support larger
- // file descriptors if FD_SETSIZE is larger than 1024 on 32bit environment.
-@@ -302,7 +238,6 @@ struct SelectData_t
+@@ -302,7 +239,6 @@ struct SelectData_t
  	rb_fdset_t fdwrites;
  	rb_fdset_t fderrors;
  	timeval tv;
@@ -282,3 +280,6 @@ index 3b11ea01..ab641135 100644
  };
  
  #endif // __EventMachine__H_
+-- 
+2.34.1
+
