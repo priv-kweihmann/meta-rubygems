@@ -65,6 +65,9 @@ class RubyGemsTestrubygems_ruby_parser(RubyGemsTestUtils):
     def test_load_ruby_parser33(self):
         self.gem_is_loadable("ruby_parser33")
 
+    def test_load_ruby_parser34(self):
+        self.gem_is_loadable("ruby_parser34")
+
     def test_load_ruby_parser_extras(self):
         self.gem_is_loadable("ruby_parser_extras")
 
