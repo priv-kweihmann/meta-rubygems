@@ -6,9 +6,7 @@ HOMEPAGE = "https://github.com/whitequark/parser"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=71edab539f93d7250a8c8399c77d3ad4"
 
-EXTRA_DEPENDS:append = " \
-    rubygems-gauntlet \
-"
+EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\

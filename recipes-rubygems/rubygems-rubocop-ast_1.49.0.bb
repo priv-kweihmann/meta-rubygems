@@ -11,12 +11,13 @@ EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
     rubygems-parser-native \
+    rubygems-prism-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "a4ae9737983a287284b58bb6ff673efa"
-SRC_URI[sha256sum] = "80ecbe2ac9bb26693cab9405bf72b41b85a1f909f20f021b983c32c2e7d857fe"
+SRC_URI[md5sum] = "c0a2c1882965e5cad217010347a6a185"
+SRC_URI[sha256sum] = "49c3676d3123a0923d333e20c6c2dbaaae2d2287b475273fddee0c61da9f71fd"
 
 GEM_NAME = "rubocop-ast"
 
@@ -26,6 +27,7 @@ inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
     rubygems-parser \
+    rubygems-prism \
 "
 
 BBCLASSEXTEND = "native"
