@@ -47,6 +47,7 @@ class RubyGemsTestExceptions():
         "ruby_parser31": "uninitialized constant RubyParser",
         "ruby_parser32": "uninitialized constant RubyParser",
         "ruby_parser33": "uninitialized constant RubyParser",
+        "ruby_parser34": "uninitialized constant RubyParser",
         "simplecov-html": "needs extra configuration -> uninitialized constant SimpleCov (NameError)",
         "syslog-formatter": "module needs upfront configuration of a logging provider",
         "version": "needs extra configuration -> uninitialized constant Azure (NameError)",
