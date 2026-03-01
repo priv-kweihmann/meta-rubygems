@@ -208,6 +208,7 @@ RDEPENDS:${PN} += "\
     rubygems-jekyll-watch \
     rubygems-jmespath \
     rubygems-json \
+    rubygems-json-schema \
     rubygems-jsonpath \
     rubygems-jwt \
     rubygems-k8s-ruby \
@@ -224,6 +225,7 @@ RDEPENDS:${PN} += "\
     rubygems-little-plugger \
     rubygems-locale \
     rubygems-logging \
+    rubygems-mcp \
     rubygems-memoist \
     rubygems-mercenary \
     rubygems-method-source \
