@@ -28,7 +28,7 @@ class RubyGemsTestUtils(OERuntimeTestCase):
             self.skipTest("'%s' skipped due to '%s'" % (require, _skip))
         _, _ = self.target.run(
             "echo \"require '%s'\" > /tmp/_rubygems.test" % require)
-        status, output = self.target.run("ruby /tmp/_rubygems.test")
+        status, output = self.target.run("ruby -r rubygems /tmp/_rubygems.test")
         self.assertEqual(
             status, 0, msg="%s should be loadable. ruby output: %s" % (require, output))
 

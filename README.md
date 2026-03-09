@@ -28,6 +28,27 @@ This layer is a rolling release.
 Integration is continuously checked against the respective [revisions](#tested-revisions) of the corresponding layers.
 Don't expect tags or any kind of versioning.
 
+## 4.0 transition note
+
+With Ruby 4.0 it doesn't look like rubygems is inherited automatically.
+To load any of the provided gems you need to include
+
+```shell
+export RUBYOPT="-rrubygems"
+```
+
+or
+
+```ruby
+require 'rubygems'
+```
+
+or
+
+```shell
+ruby -r rubygems <script name>
+```
+
 ### poky release mapping
 
 please check the following table to pick the correct branch matching your poky version
