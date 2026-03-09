@@ -270,9 +270,7 @@ RDEPENDS:${PN} += "\
     rubygems-pry \
     rubygems-pry-coolline \
     rubygems-public-suffix \
-    rubygems-puppet \
     rubygems-puppet-resource-api \
-    rubygems-puppetmodule-netdev-stdlib \
     rubygems-rack \
     rubygems-rackup \
     rubygems-rainbow \
