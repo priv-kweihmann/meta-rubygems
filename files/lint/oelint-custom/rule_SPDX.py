@@ -1,3 +1,5 @@
+import os
+
 from oelint_adv.cls_rule import Rule
 from oelint_parser.cls_item import Comment
 
@@ -16,6 +18,6 @@ class RubygemsSPDX(Rule):
         items = stash.GetItemsFor(
             filename=_file, classifier=Comment.CLASSIFIER)
         found = any(x for x in items if "SPDX-License-Identifier: MIT" in x.Raw)
-        if not found:
+        if not found and os.path.exists(_file):
             res += self.finding(_file, 1)
         return res

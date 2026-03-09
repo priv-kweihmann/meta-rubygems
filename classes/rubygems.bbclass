@@ -8,7 +8,8 @@ GEMLIB_VERSION = "4.0.0"
 GEM_SRC ?= "https://rubygems.org/gems"
 
 # Enforce IPv4 connection - IPv6 seems to be broken
-# nooelint: oelint.vars.specific,oelint.vars.pathhardcode.bindir
+
+# nooelint: oelint.vars.specific,oelint.vars.pathhardcode.bindir,oelint.vars.mispell.unknown
 FETCHCMD_wget ?= "/usr/bin/env wget -t 2 -T 30 --passive-ftp -4"
 
 GEM_NAME ?= ""
