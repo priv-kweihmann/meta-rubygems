@@ -36,6 +36,6 @@ class RubygemsTestCase(Rule):
                     if _needle in i.read():
                         found = True
                         break
-        if not found:
+        if not found and os.path.exists(_file):
             res += self.finding(_file, 1)
         return res
