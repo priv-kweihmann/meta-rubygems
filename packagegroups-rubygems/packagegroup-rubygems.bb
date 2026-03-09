@@ -170,7 +170,6 @@ RDEPENDS:${PN} += "\
     rubygems-fuzzyurl \
     rubygems-gauntlet \
     rubygems-gems \
-    rubygems-google-api-client \
     rubygems-google-apis-admin-directory-v1 \
     rubygems-google-apis-cloudkms-v1 \
     rubygems-google-apis-cloudresourcemanager-v1 \
