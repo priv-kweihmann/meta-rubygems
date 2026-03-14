@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "5838013193d6df07129862373ff6ecf0"
-SRC_URI[sha256sum] = "6bf70a2cfb6dfd5a06da28093fa8190f324c88eabd36a7f47097f227321dc702"
+SRC_URI[md5sum] = "ac8b7ae03e41c7f71dc53122d3702e78"
+SRC_URI[sha256sum] = "e8bff46ed845a22c1ab2bd0d7eccf831c01fe23bb3920caa4c74db4306813666"
 
 GEM_NAME = "json-schema"
 
