@@ -7,7 +7,9 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=5498bbc0155db622ff063f9f7396da88"
 
 EXTRA_DEPENDS:append = " "
-EXTRA_RDEPENDS:append = " bash"
+EXTRA_RDEPENDS:append = " \
+    bash \
+"
 
 DEPENDS:class-native += "\
     rubygems-json-schema-native \
@@ -15,8 +17,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "4c35929b9d025a44a4036d1f5e5e4dc0"
-SRC_URI[sha256sum] = "fa967895d6952bad0d981ea907731d8528d2c246d2079d56a9c8bae83d14f1c7"
+SRC_URI[md5sum] = "47722013b0f3759bfce6e70131b1b33c"
+SRC_URI[sha256sum] = "ae8bd146bb8e168852866fd26f805f52744f6326afb3211e073f78a95e0c34fb"
 
 GEM_NAME = "mcp"
 
