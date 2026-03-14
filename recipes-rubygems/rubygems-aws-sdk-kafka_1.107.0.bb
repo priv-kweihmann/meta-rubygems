@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "bf096dbc7f56c82d17e894e237899081"
-SRC_URI[sha256sum] = "5993a8e210bb3904bebf36f7cf08c7bf69e6ca6f0dd59efb0f96f3e39f51261c"
+SRC_URI[md5sum] = "ff49a188a1dfb579b81f374d1f4622fd"
+SRC_URI[sha256sum] = "711b25d4c73937317d528363a1d5e3e3c32238239d446f50404d6f9c8da173af"
 
 GEM_NAME = "aws-sdk-kafka"
 
