@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "364fc019afa1957d976d86f891c9b705"
-SRC_URI[sha256sum] = "d4c8bdcc61c98a0c6a6aafbce62b02de7fac3005d7c8e7e57b1a793807977e17"
+SRC_URI[md5sum] = "1265a7834aef5f75f45607122d68d4fe"
+SRC_URI[sha256sum] = "cd971c347b1a73e9ffeb017207a78e1188837f4a559a978e06eb81cede16bcf1"
 
 GEM_NAME = "aws-sdk-cognitoidentity"
 
