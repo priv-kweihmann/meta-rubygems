@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "a932c38857429a17292657587ca2084e"
-SRC_URI[sha256sum] = "9d8fce92e5450296bd11bb03d6a19dd96e01b14a31b9b139ae641fc3fffc0b3e"
+SRC_URI[md5sum] = "893fbed345adf6abf7cd7c2589d0e515"
+SRC_URI[sha256sum] = "1eb0be9d8364264d2f13ebbc1272884508fa7b47cf049e05105d0792175b77d9"
 
 GEM_NAME = "aws-sdk-mq"
 
