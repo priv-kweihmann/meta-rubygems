@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "c5b8d907c4b1f6a18132511f09a86f44"
-SRC_URI[sha256sum] = "cff238fe9ceb014af5778d4c4274c2034e3c349d2968e1ef296f96b9c46e5a8e"
+SRC_URI[md5sum] = "5f85f394b884d38d89152e7c48cf7221"
+SRC_URI[sha256sum] = "6c6e2c4da0b846a773fd33258bd0ca14965bfe5e0ea570cb4b3c3405d3ebc1c3"
 
 GEM_NAME = "aws-sdk-amplify"
 
