@@ -4,7 +4,7 @@ DESCRIPTION = "Cookstyle is a code linting tool that helps you to write better C
 HOMEPAGE = "https://github.com/chef/cookstyle"
 
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=e3edf03f3aa19ea46e101aa4b956c206"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=8f7bb094c7232b058c7e9f2e431f389c"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "be777cda6307205bf5b8e28f93b46b16"
-SRC_URI[sha256sum] = "9b9ba8e23449e4892220aba707280734e2d721f3cc9c9b7cfd20d52ee8040cf1"
+SRC_URI[md5sum] = "d65c5b9e6d638d097b09360a6d5d1da4"
+SRC_URI[sha256sum] = "9b9df27f3aaaa3e53898a0930a5b2d2bd01abb34b138e6d94a8fd13c8ab4bf57"
 
 GEM_NAME = "cookstyle"
 
