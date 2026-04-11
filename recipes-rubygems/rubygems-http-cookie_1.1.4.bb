@@ -4,7 +4,7 @@ DESCRIPTION = "HTTP::Cookie is a Ruby library to handle HTTP Cookies based on RF
 HOMEPAGE = "https://github.com/sparklemotion/http-cookie"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=f217a5829e26ed04a05e5ba14eaf2128"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=ac66e3bfd4a0a136794899462149afa8"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "40f3dcc9e6ae508f7136585a92d481ba"
-SRC_URI[sha256sum] = "38a5e60d1527eebc396831b8c4b9455440509881219273a6c99943d29eadbb19"
+SRC_URI[md5sum] = "d8e19c9cea0399f3c43e5a70368d7178"
+SRC_URI[sha256sum] = "8dd8011dedcae5f91af2671b7ba878c4a9e89f0f6384790c1f4cdd176f5e3ada"
 
 GEM_NAME = "http-cookie"
 
