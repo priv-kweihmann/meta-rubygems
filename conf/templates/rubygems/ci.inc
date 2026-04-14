@@ -26,9 +26,6 @@ PACKAGECONFIG:remove:pn-mesa-gl-native = "libclc"
 PACKAGECONFIG:remove:pn-mesa-gl-native = "amd"
 PACKAGECONFIG:remove:pn-mesa-gl-native = "intel"
 
-# We don't care about ptests, all testing is done with oeqa
-DISTRO_FEATURES:remove = "ptest"
-
 INHERIT += "no-spdx"
 
 QEMU_TARGETS = "aarch64"
