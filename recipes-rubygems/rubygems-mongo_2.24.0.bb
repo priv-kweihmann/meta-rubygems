@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "f0982c5ff2e03467c4b1cd69aca6c698"
-SRC_URI[sha256sum] = "be2fe4cc6f7119fa6b79e82a1963b2406856b4dc92d0ccfb74db543897be3109"
+SRC_URI[md5sum] = "141b84b2a1ed74a310cb0b1f87296fa6"
+SRC_URI[sha256sum] = "ff23d23157dc4a1f90f162625460d973b7ffa89ee78e6bb45a6003b3f5a67190"
 
 GEM_NAME = "mongo"
 
