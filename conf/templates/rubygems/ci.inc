@@ -31,3 +31,5 @@ INHERIT += "no-spdx"
 QEMU_TARGETS = "aarch64"
 
 MIRRORS:append = " https://gmplib.org/download/gmp/ https://ftp.gnu.org/gnu/gmp/"
+
+BB_HASHSERVE_DB_DIR = "${SSTATE_DIR}"
