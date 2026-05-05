@@ -35,14 +35,14 @@ jobs:
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
           repo: https://github.com/openembedded/openembedded-core.git
-          ref: 42fa856a00ac16b2a7a83d7ecfa60a5be192b16c
+          ref: 9ca41405e6bca276468a3b6f67eaa328b8016485
           branch: none
           add-layer: "0"
       - name: checkout (bitbake)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
         with:
           repo: https://github.com/openembedded/bitbake.git
-          ref: f3904634889e737861b47d6bf4068faac4d4661d
+          ref: cb28befc56d201cace72d70891e731b955fb567f
           branch: none
           add-layer: "0"
       - name: checkout (meta-yocto)
