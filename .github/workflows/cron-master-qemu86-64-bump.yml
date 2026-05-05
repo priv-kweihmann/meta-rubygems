@@ -50,6 +50,7 @@ jobs:
           repo: https://github.com/openembedded/bitbake.git
           ref: f3904634889e737861b47d6bf4068faac4d4661d
           branch: none
+          remove-git: "0"
           add-layer: "0"
       - name: checkout (meta-yocto)
         uses: priv-kweihmann/meta-sca-ci-utils/addlayer@2.0
