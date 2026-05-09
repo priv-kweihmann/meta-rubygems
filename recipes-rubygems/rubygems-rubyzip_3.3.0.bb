@@ -4,15 +4,15 @@ DESCRIPTION = "rubyzip is a ruby module for reading and writing zip files"
 HOMEPAGE = "http://github.com/rubyzip/rubyzip"
 
 LICENSE = "BSD-2-Clause"
-LIC_FILES_CHKSUM = "file://LICENSE.md;md5=132450ef8f45939b111e171e4b983632"
+LIC_FILES_CHKSUM = "file://LICENSE.md;md5=71270ccd875404f52a71e65c18eb9f88"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "a4c995303fbb8bd8eee65fed00dc9d03"
-SRC_URI[sha256sum] = "c0ed99385f0625415c8f05bcae33fe649ed2952894a95ff8b08f26ca57ea5b3c"
+SRC_URI[md5sum] = "e2226067da4a899ec7e19441f57a5902"
+SRC_URI[sha256sum] = "a372fc67892a4f8c0bc8ec906b720353d8e48807a64b2e63adf99b1e3583a034"
 
 GEM_NAME = "rubyzip"
 
