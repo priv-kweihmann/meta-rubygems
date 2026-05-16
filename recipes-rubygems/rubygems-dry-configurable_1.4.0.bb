@@ -4,7 +4,7 @@ DESCRIPTION = "A mixin to add configuration functionality to your classes"
 HOMEPAGE = "https://dry-rb.org/gems/dry-configurable"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=b14b1929847ba471f3f59da600744315"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=fe7086983f71ec803146164cfaaa1737"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "6801db3941248b79d5f4ff2c2491e844"
-SRC_URI[sha256sum] = "882d862858567fc1210d2549d4c090f34370fc1bb7c5c1933de3fe792e18afa8"
+SRC_URI[md5sum] = "9a2b3ccc909da6f3f57bb3ff21518d1f"
+SRC_URI[sha256sum] = "e35d1b5f3c081753ef361f564919db79000f32cfa6f20ee3a3ba5921b41b73ce"
 
 GEM_NAME = "dry-configurable"
 
