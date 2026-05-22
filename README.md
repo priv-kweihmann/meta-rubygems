@@ -53,16 +53,23 @@ ruby -r rubygems <script name>
 
 please check the following table to pick the correct branch matching your poky version
 
-| poky release | suggested meta-rubygems branch | ruby version | maintainer     |
-| ------------ | ------------------------------ | ------------ | -------------- |
-| master       | master                         | 4.0.x        | priv-kweihmann |
-| whinlatter   | whinlatter                     | 3.4.x        | n.a.           |
-| kirkstone    | kirkstone                      | 3.1.x        | n.a.           |
-| honister     | hardknott                      | 3.0.x        | n.a.           |
-| hardknott    | hardknott                      | 3.0.x        | n.a.           |
-| gatesgarth   | dunfell                        | 2.7.x        | n.a.           |
-| dunfell      | dunfell                        | 2.7.x        | n.a.           |
-| zeus         | zeus                           | 2.5.x        | n.a.           |
+| poky release | suggested meta-rubygems branch                  | ruby version | maintainer     |
+| ------------ | ----------------------------------------------- | ------------ | -------------- |
+| master       | master                                          | 4.0.x        | priv-kweihmann |
+| wrynose      | master@dba6dfb9106584ce464d9d9c968f821b94b9a01f | 4.0.x        | n.a.           |
+| whinlatter   | whinlatter                                      | 3.4.x        | n.a.           |
+| walnascar    | master@2fe6f64072ba95c87e6beaa1c2856772ed71dead | 3.4.x        | n.a.           |
+| styhead      | master@906b2f637fbf5acee11fe23b313254b0739b4fba | 3.3.x        | n.a.           |
+| scarthgap    | master@f023803dfeae8d5e5414b5feb4b7dce2b5ff55d3 | 3.3.x        | n.a.           |
+| nanbield     | master@b0baf72297f3f521ec76195ec1b8acca499aee44 | 3.2.x        | n.a.           |
+| mickledore   | master@b0baf72297f3f521ec76195ec1b8acca499aee44 | 3.2.x        | n.a.           |
+| langdale     | master@ef8ad0e8632125f73410bed3da125a108860dd38 | 3.1.x        | n.a.           |
+| kirkstone    | kirkstone                                       | 3.1.x        | n.a.           |
+| honister     | hardknott                                       | 3.0.x        | n.a.           |
+| hardknott    | hardknott                                       | 3.0.x        | n.a.           |
+| gatesgarth   | dunfell                                         | 2.7.x        | n.a.           |
+| dunfell      | dunfell                                         | 2.7.x        | n.a.           |
+| zeus         | zeus                                            | 2.5.x        | n.a.           |
 
 ## License
 
