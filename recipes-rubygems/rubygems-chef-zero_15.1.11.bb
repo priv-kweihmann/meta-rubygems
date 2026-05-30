@@ -15,15 +15,14 @@ DEPENDS:class-native += "\
     rubygems-mixlib-log-native \
     rubygems-rack-native \
     rubygems-rackup-native \
-    rubygems-unf-ext-native \
     rubygems-uuidtools-native \
     rubygems-webrick-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "f607f8153fcd1fb1f401302b9a7b4d75"
-SRC_URI[sha256sum] = "85220e9f3db8ee0cd0697f08baa8f7f0bc4bc2920bd03c7191a6f41b5450588a"
+SRC_URI[md5sum] = "c541cff67b61a55528d047a4511b8e58"
+SRC_URI[sha256sum] = "1882ad6bca87d0100c27b0ad5927acd31136f3b2ff291e0afddbd5344818b8ec"
 
 GEM_NAME = "chef-zero"
 
@@ -37,7 +36,6 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-mixlib-log \
     rubygems-rack \
     rubygems-rackup \
-    rubygems-unf-ext \
     rubygems-uuidtools \
     rubygems-webrick \
 "
