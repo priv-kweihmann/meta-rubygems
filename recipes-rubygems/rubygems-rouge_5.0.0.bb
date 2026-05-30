@@ -9,15 +9,23 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=6b48c48828e3f0a22274ed1d5e0b1c58"
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
+DEPENDS:class-native += "\
+    rubygems-strscan-native \
+"
+
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "428d90116ed7006f70e7991f37f1a9a4"
-SRC_URI[sha256sum] = "dba5896715c0325c362e895460a6d350803dbf6427454f49a47500f3193ea739"
+SRC_URI[md5sum] = "8b8d6111af591731f3a940200dce9194"
+SRC_URI[sha256sum] = "e2de9bba2f9cb88f8a73bca3643b560b2b398f32f91bf716f584477bc0175ebc"
 
 GEM_NAME = "rouge"
 
 inherit rubygems
 inherit rubygentest
 inherit pkgconfig
+
+RDEPENDS:${PN}:class-target += "\
+    rubygems-strscan \
+"
 
 BBCLASSEXTEND = "native"
