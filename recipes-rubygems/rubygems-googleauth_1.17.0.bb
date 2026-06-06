@@ -14,15 +14,15 @@ DEPENDS:class-native += "\
     rubygems-google-cloud-env-native \
     rubygems-google-logging-utils-native \
     rubygems-jwt-native \
-    rubygems-multi-json-native \
     rubygems-os-native \
+    rubygems-pstore-native \
     rubygems-signet-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "52b51849b61605cb4194d4b4c5df1219"
-SRC_URI[sha256sum] = "15009502e2e38af71948cda918f230e27d327f6882a1e47967a5a4664930a638"
+SRC_URI[md5sum] = "d42e66a6c76956f9b45ff3c7d925d66a"
+SRC_URI[sha256sum] = "dbddcaa3b78469fa9392c0e784ab6d8f3f760a1e5f6c6dbbbaa44a612c4198b0"
 
 GEM_NAME = "googleauth"
 
@@ -40,8 +40,8 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-google-cloud-env \
     rubygems-google-logging-utils \
     rubygems-jwt \
-    rubygems-multi-json \
     rubygems-os \
+    rubygems-pstore \
     rubygems-signet \
 "
 

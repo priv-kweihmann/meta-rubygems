@@ -13,13 +13,12 @@ DEPENDS:class-native += "\
     rubygems-addressable-native \
     rubygems-faraday-native \
     rubygems-jwt-native \
-    rubygems-multi-json-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "4f386244311be0d6b96f3a721c18e5a3"
-SRC_URI[sha256sum] = "d617e9fbf24928280d39dcfefba9a0372d1c38187ffffd0a9283957a10a8cd5b"
+SRC_URI[md5sum] = "73846a4271f6c794d66646b315639256"
+SRC_URI[sha256sum] = "b76d495ccb07ad35dbc89f3e920665a9d8ed717141955034005d7843dcfe4780"
 
 GEM_NAME = "signet"
 
@@ -31,7 +30,6 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-addressable \
     rubygems-faraday \
     rubygems-jwt \
-    rubygems-multi-json \
 "
 
 BBCLASSEXTEND = "native"
