@@ -4,7 +4,7 @@ DESCRIPTION = "WebSocket protocol handler with pluggable I/O"
 HOMEPAGE = "https://github.com/faye/websocket-driver-ruby"
 
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE.md;md5=f307b44409bc0386d1fca56273f1e743"
+LIC_FILES_CHKSUM = "file://LICENSE.md;md5=9b7b313780d45a859653127cf7439e17"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "b8bb55057241cb0479a4061147fab98c"
-SRC_URI[sha256sum] = "ed0dba4b943c22f17f9a734817e808bc84cdce6a7e22045f5315aa57676d4962"
+SRC_URI[md5sum] = "2f2d177f5c67edfb0c1931098e8b7b5c"
+SRC_URI[sha256sum] = "5ab238238ce230e5d4b262d2be39624c867914eab99171dc4952b58b577c2d96"
 
 GEM_NAME = "websocket-driver"
 
