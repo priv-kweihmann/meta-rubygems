@@ -15,14 +15,15 @@ DEPENDS:class-native += "\
     rubygems-faraday-native \
     rubygems-googleauth-native \
     rubygems-mini-mime-native \
+    rubygems-multi-json-native \
     rubygems-representable-native \
     rubygems-retriable-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "f00b8904c5c9ef2660838b26e212fe86"
-SRC_URI[sha256sum] = "965e5e3d87541ab619942f91bc3247a0eee2cd38ee149e48c2d3d3291f95ccec"
+SRC_URI[md5sum] = "a72e6b9a68e414ebfcbd7c220ba92d42"
+SRC_URI[sha256sum] = "2ce34c17c144e24d966ecb0efa5d46aaba3e3e3721ba1faa1ed80db2389e7b08"
 
 GEM_NAME = "google-apis-core"
 
@@ -36,6 +37,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-faraday-follow-redirects \
     rubygems-googleauth \
     rubygems-mini-mime \
+    rubygems-multi-json \
     rubygems-representable \
     rubygems-retriable \
 "
