@@ -16,6 +16,7 @@ DEPENDS:class-native += "\
     rubygems-azure-mgmt-resources-native \
     rubygems-azure-mgmt-security-native \
     rubygems-azure-mgmt-storage-native \
+    rubygems-bigdecimal-native \
     rubygems-docker-api-native \
     rubygems-google-apis-admin-directory-v1-native \
     rubygems-google-apis-cloudkms-v1-native \
@@ -33,8 +34,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "d05af1963e1d143f82e3e90fcfa0f638"
-SRC_URI[sha256sum] = "1a1f71a00ae8f908a511a4d763425d0ae3b3a4934c029fdb22f7f0aec28ffa03"
+SRC_URI[md5sum] = "1b6b42da3b785f73b280145c9baec356"
+SRC_URI[sha256sum] = "5f43128f86bb7316461dd3f8037f97ca33d79397ebe99327b14c7dca4f9afe88"
 
 GEM_NAME = "train"
 
@@ -49,6 +50,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-azure-mgmt-resources \
     rubygems-azure-mgmt-security \
     rubygems-azure-mgmt-storage \
+    rubygems-bigdecimal \
     rubygems-docker-api \
     rubygems-google-apis-admin-directory-v1 \
     rubygems-google-apis-cloudkms-v1 \
