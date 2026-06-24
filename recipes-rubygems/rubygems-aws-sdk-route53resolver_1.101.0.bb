@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-cognitoidentityprovider"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Cognito Identity Provider"
+SUMMARY = "RubyGem: aws-sdk-route53resolver"
+DESCRIPTION = "Official AWS Ruby gem for Amazon Route 53 Resolver (Route53Resolver)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "c307069e8992daf2bbccfc6099917c71"
-SRC_URI[sha256sum] = "99ece7652b7e52b80951522ae7e476eccae24390525bad35ab2926748bba3baf"
+SRC_URI[md5sum] = "e13a17ab7ac4d1852b41d5cd7a8b0d00"
+SRC_URI[sha256sum] = "d9d0d7955d50a090e313948ffce5e069c61036425c2b3ef188487a2c27aedd12"
 
-GEM_NAME = "aws-sdk-cognitoidentityprovider"
+GEM_NAME = "aws-sdk-route53resolver"
 
 inherit rubygems
 inherit rubygentest

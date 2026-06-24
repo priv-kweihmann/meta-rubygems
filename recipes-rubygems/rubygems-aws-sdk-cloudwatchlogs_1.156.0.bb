@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-ecs"
-DESCRIPTION = "Official AWS Ruby gem for Amazon EC2 Container Service (Amazon ECS)"
+SUMMARY = "RubyGem: aws-sdk-cloudwatchlogs"
+DESCRIPTION = "Official AWS Ruby gem for Amazon CloudWatch Logs"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "89f56c67339236c65eb27b1ac7ecd8d2"
-SRC_URI[sha256sum] = "2db522bc350962e7709d7174cb06da7dc3e4af0aeb55c76dbebcf655224b27ae"
+SRC_URI[md5sum] = "68607055af62536efe9ed236fe5a4d3e"
+SRC_URI[sha256sum] = "8e9e6854a2da907725c5bc517f15e0a90d9aaf945b7094883e66fb0b5049dc64"
 
-GEM_NAME = "aws-sdk-ecs"
+GEM_NAME = "aws-sdk-cloudwatchlogs"
 
 inherit rubygems
 inherit rubygentest

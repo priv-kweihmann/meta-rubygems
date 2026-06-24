@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-applicationautoscaling"
-DESCRIPTION = "Official AWS Ruby gem for Application Auto Scaling"
+SUMMARY = "RubyGem: aws-sdk-lambda"
+DESCRIPTION = "Official AWS Ruby gem for AWS Lambda"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "32538f204de24e01ff629d7ade53790b"
-SRC_URI[sha256sum] = "bfae8b66622e085232e109ce71a6ba89afce43637840ed2039a5feb22fbb50a9"
+SRC_URI[md5sum] = "75bd90cdf2c0b7d91d4e13f694f257a0"
+SRC_URI[sha256sum] = "27078229843bcaf9a87386be96ff36bcbd5b3c77f8bcb0ac83fd1c22eddc9034"
 
-GEM_NAME = "aws-sdk-applicationautoscaling"
+GEM_NAME = "aws-sdk-lambda"
 
 inherit rubygems
 inherit rubygentest

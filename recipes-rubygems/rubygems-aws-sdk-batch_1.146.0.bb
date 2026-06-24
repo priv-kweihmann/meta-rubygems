@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-eks"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Elastic Kubernetes Service (Amazon EKS)"
+SUMMARY = "RubyGem: aws-sdk-batch"
+DESCRIPTION = "Official AWS Ruby gem for AWS Batch"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "c1a8231c1b22b3b1b9379c1f32f15ae6"
-SRC_URI[sha256sum] = "3a867a775383925c1288bf5300fd115c3c17ac003c956be635ea4b985f433ed5"
+SRC_URI[md5sum] = "5f8e6b36a99434d441079de429855419"
+SRC_URI[sha256sum] = "a5791dc2e31ff92d41200700d6cf9c29c4feb29096ba80a9d526bde547c085e6"
 
-GEM_NAME = "aws-sdk-eks"
+GEM_NAME = "aws-sdk-batch"
 
 inherit rubygems
 inherit rubygentest

@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-batch"
-DESCRIPTION = "Official AWS Ruby gem for AWS Batch"
+SUMMARY = "RubyGem: aws-sdk-rds"
+DESCRIPTION = "Official AWS Ruby gem for Amazon Relational Database Service (Amazon RDS)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "e11837c4b0bcfc5032ead60ce7b71d40"
-SRC_URI[sha256sum] = "881b13acd0076a23a668ab3608306294e319256eac0ea4c1704c8c0444d73315"
+SRC_URI[md5sum] = "aece6d1111fa4b75ab099fea1b548521"
+SRC_URI[sha256sum] = "81fec624bee0e66c8360fa6295e33c615719d9847bb4ebb6f145738699217804"
 
-GEM_NAME = "aws-sdk-batch"
+GEM_NAME = "aws-sdk-rds"
 
 inherit rubygems
 inherit rubygentest

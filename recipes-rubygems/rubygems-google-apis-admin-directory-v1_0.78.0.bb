@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: google-apis-discovery_v1"
-DESCRIPTION = "This is the simple REST client for API Discovery Service V1"
+SUMMARY = "RubyGem: google-apis-admin_directory_v1"
+DESCRIPTION = "This is the simple REST client for Admin SDK API DirectoryV1"
 HOMEPAGE = "https://github.com/google/google-api-ruby-client"
 
 LICENSE = "Apache-2.0"
@@ -15,10 +15,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "e6d3c6a544b91351ee218faa242c0c4a"
-SRC_URI[sha256sum] = "6e0fdb80854c063feeed253dedbe777ab1eccd81ce81c94332fd18e7aee3c1c0"
+SRC_URI[md5sum] = "91640d46178b3c3385f0ddbf253bec0b"
+SRC_URI[sha256sum] = "8b9e962a598eb935cdadf49041237cef6adb32496d3fc8b39f09e38056526a68"
 
-GEM_NAME = "google-apis-discovery_v1"
+GEM_NAME = "google-apis-admin_directory_v1"
 
 inherit rubygems
 inherit rubygentest

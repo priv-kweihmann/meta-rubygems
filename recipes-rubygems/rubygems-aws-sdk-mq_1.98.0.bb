@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-glue"
-DESCRIPTION = "Official AWS Ruby gem for AWS Glue"
+SUMMARY = "RubyGem: aws-sdk-mq"
+DESCRIPTION = "Official AWS Ruby gem for AmazonMQ"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "5ae7e5c71652cc0598da4e323e1471a3"
-SRC_URI[sha256sum] = "8c51a38639db00339ecaf50ea2a26f1979669bf7230f13966cf6e909434f8fc9"
+SRC_URI[md5sum] = "c20c012502d5ca6ce3e683fdbfe13ed2"
+SRC_URI[sha256sum] = "55157af4a1bc34f25c472d179e659fe207ddf9a0be42ad67914d64b6e51ef1ff"
 
-GEM_NAME = "aws-sdk-glue"
+GEM_NAME = "aws-sdk-mq"
 
 inherit rubygems
 inherit rubygentest

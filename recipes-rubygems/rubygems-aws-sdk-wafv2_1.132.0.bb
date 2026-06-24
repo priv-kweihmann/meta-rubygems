@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-lambda"
-DESCRIPTION = "Official AWS Ruby gem for AWS Lambda"
+SUMMARY = "RubyGem: aws-sdk-wafv2"
+DESCRIPTION = "Official AWS Ruby gem for AWS WAFV2 (WAFV2)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "9827eff235759fef5b4781c83efa3833"
-SRC_URI[sha256sum] = "3dbf19f07e2d484108ec9e7f45c6482ee2f5f3023ee5df1434caa8a4d84f3ae4"
+SRC_URI[md5sum] = "4a25684e4449de8a95a3ac2b67b5976b"
+SRC_URI[sha256sum] = "ba7f17b740bc3941c25565eb6f93cc9fd2d7f86208707f6b4e95b4a12f8964d4"
 
-GEM_NAME = "aws-sdk-lambda"
+GEM_NAME = "aws-sdk-wafv2"
 
 inherit rubygems
 inherit rubygentest

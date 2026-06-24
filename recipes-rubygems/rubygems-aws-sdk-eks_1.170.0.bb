@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-synthetics"
-DESCRIPTION = "Official AWS Ruby gem for Synthetics"
+SUMMARY = "RubyGem: aws-sdk-eks"
+DESCRIPTION = "Official AWS Ruby gem for Amazon Elastic Kubernetes Service (Amazon EKS)"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "690dc8035f0a3dc09fea65dca05552e3"
-SRC_URI[sha256sum] = "37e86c9194654ae7e98c23406c539dc1d16dc5bc9681456d57c4c7c1b341637b"
+SRC_URI[md5sum] = "778b88369d5fa6ff8e5006901bfb7383"
+SRC_URI[sha256sum] = "91fc2629443fc15d131c51a1d42a952a90cbdda2b3e3dec6dff178d88331e8c1"
 
-GEM_NAME = "aws-sdk-synthetics"
+GEM_NAME = "aws-sdk-eks"
 
 inherit rubygems
 inherit rubygentest

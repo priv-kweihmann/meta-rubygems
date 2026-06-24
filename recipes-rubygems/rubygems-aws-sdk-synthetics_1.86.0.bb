@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: aws-sdk-route53resolver"
-DESCRIPTION = "Official AWS Ruby gem for Amazon Route 53 Resolver (Route53Resolver)"
+SUMMARY = "RubyGem: aws-sdk-synthetics"
+DESCRIPTION = "Official AWS Ruby gem for Synthetics"
 HOMEPAGE = "https://github.com/aws/aws-sdk-ruby"
 
 LICENSE = "Apache-2.0"
@@ -16,10 +16,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "b7312eed99eb2511779d80927dbb939a"
-SRC_URI[sha256sum] = "09deec68522743f48202fb95293df634304021ac3e42aad451168d5c83853e07"
+SRC_URI[md5sum] = "162ba4c8bed7f5b3a21b4b53bd8d2f4b"
+SRC_URI[sha256sum] = "d94bb9f83dba971baf80cb8f5807f026f0145d9ca69a300302f64f1ed931ca3e"
 
-GEM_NAME = "aws-sdk-route53resolver"
+GEM_NAME = "aws-sdk-synthetics"
 
 inherit rubygems
 inherit rubygentest
