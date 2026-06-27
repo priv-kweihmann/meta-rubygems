@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: google-apis-storage_v1"
-DESCRIPTION = "This is the simple REST client for Cloud Storage JSON API V1"
+SUMMARY = "RubyGem: google-apis-monitoring_v3"
+DESCRIPTION = "This is the simple REST client for Cloud Monitoring API V3"
 HOMEPAGE = "https://github.com/google/google-api-ruby-client"
 
 LICENSE = "Apache-2.0"
@@ -15,10 +15,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "8221243ce62eec95a93381132183af8d"
-SRC_URI[sha256sum] = "7063a6c19c40f5ef96d5894df33c4f9ac915e3107e632b1870ba5247e3bb633f"
+SRC_URI[md5sum] = "afde4a4156a08c3d80d1153455c60d1f"
+SRC_URI[sha256sum] = "c304ff07eef6582cc81af61a441270af228169253d8257ab70cac38645801388"
 
-GEM_NAME = "google-apis-storage_v1"
+GEM_NAME = "google-apis-monitoring_v3"
 
 inherit rubygems
 inherit rubygentest

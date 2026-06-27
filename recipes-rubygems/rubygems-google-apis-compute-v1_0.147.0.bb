@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
-SUMMARY = "RubyGem: google-apis-monitoring_v3"
-DESCRIPTION = "This is the simple REST client for Cloud Monitoring API V3"
+SUMMARY = "RubyGem: google-apis-compute_v1"
+DESCRIPTION = "This is the simple REST client for Compute Engine API V1"
 HOMEPAGE = "https://github.com/google/google-api-ruby-client"
 
 LICENSE = "Apache-2.0"
@@ -15,10 +15,10 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "b56d666221a01654283d38c74e0f8dcb"
-SRC_URI[sha256sum] = "33df0b0405e64b9c2b88a5c16b6f601b7ad6c5f1e1fed8dbc5e017849f295e7a"
+SRC_URI[md5sum] = "fbc76393b749a8548927600afd1ae7be"
+SRC_URI[sha256sum] = "34c65fef0353feb334dd74dc25dfa4b622687d9cb7daacc8360871d05db7c9c1"
 
-GEM_NAME = "google-apis-monitoring_v3"
+GEM_NAME = "google-apis-compute_v1"
 
 inherit rubygems
 inherit rubygentest
