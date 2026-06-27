@@ -23,6 +23,7 @@ DEPENDS:class-native += "\
     rubygems-parallel-native \
     rubygems-parslet-native \
     rubygems-pry-native \
+    rubygems-public-suffix-native \
     rubygems-rspec-its-native \
     rubygems-rspec-native \
     rubygems-rubyzip-native \
@@ -37,8 +38,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "dcf594f8700f65db76947f2ff4ae94e6"
-SRC_URI[sha256sum] = "847b29e13963beb303b2c3d1f7ca1c93060e26c91e3d2262850bc66903b5f9f6"
+SRC_URI[md5sum] = "9730bb9598de4219a8d9c440c8b43f25"
+SRC_URI[sha256sum] = "2b23939869add90dde39f195160f7c3e05cf89f749b77a9c94631d201e626ee3"
 
 GEM_NAME = "inspec-core"
 
@@ -60,6 +61,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-parallel \
     rubygems-parslet \
     rubygems-pry \
+    rubygems-public-suffix \
     rubygems-rspec \
     rubygems-rspec-its \
     rubygems-rubyzip \
