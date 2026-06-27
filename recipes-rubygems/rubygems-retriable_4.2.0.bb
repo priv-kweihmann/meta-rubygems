@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "2aef87e90b610583dd075038d644f837"
-SRC_URI[sha256sum] = "6c25151721cba9d5d1c0aa9dbb38012aee36dd84752069f13dec98e7f8b51cec"
+SRC_URI[md5sum] = "5622ac787066fe981bc061b36ea52ce9"
+SRC_URI[sha256sum] = "90c3b257472a1c02f2a3dfa64dd35a420f7a624cef1a5981e20fdac5730f8cdc"
 
 GEM_NAME = "retriable"
 
