@@ -185,6 +185,7 @@ RDEPENDS:${PN} += "\
     rubygems-googleauth \
     rubygems-gssapi \
     rubygems-gyoku \
+    rubygems-hana \
     rubygems-hashdiff \
     rubygems-hashie \
     rubygems-hiera \
@@ -208,6 +209,7 @@ RDEPENDS:${PN} += "\
     rubygems-jmespath \
     rubygems-json \
     rubygems-json-schema \
+    rubygems-json-schemer \
     rubygems-jsonpath \
     rubygems-jwt \
     rubygems-k8s-ruby \
@@ -312,6 +314,7 @@ RDEPENDS:${PN} += "\
     rubygems-simplecov \
     rubygems-simplecov-html \
     rubygems-simplecov-json-formatter \
+    rubygems-simpleidn \
     rubygems-slop \
     rubygems-socksify \
     rubygems-specinfra \
