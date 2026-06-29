@@ -7,18 +7,16 @@ LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=5498bbc0155db622ff063f9f7396da88"
 
 EXTRA_DEPENDS:append = " "
-EXTRA_RDEPENDS:append = " \
-    bash \
-"
+EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
-    rubygems-json-schema-native \
+    rubygems-json-schemer-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "5bb723c6709ca8c84b7c5e3eabf22fa7"
-SRC_URI[sha256sum] = "4d8ec572c1536f53370196539d5272355fb6480ed969ea58a8d24917ee2562c8"
+SRC_URI[md5sum] = "4543eb5478e22efbd6fc9f33dab95cc9"
+SRC_URI[sha256sum] = "e2ef603207c7e2c691bef4d8d8ab35d9740bedf315949fdb6d9a25318d1a7025"
 
 GEM_NAME = "mcp"
 
@@ -27,7 +25,7 @@ inherit rubygentest
 inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
-    rubygems-json-schema \
+    rubygems-json-schemer \
 "
 
 BBCLASSEXTEND = "native"
