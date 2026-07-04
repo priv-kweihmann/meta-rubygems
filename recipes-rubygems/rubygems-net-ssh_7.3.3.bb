@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "2824b87ad0982993907ecaeeca6786f6"
-SRC_URI[sha256sum] = "65029e213c380e20e5fd92ece663934ab0a0fe888e0cd7cc6a5b664074362dd4"
+SRC_URI[md5sum] = "27455db97bc19a0a886f84fbd9b45cc8"
+SRC_URI[sha256sum] = "831def58b2c51dcef66ec00d29397d4f210de89c19fe78f95873ca30f386e86a"
 
 GEM_NAME = "net-ssh"
 
