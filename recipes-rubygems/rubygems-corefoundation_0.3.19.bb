@@ -17,8 +17,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "3968463cfd0c318536d965ecce3e84d0"
-SRC_URI[sha256sum] = "29c07766cc1d7e428b116b9ebe03b16bb829ef9104f0fa8fff899a61daf02f93"
+SRC_URI[md5sum] = "3367b95de1fc71f35b6b4e4277fea77f"
+SRC_URI[sha256sum] = "236d6c29a84760f14a6b0a6664d5ecc21237775c400f2a91f18cd9ab2ca05e73"
 
 GEM_NAME = "corefoundation"
 
