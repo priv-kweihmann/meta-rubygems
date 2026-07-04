@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "11ce157c05a7a5dfb2920e82c322a5b6"
-SRC_URI[sha256sum] = "5a3c2c2430cd925d21c53e4ed9abea52cd0a9da53b541422f81dee79aca2a673"
+SRC_URI[md5sum] = "7183c3f6f868276e68b81dc8ac8d862b"
+SRC_URI[sha256sum] = "09d594fd96b98e19a8fd5c32aadcc6950df429b69f48c2f774c0db0ce272bf19"
 
 GEM_NAME = "liquid"
 
