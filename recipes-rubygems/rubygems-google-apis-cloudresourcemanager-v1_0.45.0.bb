@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "1df842e1e1c4cbc42ad9acaddbe84ba5"
-SRC_URI[sha256sum] = "be96723ff28664407dd86724857f9cd7402bf6dd63ef4257cbd42002816705f8"
+SRC_URI[md5sum] = "7d6491039334878d07ed53600fbb6b9f"
+SRC_URI[sha256sum] = "ea936d4d51dd0556fb93f4a78131c0441c308906bf076d543c8852dbeec27d45"
 
 GEM_NAME = "google-apis-cloudresourcemanager_v1"
 
