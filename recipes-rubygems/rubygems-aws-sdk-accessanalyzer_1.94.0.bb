@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "1a2378c3de7b861653eff335c1f8a4ef"
-SRC_URI[sha256sum] = "93b15fed6a01c03a553ee06151ce3b5d738202d58f3a5989e27e712b11cc3691"
+SRC_URI[md5sum] = "025879d4cef540dfbcd124e1bcda54bb"
+SRC_URI[sha256sum] = "a261fdd74b4ba867f65fc49821b8e055c14d0fffc4be12928c1f68096c4a5e5e"
 
 GEM_NAME = "aws-sdk-accessanalyzer"
 
