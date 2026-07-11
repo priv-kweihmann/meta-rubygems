@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "d3e602dae1b06b6517aa8db13bf45f7e"
-SRC_URI[sha256sum] = "8f57ad1d7155c6e2ddd67c9591c19952d0dab10402d09c8d358e4b0c2b5fc605"
+SRC_URI[md5sum] = "e6cad23cb97261bef9c0e4a1c9d80731"
+SRC_URI[sha256sum] = "197a97d1b532484f38d87b7c3ceccf50afed2db27ed1807a2e9cad7b8962f14e"
 
 GEM_NAME = "aws-sdk-codepipeline"
 
