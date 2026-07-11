@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "2e271914490a160e2b1291b81432338c"
-SRC_URI[sha256sum] = "2c09f66057dac1c279f40d187155e39edd325fe10dcd886c1e8a25d830557f5a"
+SRC_URI[md5sum] = "34c5ac8833f813a945dfe3745f99de2c"
+SRC_URI[sha256sum] = "530aa2d58595d414ebdc1ecab8b8818b52cc62c8c42d4b22b5ea5395148eb698"
 
 GEM_NAME = "aws-sdk-guardduty"
 
