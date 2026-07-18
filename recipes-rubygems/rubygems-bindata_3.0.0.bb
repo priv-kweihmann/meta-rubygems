@@ -4,15 +4,15 @@ DESCRIPTION = "BinData is a declarative way to read and write binary file format
 HOMEPAGE = "https://github.com/dmendel/bindata"
 
 LICENSE = "BSD-2-Clause"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=61b188c157f57c801173844363bb013d"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=d8c951d6cdf945869e89d017bd525e13"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "d5929e59e78b22f9f22c61386b584368"
-SRC_URI[sha256sum] = "53186a1ec2da943d4cb413583d680644eb810aacbf8902497aac8f191fad9e58"
+SRC_URI[md5sum] = "ded0dfed567794a569c21c852cf9d787"
+SRC_URI[sha256sum] = "7edc84092f958326ea1a3207142c79ba9f6b53796a02098a5b1670be75bd8a79"
 
 GEM_NAME = "bindata"
 
