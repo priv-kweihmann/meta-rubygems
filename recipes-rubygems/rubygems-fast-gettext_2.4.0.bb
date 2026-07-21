@@ -3,7 +3,7 @@ SUMMARY = "RubyGem: fast_gettext"
 DESCRIPTION = "A simple, fast, memory-efficient and threadsafe implementation of GetText"
 HOMEPAGE = "https://github.com/grosser/fast_gettext"
 
-LICENSE = "MIT & Ruby"
+LICENSE = "MIT AND Ruby"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=de73345c85d650bab85563ec6f1b2f9d"
 
 EXTRA_DEPENDS:append = " "

@@ -1,12 +1,12 @@
 {
     "diff-lcs": {
-        "LICENSE": "MIT & Artistic-2.0 & GPL-2.0-or-later"
+        "LICENSE": "MIT AMD Artistic-2.0 AND GPL-2.0-or-later"
     },
     "eventmachine": {
-        "LICENSE": "Ruby & GPL-2.0-only"
+        "LICENSE": "Ruby AND GPL-2.0-only"
     },
     "locale": {
-        "LICENSE": "Ruby & LGPL-3.0-or-later"
+        "LICENSE": "Ruby AND LGPL-3.0-or-later"
     },
     "httpclient": {
         "LICENSE": "Ruby"

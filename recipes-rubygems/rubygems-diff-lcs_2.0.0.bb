@@ -3,7 +3,7 @@ SUMMARY = "RubyGem: diff-lcs"
 DESCRIPTION = "Diff::LCS computes the difference between two Enumerable sequences using theMcIlroy-Hunt longest common subsequence (LCS) algorithm"
 HOMEPAGE = "https://github.com/halostatue/diff-lcs"
 
-LICENSE = "MIT & Artistic-2.0 & GPL-2.0-or-later"
+LICENSE = "Artistic-2.0 AND GPL-2.0-or-later AND MIT"
 LIC_FILES_CHKSUM = "file://LICENCE.md;md5=c8c0239f05f28a44fb28e457f95e7890"
 
 EXTRA_DEPENDS:append = " "

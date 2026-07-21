@@ -3,7 +3,7 @@ SUMMARY = "RubyGem: locale"
 DESCRIPTION = "Ruby-Locale is the pure ruby library which provides basic APIs for localization."
 HOMEPAGE = "https://github.com/ruby-gettext/locale"
 
-LICENSE = "Ruby & LGPL-3.0-or-later"
+LICENSE = "LGPL-3.0-or-later AND Ruby"
 LIC_FILES_CHKSUM = "file://COPYING;md5=99f88e67b65504d289a0326c59f9c148"
 
 EXTRA_DEPENDS:append = " "
