@@ -3,7 +3,7 @@ SUMMARY = "RubyGem: socksify"
 DESCRIPTION = "Redirect all TCPSockets through a SOCKS5 proxy"
 HOMEPAGE = "https://github.com/astro/socksify-ruby"
 
-LICENSE = "Ruby & GPL-3.0-only"
+LICENSE = "GPL-3.0-only AND Ruby"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
 
 EXTRA_DEPENDS:append = " "

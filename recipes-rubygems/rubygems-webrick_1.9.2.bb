@@ -3,7 +3,7 @@ SUMMARY = "RubyGem: webrick"
 DESCRIPTION = "WEBrick is an HTTP server toolkit that can be configured as an HTTPS server, a proxy server, and a virtual-host server."
 HOMEPAGE = "https://github.com/ruby/webrick"
 
-LICENSE = "Ruby & BSD-2-Clause"
+LICENSE = "BSD-2-Clause AND Ruby"
 LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=19aaf65c88a40b508d17ae4be539c4b5"
 
 EXTRA_DEPENDS:append = " "
