@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "2f89e7066347eab4e3e875ee5f850569"
-SRC_URI[sha256sum] = "c6459434efe4b948b46477cc2df2faa73ab365f83a33c7c17f81262f4f7f1244"
+SRC_URI[md5sum] = "a59ceecbd9c72a22584cd461351bccf6"
+SRC_URI[sha256sum] = "38ef0514f16ae7562f0d0f4df02610071115103d301b6de7dacbcc000082e39b"
 
 GEM_NAME = "simplecov"
 
