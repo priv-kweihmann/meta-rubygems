@@ -26,8 +26,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "6e91472f14dab4f9ebaa0fa4fd10a5b9"
-SRC_URI[sha256sum] = "9197c70ea7547a06fdc5534c81b00740622a0ccfb12416fc6c06af141b59071b"
+SRC_URI[md5sum] = "474610d8023f2a6799a4894151edbccf"
+SRC_URI[sha256sum] = "a07729dae717fe9842228ae90f6be0f7760427dcdb1269a3af5e6fe832cc8e07"
 
 GEM_NAME = "k8s-ruby"
 
