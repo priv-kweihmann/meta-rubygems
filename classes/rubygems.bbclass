@@ -167,6 +167,10 @@ python do_arch_patch_config() {
         "LD": d.expand("${LD}"),
         "LDFLAGS": d.expand("${LDFLAGS}"),
         "libdir": d.getVar("STAGING_LIBDIR"),
+        # Clear LIBPATHENV -- mkmf otherwise leaks the target libdir into
+        # LD_LIBRARY_PATH, crashing the native compiler (SIGBUS) when host
+        # and target arch match.
+        "LIBPATHENV": "",
         "libexecdir": "$(exec_prefix)/libexec",
         "NM": d.expand("${NM}"),
         "OBJDUMP": d.expand("${OBJDUMP}"),
