@@ -243,9 +243,12 @@ class RubygemsLicense(Rule):
     def __get_combined_licenses(self, _file):
         res = set(RubygemsLicense.POKY_KNOWN_VALID_EXPRESSIONS)
         # add different variations (+, -or-later, -only)
-        res.update(["{}+".format(x) for x in RubygemsLicense.POKY_KNOWN_VALID_EXPRESSIONS])
-        res.update(["{}-or-later".format(x) for x in RubygemsLicense.POKY_KNOWN_VALID_EXPRESSIONS])
-        res.update(["{}-only".format(x) for x in RubygemsLicense.POKY_KNOWN_VALID_EXPRESSIONS])
+        res.update(["{}+".format(x)
+                   for x in RubygemsLicense.POKY_KNOWN_VALID_EXPRESSIONS])
+        res.update(["{}-or-later".format(x)
+                   for x in RubygemsLicense.POKY_KNOWN_VALID_EXPRESSIONS])
+        res.update(["{}-only".format(x)
+                   for x in RubygemsLicense.POKY_KNOWN_VALID_EXPRESSIONS])
         __layer_root = get_layer_root(_file)
         for _, _, files in os.walk(os.path.join(__layer_root, RubygemsLicense.LAYER_LICENSE_DIR)):
             for f in files:
@@ -266,8 +269,9 @@ class RubygemsLicense(Rule):
             attribute=Variable.ATTR_VAR, attributeValue="LICENSE")
         _licenses = self.__get_combined_licenses(_file)
         for item in items:
-            _values = [x for x in item.VarValueStripped.replace(
-                "|", " ").replace("&", " ").split(" ") if x]
+            _san_input = item.VarValueStripped.replace("|", " ").replace(
+                "&", " ").replace(" AND ", " ").replace(" OR ", "").replace(" WITH ", " ")
+            _values = [x for x in _san_input.split(" ") if x]
             for val in _values:
                 if val not in _licenses:
                     res += self.finding(item.Origin,
