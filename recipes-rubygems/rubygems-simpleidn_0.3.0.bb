@@ -4,15 +4,15 @@ DESCRIPTION = "This gem allows easy conversion from punycode ACE strings to unic
 HOMEPAGE = "https://github.com/mmriis/simpleidn"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENCE;md5=125a8c5aa0f0043945e84c8bdbf84257"
+LIC_FILES_CHKSUM = "file://LICENCE;md5=40b5340dd69188c312d188f6250e23f0"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "270e236fc9772a0d7dc96e5a82a9372d"
-SRC_URI[sha256sum] = "08ce96f03fa1605286be22651ba0fc9c0b2d6272c9b27a260bc88be05b0d2c29"
+SRC_URI[md5sum] = "7dfff7f31931a76781cb1054bae8a46d"
+SRC_URI[sha256sum] = "12ca730bed2f3db04d11e9bfd1bca3e11fb37f55b21eb2e9793fb5814bf54d03"
 
 GEM_NAME = "simpleidn"
 
