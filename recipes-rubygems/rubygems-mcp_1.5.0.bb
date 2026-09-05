@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "bb3480f7aab7bcdc9c0ee7ae2f5bf179"
-SRC_URI[sha256sum] = "4048ad5ec2fb6e225fdf4888e25871a93b67da4b0233913dcbf70f780460ee5b"
+SRC_URI[md5sum] = "21cb48e9d4ead31e5d34ab3f7d405f85"
+SRC_URI[sha256sum] = "6f97785fa6e069eb667aa3d50299851ea9aca904b4abe8306f156bb8fd9eaff0"
 
 GEM_NAME = "mcp"
 
