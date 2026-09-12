@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "a395ed20dbac837d6e61ca0c1e1fe131"
-SRC_URI[sha256sum] = "47013402b99ae29ee93f930af51edaec8c6008556f4be25705a422b4430314f5"
+SRC_URI[md5sum] = "fba8572deb2f7c627fb7cd38a8027d20"
+SRC_URI[sha256sum] = "1dab5d8b5c4f6f4c01b0878ba094f0aee5d8c197d0f03eaf43d5a176d66ab447"
 
 GEM_NAME = "rubyntlm"
 
