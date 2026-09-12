@@ -10,12 +10,13 @@ EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
+    rubygems-base64-native \
     rubygems-builder-native \
     rubygems-erubi-native \
     rubygems-gssapi-native \
     rubygems-gyoku-native \
     rubygems-httpclient-native \
-    rubygems-logging-native \
+    rubygems-logger-native \
     rubygems-nori-native \
     rubygems-rexml-native \
     rubygems-rubyntlm-native \
@@ -23,8 +24,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "3ee81372528048b8305334ab6f36b4e9"
-SRC_URI[sha256sum] = "ef6b767c5772d06e186300b506ea5e65afb849904a551f8482a5cfc2a1be5d06"
+SRC_URI[md5sum] = "e30c12b61cd368349be834947bd15c69"
+SRC_URI[sha256sum] = "9e210758f5c4d76cbc28ff0b27c082483c91c17dcb6cd44ce3467c08160aa916"
 
 GEM_NAME = "winrm"
 
@@ -33,12 +34,13 @@ inherit rubygentest
 inherit pkgconfig
 
 RDEPENDS:${PN}:class-target += "\
+    rubygems-base64 \
     rubygems-builder \
     rubygems-erubi \
     rubygems-gssapi \
     rubygems-gyoku \
     rubygems-httpclient \
-    rubygems-logging \
+    rubygems-logger \
     rubygems-nori \
     rubygems-rexml \
     rubygems-rubyntlm \
