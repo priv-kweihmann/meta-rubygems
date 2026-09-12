@@ -17,12 +17,13 @@ DEPENDS:class-native += "\
     rubygems-bigdecimal-native \
     rubygems-jmespath-native \
     rubygems-logger-native \
+    rubygems-rexml-native \
 "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "e958e8258294c1bd975345f37c8ec4c2"
-SRC_URI[sha256sum] = "518089e32134c3478cd4ec63d07fb966546a45e9e4cbf5f80d2cf16d5699d29b"
+SRC_URI[md5sum] = "2b679e532bc865b8e11ffa899a45d85f"
+SRC_URI[sha256sum] = "54680a6818323ad1a977dd2aab88a98f294f11fd603852af53e5718e9ce11a12"
 
 GEM_NAME = "aws-sdk-core"
 
@@ -38,6 +39,7 @@ RDEPENDS:${PN}:class-target += "\
     rubygems-bigdecimal \
     rubygems-jmespath \
     rubygems-logger \
+    rubygems-rexml \
 "
 
 BBCLASSEXTEND = "native"
