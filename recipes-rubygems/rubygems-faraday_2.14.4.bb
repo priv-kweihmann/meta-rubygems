@@ -4,7 +4,7 @@ DESCRIPTION = "HTTP/REST API client library."
 HOMEPAGE = "https://lostisland.github.io/faraday"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE.md;md5=16803e44761e7ff8111818414be5e7ce"
+LIC_FILES_CHKSUM = "file://LICENSE.md;md5=32b1b779179d23cab52d779ba1bd2da8"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -17,8 +17,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "03e148b8aa90790bd521076b9b799f5a"
-SRC_URI[sha256sum] = "1882247e6766615c8220b4392bf1d27f6ebb63d8e28267587cef1fb0bf37f278"
+SRC_URI[md5sum] = "b2223b62917e376e57e26e0d8c2aef4b"
+SRC_URI[sha256sum] = "9bb4408c44621b0dbaaaa39e5dbfc4dbe58cc6751b6eb94d16ae9e1f2f2fab6e"
 
 GEM_NAME = "faraday"
 
