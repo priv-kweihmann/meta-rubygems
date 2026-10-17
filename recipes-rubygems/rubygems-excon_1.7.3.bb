@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "b54a9887bd90ea326085652cca740485"
-SRC_URI[sha256sum] = "2557b17420f134f00de79cc52abd325d5767291e23af7ddd03ee07952189a569"
+SRC_URI[md5sum] = "ab7f9f5ad60b0af0f011456cef34c3ea"
+SRC_URI[sha256sum] = "ea13fabcab2b5f5bb64e2952a0ac018bf9882832fe7a58206630be18ba888fa9"
 
 GEM_NAME = "excon"
 
