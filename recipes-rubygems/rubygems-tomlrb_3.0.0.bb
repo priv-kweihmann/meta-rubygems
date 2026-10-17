@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "RubyGem: tomlrb"
-DESCRIPTION = "A racc based toml parser"
+DESCRIPTION = "Parses TOML 1.1 and 1.0 documents into Ruby Hashes"
 HOMEPAGE = "https://github.com/fbernier/tomlrb"
 
 LICENSE = "MIT"
@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "219a7723c355f4e7ffaaa963def84915"
-SRC_URI[sha256sum] = "262f77947ac3ac9b3366a0a5940ecd238300c553e2e14f22009e2afcd2181b99"
+SRC_URI[md5sum] = "587105874453a2dc0b4b92e9db9f8262"
+SRC_URI[sha256sum] = "e7122820cbb9b940d1758eecb6d1d4ee97c582efa37f06e0100a97cb17a566f5"
 
 GEM_NAME = "tomlrb"
 
