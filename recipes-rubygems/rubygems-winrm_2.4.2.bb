@@ -12,7 +12,6 @@ EXTRA_RDEPENDS:append = " "
 DEPENDS:class-native += "\
     rubygems-base64-native \
     rubygems-builder-native \
-    rubygems-erubi-native \
     rubygems-gssapi-native \
     rubygems-gyoku-native \
     rubygems-httpclient-native \
@@ -24,8 +23,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "d6a5ae4492719359cdd3882f91db5590"
-SRC_URI[sha256sum] = "9f8f7a60ec18f3834119efdb33f3bd9b979892622f137e2d489a592577af1572"
+SRC_URI[md5sum] = "a168657bd312d1fb78ece68f76a7a832"
+SRC_URI[sha256sum] = "1dd3377cb9e414097b23718af5640b0bff726889f6cce2542985417c1c78abca"
 
 GEM_NAME = "winrm"
 
@@ -36,7 +35,6 @@ inherit pkgconfig
 RDEPENDS:${PN}:class-target += "\
     rubygems-base64 \
     rubygems-builder \
-    rubygems-erubi \
     rubygems-gssapi \
     rubygems-gyoku \
     rubygems-httpclient \
