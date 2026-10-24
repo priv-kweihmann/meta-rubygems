@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "278f7d0bf70326d32d0127f363f4b98a"
-SRC_URI[sha256sum] = "4e3cbc8fa14d85dc06250b14faa9f6e8a074c252d107881ef4806658d9c08537"
+SRC_URI[md5sum] = "9a823314c27ac3c1657e75fe83587de0"
+SRC_URI[sha256sum] = "7eec9b4d8655adb76bbb48f65a787b4e54ffabd74dff5ff7f186ab77e4b6781d"
 
 GEM_NAME = "aws-sdk-firehose"
 
