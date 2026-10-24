@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "ea4fe135c893ae577016b4295c44314e"
-SRC_URI[sha256sum] = "41c787e49c7e7ba13ba7c4f1486aece8eda974d56599e4bbb731c8fd1cacd34b"
+SRC_URI[md5sum] = "7afc0d484be9db88121d9cc5f5eecf22"
+SRC_URI[sha256sum] = "4cf34cc8861dbdb8e10df0b390e1679bdff0ea27761e099432f1ec0d5d3e3cab"
 
 GEM_NAME = "aws-sdk-networkfirewall"
 
