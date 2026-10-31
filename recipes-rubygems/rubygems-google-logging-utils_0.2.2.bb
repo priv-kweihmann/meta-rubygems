@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "579b5b733309e1d484ac448e03b2010e"
-SRC_URI[sha256sum] = "73945c3ac6800eba802c26b1744765d5057cc4d89182c7255ee1347b0ca96dc7"
+SRC_URI[md5sum] = "3cc5a195c666c148ac8b0f55c379a3a9"
+SRC_URI[sha256sum] = "ad2436ef22e918e2b1c3ad2bbaf5949f42f5389d49fd37e41b43bbdd3068e27c"
 
 GEM_NAME = "google-logging-utils"
 
