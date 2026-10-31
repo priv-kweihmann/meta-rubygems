@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "04d5454cb445b028981c4475df0277b1"
-SRC_URI[sha256sum] = "e58cb0ebcaf0161f4a9ddc7fc54e160d97bc50bc774547817287728245d022d0"
+SRC_URI[md5sum] = "e67aabbcf2449f7e4de7d0709ffe5feb"
+SRC_URI[sha256sum] = "dc2019e59e3e3552943b576f14cb0201ec55823935b967e10dcda169b04e4573"
 
 GEM_NAME = "net-sftp"
 
