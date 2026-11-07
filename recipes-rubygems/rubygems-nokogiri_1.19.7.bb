@@ -4,7 +4,7 @@ DESCRIPTION = "Nokogiri (鋸) makes it easy and painless to work with XML and HT
 HOMEPAGE = "https://nokogiri.org"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE-DEPENDENCIES.md;md5=7e7a84c854a5e89a25905bfc881b3b0b"
+LIC_FILES_CHKSUM = "file://LICENSE-DEPENDENCIES.md;md5=f0d35caab9435bff6daa0b505f7d5b2e"
 
 EXTRA_DEPENDS:append = " \
     libxml2 \
@@ -24,8 +24,8 @@ GEM_INSTALL_FLAGS:append = " \
     --use-system-libraries \
 "
 
-SRC_URI[md5sum] = "0d54395ae619300970827b8b1d394f7c"
-SRC_URI[sha256sum] = "50c951611c92bca05c51411aef45f1cbc50f2821c4802758c5c6d34696533ab5"
+SRC_URI[md5sum] = "5b61b063dc483726e392bd94d9666eed"
+SRC_URI[sha256sum] = "abe94507c54cb18f872777b16bdca4aad32b1abdc4c52fe843f1c80fbdf992b8"
 
 GEM_NAME = "nokogiri"
 
