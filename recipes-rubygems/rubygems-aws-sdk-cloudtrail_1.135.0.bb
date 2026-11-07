@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "7d26b8a94758df99a9e84dc69e38095a"
-SRC_URI[sha256sum] = "0bad3faca21cf44d5361c1cc1f16aa4c672a0f766306d491361fd3df66a4210e"
+SRC_URI[md5sum] = "bbad6fa89b316d7a3521fdff48c35511"
+SRC_URI[sha256sum] = "237349278d89cd8d966db592581e6169a9ef0261822b4b62939fc5fb4b9ee308"
 
 GEM_NAME = "aws-sdk-cloudtrail"
 
