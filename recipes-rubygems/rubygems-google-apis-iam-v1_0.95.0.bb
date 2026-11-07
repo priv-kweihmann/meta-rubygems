@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "80dc6e9fcada9b18c3436c98c3252673"
-SRC_URI[sha256sum] = "529cd04451e0243d62cdd5300a73b0fcf084d2f147d4b5623e1b410c4d6f392d"
+SRC_URI[md5sum] = "f57790d7c3d822fce40ac2174476e4e8"
+SRC_URI[sha256sum] = "c74532e59a716bf69171a5c30c627dc2d47498a285659aa750662223bee52764"
 
 GEM_NAME = "google-apis-iam_v1"
 
