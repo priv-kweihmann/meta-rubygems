@@ -15,8 +15,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "7d5a003792b209e7e387b73ac073b490"
-SRC_URI[sha256sum] = "7c85a88bcf975def58f35ffa1ea83345f018e368c97aa3b78a4fd116f4a9cd49"
+SRC_URI[md5sum] = "4d3fb592e526461efa21332cbc2d0e27"
+SRC_URI[sha256sum] = "5c9ff6743da37eef6746f248043d97d2bbf3910a4694ec8e372326ec588c2394"
 
 GEM_NAME = "net-scp"
 
