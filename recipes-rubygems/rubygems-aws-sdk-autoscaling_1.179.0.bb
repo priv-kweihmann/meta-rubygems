@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "1eb2b21d1e8471ecd4ffbb037c7464fd"
-SRC_URI[sha256sum] = "a83c569ecec5e7607dccffd3d32f9cb5ae620ee9dad549e632e236d8c4155aa0"
+SRC_URI[md5sum] = "bc104c8944a6a5aede6ae3bd020d4a99"
+SRC_URI[sha256sum] = "ef956bd1555924a240f74399bea6009f627c48b86126e59e5784bb20a0b06552"
 
 GEM_NAME = "aws-sdk-autoscaling"
 
