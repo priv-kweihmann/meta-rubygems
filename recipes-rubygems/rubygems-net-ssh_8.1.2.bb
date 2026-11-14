@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "9865f526e8dc67aed0a28da0f5d40697"
-SRC_URI[sha256sum] = "8283aa541f89155ce55296ee7888d7082dd9b7bb7c9b7bdbd114c4cc4b52508d"
+SRC_URI[md5sum] = "1a41eaeb28f459a815c49c32468c3166"
+SRC_URI[sha256sum] = "78ce245aba70b5b8dab6226b335a7f359e0ba062fef6a1bc57bad32bee22778e"
 
 GEM_NAME = "net-ssh"
 
