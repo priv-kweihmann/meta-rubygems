@@ -17,10 +17,10 @@ Feel free to contribute any needed patches.
 
 Up to the following revisions automated checks being performed
 
-* openembedded-core: 5247d0d8862c3402ac061fede5844da4d5c4be4c
-* meta-yocto: dd6c2950bb507f8c311bd82410a032ed6eb38063
-* bitbake: e016540115bd6295ba2d6b28be00723949b16562
-* meta-openembedded: 33db795031ddef81949db64aedf33070e1330fdd
+* openembedded-core: 9518ce9aa2a6cbce678895ef9a95cd27939dae2a
+* meta-yocto: 8becfabefdf5df564aafe2d07d10e4b05fbaedb1
+* bitbake: 5495a54734f9c53b1e625c6ed2fae09afad24975
+* meta-openembedded: 914d97d8afb9e0158321c82f5a3279743e52613e
 
 ## Support
 
