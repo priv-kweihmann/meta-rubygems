@@ -56,6 +56,7 @@ please check the following table to pick the correct branch matching your poky v
 | poky release | suggested meta-rubygems branch                  | ruby version | maintainer     |
 | ------------ | ----------------------------------------------- | ------------ | -------------- |
 | master       | master                                          | 4.0.x        | priv-kweihmann |
+| blacksail    | blacksail                                       | 4.0.x        | n.a.           |
 | wrynose      | master@dba6dfb9106584ce464d9d9c968f821b94b9a01f | 4.0.x        | n.a.           |
 | whinlatter   | whinlatter                                      | 3.4.x        | n.a.           |
 | walnascar    | master@2fe6f64072ba95c87e6beaa1c2856772ed71dead | 3.4.x        | n.a.           |
