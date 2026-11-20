@@ -4,13 +4,9 @@ DESCRIPTION = "Flay analyzes code for structural similarities"
 HOMEPAGE = "http://ruby.sadi.st/"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "\
-    file://README.rdoc;beginline=100;endline=123;md5=9729e7cc2f0b6cd88813876ac0335063 \
-"
+LIC_FILES_CHKSUM = "file://README.rdoc;beginline=106;md5=9729e7cc2f0b6cd88813876ac0335063"
 
-EXTRA_DEPENDS:append = " \
-    rubygems-gauntlet \
-"
+EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
 
 DEPENDS:class-native += "\
@@ -22,8 +18,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "d81824c82897406b07ebddccd223e982"
-SRC_URI[sha256sum] = "a62d96a51d1da185aa41ba95b696966df9f7d1d91a457709277f24515895de77"
+SRC_URI[md5sum] = "2750fe1525b567538dbc91648474dcb1"
+SRC_URI[sha256sum] = "2f6c97ade18eacc87dabdc8a1a2fa5cbd80b84eb0e290cea7af257ac0801a206"
 
 GEM_NAME = "flay"
 
