@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "39f8af14d1453d58c8ec0bcd2555cdea"
-SRC_URI[sha256sum] = "12da102d64e98a64f5a36d0b073efbda02a0df581f5edefa515bea78e6f1e7ce"
+SRC_URI[md5sum] = "45caac1fbe6d4e3ecb86e99a28d362c1"
+SRC_URI[sha256sum] = "87437afa80f5c35ab98fa370b803e562bd7c04aa3a25ad41632edf8a666a5ee2"
 
 GEM_NAME = "aws-sdk-elasticbeanstalk"
 
