@@ -27,8 +27,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "601b8cee268cf85500dc88483fa2c679"
-SRC_URI[sha256sum] = "ea9ace2ebac2a193061315c39e49f63f3304b8ae56ecbd3daa005149d195ed7b"
+SRC_URI[md5sum] = "33342eb21b8fdb01cee7a0f74b565c46"
+SRC_URI[sha256sum] = "09d932cc5aac9cd544865bc2f7ff77426a1321e490ab3012e08085be2c147a15"
 
 GEM_NAME = "ohai"
 
