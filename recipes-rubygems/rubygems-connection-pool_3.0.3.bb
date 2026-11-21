@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "d73c7eec4640449105da4d8028acdc64"
-SRC_URI[sha256sum] = "33fff5ba71a12d2aa26cb72b1db8bba2a1a01823559fb01d29eb74c286e62e0a"
+SRC_URI[md5sum] = "ad36f5191a4266a57773833f24475802"
+SRC_URI[sha256sum] = "e0f8ee3ee0039396753e06e8a2dde0ef028e40f7df29e97f57da7577c489cb5e"
 
 GEM_NAME = "connection_pool"
 
