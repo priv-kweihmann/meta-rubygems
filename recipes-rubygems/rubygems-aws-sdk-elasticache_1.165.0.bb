@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "20ab2ccaed1ae1973d87a0d246b9ee04"
-SRC_URI[sha256sum] = "74cc394c320a6db85884b175f1c0759f522f534a7ff38123a7e4e6931d371257"
+SRC_URI[md5sum] = "53ac145e2e037e59613ccb10d5511667"
+SRC_URI[sha256sum] = "7be25dfd77a3f729a2b42121922771118f241a38c148088e0d093949ebc64212"
 
 GEM_NAME = "aws-sdk-elasticache"
 
