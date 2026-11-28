@@ -18,8 +18,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "0a891f2046daf3689ba8779e31f55c8c"
-SRC_URI[sha256sum] = "027984d28485d6502ae4c72f9341080f54f538599f5dbb54f81875a4ddcad574"
+SRC_URI[md5sum] = "2e7f4b1b0d1bca6e90bba9e4d0a754b6"
+SRC_URI[sha256sum] = "11f7cadec54e593e905b1bb78f2b28bdd4b8e13b34cb82fe49c876e3dd5008c1"
 
 GEM_NAME = "rubocop-ast"
 
