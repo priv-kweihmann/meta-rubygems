@@ -4,7 +4,7 @@ DESCRIPTION = "Predicate logic with rule composition"
 HOMEPAGE = "https://dry-rb.org/gems/dry-logic"
 
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=b14b1929847ba471f3f59da600744315"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=fe7086983f71ec803146164cfaaa1737"
 
 EXTRA_DEPENDS:append = " "
 EXTRA_RDEPENDS:append = " "
@@ -18,8 +18,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "8931ddc947e3af4f82c25d69a8c9b5b4"
-SRC_URI[sha256sum] = "da6fedbc0f90fc41f9b0cc7e6f05f5d529d1efaef6c8dcc8e0733f685745cea2"
+SRC_URI[md5sum] = "f274f67a2fb51f403973f470b46c6583"
+SRC_URI[sha256sum] = "3cea14d2108b62f1a99d20b993dff3a5c365136a3995202fd33d9a163baedd31"
 
 GEM_NAME = "dry-logic"
 
