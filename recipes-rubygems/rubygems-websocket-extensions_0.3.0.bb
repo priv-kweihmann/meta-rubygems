@@ -11,8 +11,8 @@ EXTRA_RDEPENDS:append = " "
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "5f5c6b525200a832c59121be308e474e"
-SRC_URI[sha256sum] = "6fb0d0f687aa8adc8eafa5ce68db36dfd6a8ebf232515040ce27c33c1291e589"
+SRC_URI[md5sum] = "c50bb1f964f11dd1827ee33fc6d24e3f"
+SRC_URI[sha256sum] = "1492aabd79218294b564e67e9ee6a90abdac1a2981d35a49848bbc39754f0752"
 
 GEM_NAME = "websocket-extensions"
 
