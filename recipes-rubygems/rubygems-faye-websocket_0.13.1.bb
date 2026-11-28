@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "ce132cf9b6e98cb35bd4a61d2f7070cf"
-SRC_URI[sha256sum] = "4c83189002a11fc884d78a7e9e3e1d5a9651f79129ab7d1452a19b1c656e5cc5"
+SRC_URI[md5sum] = "3f3407830f83d9bce4d557cbf883b710"
+SRC_URI[sha256sum] = "d283b9d26614de5f6537c5227c0c0726af89ce744bee2da7e9d666dd62f9ff68"
 
 GEM_NAME = "faye-websocket"
 
