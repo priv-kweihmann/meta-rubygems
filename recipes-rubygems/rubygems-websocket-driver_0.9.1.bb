@@ -16,8 +16,8 @@ DEPENDS:class-native += "\
 
 GEM_INSTALL_FLAGS:append = " "
 
-SRC_URI[md5sum] = "ee49f9c6cef14832857ef73d8fca2d1d"
-SRC_URI[sha256sum] = "4dfcc6ac0ea1b6771daf5fb54cbbca131e4d5922ea0a65ba2da980370dadbe9f"
+SRC_URI[md5sum] = "4f7b2b380aa03cd01f1e912922501860"
+SRC_URI[sha256sum] = "8b6c5c0834f77f53b86d486cc761c99d60df807a8264267ea52fca0da660bb1e"
 
 GEM_NAME = "websocket-driver"
 
